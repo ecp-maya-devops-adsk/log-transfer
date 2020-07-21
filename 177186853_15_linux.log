@@ -1,0 +1,60 @@
+================================================================================
+                                 setup (Debug)
+================================================================================
+
+================================================================================
+                             setup (RelWithDebInfo)
+================================================================================
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] timeout
+Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clean)
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[ecg-mayausd-branch-preflight-linux] Running shell script
++ scl enable devtoolset-6 -
+python ecg-maya-usd/build.py --stages=clean --workspace-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/build --install-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/install --signing-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/signing --package-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/package --output-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/output --stash-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/stash --jenkins-build=377 --git-commit=ffdf64f853ccfbc01c28c58a1a1cfa40f4072982 --git-branch=master --maya-package=rundev-master-python2 --stage-banner
+Searching for available Maya cuts in /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-master-python2
+Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-master-python2/202007201530/runtime/ebcfe78
+
+================================================================================
+                                 clean (Debug)
+================================================================================
+running clean stage....................
+build.py: internal error: Unable to find Debug Python include folder in Maya runtime.
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] emailextrecipients
+[Pipeline] isUnix
+[Pipeline] echo
+Sending notification via SendGrid.
+Sending email to bang.nguyen@autodesk.com
+[Pipeline] withCredentials
+[Pipeline] {
+[Pipeline] sh
+[ecg-mayausd-branch-preflight-linux] Running shell script
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+Finished: FAILURE
