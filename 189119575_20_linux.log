@@ -1,0 +1,50 @@
+================================================================================
+                                 setup (Debug)
+================================================================================
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[ecg-mayausd-branch-preflight-linux] Running shell script
++ scl enable devtoolset-6 -
+python ecg-maya-usd/build.py --stages=setup --workspace-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/build --install-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/install --signing-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/signing --package-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/package --output-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/output --stash-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/stash --jenkins-build=415 --git-commit=58ecbb858afdfd11c11d28c5a3abc1f17915c8b5 --git-branch=master --variants=RelWithDebInfo --python=2 --prune-versions=2 --prune-revisions=2 --maya-cut-id=latest --maya-package=rundev-master --stage-banner --prune-artifacts --force-pruning
+Finding Artifactory servers response times
+Checking server art-bear.autodesk.com for artifacts matching properties:
+	package=rundev-master
+	platform=lin
+Multiple artifacts matching the selection properties were found on server art-bear.autodesk.com.
+Query returned artifacts with different hashes.
+Selecting latest Maya cut
+Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-master/202007292115/runtime/d98b80b
+Pruning artifacts in /local/S/jenkins/workspace/shared/Artifactory/Linux
+The following artifact versions will be pruned:
+	rundev-master-debug/202007272115
+Removing directory: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-master-debug/202007272115
+Calling Pipeline was cancelled
+Sending interrupt signal to process
+/var/tmp/scl9LAKCP: line 9: 30479 Terminated              python ecg-maya-usd/build.py --stages=setup --workspace-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/build --install-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/install --signing-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/signing --package-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/package --output-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/output --stash-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-linux/stash --jenkins-build=415 --git-commit=58ecbb858afdfd11c11d28c5a3abc1f17915c8b5 --git-branch=master --variants=RelWithDebInfo --python=2 --prune-versions=2 --prune-revisions=2 --maya-cut-id=latest --maya-package=rundev-master --stage-banner --prune-artifacts --force-pruning
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] emailextrecipients
+[Pipeline] isUnix
+[Pipeline] echo
+Sending notification via SendGrid.
+Sending email to bang.nguyen@autodesk.com
+[Pipeline] withCredentials
+[Pipeline] {
+[Pipeline] sh
+[ecg-mayausd-branch-preflight-linux] Running shell script
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: script returned exit code 143
+Finished: ABORTED
