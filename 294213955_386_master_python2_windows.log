@@ -1,0 +1,141 @@
+================================================================================
+                                 setup (Debug)
+================================================================================
+Deleting subst P:
+Deleting subst W:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[ecg-mayausd-branch-preflight-windows] Running batch script
+Subst W: S:\jenkins\workspace\ecg-mayausd-branch-preflight-windows
+Subst P: S:\jenkins\workspace
+"C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+**********************************************************************
+** Visual Studio 2017 Developer Command Prompt v15.9.15
+** Copyright (c) 2017 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+python ecg-maya-usd/build.py --stages=setup --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=617 --git-commit=0ead4f590dc00905afae8f670011d9fba3920988 --git-branch=master --variants=RelWithDebInfo --python=2 --prune-versions=2 --prune-revisions=2 --maya-cut-id=latest --maya-package=rundev-master --stage-banner --prune-artifacts --force-pruning
+Finding Artifactory servers response times
+Checking server art-bear.autodesk.com for artifacts matching properties:
+	package=rundev-master
+	platform=win
+Multiple artifacts matching the selection properties were found on server art-bear.autodesk.com.
+Query returned artifacts with different hashes.
+Selecting latest Maya cut
+Using Maya cut from P:\shared\Artifactory\Windows\rundev-master\202010070315\runtime\04421ea
+
+================================================================================
+                             setup (RelWithDebInfo)
+================================================================================
+Deleting subst P:
+Deleting subst W:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] timeout
+Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clean)
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[ecg-mayausd-branch-preflight-windows] Running batch script
+Subst W: S:\jenkins\workspace\ecg-mayausd-branch-preflight-windows
+Subst P: S:\jenkins\workspace
+"C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+**********************************************************************
+** Visual Studio 2017 Developer Command Prompt v15.9.15
+** Copyright (c) 2017 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+python ecg-maya-usd/build.py --stages=clean --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=617 --git-commit=0ead4f590dc00905afae8f670011d9fba3920988 --git-branch=master --variants=Debug --python=2 --maya-package=rundev-master-debug --stage-banner
+Searching for available Maya cuts in P:\shared\Artifactory\Windows\rundev-master-debug
+Using Maya cut from P:\shared\Artifactory\Windows\rundev-master-debug\202010060315\runtime\c144d54
+
+================================================================================
+                                 clean (Debug)
+================================================================================
+running clean stage....................
+Maya Python Debug Info:
+  mayapy executable   = P:\shared\Artifactory\Windows\rundev-master-debug\202010060315\runtime\c144d54\runTime\bin\mayapy2.exe
+  Include Folder      = P:\shared\Artifactory\Windows\rundev-master-debug\202010060315\runtime\c144d54\runTime\include\Python27\Python
+  Library             = P:\shared\Artifactory\Windows\rundev-master-debug\202010060315\runtime\c144d54\runTime\lib\python27_d.lib
+  site-package Folder = P:\shared\Artifactory\Windows\rundev-master-debug\202010060315\runtime\c144d54\runTime\Python27\Lib\site-packages
+Adding Python package requirements: ['P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202010060315\\runtime\\c144d54\\runTime\\bin\\mayapy2.exe', '-m', 'pip', 'install', '-t', 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202010060315\\runtime\\c144d54\\runTime\\Python27\\Lib\\site-packages', '-r', 'python_requirements.txt']
+In workdir: S:\jenkins\workspace\ecg-mayausd-branch-preflight-windows\ecg-maya-usd\maya-usd
+Executing: 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202010060315\\runtime\\c144d54\\runTime\\bin\\mayapy2.exe' 'S:\\jenkins\\workspace\\ecg-mayausd-branch-preflight-windows\\ecg-maya-usd\\maya-usd\\build.py' --generator Ninja --build-debug --maya-location 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202010060315\\runtime\\c144d54\\runTime' --devkit-location 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202010060315\\runtime\\c144d54\\devkitBase' --pxrusd-location 'P:\\shared\\Artifactory\\Windows\\USD\\9d4dcfc' --qt-location 'P:\\shared\\Artifactory\\Windows\\qt\\5.12.9\\800c1ac' '--build-args=-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.9.0/c68f192/ninja.exe,-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master-debug/202010060315/runtime/c144d54/runTime/include/Python27/Python,-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master-debug/202010060315/runtime/c144d54/runTime/bin/mayapy2.exe,-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master-debug/202010060315/runtime/c144d54/runTime/lib/python27_d.lib,-DMAYAUSD_TO_USD_RELATIVE_PATH=../USD' --debug-python '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|testUsdExportAsClip,-LE interactive,--parallel 16' --stages=clean --redirect-outstream-file=False --install-location 'W:\\install\\Debug\\MayaUSD' 'W:\\'
+Modified environment variables:
+    PATH=P:\shared\Artifactory\Windows\cmake\3.14.4\c5af748\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\bin\HostX64\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCPackages;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\bin\Roslyn;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Performance Tools\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\\MSBuild\15.0\bin;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\PathVerify;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja
+    
+        Building with settings:
+          Source directory          S:\jenkins\workspace\ecg-mayausd-branch-preflight-windows\ecg-maya-usd\maya-usd
+          Workspace directory       W:\
+          Build directory           W:\build\Debug
+          Install directory         W:\install\Debug\MayaUSD
+          Variant                   Debug
+          Python Debug              On
+          CMake generator           Ninja
+          Build arguments           ['-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.9.0/c68f192/ninja.exe', '-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master-debug/202010060315/runtime/c144d54/runTime/include/Python27/Python', '-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master-debug/202010060315/runtime/c144d54/runTime/bin/mayapy2.exe', '-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master-debug/202010060315/runtime/c144d54/runTime/lib/python27_d.lib', '-DMAYAUSD_TO_USD_RELATIVE_PATH=../USD']
+          Stages arguments          ['clean']
+          CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|testUsdExportAsClip', '-LE interactive', '--parallel 16']
+    Success MayaUSD build and install !!!!
+    Elapsed time: 00:00:00
+    [36510 refs]
+Deleting subst P:
+Deleting subst W:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[ecg-mayausd-branch-preflight-windows] Running batch script
+Subst W: S:\jenkins\workspace\ecg-mayausd-branch-preflight-windows
+Subst P: S:\jenkins\workspace
+"C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+**********************************************************************
+** Visual Studio 2017 Developer Command Prompt v15.9.15
+** Copyright (c) 2017 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+python ecg-maya-usd/build.py --stages=clean --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=617 --git-commit=0ead4f590dc00905afae8f670011d9fba3920988 --git-branch=master --variants=RelWithDebInfo --python=2 --maya-package=rundev-master --stage-banner
+Searching for available Maya cuts in P:\shared\Artifactory\Windows\rundev-master
+Using Maya cut from P:\shared\Artifactory\Windows\rundev-master\202010070315\runtime\04421ea
+
+================================================================================
+                             clean (RelWithDebInfo)
+================================================================================
+running clean stage....................
+Maya Python RelWithDebInfo Info:
+  mayapy executable   = P:\shared\Artifactory\Windows\rundev-master\202010070315\runtime\04421ea\runTime\bin\mayapy2.exe
+  Include Folder      = P:\shared\Artifactory\Windows\rundev-master\202010070315\runtime\04421ea\runTime\include\Python27\Python
+  Library             = P:\shared\Artifactory\Windows\rundev-master\202010070315\runtime\04421ea\runTime\lib\python27.lib
+  site-package Folder = P:\shared\Artifactory\Windows\rundev-master\202010070315\runtime\04421ea\runTime\Python27\Lib\site-packages
+build.py: error: Command failed with error code: -1073741515
+Deleting subst P:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] emailextrecipients
+[Pipeline] echo
+No recipients to send notification.
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: script returned exit code -1073741515
+Finished: FAILURE
