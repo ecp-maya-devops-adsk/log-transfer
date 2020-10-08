@@ -1,0 +1,168 @@
+================================================================================
+                                 setup (Debug)
+================================================================================
+Deleting subst P:
+Deleting subst W:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[ecg-mayausd-branch-preflight-python3-windows] Running batch script
+Subst W: S:\jenkins\workspace\ecg-mayausd-branch-preflight-python3-windows
+Subst P: S:\jenkins\workspace
+"C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+**********************************************************************
+** Visual Studio 2017 Developer Command Prompt v15.9.15
+** Copyright (c) 2017 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+python ecg-maya-usd/build.py --stages=setup --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=173 --git-commit=d42b56b8c19c5d54d25c6012481df5968121b7d0 --git-branch=master --variants=RelWithDebInfo --python=3 --prune-versions=2 --prune-revisions=2 --maya-cut-id=latest --maya-package=rundev-master --stage-banner --prune-artifacts --force-pruning
+Finding Artifactory servers response times
+Checking server art-bear.autodesk.com for artifacts matching properties:
+	package=rundev-master
+	platform=win
+Multiple artifacts matching the selection properties were found on server art-bear.autodesk.com.
+Query returned artifacts with different hashes.
+Selecting latest Maya cut
+Using Maya cut from P:\shared\Artifactory\Windows\rundev-master\202010072115\runtime\29f1fc2
+Downloading https://art-bear.autodesk.com:443/artifactory/oss-stg-generic/Maya/master/2020-10-07-21-15/windows/202010072115-9d84d032b0-RUNDEV.zip to P:\shared\Artifactory\Windows\tmp\tmp7mvnyw
+    Progress: [########################################]
+Extracting 202010072115-9d84d032b0-RUNDEV.zip to P:\shared\Artifactory\Windows\tmp\tmpn2hgzs
+Installing on P:\shared\Artifactory\Windows\rundev-master\202010072115\runtime\29f1fc2
+
+================================================================================
+                             setup (RelWithDebInfo)
+================================================================================
+Deleting subst P:
+Deleting subst W:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] timeout
+Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clean)
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] emailextrecipients
+[Pipeline] echo
+No recipients to send notification.
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+java.io.IOException: remote file operation failed: S:\jenkins\workspace\ecg-mayausd-branch-preflight-python3-windows at hudson.remoting.Channel@49b6a1e4:Channel to /10.50.88.90: hudson.remoting.ChannelClosedException: channel is already closed
+	at hudson.FilePath.act(FilePath.java:992)
+	at hudson.FilePath.act(FilePath.java:974)
+	at hudson.FilePath.mkdirs(FilePath.java:1157)
+	at org.jenkinsci.plugins.durabletask.FileMonitoringTask$FileMonitoringController.<init>(FileMonitoringTask.java:112)
+	at org.jenkinsci.plugins.durabletask.WindowsBatchScript$BatchController.<init>(WindowsBatchScript.java:94)
+	at org.jenkinsci.plugins.durabletask.WindowsBatchScript$BatchController.<init>(WindowsBatchScript.java:92)
+	at org.jenkinsci.plugins.durabletask.WindowsBatchScript.doLaunch(WindowsBatchScript.java:60)
+	at org.jenkinsci.plugins.durabletask.FileMonitoringTask.launchWithCookie(FileMonitoringTask.java:68)
+	at org.jenkinsci.plugins.durabletask.FileMonitoringTask.launch(FileMonitoringTask.java:63)
+	at org.jenkinsci.plugins.workflow.steps.durable_task.DurableTaskStep$Execution.start(DurableTaskStep.java:172)
+	at org.jenkinsci.plugins.workflow.cps.DSL.invokeStep(DSL.java:184)
+	at org.jenkinsci.plugins.workflow.cps.DSL.invokeMethod(DSL.java:126)
+	at org.jenkinsci.plugins.workflow.cps.CpsScript.invokeMethod(CpsScript.java:108)
+	at groovy.lang.GroovyObject$invokeMethod$1000.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.kohsuke.groovy.sandbox.impl.Checker$1.call(Checker.java:151)
+	at org.kohsuke.groovy.sandbox.GroovyInterceptor.onMethodCall(GroovyInterceptor.java:21)
+	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SandboxInterceptor.onMethodCall(SandboxInterceptor.java:115)
+	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SandboxInterceptor.onMethodCall(SandboxInterceptor.java:103)
+	at org.kohsuke.groovy.sandbox.impl.Checker$1.call(Checker.java:149)
+	at org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:146)
+	at com.cloudbees.groovy.cps.sandbox.SandboxInvoker.methodCall(SandboxInvoker.java:16)
+	at ScriptStageRunner.getCommandLauncher(Script4.groovy:1182)
+	at ScriptStageRunner.runCommand(Script4.groovy:1226)
+	at ___cps.transform___(Native Method)
+	at com.cloudbees.groovy.cps.impl.ContinuationGroup.methodCall(ContinuationGroup.java:57)
+	at com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.dispatchOrArg(FunctionCallBlock.java:109)
+	at com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.fixArg(FunctionCallBlock.java:82)
+	at sun.reflect.GeneratedMethodAccessor364.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:72)
+	at com.cloudbees.groovy.cps.impl.LocalVariableBlock$LocalVariable.get(LocalVariableBlock.java:39)
+	at com.cloudbees.groovy.cps.LValueBlock$GetAdapter.receive(LValueBlock.java:30)
+	at com.cloudbees.groovy.cps.impl.LocalVariableBlock.evalLValue(LocalVariableBlock.java:28)
+	at com.cloudbees.groovy.cps.LValueBlock$BlockImpl.eval(LValueBlock.java:55)
+	at com.cloudbees.groovy.cps.LValueBlock.eval(LValueBlock.java:16)
+	at com.cloudbees.groovy.cps.Next.step(Next.java:74)
+	at com.cloudbees.groovy.cps.Continuable.run0(Continuable.java:154)
+	at org.jenkinsci.plugins.workflow.cps.SandboxContinuable.access$001(SandboxContinuable.java:18)
+	at org.jenkinsci.plugins.workflow.cps.SandboxContinuable$1.call(SandboxContinuable.java:33)
+	at org.jenkinsci.plugins.workflow.cps.SandboxContinuable$1.call(SandboxContinuable.java:30)
+	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.GroovySandbox.runInSandbox(GroovySandbox.java:108)
+	at org.jenkinsci.plugins.workflow.cps.SandboxContinuable.run0(SandboxContinuable.java:30)
+	at org.jenkinsci.plugins.workflow.cps.CpsThread.runNextChunk(CpsThread.java:163)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.run(CpsThreadGroup.java:328)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.access$100(CpsThreadGroup.java:80)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:240)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:228)
+	at org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$2.call(CpsVmExecutorService.java:63)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at hudson.remoting.SingleLaneExecutorService$1.run(SingleLaneExecutorService.java:112)
+	at jenkins.util.ContextResettingExecutorService$1.run(ContextResettingExecutorService.java:28)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: hudson.remoting.ChannelClosedException: channel is already closed
+	at hudson.remoting.Channel.send(Channel.java:604)
+	at hudson.remoting.Request.call(Request.java:130)
+	at hudson.remoting.Channel.call(Channel.java:821)
+	at hudson.FilePath.act(FilePath.java:985)
+	at hudson.FilePath.act(FilePath.java:974)
+	at hudson.FilePath.mkdirs(FilePath.java:1157)
+	at org.jenkinsci.plugins.durabletask.FileMonitoringTask$FileMonitoringController.<init>(FileMonitoringTask.java:112)
+	at org.jenkinsci.plugins.durabletask.WindowsBatchScript$BatchController.<init>(WindowsBatchScript.java:94)
+	at org.jenkinsci.plugins.durabletask.WindowsBatchScript$BatchController.<init>(WindowsBatchScript.java:92)
+	at org.jenkinsci.plugins.durabletask.WindowsBatchScript.doLaunch(WindowsBatchScript.java:60)
+	at org.jenkinsci.plugins.durabletask.FileMonitoringTask.launchWithCookie(FileMonitoringTask.java:68)
+	at org.jenkinsci.plugins.durabletask.FileMonitoringTask.launch(FileMonitoringTask.java:63)
+	at org.jenkinsci.plugins.workflow.steps.durable_task.DurableTaskStep$Execution.start(DurableTaskStep.java:172)
+	at org.jenkinsci.plugins.workflow.cps.DSL.invokeStep(DSL.java:184)
+	at org.jenkinsci.plugins.workflow.cps.DSL.invokeMethod(DSL.java:126)
+	at org.jenkinsci.plugins.workflow.cps.CpsScript.invokeMethod(CpsScript.java:108)
+	at groovy.lang.GroovyObject$invokeMethod$1000.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.kohsuke.groovy.sandbox.impl.Checker$1.call(Checker.java:151)
+	at org.kohsuke.groovy.sandbox.GroovyInterceptor.onMethodCall(GroovyInterceptor.java:21)
+	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SandboxInterceptor.onMethodCall(SandboxInterceptor.java:115)
+	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SandboxInterceptor.onMethodCall(SandboxInterceptor.java:103)
+	at org.kohsuke.groovy.sandbox.impl.Checker$1.call(Checker.java:149)
+	at org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:146)
+	at com.cloudbees.groovy.cps.sandbox.SandboxInvoker.methodCall(SandboxInvoker.java:16)
+	... 33 more
+Caused by: java.io.IOException: Unexpected EOF while receiving the data from the channel. FIFO buffer has been already closed
+	at org.jenkinsci.remoting.nio.NioChannelHub$3.run(NioChannelHub.java:617)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	... 8 more
+Caused by: org.jenkinsci.remoting.nio.FifoBuffer$CloseCause: Buffer close has been requested
+	at org.jenkinsci.remoting.nio.FifoBuffer.close(FifoBuffer.java:426)
+	at org.jenkinsci.remoting.nio.NioChannelHub$MonoNioTransport.closeR(NioChannelHub.java:332)
+	at org.jenkinsci.remoting.nio.NioChannelHub.run(NioChannelHub.java:565)
+	... 6 more
+Finished: FAILURE
