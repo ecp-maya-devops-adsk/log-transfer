@@ -1,0 +1,74 @@
+================================================================================
+                                 setup (Debug)
+================================================================================
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[ecg-mayausd-branch-preflight-python3-osx] Running shell script
++ python ecg-maya-usd/build.py --stages=setup --workspace-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-python3-osx --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-python3-osx/build --install-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-python3-osx/install --signing-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-python3-osx/signing --package-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-python3-osx/package --output-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-python3-osx/output --stash-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-python3-osx/stash --jenkins-build=235 --git-commit=9783672b1f539ced17ccbdc14e49a480c686142d --git-branch=master --variants=RelWithDebInfo --python=3 --prune-versions=2 --prune-revisions=2 --maya-cut-id=latest --maya-package=rundev-master --stage-banner --prune-artifacts --force-pruning
+Finding Artifactory servers response times
+Checking server art-bobcat.autodesk.com for artifacts matching properties:
+	package=rundev-master
+	platform=osx
+Multiple artifacts matching the selection properties were found on server art-bobcat.autodesk.com.
+Query returned artifacts with different hashes.
+Selecting latest Maya cut
+Loading URL (found): [ValueError] Extra data: line 6 column 2 - line 11 column 2 (char 174 - 642)
+Contents:
+{
+  "errors" : [ {
+    "status" : 500,
+    "message" : "Couldn't get node id for: oss-stg-generic:Maya/master/2020-09-24-09-15/osx/202009240915-a04813e47a-RUNDEV.dmg"
+  } ]
+}{
+  "errors" : [ {
+    "status" : 500,
+    "message" : "HTTP response status 500:Failed on executing /api/v1/auth/authenticate, with response: {\n  \"errors\" : [ {\n    \"code\" : \"INTERNAL_SERVER_ERROR\",\n    \"message\" : \"Could not find user: 'ecgbifrost'\",\n    \"detail\" : \"Communications link failure\\n\\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.\"\n  } ]\n}"
+  } ]
+}
+Retry #1...
+Loading URL (found): Loading https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/master/2020-09-24-09-15/osx/202009240915-a04813e47a-RUNDEV.dmg?properties returned an empty output
+Retry #2...
+Loading URL (found): Loading https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/master/2020-09-24-09-15/osx/202009240915-a04813e47a-RUNDEV.dmg?properties returned an empty output
+Retry #3...
+Loading URL (found): Loading https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/master/2020-09-24-09-15/osx/202009240915-a04813e47a-RUNDEV.dmg?properties returned an empty output
+Retry #4...
+Loading URL (found): [ValueError] No JSON object could be decoded
+Contents:
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.10.1</center>
+</body>
+</html>
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.10.1</center>
+</body>
+</html>
+Retry #5...
+Retried 5 times. Aborting...
+Loading URL (found) error: reached maximum number of retry attempts.
+Unable to obtain the URL for an artifact matching properties on Artifactory server art-bobcat.autodesk.com. Retrying using alternative Artifactory servers...
+build.py: internal error: Unable to determine the Maya cut install path.
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] emailextrecipients
+[Pipeline] echo
+No recipients to send notification.
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+Finished: FAILURE
