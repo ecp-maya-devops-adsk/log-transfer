@@ -1,0 +1,205 @@
+================================================================================
+                                 setup (Debug)
+================================================================================
+Installing license file 'melicense.lic'.
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[ecg-mayausd-branch-preflight-python3-osx] Running shell script
++ python ecg-maya-usd/build.py --stages=setup --workspace-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-python3-osx --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-python3-osx/build --install-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-python3-osx/install --signing-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-python3-osx/signing --package-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-python3-osx/package --output-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-python3-osx/output --stash-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-python3-osx/stash --jenkins-build=1480 --git-commit=4d2073bdaa68ecfff351646dc86dc4fb4c1823a5 --git-branch=master --variants=RelWithDebInfo --python=3.9 --post-zips=false --extra-license-file=ecg-maya-usd/jenkins/melicense.lic --prune-versions=2 --prune-revisions=2 --maya-cut-config=maya-rundev-master.yaml --stage-banner --prune-artifacts --force-pruning
+Getting Maya cut download URL from Maya SHA-1 hash
+Finding Artifactory servers response times
+[VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/checksum?sha1=1455418944f7d04772a2d5cb2cc21493d061ce73
+[DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 60 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com/artifactory/api/search/checksum?sha1=1455418944f7d04772a2d5cb2cc21493d061ce73
+[DEBUG] Output:
+{
+  "results" : [ {
+    "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg"
+  } ]
+}
+[VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/checksum?sha1=1455418944f7d04772a2d5cb2cc21493d061ce73
+[VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg
+[DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 60 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg
+[DEBUG] Output:
+{
+  "repo" : "oss-stg-generic",
+  "path" : "/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg",
+  "created" : "2022-01-05T18:21:32.117-08:00",
+  "createdBy" : "svc_p_mescm",
+  "lastModified" : "2022-01-05T18:20:17.806-08:00",
+  "modifiedBy" : "svc_p_mescm",
+  "lastUpdated" : "2022-01-05T18:21:32.118-08:00",
+  "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg",
+  "mimeType" : "application/octet-stream",
+  "size" : "1967413715",
+  "checksums" : {
+    "sha1" : "1455418944f7d04772a2d5cb2cc21493d061ce73",
+    "md5" : "88311f463e19e2621c43d464b67f2f44",
+    "sha256" : "2d76ea3b197e0097b9da697127639b45895fe8dd5aa5c4817efc691c30a10a90"
+  },
+  "originalChecksums" : {
+    "sha1" : "1455418944f7d04772a2d5cb2cc21493d061ce73",
+    "md5" : "88311f463e19e2621c43d464b67f2f44",
+    "sha256" : "2d76ea3b197e0097b9da697127639b45895fe8dd5aa5c4817efc691c30a10a90"
+  },
+  "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg"
+}
+[VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg
+Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202201051515/runtime/1455418
+[VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg.multipart
+[DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 60 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg.multipart
+[DEBUG] Output:
+{
+  "errors" : [ {
+    "status" : 404,
+    "message" : "Unable to find item"
+  } ]
+}
+[VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg.multipart
+Downloading https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg to /local/S/jenkins/workspace/shared/Artifactory/OSX/tmp/tmpyPOIgv
+[VERBOSE] Start downloading file (CURL): https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg
+[DEBUG] Running: /usr/bin/curl -sI -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 60 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg
+[DEBUG] Header:
+HTTP/1.1 200 OK
+Date: Thu, 06 Jan 2022 13:33:01 GMT
+Content-Type: application/octet-stream
+Content-Length: 1967413715
+Connection: close
+X-JFrog-Version: Artifactory/7.27.3 72703900
+X-Artifactory-Id: e62f9b386b83614e24922f0ed2f7bd4f217f40a6
+X-Artifactory-Node-Id: ussclpdrsync010
+Last-Modified: Thu, 06 Jan 2022 02:20:17 GMT
+ETag: 1455418944f7d04772a2d5cb2cc21493d061ce73
+X-Checksum-Sha1: 1455418944f7d04772a2d5cb2cc21493d061ce73
+X-Checksum-Sha256: 2d76ea3b197e0097b9da697127639b45895fe8dd5aa5c4817efc691c30a10a90
+X-Checksum-Md5: 88311f463e19e2621c43d464b67f2f44
+Accept-Ranges: bytes
+X-Artifactory-Filename: 202201051515-d0846cf5c6-RUNDEV.dmg
+Content-Disposition: attachment; filename="202201051515-d0846cf5c6-RUNDEV.dmg"; filename*=UTF-8''202201051515-d0846cf5c6-RUNDEV.dmg
+Access-Control-Allow-Methods: GET, PUT, POST, OPTIONS, HEAD
+Access-Control-Allow-Headers: Authorization, Origin, X-Requested-With, Content-Type, Accept
+Access-Control-Allow-Credentials: true
+Set-Cookie: AlteonSC=1465459466.47873.0000; path=/; Httponly; Secure
+[DEBUG] Running: /usr/bin/curl --progress-bar -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 60 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg -o /local/S/jenkins/workspace/shared/Artifactory/OSX/tmp/tmpyPOIgv/202201051515-d0846cf5c6-RUNDEV.dmg
+      0% complete.
+      1% complete.
+      2% complete.
+      3% complete.
+      4% complete.
+      5% complete.
+      6% complete.
+      7% complete.
+      8% complete.
+      9% complete.
+     10% complete.
+     11% complete.
+     12% complete.
+     13% complete.
+     14% complete.
+     15% complete.
+     16% complete.
+     17% complete.
+     18% complete.
+     19% complete.
+     20% complete.
+     21% complete.
+     22% complete.
+     23% complete.
+     24% complete.
+     25% complete.
+     26% complete.
+     27% complete.
+     28% complete.
+     29% complete.
+     30% complete.
+     31% complete.
+     32% complete.
+     33% complete.
+     34% complete.
+     35% complete.
+     36% complete.
+     37% complete.
+     38% complete.
+     39% complete.
+     40% complete.
+     41% complete.
+     42% complete.
+     43% complete.
+     44% complete.
+     45% complete.
+     46% complete.
+     47% complete.
+     48% complete.
+     49% complete.
+     50% complete.
+     51% complete.
+     52% complete.
+     53% complete.
+     54% complete.
+     55% complete.
+     56% complete.
+     57% complete.
+     58% complete.
+     59% complete.
+     60% complete.
+     61% complete.
+     62% complete.
+     63% complete.
+     64% complete.
+     65% complete.
+     66% complete.
+     67% complete.
+     68% complete.
+     69% complete.
+     70% complete.
+     71% complete.
+     72% complete.
+     73% complete.
+     74% complete.
+     75% complete.
+     76% complete.
+     77% complete.
+     78% complete.
+     79% complete.
+     80% complete.
+     81% complete.
+     82% complete.
+     83% complete.
+     84% complete.
+     85% complete.
+     86% complete.
+     87% complete.
+     88% complete.
+     89% complete.
+     90% complete.
+     91% complete.
+     92% complete.
+     93% complete.
+     94% complete.
+     95% complete.
+     96% complete.
+     97% complete.
+     98% complete.
+     99% complete.
+    100% complete.
+[VERBOSE] End downloading file (CURL): https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/master/2022-01-05-15-15/osx/202201051515-d0846cf5c6-RUNDEV.dmg
+Extracting 202201051515-d0846cf5c6-RUNDEV.dmg to /local/S/jenkins/workspace/shared/Artifactory/OSX/tmp/tmpAcAEuU
+build.py: error: Command failed with error code: 1
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] emailextrecipients
+[Pipeline] echo
+No recipients to send notification.
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+Finished: FAILURE
