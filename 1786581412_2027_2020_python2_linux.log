@@ -1,0 +1,1785 @@
+================================================================================
+                             setup (RelWithDebInfo)
+================================================================================
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] timeout
+Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clean)
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[ecg-mayausd-branch-preflight-2020-linux] Running shell script
++ scl enable devtoolset-6 -
+python ecg-maya-usd/build.py --stages=clean --workspace-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build --install-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install --signing-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/signing --package-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/package --output-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/output --stash-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/stash --jenkins-build=1734 --git-commit=ecd842c02768d6ef7361f0d4b764f3316a836c6c --git-branch=master --variants=RelWithDebInfo --python=2.7 --post-zips=false --maya-cut-config=maya-rundev-2020.yaml --stage-banner
+Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045
+
+================================================================================
+                             clean (RelWithDebInfo)
+================================================================================
+Maya Python RelWithDebInfo Info:
+  mayapy executable   = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy
+  Include Folder      = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python
+  Library             = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0
+  site-package Folder = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/python2.7/site-packages
+In workdir: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd
+Executing: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/build.py --generator Ninja --build-relwithdebug --maya-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime --devkit-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase --pxrusd-location /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f --qt-location /local/S/jenkins/workspace/shared/Artifactory/Linux/qt/5.12.5/84f551b --build-args=-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.9.0/aca9939/ninja,-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python,-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy,-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0,-DUSD_LIB_PREFIX=lib,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|TestALUSDMayaPython_LayerManager|testUsdMayaReadWriteUtils|AL_MayaUtilsTests|testUsdImportDisplacement|testUsdImportFrameRange,-LE interactive,--parallel 16' --stages=clean --redirect-outstream-file=False --install-location /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux
+Modified environment variables:
+    PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/cmake/3.14.4/656573b/bin:/opt/rh/devtoolset-6/root/usr/bin:/usr/local/bin:/usr/bin
+    LD_LIBRARY_PATH=/opt/rh/devtoolset-6/root/usr/lib64:/opt/rh/devtoolset-6/root/usr/lib64:/opt/rh/devtoolset-6/root/usr/lib
+    
+        Building with settings:
+          Source directory          /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd
+          Workspace directory       /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux
+          Build directory           /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo
+          Install directory         /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD
+          Variant                   RelWithDebInfo
+          Python Debug              Off
+          CMake generator           Ninja
+          Build arguments           ['-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.9.0/aca9939/ninja', '-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python', '-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy', '-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0', '-DUSD_LIB_PREFIX=lib', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f']
+          Stages arguments          ['clean']
+          CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|TestALUSDMayaPython_LayerManager|testUsdMayaReadWriteUtils|AL_MayaUtilsTests|testUsdImportDisplacement|testUsdImportFrameRange', '-LE interactive', '--parallel 16']
+    Success MayaUSD build and install !!!!
+    Elapsed time: 00:00:00
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] timeout
+Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Configure)
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[ecg-mayausd-branch-preflight-2020-linux] Running shell script
++ scl enable devtoolset-6 -
+python ecg-maya-usd/build.py --stages=configure --workspace-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build --install-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install --signing-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/signing --package-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/package --output-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/output --stash-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/stash --jenkins-build=1734 --git-commit=ecd842c02768d6ef7361f0d4b764f3316a836c6c --git-branch=master --variants=RelWithDebInfo --python=2.7 --post-zips=false --maya-cut-config=maya-rundev-2020.yaml --stage-banner
+Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045
+
+================================================================================
+                           configure (RelWithDebInfo)
+================================================================================
+Maya Python RelWithDebInfo Info:
+  mayapy executable   = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy
+  Include Folder      = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python
+  Library             = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0
+  site-package Folder = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/python2.7/site-packages
+In workdir: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd
+Executing: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/build.py --generator Ninja --build-relwithdebug --maya-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime --devkit-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase --pxrusd-location /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f --qt-location /local/S/jenkins/workspace/shared/Artifactory/Linux/qt/5.12.5/84f551b --build-args=-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.9.0/aca9939/ninja,-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python,-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy,-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0,-DUSD_LIB_PREFIX=lib,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|TestALUSDMayaPython_LayerManager|testUsdMayaReadWriteUtils|AL_MayaUtilsTests|testUsdImportDisplacement|testUsdImportFrameRange,-LE interactive,--parallel 16' --stages=configure --redirect-outstream-file=False --install-location /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux
+Modified environment variables:
+    PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/cmake/3.14.4/656573b/bin:/opt/rh/devtoolset-6/root/usr/bin:/usr/local/bin:/usr/bin
+    LD_LIBRARY_PATH=/opt/rh/devtoolset-6/root/usr/lib64:/opt/rh/devtoolset-6/root/usr/lib64:/opt/rh/devtoolset-6/root/usr/lib
+    -- The C compiler identification is GNU 6.3.1
+    -- The CXX compiler identification is GNU 6.3.1
+    -- Check for working C compiler: /opt/rh/devtoolset-6/root/usr/bin/cc
+    -- Check for working C compiler: /opt/rh/devtoolset-6/root/usr/bin/cc -- works
+    -- Detecting C compiler ABI info
+    -- Detecting C compiler ABI info - done
+    -- Detecting C compile features
+    -- Detecting C compile features - done
+    -- Check for working CXX compiler: /opt/rh/devtoolset-6/root/usr/bin/c++
+    -- Check for working CXX compiler: /opt/rh/devtoolset-6/root/usr/bin/c++ -- works
+    -- Detecting CXX compiler ABI info
+    -- Detecting CXX compiler ABI info - done
+    -- Detecting CXX compile features
+    -- Detecting CXX compile features - done
+    -- Using Maya Light API Version 1
+    -- Found Maya: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/maya (found suitable version "2020", minimum required is "2018")
+    -- Found Python: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy (found suitable exact version "2.7.11") found components:  Interpreter
+    -- Build MayaUSD with Python3 = OFF
+    --    PYTHON_INCLUDE_DIRS = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python
+    --    PYTHON_LIBRARIES    = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0
+    --    Python_EXECUTABLE   = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy
+    -- USD include dir: /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/include
+    -- USD library dir: /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib
+    -- USD version: 0.21.11
+    -- Found USD: /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f (found suitable version "0.21.11", minimum required is "0.20.05")
+    Updated PYTHONPATH: /opt/rh/devtoolset-6/root/usr/lib64/python2.7/site-packages:/opt/rh/devtoolset-6/root/usr/lib/python2.7/site-packages:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib/python
+    -- UFE include dir: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/include
+    -- UFE library: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib/libufe_1.so
+    -- UFE version: 1.0.0
+    -- Building with UFE 1.0.0 features enabled.
+    CMake Warning at CMakeLists.txt:143 (message):
+      Disabling MaterialX VP2 rendering: it is not supported by this version of
+      Maya.
+    
+    
+    -- Found MaterialX
+    -- Building with Qt features enabled.
+    -- **** Building Gulrak From Github Repository.
+    -- Populating gulrak
+    -- Configuring done
+    -- Generating done
+    -- Build files have been written to: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/_deps/gulrak-subbuild
+    [1/9] Creating directories for 'gulrak-populate'
+    [1/9] Performing download step (git clone) for 'gulrak-populate'
+    Cloning into 'gulrak-src'...
+    HEAD is now at 4e21ab3 Version bump and updated readme.
+    [2/9] Performing update step for 'gulrak-populate'
+    [3/9] No patch step for 'gulrak-populate'
+    [5/9] No configure step for 'gulrak-populate'
+    [6/9] No build step for 'gulrak-populate'
+    [7/9] No install step for 'gulrak-populate'
+    [8/9] No test step for 'gulrak-populate'
+    [9/9] Completed 'gulrak-populate'
+    -- ========== Installing GoogleTest... ==========
+    -- Configuring done
+    -- Generating done
+    -- Build files have been written to: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-config
+    [1/8] Creating directories for 'googletest'
+    [2/8] Performing download step (git clone) for 'googletest'
+    Cloning into 'googletest-src'...
+    HEAD is now at 703bd9ca Googletest export
+    [3/8] No patch step for 'googletest'
+    [4/8] Performing update step for 'googletest'
+    [5/8] Performing configure step for 'googletest'
+    -- The C compiler identification is GNU 6.3.1
+    -- The CXX compiler identification is GNU 6.3.1
+    -- Check for working C compiler: /opt/rh/devtoolset-6/root/usr/bin/cc
+    -- Check for working C compiler: /opt/rh/devtoolset-6/root/usr/bin/cc -- works
+    -- Detecting C compiler ABI info
+    -- Detecting C compiler ABI info - done
+    -- Detecting C compile features
+    -- Detecting C compile features - done
+    -- Check for working CXX compiler: /opt/rh/devtoolset-6/root/usr/bin/c++
+    -- Check for working CXX compiler: /opt/rh/devtoolset-6/root/usr/bin/c++ -- works
+    -- Detecting CXX compiler ABI info
+    -- Detecting CXX compiler ABI info - done
+    -- Detecting CXX compile features
+    -- Detecting CXX compile features - done
+    -- Found PythonInterp: /usr/bin/python (found version "2.7.11")
+    -- Looking for pthread.h
+    -- Looking for pthread.h - found
+    -- Looking for pthread_create
+    -- Looking for pthread_create - not found
+    -- Looking for pthread_create in pthreads
+    -- Looking for pthread_create in pthreads - not found
+    -- Looking for pthread_create in pthread
+    -- Looking for pthread_create in pthread - found
+    -- Found Threads: TRUE
+    -- Configuring done
+    -- Generating done
+    -- Build files have been written to: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-build
+    [6/8] Performing build step for 'googletest'
+    [1/8] Building CXX object googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+    [2/8] Building CXX object googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+    [3/8] Building CXX object googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+    [4/8] Building CXX object googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+    [5/8] Linking CXX shared library lib/libgtest.so
+    [6/8] Linking CXX shared library lib/libgtest_main.so
+    [7/8] Linking CXX shared library lib/libgmock.so
+    [8/8] Linking CXX shared library lib/libgmock_main.so
+    [7/8] Performing install step for 'googletest'
+    [0/1] Install the project...
+    -- Install configuration: "RelWithDebInfo"
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/internal
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/internal/custom
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/internal/custom/README.md
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/internal/custom/gmock-generated-actions.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/internal/custom/gmock-generated-actions.h.pump
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/internal/custom/gmock-matchers.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/internal/custom/gmock-port.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/internal/gmock-internal-utils.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/internal/gmock-port.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/internal/gmock-pp.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock-actions.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock-cardinalities.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock-function-mocker.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock-generated-actions.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock-generated-actions.h.pump
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock-generated-function-mockers.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock-generated-function-mockers.h.pump
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock-generated-matchers.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock-generated-matchers.h.pump
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock-matchers.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock-more-actions.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock-more-matchers.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock-nice-strict.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock-spec-builders.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gmock/gmock.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/libgmock.so
+    -- Set runtime path of "/home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/libgmock.so" to ""
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/libgmock_main.so
+    -- Set runtime path of "/home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/libgmock_main.so" to ""
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/pkgconfig/gmock.pc
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/pkgconfig/gmock_main.pc
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/cmake/GTest/GTestTargets.cmake
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/cmake/GTest/GTestTargets-relwithdebinfo.cmake
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/cmake/GTest/GTestConfigVersion.cmake
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/cmake/GTest/GTestConfig.cmake
+    -- Up-to-date: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal/custom
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal/custom/README.md
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal/custom/gtest-port.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal/custom/gtest-printers.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal/custom/gtest.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal/gtest-death-test-internal.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal/gtest-filepath.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal/gtest-internal.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal/gtest-param-util.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal/gtest-port-arch.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal/gtest-port.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal/gtest-string.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal/gtest-type-util.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/internal/gtest-type-util.h.pump
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/gtest-death-test.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/gtest-matchers.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/gtest-message.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/gtest-param-test.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/gtest-printers.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/gtest-spi.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/gtest-test-part.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/gtest-typed-test.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/gtest.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/gtest_pred_impl.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/include/gtest/gtest_prod.h
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/libgtest.so
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/libgtest_main.so
+    -- Set runtime path of "/home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/libgtest_main.so" to ""
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/pkgconfig/gtest.pc
+    -- Installing: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/pkgconfig/gtest_main.pc
+    [8/8] Completed 'googletest'
+    -- ========== ...  GoogleTest installed. ==========
+    -- MAYA_HAS_DEFAULT_MATERIAL_API is FALSE
+    -- MAYA_NEW_POINT_SNAPPING_SUPPORT is FALSE
+    -- MAYA_HAS_CRASH_DETECTION is FALSE
+    -- MAYA_CURRENT_UFE_CAMERA_SUPPORT is FALSE
+    -- MAYA_MRENDERITEM_UFE_IDENTIFIER_SUPPORT is FALSE
+    -- MAYA_UPDATE_UFE_IDENTIFIER_SUPPORT is FALSE
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/base/mayaUsd.h.src
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/base/api.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/base/debugCodes.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/base/id.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/base/syncId.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/base/tokens.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/abstractLayerEditorWindow.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/baseExportCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/baseImportCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/baseListJobContextsCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/baseListShadingModesCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/editTargetCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/layerEditorCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/layerEditorWindowCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/fallbackPrimReader.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/functorPrimReader.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/functorPrimWriter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/importData.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/instancedNodeWriter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobContextRegistry.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primReader.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primReaderArgs.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primReaderContext.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primReaderRegistry.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriterArgs.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriterContext.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriterRegistry.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/registryHelper.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/schemaApiAdaptor.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/schemaApiAdaptorRegistry.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shaderReader.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shaderReaderRegistry.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shaderWriter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shaderWriterRegistry.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/transformWriter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/writeJobContext.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/chaser/exportChaser.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/chaser/exportChaserRegistry.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/chaser/importChaserRegistry.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/chaser/importChaser.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobs/jobArgs.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobs/modelKindProcessor.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobs/readJob.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobs/writeJob.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/rfmShaderMap.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/shadingModeExporter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/shadingModeExporterContext.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/shadingModeImporter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/shadingModeRegistry.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/symmetricShaderReader.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/symmetricShaderWriter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/skelBindingsProcessor.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorCamera.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorCurves.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorGprim.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorLight.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorMaterial.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorMayaReference.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorMesh.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorNurbsPatch.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorPrim.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorRfMLight.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorSkel.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorUtil.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorXformable.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/adaptor.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/jointWriteUtils.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/meshReadUtils.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/meshWriteUtils.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/readUtil.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/roundTripUtil.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/shadingUtil.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/userTaggedAttribute.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/writeUtil.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/xformStack.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/listeners/notice.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/listeners/proxyShapeNotice.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/listeners/stageNoticeListener.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/hdImagingShape.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/pointBasedDeformerNode.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyAccessor.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyShapeBase.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyShapePlugin.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyStageProvider.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/stageData.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/stageNode.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/usdPrimProvider.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/layerManager.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/px_vp20/glslProgram.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/px_vp20/utils.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/px_vp20/utils_legacy.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/batchRenderer.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/debugCodes.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/hdImagingShapeDrawOverride.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/hdImagingShapeUI.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/instancerImager.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/instancerShapeAdapter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/proxyDrawOverride.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/proxyShapeUI.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/renderParams.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/sceneDelegate.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/shapeAdapter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/softSelectHelper.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/usdProxyShapeAdapter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/userData.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/vp2RenderDelegate/proxyRenderDelegate.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/vp2ShaderFragments/shaderFragments.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/Global.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/ProxyShapeHandler.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/ProxyShapeHierarchy.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/ProxyShapeHierarchyHandler.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/StagesSubject.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdHierarchy.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdHierarchyHandler.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPointInstanceModifierBase.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPointInstanceOrientationModifier.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPointInstancePositionModifier.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPointInstanceScaleModifier.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdRootChildHierarchy.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdRotatePivotTranslateUndoableCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdRotateUndoableCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdScaleUndoableCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdSceneItem.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdSceneItemOps.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdSceneItemOpsHandler.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdStageMap.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTRSUndoableCommandBase.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3d.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dHandler.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTranslateUndoableCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoDeleteCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoDuplicateCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoRenameCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/Utils.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UfeVersionCompat.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/OpUndoItemList.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/OpUndoItemMuting.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/OpUndoItemRecorder.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/OpUndoItems.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/UsdUndoBlock.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/UsdUndoManager.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/UsdUndoStateDelegate.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/UsdUndoableItem.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/blockSceneModificationContext.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/colorSpace.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/customLayerData.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/converter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/diagnosticDelegate.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/editability.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/editRouter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/hash.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/query.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/plugRegistryHelper.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/selectability.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/stageCache.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/traverseLayer.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/undoHelperCommand.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/util.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/utilFileSystem.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/utilSerialization.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/mayaToHydra/utils.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/api.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/utils.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/debugCodes.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/adapters/adapter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/adapters/adapterDebugCodes.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/adapters/adapterRegistry.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/adapters/cameraAdapter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/adapters/constantShadowMatrix.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/adapters/dagAdapter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/adapters/lightAdapter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/adapters/proxyAdapter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/adapters/materialAdapter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/adapters/materialNetworkConverter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/adapters/mayaAttrs.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/adapters/shapeAdapter.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/adapters/tokens.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/delegates/delegate.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/delegates/delegateCtx.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/delegates/delegateDebugCodes.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/delegates/delegateRegistry.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/delegates/params.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/delegates/proxyDelegate.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/delegates/proxyUsdImagingDelegate.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/delegates/sceneDelegate.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/hdMaya/delegates/testDelegate.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/pxrUsdPreviewSurface/usdPreviewSurface.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/pxrUsdPreviewSurface/usdPreviewSurfacePlugin.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/schemas/api.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/schemas/ALMayaReference.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/schemas/MayaReference.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/schemas/tokens.h
+    #################################################################################################
+    #  USD_DISABLE_PRIM_DEFINITIONS_FOR_USDGENSCHEMA is overridden to 'true'.  Default is 'false'.  #
+    #################################################################################################
+    Processing schema classes:
+    MayaReference, ALMayaReference
+    Loading Templates from /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib/usd/usd/resources/codegenTemplates
+    Writing API:
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/lib/usd/schemas/api.h
+    Writing Schema Tokens:
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/lib/usd/schemas/tokens.h
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/lib/usd/schemas/tokens.cpp
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/lib/usd/schemas/wrapTokens.cpp
+    Generating Classes:
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/lib/usd/schemas/MayaReference.h
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/lib/usd/schemas/MayaReference.cpp
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/lib/usd/schemas/wrapMayaReference.cpp
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/lib/usd/schemas/ALMayaReference.h
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/lib/usd/schemas/ALMayaReference.cpp
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/lib/usd/schemas/wrapALMayaReference.cpp
+    Loading Templates from /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib/usd/usd/resources/codegenTemplates
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/lib/usd/schemas/plugInfo.json
+    Generating Schematics:
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/lib/usd/schemas/generatedSchema.usda
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/utils/ALHalf.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/utils/Api.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/utils/DebugCodes.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/utils/DiffCore.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/utils/DiffPrims.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/utils/MergePrims.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/utils/MergePrimsOptions.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/utils/ForwardDeclares.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/utils/SIMD.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/utils/util.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/ui/layerEditor/batchSaveLayersUIDelegate.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/IMayaMQtUtil.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/ItemDelegate.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/IUSDImportView.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/TreeItem.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/TreeModel.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/TreeModelFactory.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/USDImportDialog.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/USDImportDialogCmd.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/USDQtUtil.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/ui/api.h
+    -- promoting: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/lib/usd/ui/initStringResources.h
+    ========== Pixar USD Plugin ==========
+    Compiling /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/pxr/__init__.py ...
+    ========== AL USD Plugin ==========
+    CMake Deprecation Warning at plugin/al/CMakeLists.txt:7 (cmake_policy):
+      The OLD behavior for policy CMP0026 will be removed from a future version
+      of CMake.
+    
+      The cmake-policies(7) manual explains that the OLD behaviors of all
+      policies are deprecated and that a policy should be set to OLD only under
+      specific short-term circumstances.  Projects should be ported to the NEW
+      behavior and not rely on setting a policy to OLD.
+    
+    
+    -- Boost version: 1.66.0
+    -- Boost version: 1.66.0
+    -- Found the following Boost libraries:
+    --   python
+    -- Found GTest: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/googletest-install/lib64/libgtest.so
+    -- Building AL_USDMayaSchemas
+    #################################################################################################
+    #  USD_DISABLE_PRIM_DEFINITIONS_FOR_USDGENSCHEMA is overridden to 'true'.  Default is 'false'.  #
+    #################################################################################################
+    Processing schema classes:
+    ALModelAPI, ALFrameRange
+    Loading Templates from /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib/usd/usd/resources/codegenTemplates
+    Writing API:
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/api.h
+    Writing Schema Tokens:
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/tokens.h
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/tokens.cpp
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/wrapTokens.cpp
+    Generating Classes:
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/ModelAPI.h
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/ModelAPI.cpp
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/wrapModelAPI.cpp
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/FrameRange.h
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/FrameRange.cpp
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/wrapFrameRange.cpp
+    Loading Templates from /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib/usd/usd/resources/codegenTemplates
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/plugInfo.json
+    Generating Schematics:
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/generatedSchema.usda
+    #################################################################################################
+    #  USD_DISABLE_PRIM_DEFINITIONS_FOR_USDGENSCHEMA is overridden to 'true'.  Default is 'false'.  #
+    #################################################################################################
+    Processing schema classes:
+    ALExamplePolyCubeNode
+    Loading Templates from /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib/usd/usd/resources/codegenTemplates
+    Writing API:
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/api.h
+    Writing Schema Tokens:
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/tokens.h
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/tokens.cpp
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/wrapTokens.cpp
+    Generating Classes:
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/ExamplePolyCubeNode.h
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/ExamplePolyCubeNode.cpp
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/wrapExamplePolyCubeNode.cpp
+    Loading Templates from /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib/usd/usd/resources/codegenTemplates
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/plugInfo.json
+    Generating Schematics:
+    	    wrote /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/generatedSchema.usda
+    -- Building AL_USDMayaTranslators
+    ========== ADSK USD Plugin ==========
+    -- Configuring done
+    -- Generating done
+    -- Build files have been written to: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo
+    
+        Building with settings:
+          Source directory          /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd
+          Workspace directory       /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux
+          Build directory           /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo
+          Install directory         /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD
+          Variant                   RelWithDebInfo
+          Python Debug              Off
+          CMake generator           Ninja
+          Build arguments           ['-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.9.0/aca9939/ninja', '-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python', '-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy', '-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0', '-DUSD_LIB_PREFIX=lib', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f']
+          Stages arguments          ['configure']
+          CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|TestALUSDMayaPython_LayerManager|testUsdMayaReadWriteUtils|AL_MayaUtilsTests|testUsdImportDisplacement|testUsdImportFrameRange', '-LE interactive', '--parallel 16']
+    Success MayaUSD build and install !!!!
+    Elapsed time: 00:00:16
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] timeout
+Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[ecg-mayausd-branch-preflight-2020-linux] Running shell script
++ scl enable devtoolset-6 -
+python ecg-maya-usd/build.py --stages=build --workspace-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build --install-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install --signing-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/signing --package-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/package --output-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/output --stash-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/stash --jenkins-build=1734 --git-commit=ecd842c02768d6ef7361f0d4b764f3316a836c6c --git-branch=master --variants=RelWithDebInfo --python=2.7 --post-zips=false --build-retry=3 --maya-cut-config=maya-rundev-2020.yaml --stage-banner
+Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045
+
+================================================================================
+                             build (RelWithDebInfo)
+================================================================================
+Maya Python RelWithDebInfo Info:
+  mayapy executable   = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy
+  Include Folder      = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python
+  Library             = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0
+  site-package Folder = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/python2.7/site-packages
+In workdir: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd
+Executing: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/build.py --generator Ninja --build-relwithdebug --maya-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime --devkit-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase --pxrusd-location /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f --qt-location /local/S/jenkins/workspace/shared/Artifactory/Linux/qt/5.12.5/84f551b --build-args=-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.9.0/aca9939/ninja,-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python,-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy,-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0,-DUSD_LIB_PREFIX=lib,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|TestALUSDMayaPython_LayerManager|testUsdMayaReadWriteUtils|AL_MayaUtilsTests|testUsdImportDisplacement|testUsdImportFrameRange,-LE interactive,--parallel 16' --stages=build --redirect-outstream-file=False --install-location /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux
+Modified environment variables:
+    PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/cmake/3.14.4/656573b/bin:/opt/rh/devtoolset-6/root/usr/bin:/usr/local/bin:/usr/bin
+    LD_LIBRARY_PATH=/opt/rh/devtoolset-6/root/usr/lib64:/opt/rh/devtoolset-6/root/usr/lib64:/opt/rh/devtoolset-6/root/usr/lib
+    [1/651] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestApiWriter.dir/plugin.cpp.o
+    [2/651] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestMayaPlugin.dir/plugin.cpp.o
+    [3/651] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestInfoImportChaser.dir/plugin.cpp.o
+    [4/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/undo/UsdUndoableItem.cpp.o
+    [5/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffCore.dir/main.cpp.o
+    [6/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffDictionaries.dir/main.cpp.o
+    [7/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffLists.dir/main.cpp.o
+    [8/651] Building CXX object test/lib/usd/utils/CMakeFiles/testMergePrims.dir/main.cpp.o
+    [9/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffAttributes.dir/main.cpp.o
+    [10/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffMetadatas.dir/main.cpp.o
+    [11/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffRelationships.dir/main.cpp.o
+    [12/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffCore.dir/test_DiffCore.cpp.o
+    [13/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/undo/UsdUndoBlock.cpp.o
+    [14/651] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestInfoImportChaser.dir/infoImportChaser.cpp.o
+    [15/651] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestUsdPlugin.dir/mayaShaderTranslation.cpp.o
+    [16/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffComputeOverall.dir/main.cpp.o
+    [17/651] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestMayaPlugin.dir/mayaShaderTranslation.cpp.o
+    [18/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffRelationships.dir/test_DiffRelationships.cpp.o
+    [19/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffDictionaries.dir/test_DiffDictionaries.cpp.o
+    [20/651] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestApiWriter.dir/nullApiExporter.cpp.o
+    [21/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffPrims.dir/main.cpp.o
+    [22/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffAttributes.dir/test_DiffAttributes.cpp.o
+    [23/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffPrims.dir/test_DiffPrims.cpp.o
+    [24/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffPrims.dir/test_DiffPrimsChildren.cpp.o
+    [25/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/main.cpp.o
+    [26/651] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestApiWriter.dir/bulletAdaptor.cpp.o
+    [27/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffMetadatas.dir/test_DiffMetadatas.cpp.o
+    [28/651] Building CXX object test/lib/usd/utils/CMakeFiles/testMergePrims.dir/test_MergePrims.cpp.o
+    [29/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffLists.dir/test_DiffLists.cpp.o
+    [30/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/base/debugCodes.cpp.o
+    [31/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/base/tokens.cpp.o
+    [32/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdUndoRenameCommand.cpp.o
+    [33/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffComputeOverall.dir/test_DiffComputeOverall.cpp.o
+    [34/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffPrims.dir/test_DiffPrimsAttributes.cpp.o
+    [35/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffPrims.dir/test_DiffPrimsRelations.cpp.o
+    [36/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/importData.cpp.o
+    [37/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesMatrices.cpp.o
+    [38/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValues.cpp.o
+    [39/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/commands/layerEditorWindowCommand.cpp.o
+    [40/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesGeneric.cpp.o
+    [41/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesIntVecs.cpp.o
+    [42/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesQuaternions.cpp.o
+    [43/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesArrays.cpp.o
+    [44/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/Utils.cpp.o
+    [45/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/commands/baseExportCommand.cpp.o
+    [46/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/commands/baseImportCommand.cpp.o
+    [47/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesDoubleVecs.cpp.o
+    [48/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesFloatVecs.cpp.o
+    [49/651] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesHalfVecs.cpp.o
+    [50/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/commands/baseListJobContextsCommand.cpp.o
+    [51/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/commands/editTargetCommand.cpp.o
+    [52/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/jobContextRegistry.cpp.o
+    [53/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/fallbackPrimReader.cpp.o
+    [54/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/functorPrimReader.cpp.o
+    [55/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/commands/baseListShadingModesCommand.cpp.o
+    [56/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/primReader.cpp.o
+    [57/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/functorPrimWriter.cpp.o
+    [58/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/primReaderArgs.cpp.o
+    [59/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/instancedNodeWriter.cpp.o
+    [60/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/primWriterContext.cpp.o
+    [61/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/primReaderContext.cpp.o
+    [62/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/primWriterArgs.cpp.o
+    [63/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/chaser/exportChaser.cpp.o
+    [64/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/primReaderRegistry.cpp.o
+    [65/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/registryHelper.cpp.o
+    [66/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/commands/layerEditorCommand.cpp.o
+    [67/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/primWriterRegistry.cpp.o
+    [68/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/schemaApiAdaptor.cpp.o
+    [69/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/primWriter.cpp.o
+    [70/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/shaderWriter.cpp.o
+    [71/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/shaderReaderRegistry.cpp.o
+    [72/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/shaderReader.cpp.o
+    [73/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/schemaApiAdaptorRegistry.cpp.o
+    [74/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/shaderWriterRegistry.cpp.o
+    [75/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/chaser/importChaser.cpp.o
+    [76/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/chaser/exportChaserRegistry.cpp.o
+    [77/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/chaser/importChaserRegistry.cpp.o
+    [78/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/transformWriter.cpp.o
+    [79/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/writeJobContext.cpp.o
+    [80/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/jobs/readJob.cpp.o
+    [81/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/jobs/modelKindProcessor.cpp.o
+    [82/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/shading/shadingModeDisplayColor.cpp.o
+    [83/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/shading/shadingModeImporter.cpp.o
+    [84/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/shading/shadingModeExporter.cpp.o
+    [85/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/skelBindingsProcessor.cpp.o
+    [86/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/jobs/writeJob.cpp.o
+    [87/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/shading/symmetricShaderReader.cpp.o
+    [88/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/shading/shadingModeRegistry.cpp.o
+    [89/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/shading/shadingModePxrRis.cpp.o
+    [90/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/jobs/jobArgs.cpp.o
+    [91/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/shading/symmetricShaderWriter.cpp.o
+    [92/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/translatorMayaReference.cpp.o
+    [93/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/shading/shadingModeUseRegistry.cpp.o
+    [94/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/shading/shadingModeExporterContext.cpp.o
+    [95/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/translatorGprim.cpp.o
+    [96/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/translatorCamera.cpp.o
+    [97/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/translatorCurves.cpp.o
+    [98/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/translatorLight.cpp.o
+    [99/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/translatorPrim.cpp.o
+    [100/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/translatorMesh.cpp.o
+    [101/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/translatorNurbsPatch.cpp.o
+    [102/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/translatorMaterial.cpp.o
+    [103/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/translatorUtil.cpp.o
+    [104/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/translatorXformable_decompose.cpp.o
+    [105/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/translatorXformable.cpp.o
+    [106/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/translatorSkel.cpp.o
+    [107/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/listeners/notice.cpp.o
+    [108/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/translators/translatorRfMLight.cpp.o
+    [109/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/utils/jointWriteUtils.cpp.o
+    [110/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/px_vp20/utils.cpp.o
+    [111/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/utils/adaptor.cpp.o
+    [112/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/utils/meshReadUtils.cpp.o
+    [113/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/utils/roundTripUtil.cpp.o
+    [114/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/utils/readUtil.cpp.o
+    [115/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/utils/userTaggedAttribute.cpp.o
+    [116/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/nodes/hdImagingShape.cpp.o
+    [117/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/utils/meshWriteUtils.cpp.o
+    [118/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/px_vp20/glslProgram.cpp.o
+    [119/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/utils/xformStack.cpp.o
+    [120/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/listeners/proxyShapeNotice.cpp.o
+    [121/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/python/moduleDeps.cpp.o
+    [122/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/listeners/stageNoticeListener.cpp.o
+    [123/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/pxrUsdMayaGL/debugCodes.cpp.o
+    [124/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/nodes/pointBasedDeformerNode.cpp.o
+    [125/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/px_vp20/utils_legacy.cpp.o
+    [126/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/nodes/stageData.cpp.o
+    [127/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/utils/shadingUtil.cpp.o
+    [128/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/nodes/proxyAccessor.cpp.o
+    [129/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/nodes/usdPrimProvider.cpp.o
+    [130/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/utils/writeUtil.cpp.o
+    [131/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/pxrUsdMayaGL/softSelectHelper.cpp.o
+    [132/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/nodes/stageNode.cpp.o
+    [133/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/pxrUsdMayaGL/userData.cpp.o
+    [134/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/bboxGeom.cpp.o
+    [135/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/nodes/proxyShapePlugin.cpp.o
+    [136/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/debugCodes.cpp.o
+    [137/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/nodes/proxyShapeBase.cpp.o
+    [138/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/pxrUsdMayaGL/hdImagingShapeDrawOverride.cpp.o
+    [139/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/nodes/layerManager.cpp.o
+    [140/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/pxrUsdMayaGL/proxyShapeDelegate.cpp.o
+    [141/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/pxrUsdMayaGL/hdImagingShapeUI.cpp.o
+    [142/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/extComputation.cpp.o
+    [143/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/meshViewportCompute.cpp.o
+    [144/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/draw_item.cpp.o
+    [145/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/pxrUsdMayaGL/proxyDrawOverride.cpp.o
+    [146/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/pxrUsdMayaGL/batchRenderer.cpp.o
+    [147/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/pxrUsdMayaGL/shapeAdapter.cpp.o
+    [148/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/pxrUsdMayaGL/instancerImager.cpp.o
+    [149/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/pxrUsdMayaGL/proxyShapeUI.cpp.o
+    [150/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/tokens.cpp.o
+    [151/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/shader.cpp.o
+    [152/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/pxrUsdMayaGL/instancerShapeAdapter.cpp.o
+    [153/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/pxrUsdMayaGL/sceneDelegate.cpp.o
+    [154/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/instancer.cpp.o
+    [155/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/mayaPrimCommon.cpp.o
+    [156/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/sampler.cpp.o
+    [157/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/render_param.cpp.o
+    [158/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/pxrUsdMayaGL/usdProxyShapeAdapter.cpp.o
+    [159/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2ShaderFragments/shaderFragments.cpp.o
+    [160/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/basisCurves.cpp.o
+    [161/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/ProxyShapeHandler.cpp.o
+    [162/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/material.cpp.o
+    [163/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/render_delegate.cpp.o
+    [164/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/Global.cpp.o
+    [165/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/ProxyShapeHierarchyHandler.cpp.o
+    [166/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdPointInstanceOrientationModifier.cpp.o
+    [167/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/ProxyShapeHierarchy.cpp.o
+    [168/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdHierarchyHandler.cpp.o
+    [169/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdHierarchy.cpp.o
+    [170/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/StagesSubject.cpp.o
+    [171/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/mesh.cpp.o
+    [172/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdRotatePivotTranslateUndoableCommand.cpp.o
+    [173/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdPointInstancePositionModifier.cpp.o
+    [174/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/render/vp2RenderDelegate/proxyRenderDelegate.cpp.o
+    [175/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdPointInstanceScaleModifier.cpp.o
+    [176/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdRootChildHierarchy.cpp.o
+    [177/651] Building CXX object lib/usd/schemas/CMakeFiles/mayaUsd_Schemas.dir/tokens.cpp.o
+    [178/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdScaleUndoableCommand.cpp.o
+    [179/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdRotateUndoableCommand.cpp.o
+    [180/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/private/UfeNotifGuard.cpp.o
+    [181/651] Building CXX object lib/usd/schemas/CMakeFiles/mayaUsd_Schemas.dir/ModuleDeps.cpp.o
+    [182/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdSceneItem.cpp.o
+    [183/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/moduleDeps.cpp.o
+    [184/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/undo/OpUndoItemRecorder.cpp.o
+    [185/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdSceneItemOps.cpp.o
+    [186/651] Building CXX object lib/usd/pxrUsdPreviewSurface/CMakeFiles/basePxrUsdPreviewSurface.dir/usdPreviewSurfaceShadingNodeOverride.cpp.o
+    [187/651] Building CXX object lib/usd/schemas/CMakeFiles/mayaUsd_Schemas.dir/ALMayaReference.cpp.o
+    [188/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdSceneItemOpsHandler.cpp.o
+    [189/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/undo/OpUndoItemList.cpp.o
+    [190/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdTRSUndoableCommandBase.cpp.o
+    [191/651] Building CXX object lib/usd/schemas/CMakeFiles/_schemas.dir/wrapALMayaReference.cpp.o
+    [192/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/colorSpace.cpp.o
+    [193/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdTransform3dHandler.cpp.o
+    [194/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdStageMap.cpp.o
+    [195/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/blockSceneModificationContext.cpp.o
+    [196/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdTransform3d.cpp.o
+    [197/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdTranslateUndoableCommand.cpp.o
+    [198/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdUndoDeleteCommand.cpp.o
+    [199/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/UsdUndoDuplicateCommand.cpp.o
+    [200/651] Building CXX object lib/usd/schemas/CMakeFiles/mayaUsd_Schemas.dir/MayaReference.cpp.o
+    [201/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/diagnosticDelegate.cpp.o
+    [202/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/undo/OpUndoItems.cpp.o
+    [203/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/ufe/private/Utils.cpp.o
+    [204/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/plugRegistryHelper.cpp.o
+    [205/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/undo/UsdUndoManager.cpp.o
+    [206/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/module.cpp.o
+    [207/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/editability.cpp.o
+    [208/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/customLayerData.cpp.o
+    [209/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/lightRfMReader.cpp.o
+    [210/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/traverseLayer.cpp.o
+    [211/651] Building CXX object lib/usd/pxrUsdPreviewSurface/CMakeFiles/basePxrUsdPreviewSurface.dir/usdPreviewSurfaceWriter.cpp.o
+    [212/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/selectability.cpp.o
+    [213/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/query.cpp.o
+    [214/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapBlockSceneModificationContext.cpp.o
+    [215/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/undo/UsdUndoStateDelegate.cpp.o
+    [216/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/pythonObjectRegistry.cpp.o
+    [217/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/stageCache.cpp.o
+    [218/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/undoHelperCommand.cpp.o
+    [219/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapColorSpace.cpp.o
+    [220/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/converter.cpp.o
+    [221/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/editRouter.cpp.o
+    [222/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapDiagnosticDelegate.cpp.o
+    [223/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/utilSerialization.cpp.o
+    [224/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapOpUndoItem.cpp.o
+    [225/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapSparseValueWriter.cpp.o
+    [226/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapStageCache.cpp.o
+    [227/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/utilFileSystem.cpp.o
+    [228/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapTokens.cpp.o
+    [229/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapQuery.cpp.o
+    [230/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapEditRouter.cpp.o
+    [231/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapConverter.cpp.o
+    [232/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapMeshWriteUtils.cpp.o
+    [233/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapUsdUndoManager.cpp.o
+    [234/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapUtil.cpp.o
+    [235/651] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/utils/util.cpp.o
+    [236/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapAdaptor.cpp.o
+    [237/651] Building CXX object lib/mayaUsd/ufe/CMakeFiles/_ufe.dir/module.cpp.o
+    [238/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapReadUtil.cpp.o
+    [239/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapRoundTripUtil.cpp.o
+    [240/651] Building CXX object lib/mayaUsd/ufe/CMakeFiles/_ufe.dir/wrapGlobal.cpp.o
+    [241/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapOpenMaya.cpp.o
+    [242/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapWriteUtil.cpp.o
+    [243/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapUserTaggedAttribute.cpp.o
+    [244/651] Building CXX object lib/mayaUsd/render/mayaToHydra/CMakeFiles/mtoh.dir/tokens.cpp.o
+    [245/651] Building CXX object lib/mayaUsd/render/mayaToHydra/CMakeFiles/mtoh.dir/pluginDebugCodes.cpp.o
+    [246/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapJobContextRegistry.cpp.o
+    [247/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapXformStack.cpp.o
+    [248/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/debugCodes.cpp.o
+    [249/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapShadingUtil.cpp.o
+    [250/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapExportChaser.cpp.o
+    [251/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/utils.cpp.o
+    [252/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapImportChaser.cpp.o
+    [253/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/adapterDebugCodes.cpp.o
+    [254/651] Building CXX object lib/mayaUsd/ufe/CMakeFiles/_ufe.dir/wrapNotice.cpp.o
+    [255/651] Building CXX object lib/mayaUsd/render/mayaToHydra/CMakeFiles/mtoh.dir/utils.cpp.o
+    [256/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapShadingMode.cpp.o
+    [257/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapSchemaApiAdaptor.cpp.o
+    [258/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapPrimWriter.cpp.o
+    [259/651] Building CXX object lib/mayaUsd/ufe/CMakeFiles/_ufe.dir/wrapUtils.cpp.o
+    [260/651] Building CXX object lib/mayaUsd/render/mayaToHydra/CMakeFiles/mtoh.dir/plugin.cpp.o
+    [261/651] Building CXX object lib/mayaUsd/python/CMakeFiles/_mayaUsd.dir/wrapPrimReader.cpp.o
+    [262/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/adapter.cpp.o
+    [263/651] Building CXX object lib/mayaUsd/render/mayaToHydra/CMakeFiles/mtoh.dir/shadingModeExporter.cpp.o
+    [264/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/mayaAttrs.cpp.o
+    [265/651] Building CXX object lib/mayaUsd/render/mayaToHydra/CMakeFiles/mtoh.dir/defaultLightDelegate.cpp.o
+    [266/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/areaLightAdapter.cpp.o
+    [267/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/cameraAdapter.cpp.o
+    [268/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/dagAdapter.cpp.o
+    [269/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/aiSkydomeLightAdapter.cpp.o
+    [270/651] Building CXX object lib/mayaUsd/render/mayaToHydra/CMakeFiles/mtoh.dir/renderGlobals.cpp.o
+    [271/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/directionalLightAdapter.cpp.o
+    [272/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/tokens.cpp.o
+    [273/651] Building CXX object lib/mayaUsd/render/mayaToHydra/CMakeFiles/mtoh.dir/viewCommand.cpp.o
+    [274/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/adapterRegistry.cpp.o
+    [275/651] Building CXX object lib/mayaUsd/render/mayaToHydra/CMakeFiles/mtoh.dir/renderOverride.cpp.o
+    [276/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/lightAdapter.cpp.o
+    [277/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/delegates/delegateDebugCodes.cpp.o
+    [278/651] Building CXX object lib/usd/pxrUsdPreviewSurface/CMakeFiles/basePxrUsdPreviewSurface.dir/cpvColor.cpp.o
+    [279/651] Building CXX object lib/usd/pxrUsdPreviewSurface/CMakeFiles/basePxrUsdPreviewSurface.dir/usdPreviewSurface.cpp.o
+    [280/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/materialAdapter.cpp.o
+    [281/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/pointLightAdapter.cpp.o
+    [282/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/nurbsCurveAdapter.cpp.o
+    [283/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/shapeAdapter.cpp.o
+    [284/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/delegates/delegate.cpp.o
+    [285/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/meshAdapter.cpp.o
+    [286/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/spotLightAdapter.cpp.o
+    [287/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/delegates/delegateRegistry.cpp.o
+    [288/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/proxyAdapter.cpp.o
+    [289/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/delegates/delegateCtx.cpp.o
+    [290/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/adapters/materialNetworkConverter.cpp.o
+    [291/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/delegates/proxyUsdImagingDelegate.cpp.o
+    [292/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/delegates/sceneDelegate.cpp.o
+    [293/651] Building CXX object lib/usd/pxrUsdPreviewSurface/CMakeFiles/basePxrUsdPreviewSurface.dir/usdPreviewSurfacePlugin.cpp.o
+    [294/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/lightReader.cpp.o
+    [295/651] Building CXX object lib/usd/pxrUsdPreviewSurface/CMakeFiles/basePxrUsdPreviewSurface.dir/usdPreviewSurfaceReader.cpp.o
+    [296/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/mayaReferenceReader.cpp.o
+    [297/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/delegates/proxyDelegate.cpp.o
+    [298/651] Building CXX object lib/usd/hdMaya/CMakeFiles/hdMaya.dir/delegates/testDelegate.cpp.o
+    [299/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/cameraReader.cpp.o
+    [300/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/lightRfMWriter.cpp.o
+    [301/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/plugin.cpp.o
+    [302/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/cameraWriter.cpp.o
+    [303/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/lightWriter.cpp.o
+    [304/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/instancerWriter.cpp.o
+    [305/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/jointWriter.cpp.o
+    [306/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/locatorWriter.cpp.o
+    [307/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/materialReader.cpp.o
+    [308/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/shadingTokens.cpp.o
+    [309/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/nurbsCurvesReader.cpp.o
+    [310/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/meshReader.cpp.o
+    [311/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/nurbsPatchReader.cpp.o
+    [312/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/scopeReader.cpp.o
+    [313/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/meshWriter.cpp.o
+    [314/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/xformReader.cpp.o
+    [315/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/skelReader.cpp.o
+    [316/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/meshWriter_BlendShapes.cpp.o
+    [317/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/nurbsCurveWriter.cpp.o
+    [318/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/strokeWriter.cpp.o
+    [319/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdBlinnReader.cpp.o
+    [320/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/particleWriter.cpp.o
+    [321/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdBlinnWriter.cpp.o
+    [322/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/nurbsSurfaceWriter.cpp.o
+    [323/651] Building CXX object lib/usd/schemas/CMakeFiles/_schemas.dir/module.cpp.o
+    [324/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdDisplacementShaderWriter.cpp.o
+    [325/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdLambertWriter.cpp.o
+    [326/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdLambertReader.cpp.o
+    [327/651] Building CXX object lib/usd/schemas/CMakeFiles/_schemas.dir/wrapTokens.cpp.o
+    [328/651] Linking CXX shared library lib/usd/schemas/libmayaUsd_Schemas.so
+    [329/651] Building CXX object lib/usd/utils/CMakeFiles/mayaUsdUtils.dir/DiffCore.cpp.o
+    [330/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdMaterialReader.cpp.o
+    [331/651] Building CXX object lib/usd/utils/CMakeFiles/mayaUsdUtils.dir/DebugCodes.cpp.o
+    [332/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdFileTextureWriter.cpp.o
+    [333/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdPhongReader.cpp.o
+    [334/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdPhongEWriter.cpp.o
+    [335/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdMaterialWriter.cpp.o
+    [336/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdPhongWriter.cpp.o
+    [337/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdReflectWriter.cpp.o
+    [338/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdPrimvarReaderFloat3Reader.cpp.o
+    [339/651] Copying instancerShapeAdapterWithSceneAssembly.h ...
+    [340/651] Generating __init__.pyc
+    [341/651] Generating AEpxrUsdReferenceAssemblyTemplate.pyc
+    [342/651] Copying readJobWithSceneAssembly.h ...
+    [343/651] Copying api.h ...
+    [344/651] Copying referenceAssembly.h ...
+    [345/651] Copying proxyShape.h ...
+    [346/651] Copying listShadingModesCommand.h ...
+    [347/651] Copying importTranslator.h ...
+    [348/651] Copying importCommand.h ...
+    [349/651] Copying exportTranslator.h ...
+    [350/651] Copying exportCommand.h ...
+    [351/651] Copying translatorModelAssembly.h ...
+    [352/651] Copying editUtil.h ...
+    [353/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdStandardSurfaceReader.cpp.o
+    [354/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdStandardSurfaceWriter.cpp.o
+    [355/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/rfmShaderTranslation.cpp.o
+    [356/651] Building CXX object lib/usd/translators/CMakeFiles/mayaUsd_Translators.dir/shading/usdUVTextureReader.cpp.o
+    [357/651] Building CXX object lib/usd/utils/CMakeFiles/mayaUsdUtils.dir/DiffAttributes.cpp.o
+    [358/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/usdMaya.dir/listShadingModesCommand.cpp.o
+    [359/651] Building CXX object lib/usd/utils/CMakeFiles/mayaUsdUtils.dir/DiffDictionaries.cpp.o
+    [360/651] Building CXX object lib/usd/utils/CMakeFiles/mayaUsdUtils.dir/MergePrimsOptions.cpp.o
+    [361/651] Building CXX object lib/usd/utils/CMakeFiles/mayaUsdUtils.dir/DiffMetadatas.cpp.o
+    [362/651] Building CXX object lib/usd/utils/CMakeFiles/mayaUsdUtils.dir/DiffRelationships.cpp.o
+    [363/651] Building CXX object lib/usd/schemas/CMakeFiles/_schemas.dir/wrapMayaReference.cpp.o
+    [364/651] Linking CXX shared library lib/usd/schemas/_schemas.so
+    [365/651] Building CXX object lib/usd/utils/CMakeFiles/mayaUsdUtils.dir/DiffLists.cpp.o
+    [366/651] Generating userExportedAttributesUI.pyc
+    [367/651] Building CXX object lib/usd/utils/CMakeFiles/mayaUsdUtils.dir/DiffPrims.cpp.o
+    [368/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/_usdMaya.dir/module.cpp.o
+    [369/651] Building CXX object lib/usd/utils/CMakeFiles/mayaUsdUtils.dir/util.cpp.o
+    [370/651] Copying api.h ...
+    [371/651] Copying api.h ...
+    [372/651] Building CXX object lib/usd/utils/CMakeFiles/mayaUsdUtils.dir/DiffValues.cpp.o
+    [373/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/usdMaya.dir/readJobWithSceneAssembly.cpp.o
+    [374/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/usdMaya.dir/exportCommand.cpp.o
+    [375/651] Building CXX object lib/usd/utils/CMakeFiles/mayaUsdUtils.dir/MergePrims.cpp.o
+    [376/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/usdMaya.dir/importCommand.cpp.o
+    [377/651] Linking CXX shared library lib/usd/utils/libmayaUsdUtils.so
+    [378/651] Linking CXX executable test/lib/usd/utils/testDiffLists
+    [379/651] Linking CXX executable test/lib/usd/utils/testDiffCore
+    [380/651] Linking CXX executable test/lib/usd/utils/testMergePrims
+    [381/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/usdMaya.dir/exportTranslator.cpp.o
+    [382/651] Linking CXX executable test/lib/usd/utils/testDiffDictionaries
+    [383/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/usdMaya.dir/readJob_ImportWithProxies.cpp.o
+    [384/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/usdMaya.dir/translatorModelAssembly.cpp.o
+    [385/651] Building CXX object plugin/al/utils/AL/CMakeFiles/AL_EventSystem.dir/event/EventHandler.cpp.o
+    [386/651] Linking CXX executable test/lib/usd/utils/testDiffAttributes
+    [387/651] Linking CXX executable test/lib/usd/utils/testDiffMetadatas
+    [388/651] Linking CXX executable test/lib/usd/utils/testDiffRelationships
+    [389/651] Linking CXX executable test/lib/usd/utils/testDiffComputeOverall
+    [390/651] Linking CXX shared library plugin/al/utils/AL/libAL_EventSystem.so
+    [391/651] Linking CXX executable test/lib/usd/utils/testDiffPrims
+    [392/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/usdMaya.dir/editUtil.cpp.o
+    [393/651] Linking CXX executable test/lib/usd/utils/testDiffValues
+    [394/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/usdMaya.dir/importTranslator.cpp.o
+    [395/651] Building CXX object plugin/al/mayatest/AL/maya/test/CMakeFiles/AL_MayaTest.dir/testHarness.cpp.o
+    [396/651] Building CXX object plugin/al/mayautils/AL/maya/CMakeFiles/AL_MayaUtils.dir/utils/MenuBuilder.cpp.o
+    [397/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/_usdMaya.dir/wrapAssembly.cpp.o
+    [398/651] Building CXX object plugin/al/mayautils/AL/maya/CMakeFiles/AL_MayaUtils.dir/utils/FileTranslatorOptions.cpp.o
+    [399/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/usdMaya.dir/instancerShapeAdapterWithSceneAssembly.cpp.o
+    [400/651] Building CXX object plugin/al/mayautils/AL/maya/CMakeFiles/AL_MayaUtils.dir/utils/Utils.cpp.o
+    [401/651] Building CXX object plugin/al/mayautils/AL/maya/tests/mayaplugintest/CMakeFiles/AL_MayaUtilsTests.dir/plugin.cpp.o
+    [402/651] Building CXX object plugin/al/mayatest/AL/maya/test/CMakeFiles/AL_MayaTest.dir/testHelpers.cpp.o
+    [403/651] Building CXX object plugin/al/mayautils/AL/maya/CMakeFiles/AL_MayaUtils.dir/utils/CommandGuiHelper.cpp.o
+    [404/651] Building CXX object plugin/al/mayautils/AL/maya/CMakeFiles/AL_MayaUtils.dir/event/MayaEventManager.cpp.o
+    [405/651] Building CXX object plugin/al/mayautils/AL/maya/CMakeFiles/AL_MayaUtils.dir/utils/PluginTranslatorOptions.cpp.o
+    [406/651] Linking CXX shared library plugin/al/mayatest/AL/maya/test/libAL_MayaTest.so
+    [407/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/usdMaya.dir/proxyShape.cpp.o
+    [408/651] Building CXX object plugin/al/mayautils/AL/maya/tests/mayaplugintest/CMakeFiles/AL_MayaUtilsTests.dir/test_mobjectmap.cpp.o
+    [409/651] Building CXX object plugin/al/mayautils/AL/maya/tests/mayaplugintest/CMakeFiles/AL_MayaUtilsTests.dir/utils/NodeHelperUnitTest.cpp.o
+    [410/651] Building CXX object plugin/al/mayautils/AL/maya/CMakeFiles/AL_MayaUtils.dir/utils/NodeHelper.cpp.o
+    [411/651] Building CXX object plugin/al/mayautils/AL/maya/tests/mayaplugintest/CMakeFiles/AL_MayaUtilsTests.dir/utils/CommandGuiHelperTest.cpp.o
+    [412/651] Linking CXX shared library plugin/al/mayautils/AL/maya/libAL_MayaUtils.so
+    [413/651] Building CXX object plugin/pxr/maya/plugin/pxrUsd/CMakeFiles/pxrUsd.dir/usdTranslator.cpp.o
+    [414/651] Building CXX object plugin/al/mayautils/AL/maya/tests/mayaplugintest/CMakeFiles/AL_MayaUtilsTests.dir/test_maya_MenuBuilder.cpp.o
+    [415/651] Building CXX object plugin/al/usdtransaction/AL/usd/transaction/CMakeFiles/_AL_USDTransaction.dir/module.cpp.o
+    [416/651] Building CXX object plugin/pxr/maya/plugin/pxrUsdPreviewSurface/CMakeFiles/pxrUsdPreviewSurface.dir/plugin.cpp.o
+    [417/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/_usdMaya.dir/wrapEditUtil.cpp.o
+    [418/651] Building CXX object plugin/al/mayautils/AL/maya/tests/mayaplugintest/CMakeFiles/AL_MayaUtilsTests.dir/utils/PluginTranslatorOptionsTest.cpp.o
+    [419/651] Building CXX object plugin/pxr/maya/plugin/pxrUsd/CMakeFiles/pxrUsd.dir/alembicChaser.cpp.o
+    [420/651] Building CXX object plugin/al/mayautils/AL/maya/tests/mayaplugintest/CMakeFiles/AL_MayaUtilsTests.dir/test_maya_NodeHelper.cpp.o
+    [421/651] Linking CXX shared library lib/mayaUsd/libmayaUsd.so
+    [422/651] Linking CXX shared library plugin/al/mayautils/AL/maya/tests/mayaplugintest/AL_MayaUtilsTests.so
+    [423/651] Linking CXX shared library test/lib/usd/plugin/libusdTestUsdPlugin.so
+    [424/651] Linking CXX shared library test/lib/usd/plugin/usdTestMayaPlugin.so
+    [425/651] Linking CXX shared library test/lib/usd/plugin/usdTestInfoImportChaser.so
+    [426/651] Linking CXX shared library test/lib/usd/plugin/libusdTestApiWriter.so
+    [427/651] Linking CXX shared library lib/usd/pxrUsdPreviewSurface/libbasePxrUsdPreviewSurface.so
+    [428/651] Linking CXX shared library lib/mayaUsd/ufe/_ufe.so
+    [429/651] Building CXX object plugin/pxr/maya/plugin/pxrUsd/CMakeFiles/pxrUsd.dir/plugin.cpp.o
+    [430/651] Building CXX object plugin/pxr/maya/lib/usdMaya/CMakeFiles/usdMaya.dir/referenceAssembly.cpp.o
+    [431/651] Linking CXX shared library lib/mayaUsd/python/_mayaUsd.so
+    [432/651] Building CXX object plugin/al/usdmayautils/AL/usdmaya/utils/CMakeFiles/AL_USDMayaUtils.dir/Utils.cpp.o
+    [433/651] Linking CXX shared library lib/usd/hdMaya/libhdMaya.so
+    [434/651] Linking CXX shared library plugin/pxr/maya/lib/usdMaya/libusdMaya.so
+    [435/651] Linking CXX shared library lib/usd/translators/libmayaUsd_Translators.so
+    [436/651] Linking CXX shared library plugin/pxr/maya/plugin/pxrUsdPreviewSurface/pxrUsdPreviewSurface.so
+    [437/651] Building CXX object plugin/al/usdmayautils/AL/usdmaya/utils/CMakeFiles/AL_USDMayaUtils.dir/AttributeType.cpp.o
+    [438/651] Building CXX object plugin/al/usdtransaction/AL/usd/transaction/CMakeFiles/AL_USDTransaction.dir/Transaction.cpp.o
+    [439/651] Linking CXX shared library plugin/pxr/maya/lib/usdMaya/_usdMaya.so
+    [440/651] Linking CXX shared library lib/mayaUsd/render/mayaToHydra/mtoh.so
+    [441/651] Building CXX object plugin/al/usdtransaction/AL/usd/transaction/CMakeFiles/AL_USDTransaction.dir/Notice.cpp.o
+    [442/651] Linking CXX shared library plugin/pxr/maya/plugin/pxrUsd/pxrUsd.so
+    [443/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/_AL_USDMaya.dir/AL/usdmaya/module.cpp.o
+    [444/651] Building CXX object plugin/al/usdmayautils/AL/usdmaya/utils/CMakeFiles/AL_USDMayaUtils.dir/AnimationTranslator.cpp.o
+    [445/651] Building CXX object plugin/al/usdtransaction/AL/usd/transaction/tests/CMakeFiles/AL_USDTransactionTests.dir/testMain.cpp.o
+    [446/651] Automatic MOC and UIC for target mayaUsdUI
+    [447/651] Automatic RCC for layerEditor/resources.qrc
+    [448/651] Automatic RCC for importDialog/images/ui.qrc
+    [449/651] Building CXX object plugin/al/usdtransaction/AL/usd/transaction/CMakeFiles/_AL_USDTransaction.dir/wrapTransaction.cpp.o
+    [450/651] Building CXX object plugin/al/usdtransaction/AL/usd/transaction/CMakeFiles/_AL_USDTransaction.dir/wrapNotice.cpp.o
+    [451/651] Building CXX object plugin/al/usdtransaction/AL/usd/transaction/CMakeFiles/_AL_USDTransaction.dir/wrapTransactionManager.cpp.o
+    [452/651] Building CXX object plugin/al/usdmayautils/AL/usdmaya/utils/CMakeFiles/AL_USDMayaUtils.dir/DiffPrimVar.cpp.o
+    [453/651] Building CXX object plugin/al/usdmayautils/AL/usdmaya/utils/CMakeFiles/AL_USDMayaUtils.dir/MeshUtils.cpp.o
+    [454/651] Building CXX object plugin/al/usdmayautils/AL/usdmaya/utils/CMakeFiles/AL_USDMayaUtils.dir/NurbsCurveUtils.cpp.o
+    [455/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/_AL_USDMaya.dir/AL/usdmaya/wrapStageCache.cpp.o
+    [456/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/dirtyLayersCountBadge.cpp.o
+    [457/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/generatedIconButton.cpp.o
+    [458/651] Building CXX object plugin/al/usdtransaction/AL/usd/transaction/tests/CMakeFiles/AL_USDTransactionTests.dir/testTransactionManager.cpp.o
+    [459/651] Building CXX object plugin/al/usdtransaction/AL/usd/transaction/CMakeFiles/AL_USDTransaction.dir/TransactionManager.cpp.o
+    [460/651] Building CXX object plugin/al/usdtransaction/AL/usd/transaction/tests/CMakeFiles/AL_USDTransactionTests.dir/testTransaction.cpp.o
+    [461/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/_AL_USDMaya.dir/AL/usdmaya/nodes/wrapLayerManager.cpp.o
+    [462/651] Building CXX object plugin/al/usdmayautils/AL/usdmaya/utils/CMakeFiles/AL_USDMayaUtils.dir/DgNodeHelper.cpp.o
+    [463/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/_AL_USDMaya.dir/AL/usdmaya/nodes/wrapProxyShape.cpp.o
+    [464/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/mayaQtUtils.cpp.o
+    [465/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/mayaUsdUI_autogen/mocs_compilation.cpp.o
+    [466/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/_AL_USDMaya.dir/AL/usdmaya/fileio/translators/wrapTranslatorContext.cpp.o
+    [467/651] Building CXX object plugin/adsk/plugin/CMakeFiles/mayaUsdPlugin.dir/adskListJobContextsCommand.cpp.o
+    [468/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/layerTreeItemDelegate.cpp.o
+    [469/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/layerEditorWidget.cpp.o
+    [470/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/stringResources.cpp.o
+    [471/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/qtUtils.cpp.o
+    [472/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/mayaCommandHook.cpp.o
+    [473/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/layerTreeView.cpp.o
+    [474/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/_AL_USDMaya.dir/AL/usdmaya/fileio/translators/wrapTranslatorBase.cpp.o
+    [475/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/layerTreeModel.cpp.o
+    [476/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/layerTreeItem.cpp.o
+    [477/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/pathChecker.cpp.o
+    [478/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/loadLayersDialog.cpp.o
+    [479/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/mayaUsdUI_autogen/5WMDHDZAMM/qrc_resources.cpp.o
+    [480/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/mayaUsdUI_autogen/AUCU3ACLTF/qrc_ui.cpp.o
+    [481/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/initStringResources.cpp.o
+    [482/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/warningDialogs.cpp.o
+    [483/651] Linking CXX shared library plugin/al/usdtransaction/AL/usd/transaction/libAL_USDTransaction.so
+    [484/651] Linking CXX shared library plugin/al/usdtransaction/AL/usd/transaction/_AL_USDTransaction.so
+    [485/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/importDialog/USDQtUtil.cpp.o
+    [486/651] Linking CXX shared library plugin/al/usdmayautils/AL/usdmaya/utils/libAL_USDMayaUtils.so
+    [487/651] Linking CXX executable plugin/al/usdtransaction/AL/usd/transaction/tests/AL_USDTransactionTests
+    [488/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/mayaLayerEditorWindow.cpp.o
+    [489/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/Metadata.cpp.o
+    [490/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/DebugCodes.cpp.o
+    [491/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/sessionState.cpp.o
+    [492/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/mayaSessionState.cpp.o
+    [493/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/cmds/DebugCommands.cpp.o
+    [494/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/StageCache.cpp.o
+    [495/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/moduleDeps.cpp.o
+    [496/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/cmds/EventCommand.cpp.o
+    [497/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/importDialog/TreeItem.cpp.o
+    [498/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/importDialog/ItemDelegate.cpp.o
+    [499/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/cmds/RendererCommands.cpp.o
+    [500/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/stageSelectorWidget.cpp.o
+    [501/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/cmds/SyncFileIOGui.cpp.o
+    [502/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/importDialog/TreeModel.cpp.o
+    [503/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/importDialog/TreeModelFactory.cpp.o
+    [504/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/importDialog/USDImportDialog.cpp.o
+    [505/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/importDialog/USDImportDialogCmd.cpp.o
+    [506/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/SelectabilityDB.cpp.o
+    [507/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/TransformOperation.cpp.o
+    [508/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/batchSaveLayersUIDelegate.cpp.o
+    [509/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/cmds/CreateUsdPrim.cpp.o
+    [510/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/Global.cpp.o
+    [511/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/cmds/ListTranslators.cpp.o
+    [512/651] Building CXX object lib/usd/ui/CMakeFiles/mayaUsdUI.dir/layerEditor/saveLayersDialog.cpp.o
+    [513/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/cmds/LayerCommands.cpp.o
+    [514/651] Linking CXX shared library lib/usd/ui/libmayaUsdUI.so
+    [515/651] Automatic MOC and UIC for target testMayaUsdUI
+    [516/651] Building CXX object lib/usd/ui/importDialogDemo/CMakeFiles/testMayaUsdUI.dir/testMayaUsdUI_autogen/mocs_compilation.cpp.o
+    [517/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/cmds/UnloadPrim.cpp.o
+    [518/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/SchemaPrims.cpp.o
+    [519/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/ImportTranslator.cpp.o
+    [520/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/cmds/ProxyShapePostLoadProcess.cpp.o
+    [521/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/ExportTranslator.cpp.o
+    [522/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/AnimationTranslator.cpp.o
+    [523/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/NodeFactory.cpp.o
+    [524/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/translators/DagNodeTranslator.cpp.o
+    [525/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/TransformIterator.cpp.o
+    [526/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/Layer.cpp.o
+    [527/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/Import.cpp.o
+    [528/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/cmds/ProxyShapeCommands.cpp.o
+    [529/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/translators/DgNodeTranslator.cpp.o
+    [530/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/Export.cpp.o
+    [531/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/translators/TransformTranslator.cpp.o
+    [532/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/translators/TranslatorBase.cpp.o
+    [533/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/translators/TranslatorTestType.cpp.o
+    [534/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/translators/ExtraDataPlugin.cpp.o
+    [535/651] Building CXX object lib/usd/ui/importDialogDemo/CMakeFiles/testMayaUsdUI.dir/testMayaUsdUI.cpp.o
+    [536/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/translators/TranslatorTestPlugin.cpp.o
+    [537/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/translators/TestExtraDataPlugin.cpp.o
+    [538/651] Linking CXX executable lib/usd/ui/importDialogDemo/testMayaUsdUI
+    [539/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/proxy/LockManager.cpp.o
+    [540/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/LayerManager.cpp.o
+    [541/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/fileio/translators/TranslatorContext.cpp.o
+    [542/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/MeshAnimDeformer.cpp.o
+    [543/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/MeshAnimCreator.cpp.o
+    [544/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/Engine.cpp.o
+    [545/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/ProxyShapeSelection.cpp.o
+    [546/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/BasicTransformationMatrix.cpp.o
+    [547/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/ProxyUsdGeomCamera.cpp.o
+    [548/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/ProxyDrawOverride.cpp.o
+    [549/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/Transform.cpp.o
+    [550/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/Scope.cpp.o
+    [551/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/ProxyShapeUI.cpp.o
+    [552/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/RendererManager.cpp.o
+    [553/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/proxy/PrimFilter.cpp.o
+    [554/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/maya/test_EventHandler.cpp.o
+    [555/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/proxy/ProxyShapeVariantFallbacks.cpp.o
+    [556/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/TransformationMatrix.cpp.o
+    [557/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/proxy/ProxyShapeMetaData.cpp.o
+    [558/651] Building CXX object plugin/al/lib/AL_USDMaya/CMakeFiles/AL_USDMaya.dir/AL/usdmaya/nodes/ProxyShape.cpp.o
+    [559/651] Building CXX object plugin/al/plugin/AL_USDMayaPlugin/CMakeFiles/AL_USDMayaPlugin.dir/plugin.cpp.o
+    [560/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/plugin.cpp.o
+    [561/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/maya/test_MatrixToSRT.cpp.o
+    [562/651] Linking CXX shared library plugin/al/lib/AL_USDMaya/libAL_USDMaya.so
+    [563/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/maya/test_MayaEventManager.cpp.o
+    [564/651] Linking CXX shared library plugin/al/lib/AL_USDMaya/_AL_USDMaya.so
+    [565/651] Linking CXX shared library plugin/al/plugin/AL_USDMayaPlugin/AL_USDMayaPlugin.so
+    [566/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/commands/test_TranslateCommand.cpp.o
+    [567/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/commands/test_ExportCommands.cpp.o
+    [568/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/commands/test_LayerCommands.cpp.o
+    [569/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/commands/test_LayerManagerCommands.cpp.o
+    [570/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/fileio/export_misc.cpp.o
+    [571/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/fileio/export_blendshape.cpp.o
+    [572/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/fileio/export_constraints.cpp.o
+    [573/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/commands/test_ProxyShapeImport.cpp.o
+    [574/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/fileio/export_lattice.cpp.o
+    [575/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/fileio/export_ik.cpp.o
+    [576/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/fileio/export_import_instancing.cpp.o
+    [577/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/fileio/export_multiple_shapes.cpp.o
+    [578/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/fileio/export_nonlinear.cpp.o
+    [579/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/fileio/export_unmerged.cpp.o
+    [580/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/fileio/import_instances.cpp.o
+    [581/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/fileio/import_playback_range.cpp.o
+    [582/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/fileio/test_activeInActiveTranslators.cpp.o
+    [583/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/nodes/test_ExtraDataPlugin.cpp.o
+    [584/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/nodes/test_ProxyShapeSelectabilityDB.cpp.o
+    [585/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/nodes/test_Transform.cpp.o
+    [586/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/nodes/proxy/test_PrimFilter.cpp.o
+    [587/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/nodes/test_ProxyUsdGeomCamera.cpp.o
+    [588/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/nodes/test_LayerManager.cpp.o
+    [589/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/nodes/test_lockPrims.cpp.o
+    [590/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/nodes/test_ScopeMatrix.cpp.o
+    [591/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/nodes/test_ActiveInactive.cpp.o
+    [592/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/nodes/test_VariantFallbacks.cpp.o
+    [593/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/nodes/test_TranslatorContext.cpp.o
+    [594/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/test_SelectabilityDB.cpp.o
+    [595/651] Building CXX object plugin/al/schemas/AL/usd/schemas/maya/CMakeFiles/_AL_USDMayaSchemas.dir/module.cpp.o
+    [596/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/test_DiffGeom.cpp.o
+    [597/651] Building CXX object plugin/al/schemas/AL/usd/schemas/maya/CMakeFiles/_AL_USDMayaSchemas.dir/wrapTokens.cpp.o
+    [598/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/nodes/test_ProxyShape.cpp.o
+    [599/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/test_DiffPrimVar.cpp.o
+    [600/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/AL/usdmaya/nodes/test_TransformMatrix.cpp.o
+    [601/651] Building CXX object plugin/al/schemas/AL/usd/schemas/maya/CMakeFiles/AL_USDMayaSchemas.dir/tokens.cpp.o
+    [602/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/test_translators_PythonBindings.cpp.o
+    [603/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/test_translators_AnimationTranslator.cpp.o
+    [604/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/test_translators_CameraTranslator.cpp.o
+    [605/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/test_translators_NurbsCurveTranslator.cpp.o
+    [606/651] Building CXX object plugin/al/schemas/AL/usd/schemas/mayatest/CMakeFiles/_AL_USDMayaSchemasTest.dir/module.cpp.o
+    [607/651] Building CXX object plugin/al/schemas/AL/usd/schemas/maya/tests/CMakeFiles/testMayaSchemas.dir/main.cpp.o
+    [608/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/test_usdmaya.cpp.o
+    [609/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/test_translators_Translator.cpp.o
+    [610/651] Building CXX object plugin/al/schemas/AL/usd/schemas/mayatest/CMakeFiles/AL_USDMayaSchemasTest.dir/tokens.cpp.o
+    [611/651] Building CXX object plugin/al/schemas/AL/usd/schemas/maya/CMakeFiles/AL_USDMayaSchemas.dir/ModuleDeps.cpp.o
+    [612/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/test_translators_TransformTranslator.cpp.o
+    [613/651] Building CXX object plugin/al/schemas/AL/usd/schemas/mayatest/CMakeFiles/_AL_USDMayaSchemasTest.dir/wrapTokens.cpp.o
+    [614/651] Building CXX object plugin/al/translators/CMakeFiles/AL_USDMayaTranslators.dir/CommonTranslatorOptions.cpp.o
+    [615/651] Building CXX object plugin/al/schemas/AL/usd/schemas/mayatest/CMakeFiles/AL_USDMayaSchemasTest.dir/ModuleDeps.cpp.o
+    [616/651] Building CXX object plugin/al/schemas/AL/usd/schemas/maya/CMakeFiles/_AL_USDMayaSchemas.dir/wrapModelAPI.cpp.o
+    [617/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/test_translators_MeshTranslator.cpp.o
+    [618/651] Building CXX object plugin/al/schemas/AL/usd/schemas/maya/CMakeFiles/_AL_USDMayaSchemas.dir/wrapFrameRange.cpp.o
+    [619/651] Building CXX object plugin/al/schemas/AL/usd/schemas/maya/CMakeFiles/AL_USDMayaSchemas.dir/ModelAPI.cpp.o
+    [620/651] Building CXX object plugin/al/translators/pxrUsdTranslators/CMakeFiles/AL_USDMayaPxrTranslators.dir/plugin.cpp.o
+    [621/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/test_usdmaya_AttributeType.cpp.o
+    [622/651] Building CXX object plugin/al/schemas/AL/usd/schemas/maya/CMakeFiles/AL_USDMayaSchemas.dir/FrameRange.cpp.o
+    [623/651] Linking CXX shared library plugin/al/schemas/AL/usd/schemas/maya/libAL_USDMayaSchemas.so
+    [624/651] Linking CXX shared library plugin/al/schemas/AL/usd/schemas/maya/_AL_USDMayaSchemas.so
+    [625/651] Building CXX object plugin/adsk/plugin/CMakeFiles/mayaUsdPlugin.dir/adskListShadingModesCommand.cpp.o
+    [626/651] Building CXX object plugin/al/schemas/AL/usd/schemas/maya/tests/CMakeFiles/testMayaSchemas.dir/testMayaSchemas.cpp.o
+    [627/651] Building CXX object plugin/al/schemas/AL/usd/schemas/mayatest/CMakeFiles/AL_USDMayaSchemasTest.dir/ExamplePolyCubeNode.cpp.o
+    [628/651] Linking CXX shared library plugin/al/schemas/AL/usd/schemas/mayatest/libAL_USDMayaSchemasTest.so
+    [629/651] Building CXX object plugin/al/plugin/AL_USDMayaTestPlugin/CMakeFiles/AL_USDMayaTestPlugin.dir/test_translators_DgTranslator.cpp.o
+    [630/651] Building CXX object plugin/al/schemas/AL/usd/schemas/maya/tests/CMakeFiles/testMayaSchemas.dir/testModelAPI.cpp.o
+    [631/651] Linking CXX executable plugin/al/schemas/AL/usd/schemas/maya/tests/testMayaSchemas
+    [632/651] Building CXX object plugin/al/schemas/AL/usd/schemas/mayatest/CMakeFiles/_AL_USDMayaSchemasTest.dir/wrapExamplePolyCubeNode.cpp.o
+    [633/651] Linking CXX shared library plugin/al/plugin/AL_USDMayaTestPlugin/AL_USDMayaTestPlugin.so
+    [634/651] Linking CXX shared library plugin/al/schemas/AL/usd/schemas/mayatest/_AL_USDMayaSchemasTest.so
+    [635/651] Building CXX object plugin/al/translators/CMakeFiles/AL_USDMayaTranslators.dir/FrameRange.cpp.o
+    [636/651] Building CXX object plugin/al/translators/CMakeFiles/AL_USDMayaTranslators.dir/MayaReference.cpp.o
+    [637/651] Building CXX object plugin/al/translators/CMakeFiles/AL_USDMayaTranslators.dir/DirectionalLight.cpp.o
+    [638/651] Building CXX object plugin/adsk/plugin/CMakeFiles/mayaUsdPlugin.dir/adskImportCommand.cpp.o
+    [639/651] Building CXX object plugin/adsk/plugin/CMakeFiles/mayaUsdPlugin.dir/adskExportCommand.cpp.o
+    [640/651] Building CXX object plugin/al/translators/CMakeFiles/AL_USDMayaTranslators.dir/Camera.cpp.o
+    [641/651] Building CXX object plugin/al/translators/CMakeFiles/AL_USDMayaTranslators.dir/NurbsCurve.cpp.o
+    [642/651] Building CXX object plugin/adsk/plugin/CMakeFiles/mayaUsdPlugin.dir/adskStageLoadUnloadCommands.cpp.o
+    [643/651] Building CXX object plugin/al/translators/pxrUsdTranslators/CMakeFiles/AL_USDMayaPxrTranslators.dir/ProxyShapeTranslator.cpp.o
+    [644/651] Building CXX object plugin/al/translators/CMakeFiles/AL_USDMayaTranslators.dir/Mesh.cpp.o
+    [645/651] Linking CXX shared library plugin/al/translators/pxrUsdTranslators/AL_USDMayaPxrTranslators.so
+    [646/651] Linking CXX shared library plugin/al/translators/libAL_USDMayaTranslators.so
+    [647/651] Building CXX object plugin/adsk/plugin/CMakeFiles/mayaUsdPlugin.dir/ProxyShape.cpp.o
+    [648/651] Building CXX object plugin/adsk/plugin/CMakeFiles/mayaUsdPlugin.dir/exportTranslator.cpp.o
+    [649/651] Building CXX object plugin/adsk/plugin/CMakeFiles/mayaUsdPlugin.dir/importTranslator.cpp.o
+    [650/651] Building CXX object plugin/adsk/plugin/CMakeFiles/mayaUsdPlugin.dir/plugin.cpp.o
+    [651/651] Linking CXX shared module plugin/adsk/plugin/mayaUsdPlugin.so
+    
+        Building with settings:
+          Source directory          /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd
+          Workspace directory       /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux
+          Build directory           /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo
+          Install directory         /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD
+          Variant                   RelWithDebInfo
+          Python Debug              Off
+          CMake generator           Ninja
+          Build arguments           ['-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.9.0/aca9939/ninja', '-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python', '-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy', '-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0', '-DUSD_LIB_PREFIX=lib', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f']
+          Stages arguments          ['build']
+          CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|TestALUSDMayaPython_LayerManager|testUsdMayaReadWriteUtils|AL_MayaUtilsTests|testUsdImportDisplacement|testUsdImportFrameRange', '-LE interactive', '--parallel 16']
+    Success MayaUSD build and install !!!!
+    Elapsed time: 00:03:34
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] timeout
+Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Install)
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[ecg-mayausd-branch-preflight-2020-linux] Running shell script
++ scl enable devtoolset-6 -
+python ecg-maya-usd/build.py --stages=install --workspace-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build --install-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install --signing-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/signing --package-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/package --output-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/output --stash-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/stash --jenkins-build=1734 --git-commit=ecd842c02768d6ef7361f0d4b764f3316a836c6c --git-branch=master --variants=RelWithDebInfo --python=2.7 --post-zips=false --maya-cut-config=maya-rundev-2020.yaml --stage-banner
+Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045
+
+================================================================================
+                            install (RelWithDebInfo)
+================================================================================
+Maya Python RelWithDebInfo Info:
+  mayapy executable   = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy
+  Include Folder      = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python
+  Library             = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0
+  site-package Folder = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/python2.7/site-packages
+In workdir: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd
+Executing: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/build.py --generator Ninja --build-relwithdebug --maya-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime --devkit-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase --pxrusd-location /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f --qt-location /local/S/jenkins/workspace/shared/Artifactory/Linux/qt/5.12.5/84f551b --build-args=-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.9.0/aca9939/ninja,-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python,-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy,-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0,-DUSD_LIB_PREFIX=lib,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|TestALUSDMayaPython_LayerManager|testUsdMayaReadWriteUtils|AL_MayaUtilsTests|testUsdImportDisplacement|testUsdImportFrameRange,-LE interactive,--parallel 16' --stages=install --redirect-outstream-file=False --install-location /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux
+Modified environment variables:
+    PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/cmake/3.14.4/656573b/bin:/opt/rh/devtoolset-6/root/usr/bin:/usr/local/bin:/usr/bin
+    LD_LIBRARY_PATH=/opt/rh/devtoolset-6/root/usr/lib64:/opt/rh/devtoolset-6/root/usr/lib64:/opt/rh/devtoolset-6/root/usr/lib
+    [1/8] Automatic MOC and UIC for target mayaUsdUI
+    [2/5] Automatic MOC and UIC for target testMayaUsdUI
+    [2/3] Install the project...
+    -- Install configuration: "RelWithDebInfo"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/lib/libmayaUsd.so" to "$ORIGIN/../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/lib/python/mayaUsd/lib/_mayaUsd.so" to "$ORIGIN/../../..:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/lib/python/mayaUsd/ufe/_ufe.so" to "$ORIGIN/../../..:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/lib/maya/mtoh.so" to "$ORIGIN/../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:$ORIGIN/..:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/lib/libhdMaya.so" to ""
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/lib/libbasePxrUsdPreviewSurface.so" to "$ORIGIN/.:$ORIGIN/../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/lib/libmayaUsd_Translators.so" to "$ORIGIN/.:$ORIGIN/../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/lib/libmayaUsd_Schemas.so" to "$ORIGIN/.:$ORIGIN/../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/lib/python/mayaUsd/schemas/_schemas.so" to "$ORIGIN/../../..:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/lib/libmayaUsdUtils.so" to ""
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/lib/libmayaUsdUI.so" to "$ORIGIN/../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:$ORIGIN/.:/local/S/jenkins/workspace/shared/Artifactory/Linux/qt/5.12.5/84f551b/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/pxr/maya/lib/libusdMaya.so" to "$ORIGIN/.:$ORIGIN/../../../../lib:$ORIGIN/../../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:$ORIGIN/../../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib64:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/pxr/lib/python/pxr/UsdMaya/_usdMaya.so" to "$ORIGIN/../../../../maya/lib:$ORIGIN/../../../../../../lib:$ORIGIN/../../../../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:$ORIGIN/../../../../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib64:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/pxr/maya/plugin/pxrUsd.so" to "$ORIGIN/../lib:$ORIGIN/../../../../lib:$ORIGIN/../../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:$ORIGIN/../../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib64:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/pxr/maya/plugin/pxrUsdPreviewSurface.so" to "$ORIGIN/../lib:$ORIGIN/../../../../lib:$ORIGIN/../../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:$ORIGIN/../../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib64:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/lib/libAL_MayaTest.so" to ""
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/lib/libAL_MayaUtils.so" to ""
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/testplugins/AL_MayaUtilsTests.so" to "$ORIGIN/../lib:$ORIGIN/../../../lib/gtest:$ORIGIN/../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib:$ORIGIN/../../../lib:$ORIGIN/../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/lib/libAL_USDMayaUtils.so" to ""
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/lib/libAL_USDTransaction.so" to ""
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/lib/python/AL/usd/transaction/_AL_USDTransaction.so" to "$ORIGIN/../../../..:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/lib/libAL_USDMaya.so" to ""
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/lib/python/AL/usdmaya/_AL_USDMaya.so" to "$ORIGIN/../../..:$ORIGIN/../../../../../../lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/plugin/AL_USDMayaPlugin.so" to "$ORIGIN/../lib:$ORIGIN/../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:$ORIGIN/../../../lib:$ORIGIN/../../pxr/lib:$ORIGIN/../../pxr/maya/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/plugin/AL_USDMayaTestPlugin.so" to "$ORIGIN/../lib:$ORIGIN/../../../lib/gtest:$ORIGIN/../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:$ORIGIN/../../../lib:$ORIGIN/../../pxr/lib:$ORIGIN/../../pxr/maya/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/lib/libAL_USDMayaSchemas.so" to ""
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/lib/python/AL/usd/schemas/maya/_AL_USDMayaSchemas.so" to ""
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/bin/testMayaSchemas" to "$ORIGIN/../../../lib/gtest:$ORIGIN/../lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/lib/libAL_USDMayaSchemasTest.so" to ""
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/lib/python/AL/usd/schemas/mayatest/_AL_USDMayaSchemasTest.so" to ""
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/lib/libAL_USDMayaTranslators.so" to "$ORIGIN/../lib:$ORIGIN/../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:$ORIGIN/../../../lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/al/plugin/AL_USDMayaPxrTranslators.so" to "$ORIGIN/../lib:$ORIGIN/../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:$ORIGIN/../../../lib:$ORIGIN/../../pxr/lib:$ORIGIN/../../pxr/maya/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    -- Set runtime path of "/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD/plugin/adsk/plugin/mayaUsdPlugin.so" to "$ORIGIN/../../../../../../../../../../../home/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:$ORIGIN/../../../lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase/devkit/ufe/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/qt/5.12.5/84f551b/lib:/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib"
+    
+        Building with settings:
+          Source directory          /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd
+          Workspace directory       /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux
+          Build directory           /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo
+          Install directory         /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD
+          Variant                   RelWithDebInfo
+          Python Debug              Off
+          CMake generator           Ninja
+          Build arguments           ['-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.9.0/aca9939/ninja', '-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python', '-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy', '-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0', '-DUSD_LIB_PREFIX=lib', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f']
+          Stages arguments          ['install']
+          CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|TestALUSDMayaPython_LayerManager|testUsdMayaReadWriteUtils|AL_MayaUtilsTests|testUsdImportDisplacement|testUsdImportFrameRange', '-LE interactive', '--parallel 16']
+    Success MayaUSD build and install !!!!
+    Elapsed time: 00:00:00
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] timeout
+Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[ecg-mayausd-branch-preflight-2020-linux] Running shell script
++ scl enable devtoolset-6 -
+python ecg-maya-usd/build.py --stages=test --workspace-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build --install-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install --signing-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/signing --package-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/package --output-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/output --stash-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/stash --jenkins-build=1734 --git-commit=ecd842c02768d6ef7361f0d4b764f3316a836c6c --git-branch=master --variants=RelWithDebInfo --python=2.7 --post-zips=false --test-jobs=0 --failed-test-retry=3 --maya-cut-config=maya-rundev-2020.yaml --stage-banner --progressive-timeout
+Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045
+
+================================================================================
+                             test (RelWithDebInfo)
+================================================================================
+Maya Python RelWithDebInfo Info:
+  mayapy executable   = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy
+  Include Folder      = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python
+  Library             = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0
+  site-package Folder = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/python2.7/site-packages
+In workdir: /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd
+Executing: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd/build.py --generator Ninja --build-relwithdebug --maya-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime --devkit-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/devkitBase --pxrusd-location /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f --qt-location /local/S/jenkins/workspace/shared/Artifactory/Linux/qt/5.12.5/84f551b --build-args=-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.9.0/aca9939/ninja,-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python,-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy,-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0,-DUSD_LIB_PREFIX=lib,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|TestALUSDMayaPython_LayerManager|testUsdMayaReadWriteUtils|AL_MayaUtilsTests|testUsdImportDisplacement|testUsdImportFrameRange,-LE interactive,--parallel 16' --stages=test --redirect-outstream-file=False --install-location /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux
+Modified environment variables:
+    PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/cmake/3.14.4/656573b/bin:/opt/rh/devtoolset-6/root/usr/bin:/usr/local/bin:/usr/bin
+    LD_LIBRARY_PATH=/opt/rh/devtoolset-6/root/usr/lib64:/opt/rh/devtoolset-6/root/usr/lib64:/opt/rh/devtoolset-6/root/usr/lib
+    Test project /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo
+            Start   1: testMayaUsdConverter
+            Start   2: testMayaUsdCreateStageCommands
+            Start   3: testMayaUsdPythonImport
+            Start   4: testMayaUsdLayerEditorCommands
+            Start   5: testMayaUsdCacheId
+            Start   7: _Interactive_Maya
+      1/149 Test   #7: _Interactive_Maya ...............................***Not Run (Disabled)   0.00 sec
+            Start   8: testMayaUsdPlugVersionCheck
+            Start   9: testDeleteCmd
+            Start  10: testMatrices
+            Start  11: testMayaPickwalk
+            Start  12: testPythonWrappers
+            Start  13: testSelection
+            Start  14: testSelectionByArray
+            Start  15: testUfePythonImport
+            Start  16: testAttributeBlock
+            Start  17: testBlockedLayerEdit
+            Start  18: testPrimReader
+      2/149 Test   #3: testMayaUsdPythonImport .........................   Passed    4.96 sec
+            Start  19: testPrimWriter
+      3/149 Test  #15: testUfePythonImport .............................   Passed    4.95 sec
+            Start  20: testExportChaser
+      4/149 Test  #13: testSelection ...................................   Passed    5.06 sec
+            Start  21: testImportChaser
+      5/149 Test   #5: testMayaUsdCacheId ..............................   Passed    5.07 sec
+            Start  22: testJobContextRegistry
+      6/149 Test   #8: testMayaUsdPlugVersionCheck .....................   Passed    5.08 sec
+            Start  23: testSchemaApiAdaptor
+      7/149 Test  #12: testPythonWrappers ..............................   Passed    5.08 sec
+            Start  24: testReadWriteUtils
+      8/149 Test   #4: testMayaUsdLayerEditorCommands ..................   Passed    5.11 sec
+            Start  25: testXformStack
+      9/149 Test  #18: testPrimReader ..................................   Passed    5.13 sec
+            Start  26: testLayerManagerSerialization
+     10/149 Test  #14: testSelectionByArray ............................   Passed    5.15 sec
+            Start  27: testPointBasedDeformerNode
+     11/149 Test   #2: testMayaUsdCreateStageCommands ..................   Passed    5.19 sec
+            Start  28: testProxyShapeBase
+     12/149 Test   #1: testMayaUsdConverter ............................   Passed    5.25 sec
+            Start  29: testHdImagingShape
+     13/149 Test  #10: testMatrices ....................................   Passed    5.31 sec
+            Start  51: testUsdUndoManager
+     14/149 Test  #16: testAttributeBlock ..............................   Passed    5.41 sec
+            Start  52: testBlockSceneModificationContext
+     15/149 Test  #11: testMayaPickwalk ................................   Passed    5.48 sec
+            Start  53: testDiagnosticDelegate
+     16/149 Test  #17: testBlockedLayerEdit ............................   Passed    5.53 sec
+            Start  54: testPxrUsdPreviewSurfaceDraw
+     17/149 Test   #9: testDeleteCmd ...................................   Passed    5.58 sec
+            Start  55: testPxrUsdPreviewSurfaceExport
+     18/149 Test  #22: testJobContextRegistry ..........................   Passed    4.17 sec
+            Start  56: testMayaUsdSchemasPythonImport
+     19/149 Test  #54: testPxrUsdPreviewSurfaceDraw ....................   Passed    3.74 sec
+            Start  57: testMayaUsdSchemasMayaReference
+     20/149 Test  #19: testPrimWriter ..................................   Passed    4.39 sec
+            Start  58: testDiffCore
+     21/149 Test  #58: testDiffCore ....................................   Passed    0.03 sec
+            Start  59: testDiffValues
+     22/149 Test  #59: testDiffValues ..................................   Passed    0.02 sec
+            Start  60: testDiffAttributes
+     23/149 Test  #20: testExportChaser ................................   Passed    4.45 sec
+            Start  61: testDiffRelationships
+     24/149 Test  #24: testReadWriteUtils ..............................   Passed    4.34 sec
+            Start  62: testDiffDictionaries
+     25/149 Test  #62: testDiffDictionaries ............................   Passed    0.02 sec
+            Start  63: testDiffLists
+     26/149 Test  #26: testLayerManagerSerialization ...................   Passed    4.32 sec
+            Start  64: testDiffComputeOverall
+     27/149 Test  #21: testImportChaser ................................   Passed    4.40 sec
+            Start  65: testDiffPrims
+     28/149 Test  #51: testUsdUndoManager ..............................   Passed    4.16 sec
+            Start  66: testMergePrims
+     29/149 Test  #63: testDiffLists ...................................   Passed    0.03 sec
+            Start  67: testDiffMetadatas
+     30/149 Test  #64: testDiffComputeOverall ..........................   Passed    0.02 sec
+            Start  68: testUsdExportAnimation
+     31/149 Test  #61: testDiffRelationships ...........................   Passed    0.09 sec
+            Start  69: testUsdExportAsClip
+     32/149 Test  #60: testDiffAttributes ..............................   Passed    0.12 sec
+            Start  70: testUsdExportBindTransform
+     33/149 Test  #25: testXformStack ..................................   Passed    4.44 sec
+            Start  71: testUsdExportBlendshapes
+     34/149 Test  #27: testPointBasedDeformerNode ......................   Passed    4.40 sec
+            Start  72: testUsdExportCamera
+     35/149 Test  #66: testMergePrims ..................................   Passed    0.11 sec
+            Start  73: testUsdExportColorSets
+     36/149 Test  #67: testDiffMetadatas ...............................   Passed    0.11 sec
+            Start  74: testUsdExportConnected
+     37/149 Test  #65: testDiffPrims ...................................   Passed    0.18 sec
+            Start  75: testUsdExportDisplacement
+     38/149 Test  #23: testSchemaApiAdaptor ............................   Passed    4.58 sec
+            Start  76: testUsdExportDisplayColor
+     39/149 Test  #29: testHdImagingShape ..............................   Passed    4.51 sec
+            Start  77: testUsdExportEulerFilter
+     40/149 Test  #53: testDiagnosticDelegate ..........................   Passed    4.28 sec
+            Start  78: testUsdExportFileFormat
+     41/149 Test  #28: testProxyShapeBase ..............................   Passed    4.61 sec
+            Start  79: testUsdExportFilterTypes
+     42/149 Test  #52: testBlockSceneModificationContext ...............   Passed    4.53 sec
+            Start  80: testUsdExportFrameOffset
+     43/149 Test  #55: testPxrUsdPreviewSurfaceExport ..................   Passed    4.54 sec
+            Start  81: testUsdExportGeomSubset
+     44/149 Test  #56: testMayaUsdSchemasPythonImport ..................   Passed    4.10 sec
+            Start  82: testUsdExportInstances
+     45/149 Test  #57: testMayaUsdSchemasMayaReference .................   Passed    4.08 sec
+            Start  83: testUsdExportLayerAttributes
+     46/149 Test  #68: testUsdExportAnimation ..........................   Passed    4.43 sec
+            Start  84: testUsdExportLight
+     47/149 Test  #70: testUsdExportBindTransform ......................   Passed    4.47 sec
+            Start  85: testUsdExportLocator
+     48/149 Test  #69: testUsdExportAsClip .............................   Passed    4.65 sec
+            Start  86: testUsdExportMayaInstancer
+     49/149 Test  #74: testUsdExportConnected ..........................   Passed    4.68 sec
+            Start  87: testUsdExportMesh
+     50/149 Test  #76: testUsdExportDisplayColor .......................   Passed    4.64 sec
+            Start  88: testUsdExportNurbsCurve
+     51/149 Test  #72: testUsdExportCamera .............................   Passed    4.84 sec
+            Start  89: testUsdExportOpenLayer
+     52/149 Test  #78: testUsdExportFileFormat .........................   Passed    4.64 sec
+            Start  90: testUsdExportOverImport
+     53/149 Test  #71: testUsdExportBlendshapes ........................   Passed    4.88 sec
+            Start  91: testUsdExportUsdzPackage
+     54/149 Test  #75: testUsdExportDisplacement .......................   Passed    4.79 sec
+            Start  92: testUsdExportUsdPreviewSurface
+     55/149 Test  #79: testUsdExportFilterTypes ........................   Passed    4.66 sec
+            Start  93: testUsdExportParentScope
+     56/149 Test  #73: testUsdExportColorSets ..........................   Passed    4.88 sec
+            Start  94: testUsdExportParticles
+     57/149 Test  #77: testUsdExportEulerFilter ........................   Passed    4.74 sec
+            Start  95: testUsdExportPref
+     58/149 Test  #80: testUsdExportFrameOffset ........................   Passed    4.57 sec
+            Start  96: testUsdExportRenderLayerMode
+     59/149 Test  #81: testUsdExportGeomSubset .........................   Passed    4.51 sec
+            Start  97: testUsdExportRoots
+     60/149 Test  #82: testUsdExportInstances ..........................   Passed    4.52 sec
+            Start  98: testUsdExportSelection
+     61/149 Test  #83: testUsdExportLayerAttributes ....................   Passed    4.59 sec
+            Start  99: testUsdExportSelectionHierarchy
+     62/149 Test  #84: testUsdExportLight ..............................   Passed    4.59 sec
+            Start 100: testUsdExportShadingInstanced
+     63/149 Test  #85: testUsdExportLocator ............................   Passed    4.73 sec
+            Start 101: testUsdExportShadingModePxrRis
+     64/149 Test  #96: testUsdExportRenderLayerMode ....................   Passed    4.25 sec
+            Start 102: testUsdExportSkeleton
+     65/149 Test  #92: testUsdExportUsdPreviewSurface ..................   Passed    4.40 sec
+            Start 103: testUsdExportStripNamespaces
+     66/149 Test  #90: testUsdExportOverImport .........................   Passed    4.44 sec
+            Start 104: testUsdExportStroke
+     67/149 Test  #89: testUsdExportOpenLayer ..........................   Passed    4.57 sec
+            Start 105: testUsdExportUserTaggedAttributes
+     68/149 Test  #87: testUsdExportMesh ...............................   Passed    4.71 sec
+            Start 106: testUsdExportVisibilityDefault
+     69/149 Test  #93: testUsdExportParentScope ........................   Passed    4.53 sec
+            Start 107: testUsdImportAnonymousLayer
+     70/149 Test  #95: testUsdExportPref ...............................   Passed    4.52 sec
+            Start 108: testUsdImportCamera
+     71/149 Test  #88: testUsdExportNurbsCurve .........................   Passed    4.77 sec
+            Start 109: testUsdImportBasisCurves
+     72/149 Test  #91: testUsdExportUsdzPackage ........................   Passed    4.64 sec
+            Start 110: testUsdImportBatchNurbsCurves
+     73/149 Test  #94: testUsdExportParticles ..........................   Passed    4.61 sec
+            Start 111: testUsdImportLinearCurves
+     74/149 Test  #86: testUsdExportMayaInstancer ......................   Passed    5.01 sec
+            Start 112: testUsdImportNurbsCurves
+     75/149 Test  #97: testUsdExportRoots ..............................   Passed    4.85 sec
+            Start 113: testUsdImportBatchBezierCurves
+     76/149 Test  #98: testUsdExportSelection ..........................   Passed    4.61 sec
+            Start 114: testUsdImportColorSets
+     77/149 Test  #99: testUsdExportSelectionHierarchy .................   Passed    4.54 sec
+            Start 115: testUsdImportExportScope
+     78/149 Test #100: testUsdExportShadingInstanced ...................   Passed    4.53 sec
+            Start 116: testUsdImportExportTypelessDefs
+     79/149 Test #103: testUsdExportStripNamespaces ....................   Passed    4.45 sec
+            Start 117: testUsdImportFramerates
+     80/149 Test #108: testUsdImportCamera .............................   Passed    4.44 sec
+            Start 118: testUsdImportInstances
+     81/149 Test #109: testUsdImportBasisCurves ........................   Passed    4.41 sec
+            Start 119: testUsdImportLight
+     82/149 Test #107: testUsdImportAnonymousLayer .....................   Passed    4.50 sec
+            Start 120: testUsdImportMayaReference
+     83/149 Test #110: testUsdImportBatchNurbsCurves ...................   Passed    4.44 sec
+            Start 121: testUsdImportMesh
+     84/149 Test #101: testUsdExportShadingModePxrRis ..................   Passed    4.78 sec
+            Start 122: testUsdImportPreviewSurface
+     85/149 Test #111: testUsdImportLinearCurves .......................   Passed    4.44 sec
+            Start 123: testUsdImportSessionLayer
+     86/149 Test #106: testUsdExportVisibilityDefault ..................   Passed    4.63 sec
+            Start 124: testUsdImportShadingModeDisplayColor
+     87/149 Test #105: testUsdExportUserTaggedAttributes ...............   Passed    4.74 sec
+            Start 125: testUsdImportShadingModePxrRis
+     88/149 Test #104: testUsdExportStroke .............................   Passed    4.88 sec
+            Start 126: testUsdImportUVSetMappings
+     89/149 Test #112: testUsdImportNurbsCurves ........................   Passed    4.69 sec
+            Start 127: testUsdImportUSDZTextures
+     90/149 Test #102: testUsdExportSkeleton ...........................   Passed    5.15 sec
+            Start 128: testUsdExportImportRoundtripPreviewSurface
+     91/149 Test #113: testUsdImportBatchBezierCurves ..................   Passed    4.51 sec
+            Start 129: testUsdExportImportUDIM
+     92/149 Test #114: testUsdImportColorSets ..........................   Passed    4.41 sec
+            Start 130: testUsdImportSkeleton
+     93/149 Test #115: testUsdImportExportScope ........................   Passed    4.42 sec
+            Start 131: testUsdImportXforms
+     94/149 Test #116: testUsdImportExportTypelessDefs .................   Passed    4.40 sec
+            Start 132: testUsdImportXformAnim
+     95/149 Test #117: testUsdImportFramerates .........................   Passed    4.42 sec
+            Start 133: testUsdMayaAdaptor
+     96/149 Test #119: testUsdImportLight ..............................   Passed    4.27 sec
+            Start 134: testUsdMayaAdaptorGeom
+     97/149 Test #121: testUsdImportMesh ...............................   Passed    4.27 sec
+            Start 135: testUsdMayaAdaptorMetadata
+     98/149 Test #118: testUsdImportInstances ..........................   Passed    4.35 sec
+            Start 136: testUsdMayaAdaptorUndoRedo
+     99/149 Test #123: testUsdImportSessionLayer .......................   Passed    4.31 sec
+            Start 137: testUsdExportUVTransforms
+    100/149 Test #126: testUsdImportUVSetMappings ......................   Passed    4.14 sec
+            Start 138: testUsdExportRfMShaders
+    101/149 Test #125: testUsdImportShadingModePxrRis ..................   Passed    4.16 sec
+            Start 139: testUsdImportRfMShaders
+    102/149 Test #124: testUsdImportShadingModeDisplayColor ............   Passed    4.29 sec
+            Start 140: testUsdExportUVSets
+    103/149 Test #122: testUsdImportPreviewSurface .....................   Passed    4.42 sec
+            Start 141: testUsdExportUVSetsFloat
+    104/149 Test #120: testUsdImportMayaReference ......................   Passed    4.55 sec
+            Start 142: testUsdExportUVSetMappings
+    105/149 Test #128: testUsdExportImportRoundtripPreviewSurface ......   Passed    4.62 sec
+            Start 143: testUsdImportUVSets
+    106/149 Test #127: testUsdImportUSDZTextures .......................   Passed    4.79 sec
+            Start 144: testUsdImportUVSetsFloat
+    107/149 Test #129: testUsdExportImportUDIM .........................   Passed    4.72 sec
+            Start 145: testUsdImportChaser
+    108/149 Test #130: testUsdImportSkeleton ...........................   Passed    4.68 sec
+            Start 146: testUsdExportCustomConverter-Maya
+    109/149 Test #132: testUsdImportXformAnim ..........................   Passed    4.49 sec
+            Start 147: testUsdExportCustomConverter-USD
+    110/149 Test #134: testUsdMayaAdaptorGeom ..........................   Passed    4.25 sec
+            Start 148: testUsdImportCustomConverter-Maya
+    111/149 Test #133: testUsdMayaAdaptor ..............................   Passed    4.43 sec
+            Start 149: testUsdImportCustomConverter-USD
+    112/149 Test #135: testUsdMayaAdaptorMetadata ......................   Passed    4.50 sec
+            Start 150: testUsdMayaListShadingModesCommand
+    113/149 Test #141: testUsdExportUVSetsFloat ........................   Passed    4.36 sec
+            Start 151: testUsdExportSchemaApi
+    114/149 Test #136: testUsdMayaAdaptorUndoRedo ......................   Passed    4.50 sec
+            Start 152: testUsdExportAssembly
+    115/149 Test #139: testUsdImportRfMShaders .........................   Passed    4.48 sec
+            Start 153: testUsdExportAssemblyEdits
+    116/149 Test #140: testUsdExportUVSets .............................   Passed    4.52 sec
+            Start 154: testUsdExportPackage
+    117/149 Test #137: testUsdExportUVTransforms .......................   Passed    4.60 sec
+            Start 155: testUsdExportPointInstancer
+    118/149 Test #138: testUsdExportRfMShaders .........................   Passed    4.75 sec
+            Start 156: testUsdImportAsAssemblies
+    119/149 Test #143: testUsdImportUVSets .............................   Passed    4.39 sec
+            Start 157: testUsdImportNestedAssemblyAnimation
+    120/149 Test #145: testUsdImportChaser .............................   Passed    4.27 sec
+            Start 158: testUsdMayaGetVariantSetSelections
+    121/149 Test #144: testUsdImportUVSetsFloat ........................   Passed    4.38 sec
+            Start 159: testUsdMayaModelKindProcessor
+    122/149 Test #142: testUsdExportUVSetMappings ......................   Passed    5.05 sec
+            Start 160: testUsdMayaReferenceAssemblyEdits
+    123/149 Test #146: testUsdExportCustomConverter-Maya ...............   Passed    4.53 sec
+            Start 161: testUsdReferenceAssemblyChangeRepresentations
+    124/149 Test #147: testUsdExportCustomConverter-USD ................   Passed    4.54 sec
+            Start 162: testPxrUsdAlembicChaser
+    125/149 Test #150: testUsdMayaListShadingModesCommand ..............   Passed    4.24 sec
+            Start 163: GTest:AL_USDTransactionTests
+    126/149 Test #163: GTest:AL_USDTransactionTests ....................   Passed    0.06 sec
+            Start 164: Python:AL_USDTransactionTests
+    127/149 Test #148: testUsdImportCustomConverter-Maya ...............   Passed    4.71 sec
+            Start 165: AL_USDMayaTestPlugin
+    128/149 Test #149: testUsdImportCustomConverter-USD ................   Passed    4.61 sec
+            Start 166: TestALUSDMayaPython_ProxyShape
+    129/149 Test #152: testUsdExportAssembly ...........................   Passed    4.55 sec
+            Start 167: TestALUSDMayaPython_Translators
+    130/149 Test #151: testUsdExportSchemaApi ..........................   Passed    4.64 sec
+            Start 168: TestALUSDMayaPython_ImportModule
+    131/149 Test #154: testUsdExportPackage ............................   Passed    4.56 sec
+            Start 169: testMayaSchemas
+    132/149 Test #156: testUsdImportAsAssemblies .......................   Passed    4.36 sec
+            Start 170: TestAdditionalTranslators
+    133/149 Test #169: testMayaSchemas .................................   Passed    0.06 sec
+            Start 171: TestPxrUsdTranslators
+    134/149 Test #153: testUsdExportAssemblyEdits ......................   Passed    4.74 sec
+    135/149 Test #164: Python:AL_USDTransactionTests ...................   Passed    0.57 sec
+    136/149 Test #157: testUsdImportNestedAssemblyAnimation ............   Passed    4.36 sec
+    137/149 Test #158: testUsdMayaGetVariantSetSelections ..............   Passed    4.60 sec
+    138/149 Test #159: testUsdMayaModelKindProcessor ...................   Passed    4.71 sec
+    139/149 Test #160: testUsdMayaReferenceAssemblyEdits ...............   Passed    4.74 sec
+    140/149 Test #168: TestALUSDMayaPython_ImportModule ................   Passed    3.52 sec
+    141/149 Test #162: testPxrUsdAlembicChaser .........................   Passed    4.53 sec
+    142/149 Test #166: TestALUSDMayaPython_ProxyShape ..................   Passed    4.33 sec
+    143/149 Test #161: testUsdReferenceAssemblyChangeRepresentations ...   Passed    5.02 sec
+    144/149 Test #171: TestPxrUsdTranslators ...........................   Passed    4.28 sec
+    145/149 Test #167: TestALUSDMayaPython_Translators .................   Passed    4.52 sec
+    146/149 Test #170: TestAdditionalTranslators .......................   Passed    5.30 sec
+    147/149 Test #155: testUsdExportPointInstancer .....................   Passed   18.54 sec
+    148/149 Test #165: AL_USDMayaTestPlugin ............................   Passed   17.77 sec
+    149/149 Test #131: testUsdImportXforms .............................   Passed   53.93 sec
+    
+    100% tests passed, 0 tests failed out of 148
+    
+    Label Time Summary:
+    Debugging            =   0.00 sec*proc (1 test)
+    MayaUsd              =  30.65 sec*proc (6 tests)
+    fileio               =  27.10 sec*proc (6 tests)
+    fileio_utils         =   8.78 sec*proc (2 tests)
+    nodes                =  17.83 sec*proc (4 tests)
+    translators          = 432.24 sec*proc (84 tests)
+    ufe                  =  47.53 sec*proc (9 tests)
+    undo                 =   4.16 sec*proc (1 test)
+    usdPreviewSurface    =   8.29 sec*proc (2 tests)
+    utils                =   8.81 sec*proc (2 tests)
+    
+    Total Test time (real) =  80.89 sec
+    
+    The following tests did not run:
+    	  7 - _Interactive_Maya (Disabled)
+    
+        Building with settings:
+          Source directory          /home/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/ecg-maya-usd/maya-usd
+          Workspace directory       /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux
+          Build directory           /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build/RelWithDebInfo
+          Install directory         /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install/RelWithDebInfo/MayaUSD
+          Variant                   RelWithDebInfo
+          Python Debug              Off
+          CMake generator           Ninja
+          Build arguments           ['-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.9.0/aca9939/ninja', '-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/include/Python', '-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/bin/mayapy', '-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045/runTime/lib/libpython2.7.so.1.0', '-DUSD_LIB_PREFIX=lib', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/b45703f']
+          Stages arguments          ['test']
+          CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|TestALUSDMayaPython_LayerManager|testUsdMayaReadWriteUtils|AL_MayaUtilsTests|testUsdImportDisplacement|testUsdImportFrameRange', '-LE interactive', '--parallel 16']
+    Success running MayaUSD tests !!!!
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] timeout
+Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Cleanup)
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[ecg-mayausd-branch-preflight-2020-linux] Running shell script
++ scl enable devtoolset-6 -
+python ecg-maya-usd/build.py --stages=cleanup --workspace-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build --install-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install --signing-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/signing --package-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/package --output-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/output --stash-dir=/local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/stash --jenkins-build=1734 --git-commit=ecd842c02768d6ef7361f0d4b764f3316a836c6c --git-branch=master --variants=RelWithDebInfo --python=2.7 --post-zips=false --maya-cut-config=maya-rundev-2020.yaml --stage-banner
+Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2020/202107140359/runtime/a6ca045
+
+================================================================================
+                               cleanup (Finalize)
+================================================================================
+Cleaning up workspace
+Removing directory: /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/build
+Removing directory: /local/S/jenkins/workspace/ecg-mayausd-branch-preflight-2020-linux/install
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
