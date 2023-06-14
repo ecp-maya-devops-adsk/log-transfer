@@ -1,0 +1,1130 @@
+[2023-06-14T20:42:10.915Z] ================================================================================
+[2023-06-14T20:42:10.915Z]                              setup (RelWithDebInfo)
+[2023-06-14T20:42:10.915Z] ================================================================================
+[Pipeline] bat
+[2023-06-14T20:42:11.223Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-06-14T20:42:11.531Z] Deleting alias drive P:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clean)
+[Pipeline] timeout
+[2023-06-14T20:42:11.838Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[2023-06-14T20:42:12.051Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-06-14T20:42:12.379Z] Creating alias drive W: to S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows
+[Pipeline] bat
+[2023-06-14T20:42:12.881Z] "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-06-14T20:42:12.985Z] **********************************************************************
+[2023-06-14T20:42:12.985Z] ** Visual Studio 2017 Developer Command Prompt v15.9.15
+[2023-06-14T20:42:12.985Z] ** Copyright (c) 2017 Microsoft Corporation
+[2023-06-14T20:42:12.985Z] **********************************************************************
+[2023-06-14T20:42:13.800Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-06-14T20:42:13.800Z] python ecg-maya-usd/build.py --stages=clean --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=1060 --git-commit=58d37b2af3bdbf1e8f7655a3a723fd823ddb68c2 --git-branch=master --variants=RelWithDebInfo --python=2.7 --pxrusd-version=min --interactive-tests=true --post-zips=false --maya-cut-config=maya-rundev-2022.yaml --maya-cut-id=202105191053-29bfc1879c --maya-package=rundev-2022 --stage-banner
+[2023-06-14T20:42:14.617Z] Finding Artifactory servers response times
+[2023-06-14T20:42:16.856Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:16.856Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:16.856Z] [DEBUG] Output:
+[2023-06-14T20:42:16.856Z] OK
+[2023-06-14T20:42:16.856Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:17.269Z] [VERBOSE] Start loading URL (CURL): https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:17.269Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:17.269Z] [DEBUG] Output:
+[2023-06-14T20:42:17.269Z] OK
+[2023-06-14T20:42:17.269Z] [VERBOSE] End loading URL (CURL): https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:17.269Z] [VERBOSE] Start loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:17.269Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:17.269Z] [DEBUG] Output:
+[2023-06-14T20:42:17.269Z] OK
+[2023-06-14T20:42:17.269Z] [VERBOSE] End loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:17.269Z] Checking server art-bobcat.autodesk.com for artifacts matching properties:
+[2023-06-14T20:42:17.269Z] 	cut_id=202105191053-29bfc1879c
+[2023-06-14T20:42:17.269Z] 	package=rundev-2022
+[2023-06-14T20:42:17.269Z] 	platform=win
+[2023-06-14T20:42:18.095Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-06-14T20:42:18.096Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X POST --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw -H Content-Type:text/plain --data items.find({"@cut_id": "202105191053-29bfc1879c", "@package": "rundev-2022", "@platform": "win", "$or": [{"repo": "team-maya-generic"}, {"repo": "oss-stg-generic"}, {"repo": "team-mayausd-post-generic"}, {"repo": "autodesk-3p-generic"}, {"repo": "adsk-build-tools-generic"}, {"repo": "team-ecg-generic"}]}) https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-06-14T20:42:18.096Z] [DEBUG] Output:
+[2023-06-14T20:42:18.096Z] {
+[2023-06-14T20:42:18.096Z] "results" : [ {
+[2023-06-14T20:42:18.096Z]   "repo" : "oss-stg-generic",
+[2023-06-14T20:42:18.096Z]   "path" : "Maya/2022/2021-05-19-10-53.Gold/windows",
+[2023-06-14T20:42:18.096Z]   "name" : "202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:42:18.096Z]   "type" : "file",
+[2023-06-14T20:42:18.096Z]   "size" : 1650110847,
+[2023-06-14T20:42:18.096Z]   "created" : "2021-05-19T19:02:46.222-07:00",
+[2023-06-14T20:42:18.096Z]   "created_by" : "svc_p_mescm",
+[2023-06-14T20:42:18.096Z]   "modified" : "2021-05-19T18:34:10.096-07:00",
+[2023-06-14T20:42:18.096Z]   "modified_by" : "svc_p_mescm",
+[2023-06-14T20:42:18.096Z]   "updated" : "2021-05-19T19:02:46.223-07:00"
+[2023-06-14T20:42:18.096Z] } ],
+[2023-06-14T20:42:18.096Z] "range" : {
+[2023-06-14T20:42:18.096Z]   "start_pos" : 0,
+[2023-06-14T20:42:18.096Z]   "end_pos" : 1,
+[2023-06-14T20:42:18.096Z]   "total" : 1
+[2023-06-14T20:42:18.096Z] }
+[2023-06-14T20:42:18.096Z] }
+[2023-06-14T20:42:18.096Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-06-14T20:42:18.096Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:42:18.096Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:42:18.096Z] [DEBUG] Output:
+[2023-06-14T20:42:18.096Z] {
+[2023-06-14T20:42:18.096Z]   "repo" : "oss-stg-generic",
+[2023-06-14T20:42:18.096Z]   "path" : "/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:42:18.096Z]   "created" : "2021-05-19T19:02:46.222-07:00",
+[2023-06-14T20:42:18.096Z]   "createdBy" : "svc_p_mescm",
+[2023-06-14T20:42:18.096Z]   "lastModified" : "2021-05-19T18:34:10.096-07:00",
+[2023-06-14T20:42:18.096Z]   "modifiedBy" : "svc_p_mescm",
+[2023-06-14T20:42:18.096Z]   "lastUpdated" : "2021-05-19T19:02:46.223-07:00",
+[2023-06-14T20:42:18.096Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:42:18.096Z]   "mimeType" : "application/zip",
+[2023-06-14T20:42:18.096Z]   "size" : "1650110847",
+[2023-06-14T20:42:18.096Z]   "checksums" : {
+[2023-06-14T20:42:18.096Z]     "sha1" : "75ce724ec25d6059a1485789ba50f46562c66b00",
+[2023-06-14T20:42:18.096Z]     "md5" : "f1ae76e064209fa12f3198469607ef12",
+[2023-06-14T20:42:18.096Z]     "sha256" : "d7f808390b03025e6387dda1e7ea7002436e08b56b0dad4067b44a58f37316e0"
+[2023-06-14T20:42:18.096Z]   },
+[2023-06-14T20:42:18.096Z]   "originalChecksums" : {
+[2023-06-14T20:42:18.096Z]     "sha1" : "75ce724ec25d6059a1485789ba50f46562c66b00",
+[2023-06-14T20:42:18.096Z]     "md5" : "f1ae76e064209fa12f3198469607ef12",
+[2023-06-14T20:42:18.096Z]     "sha256" : "d7f808390b03025e6387dda1e7ea7002436e08b56b0dad4067b44a58f37316e0"
+[2023-06-14T20:42:18.096Z]   },
+[2023-06-14T20:42:18.096Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip"
+[2023-06-14T20:42:18.096Z] }
+[2023-06-14T20:42:18.096Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:42:18.096Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:42:18.096Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:42:18.096Z] [DEBUG] Output:
+[2023-06-14T20:42:18.096Z] {
+[2023-06-14T20:42:18.096Z]   "repo" : "oss-stg-generic",
+[2023-06-14T20:42:18.096Z]   "path" : "/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:42:18.096Z]   "created" : "2021-05-19T19:02:46.222-07:00",
+[2023-06-14T20:42:18.096Z]   "createdBy" : "svc_p_mescm",
+[2023-06-14T20:42:18.096Z]   "lastModified" : "2021-05-19T18:34:10.096-07:00",
+[2023-06-14T20:42:18.096Z]   "modifiedBy" : "svc_p_mescm",
+[2023-06-14T20:42:18.096Z]   "lastUpdated" : "2021-05-19T19:02:46.223-07:00",
+[2023-06-14T20:42:18.096Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:42:18.096Z]   "mimeType" : "application/zip",
+[2023-06-14T20:42:18.096Z]   "size" : "1650110847",
+[2023-06-14T20:42:18.096Z]   "checksums" : {
+[2023-06-14T20:42:18.096Z]     "sha1" : "75ce724ec25d6059a1485789ba50f46562c66b00",
+[2023-06-14T20:42:18.096Z]     "md5" : "f1ae76e064209fa12f3198469607ef12",
+[2023-06-14T20:42:18.096Z]     "sha256" : "d7f808390b03025e6387dda1e7ea7002436e08b56b0dad4067b44a58f37316e0"
+[2023-06-14T20:42:18.096Z]   },
+[2023-06-14T20:42:18.096Z]   "originalChecksums" : {
+[2023-06-14T20:42:18.096Z]     "sha1" : "75ce724ec25d6059a1485789ba50f46562c66b00",
+[2023-06-14T20:42:18.096Z]     "md5" : "f1ae76e064209fa12f3198469607ef12",
+[2023-06-14T20:42:18.096Z]     "sha256" : "d7f808390b03025e6387dda1e7ea7002436e08b56b0dad4067b44a58f37316e0"
+[2023-06-14T20:42:18.096Z]   },
+[2023-06-14T20:42:18.096Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip"
+[2023-06-14T20:42:18.096Z] }
+[2023-06-14T20:42:18.096Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:42:18.096Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip?properties
+[2023-06-14T20:42:18.096Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip?properties
+[2023-06-14T20:42:18.096Z] [DEBUG] Output:
+[2023-06-14T20:42:18.096Z] {
+[2023-06-14T20:42:18.096Z]   "properties" : {
+[2023-06-14T20:42:18.096Z]     "branch" : [ "2022" ],
+[2023-06-14T20:42:18.097Z]     "change_set" : [ "29bfc1879c" ],
+[2023-06-14T20:42:18.097Z]     "cut_id" : [ "202105191053-29bfc1879c" ],
+[2023-06-14T20:42:18.097Z]     "package" : [ "rundev-2022" ],
+[2023-06-14T20:42:18.097Z]     "platform" : [ "win" ]
+[2023-06-14T20:42:18.097Z]   },
+[2023-06-14T20:42:18.097Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip"
+[2023-06-14T20:42:18.097Z] }
+[2023-06-14T20:42:18.097Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip?properties
+[2023-06-14T20:42:18.097Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724
+[2023-06-14T20:42:18.097Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2022\a9777c7
+[2023-06-14T20:42:18.097Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\2.1.5\ffa3adf
+[2023-06-14T20:42:18.209Z] 
+[2023-06-14T20:42:18.209Z] ================================================================================
+[2023-06-14T20:42:18.209Z]                              clean (RelWithDebInfo)
+[2023-06-14T20:42:18.209Z] ================================================================================
+[2023-06-14T20:42:18.209Z] Maya Python RelWithDebInfo Info:
+[2023-06-14T20:42:18.209Z]   mayapy executable   = P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\bin\mayapy2.exe
+[2023-06-14T20:42:18.209Z]   Include Folder      = P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\include\Python27\Python
+[2023-06-14T20:42:18.209Z]   Library             = P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\lib\python27.lib
+[2023-06-14T20:42:18.209Z]   site-package Folder = P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\Python27\Lib\site-packages
+[2023-06-14T20:42:18.538Z] In workdir: S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd
+[2023-06-14T20:42:18.539Z] Executing: 'P:\\shared\\Artifactory\\Windows\\rundev-2022\\202105191053\\runtime\\75ce724\\runTime\\bin\\mayapy2.exe' 'S:\\Jenkins\\workspace\\ECP\\ecg-maya-usd\\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\\ecg-maya-usd\\maya-usd\\build.py' --generator Ninja --build-relwithdebug --maya-location 'P:\\shared\\Artifactory\\Windows\\rundev-2022\\202105191053\\runtime\\75ce724\\runTime' --devkit-location 'P:\\shared\\Artifactory\\Windows\\rundev-2022\\202105191053\\runtime\\75ce724\\devkitBase' --pxrusd-location 'P:\\shared\\Artifactory\\Windows\\USD\\9ab6422' --qt-location 'P:\\shared\\Artifactory\\Windows\\qt\\5.15.2\\c545fea' --materialx '--build-args=-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe,-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/include/Python27/Python,-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/bin/mayapy2.exe,-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/lib/python27.lib,-DUSD_LIB_PREFIX=,-DBUILD_HDMAYA=OFF' '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|testProxyShapeDrawUsdChangeProcessing,--parallel 16' --stages=clean --redirect-outstream-file=False --install-location 'W:\\install\\RelWithDebInfo\\MayaUSD' 'W:\\'
+[2023-06-14T20:42:18.539Z] Modified environment variables:
+[2023-06-14T20:42:18.539Z]     PATH=P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\bin\HostX64\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCPackages;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\bin\Roslyn;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Performance Tools\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\\MSBuild\15.0\bin;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja
+[2023-06-14T20:42:18.646Z]     
+[2023-06-14T20:42:18.646Z]         Building with settings:
+[2023-06-14T20:42:18.646Z]           Source directory          S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd
+[2023-06-14T20:42:18.646Z]           Workspace directory       W:\
+[2023-06-14T20:42:18.646Z]           Build directory           W:\build\RelWithDebInfo
+[2023-06-14T20:42:18.646Z]           Install directory         W:\install\RelWithDebInfo\MayaUSD
+[2023-06-14T20:42:18.646Z]           Variant                   RelWithDebInfo
+[2023-06-14T20:42:18.646Z]           Python Debug              Off
+[2023-06-14T20:42:18.646Z]           CMake generator           Ninja
+[2023-06-14T20:42:18.646Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe', '-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/include/Python27/Python', '-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/bin/mayapy2.exe', '-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/lib/python27.lib', '-DUSD_LIB_PREFIX=', '-DBUILD_HDMAYA=OFF']
+[2023-06-14T20:42:18.646Z]           Stages arguments          ['clean']
+[2023-06-14T20:42:18.646Z]           CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|testProxyShapeDrawUsdChangeProcessing', '--parallel 16']
+[2023-06-14T20:42:18.646Z]     Success MayaUSD build and install !!!!
+[2023-06-14T20:42:18.646Z]     Elapsed time: 00:00:00
+[Pipeline] bat
+[2023-06-14T20:42:18.957Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-06-14T20:42:19.257Z] Deleting alias drive P:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Configure)
+[Pipeline] timeout
+[2023-06-14T20:42:19.565Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[2023-06-14T20:42:19.876Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-06-14T20:42:20.193Z] Creating alias drive W: to S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows
+[Pipeline] bat
+[2023-06-14T20:42:20.540Z] "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-06-14T20:42:20.743Z] **********************************************************************
+[2023-06-14T20:42:20.743Z] ** Visual Studio 2017 Developer Command Prompt v15.9.15
+[2023-06-14T20:42:20.743Z] ** Copyright (c) 2017 Microsoft Corporation
+[2023-06-14T20:42:20.743Z] **********************************************************************
+[2023-06-14T20:42:21.451Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-06-14T20:42:21.558Z] python ecg-maya-usd/build.py --stages=configure --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=1060 --git-commit=58d37b2af3bdbf1e8f7655a3a723fd823ddb68c2 --git-branch=master --variants=RelWithDebInfo --python=2.7 --pxrusd-version=min --interactive-tests=true --post-zips=false --maya-cut-config=maya-rundev-2022.yaml --maya-cut-id=202105191053-29bfc1879c --maya-package=rundev-2022 --stage-banner
+[2023-06-14T20:42:22.275Z] Finding Artifactory servers response times
+[2023-06-14T20:42:26.015Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:26.015Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:26.015Z] [DEBUG] Output:
+[2023-06-14T20:42:26.015Z] OK
+[2023-06-14T20:42:26.015Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:26.427Z] [VERBOSE] Start loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:26.427Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:26.427Z] [DEBUG] Output:
+[2023-06-14T20:42:26.427Z] OK
+[2023-06-14T20:42:26.427Z] [VERBOSE] End loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:26.427Z] [VERBOSE] Start loading URL (CURL): https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:26.427Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:26.427Z] [DEBUG] Output:
+[2023-06-14T20:42:26.427Z] OK
+[2023-06-14T20:42:26.427Z] [VERBOSE] End loading URL (CURL): https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:42:26.427Z] Checking server art-bobcat.autodesk.com for artifacts matching properties:
+[2023-06-14T20:42:26.427Z] 	cut_id=202105191053-29bfc1879c
+[2023-06-14T20:42:26.427Z] 	package=rundev-2022
+[2023-06-14T20:42:26.427Z] 	platform=win
+[2023-06-14T20:42:27.648Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-06-14T20:42:27.648Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X POST --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw -H Content-Type:text/plain --data items.find({"@cut_id": "202105191053-29bfc1879c", "@package": "rundev-2022", "@platform": "win", "$or": [{"repo": "team-maya-generic"}, {"repo": "oss-stg-generic"}, {"repo": "team-mayausd-post-generic"}, {"repo": "autodesk-3p-generic"}, {"repo": "adsk-build-tools-generic"}, {"repo": "team-ecg-generic"}]}) https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-06-14T20:42:27.648Z] [DEBUG] Output:
+[2023-06-14T20:42:27.648Z] {
+[2023-06-14T20:42:27.648Z] "results" : [ {
+[2023-06-14T20:42:27.648Z]   "repo" : "oss-stg-generic",
+[2023-06-14T20:42:27.648Z]   "path" : "Maya/2022/2021-05-19-10-53.Gold/windows",
+[2023-06-14T20:42:27.648Z]   "name" : "202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:42:27.648Z]   "type" : "file",
+[2023-06-14T20:42:27.648Z]   "size" : 1650110847,
+[2023-06-14T20:42:27.648Z]   "created" : "2021-05-19T19:02:46.222-07:00",
+[2023-06-14T20:42:27.648Z]   "created_by" : "svc_p_mescm",
+[2023-06-14T20:42:27.648Z]   "modified" : "2021-05-19T18:34:10.096-07:00",
+[2023-06-14T20:42:27.648Z]   "modified_by" : "svc_p_mescm",
+[2023-06-14T20:42:27.648Z]   "updated" : "2021-05-19T19:02:46.223-07:00"
+[2023-06-14T20:42:27.648Z] } ],
+[2023-06-14T20:42:27.648Z] "range" : {
+[2023-06-14T20:42:27.648Z]   "start_pos" : 0,
+[2023-06-14T20:42:27.648Z]   "end_pos" : 1,
+[2023-06-14T20:42:27.648Z]   "total" : 1
+[2023-06-14T20:42:27.648Z] }
+[2023-06-14T20:42:27.648Z] }
+[2023-06-14T20:42:27.648Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-06-14T20:42:27.648Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:42:27.648Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:42:27.648Z] [DEBUG] Output:
+[2023-06-14T20:42:27.648Z] {
+[2023-06-14T20:42:27.648Z]   "repo" : "oss-stg-generic",
+[2023-06-14T20:42:27.648Z]   "path" : "/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:42:27.648Z]   "created" : "2021-05-19T19:02:46.222-07:00",
+[2023-06-14T20:42:27.648Z]   "createdBy" : "svc_p_mescm",
+[2023-06-14T20:42:27.648Z]   "lastModified" : "2021-05-19T18:34:10.096-07:00",
+[2023-06-14T20:42:27.648Z]   "modifiedBy" : "svc_p_mescm",
+[2023-06-14T20:42:27.648Z]   "lastUpdated" : "2021-05-19T19:02:46.223-07:00",
+[2023-06-14T20:42:27.648Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:42:27.648Z]   "mimeType" : "application/zip",
+[2023-06-14T20:42:27.648Z]   "size" : "1650110847",
+[2023-06-14T20:42:27.648Z]   "checksums" : {
+[2023-06-14T20:42:27.648Z]     "sha1" : "75ce724ec25d6059a1485789ba50f46562c66b00",
+[2023-06-14T20:42:27.648Z]     "md5" : "f1ae76e064209fa12f3198469607ef12",
+[2023-06-14T20:42:27.648Z]     "sha256" : "d7f808390b03025e6387dda1e7ea7002436e08b56b0dad4067b44a58f37316e0"
+[2023-06-14T20:42:27.648Z]   },
+[2023-06-14T20:42:27.648Z]   "originalChecksums" : {
+[2023-06-14T20:42:27.648Z]     "sha1" : "75ce724ec25d6059a1485789ba50f46562c66b00",
+[2023-06-14T20:42:27.648Z]     "md5" : "f1ae76e064209fa12f3198469607ef12",
+[2023-06-14T20:42:27.648Z]     "sha256" : "d7f808390b03025e6387dda1e7ea7002436e08b56b0dad4067b44a58f37316e0"
+[2023-06-14T20:42:27.648Z]   },
+[2023-06-14T20:42:27.648Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip"
+[2023-06-14T20:42:27.648Z] }
+[2023-06-14T20:42:27.648Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:42:27.648Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:42:27.648Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:42:27.648Z] [DEBUG] Output:
+[2023-06-14T20:42:27.648Z] {
+[2023-06-14T20:42:27.648Z]   "repo" : "oss-stg-generic",
+[2023-06-14T20:42:27.648Z]   "path" : "/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:42:27.648Z]   "created" : "2021-05-19T19:02:46.222-07:00",
+[2023-06-14T20:42:27.648Z]   "createdBy" : "svc_p_mescm",
+[2023-06-14T20:42:27.767Z]   "lastModified" : "2021-05-19T18:34:10.096-07:00",
+[2023-06-14T20:42:27.767Z]   "modifiedBy" : "svc_p_mescm",
+[2023-06-14T20:42:27.767Z]   "lastUpdated" : "2021-05-19T19:02:46.223-07:00",
+[2023-06-14T20:42:27.767Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:42:27.767Z]   "mimeType" : "application/zip",
+[2023-06-14T20:42:27.767Z]   "size" : "1650110847",
+[2023-06-14T20:42:27.767Z]   "checksums" : {
+[2023-06-14T20:42:27.767Z]     "sha1" : "75ce724ec25d6059a1485789ba50f46562c66b00",
+[2023-06-14T20:42:27.767Z]     "md5" : "f1ae76e064209fa12f3198469607ef12",
+[2023-06-14T20:42:27.767Z]     "sha256" : "d7f808390b03025e6387dda1e7ea7002436e08b56b0dad4067b44a58f37316e0"
+[2023-06-14T20:42:27.767Z]   },
+[2023-06-14T20:42:27.767Z]   "originalChecksums" : {
+[2023-06-14T20:42:27.767Z]     "sha1" : "75ce724ec25d6059a1485789ba50f46562c66b00",
+[2023-06-14T20:42:27.767Z]     "md5" : "f1ae76e064209fa12f3198469607ef12",
+[2023-06-14T20:42:27.767Z]     "sha256" : "d7f808390b03025e6387dda1e7ea7002436e08b56b0dad4067b44a58f37316e0"
+[2023-06-14T20:42:27.767Z]   },
+[2023-06-14T20:42:27.767Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip"
+[2023-06-14T20:42:27.767Z] }
+[2023-06-14T20:42:27.767Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:42:27.767Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip?properties
+[2023-06-14T20:42:27.767Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip?properties
+[2023-06-14T20:42:27.767Z] [DEBUG] Output:
+[2023-06-14T20:42:27.767Z] {
+[2023-06-14T20:42:27.767Z]   "properties" : {
+[2023-06-14T20:42:27.767Z]     "branch" : [ "2022" ],
+[2023-06-14T20:42:27.767Z]     "change_set" : [ "29bfc1879c" ],
+[2023-06-14T20:42:27.767Z]     "cut_id" : [ "202105191053-29bfc1879c" ],
+[2023-06-14T20:42:27.767Z]     "package" : [ "rundev-2022" ],
+[2023-06-14T20:42:27.767Z]     "platform" : [ "win" ]
+[2023-06-14T20:42:27.767Z]   },
+[2023-06-14T20:42:27.767Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip"
+[2023-06-14T20:42:27.767Z] }
+[2023-06-14T20:42:27.767Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip?properties
+[2023-06-14T20:42:27.767Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724
+[2023-06-14T20:42:27.767Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2022\a9777c7
+[2023-06-14T20:42:27.767Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\2.1.5\ffa3adf
+[2023-06-14T20:42:27.767Z] 
+[2023-06-14T20:42:27.767Z] ================================================================================
+[2023-06-14T20:42:27.767Z]                            configure (RelWithDebInfo)
+[2023-06-14T20:42:27.767Z] ================================================================================
+[2023-06-14T20:42:27.767Z] Maya Python RelWithDebInfo Info:
+[2023-06-14T20:42:27.767Z]   mayapy executable   = P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\bin\mayapy2.exe
+[2023-06-14T20:42:27.767Z]   Include Folder      = P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\include\Python27\Python
+[2023-06-14T20:42:27.767Z]   Library             = P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\lib\python27.lib
+[2023-06-14T20:42:27.767Z]   site-package Folder = P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\Python27\Lib\site-packages
+[2023-06-14T20:42:28.085Z] In workdir: S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd
+[2023-06-14T20:42:28.085Z] Executing: 'P:\\shared\\Artifactory\\Windows\\rundev-2022\\202105191053\\runtime\\75ce724\\runTime\\bin\\mayapy2.exe' 'S:\\Jenkins\\workspace\\ECP\\ecg-maya-usd\\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\\ecg-maya-usd\\maya-usd\\build.py' --generator Ninja --build-relwithdebug --maya-location 'P:\\shared\\Artifactory\\Windows\\rundev-2022\\202105191053\\runtime\\75ce724\\runTime' --devkit-location 'P:\\shared\\Artifactory\\Windows\\rundev-2022\\202105191053\\runtime\\75ce724\\devkitBase' --pxrusd-location 'P:\\shared\\Artifactory\\Windows\\USD\\9ab6422' --qt-location 'P:\\shared\\Artifactory\\Windows\\qt\\5.15.2\\c545fea' --materialx '--build-args=-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe,-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/include/Python27/Python,-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/bin/mayapy2.exe,-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/lib/python27.lib,-DUSD_LIB_PREFIX=,-DBUILD_HDMAYA=OFF' '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|testProxyShapeDrawUsdChangeProcessing,--parallel 16' --stages=configure --redirect-outstream-file=False --install-location 'W:\\install\\RelWithDebInfo\\MayaUSD' 'W:\\'
+[2023-06-14T20:42:28.085Z] Modified environment variables:
+[2023-06-14T20:42:28.085Z]     PATH=P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\bin\HostX64\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCPackages;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\bin\Roslyn;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Performance Tools\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\\MSBuild\15.0\bin;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja
+[2023-06-14T20:42:28.707Z]     -- The C compiler identification is MSVC 19.16.27032.1
+[2023-06-14T20:42:28.931Z]     -- The CXX compiler identification is MSVC 19.16.27032.1
+[2023-06-14T20:42:29.043Z]     -- Detecting C compiler ABI info
+[2023-06-14T20:42:30.874Z]     -- Detecting C compiler ABI info - done
+[2023-06-14T20:42:30.987Z]     -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/cl.exe - skipped
+[2023-06-14T20:42:30.987Z]     -- Detecting C compile features
+[2023-06-14T20:42:30.987Z]     -- Detecting C compile features - done
+[2023-06-14T20:42:30.987Z]     -- Detecting CXX compiler ABI info
+[2023-06-14T20:42:31.612Z]     -- Detecting CXX compiler ABI info - done
+[2023-06-14T20:42:31.612Z]     -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/cl.exe - skipped
+[2023-06-14T20:42:31.612Z]     -- Detecting CXX compile features
+[2023-06-14T20:42:31.612Z]     -- Detecting CXX compile features - done
+[2023-06-14T20:42:32.544Z]     -- Using Maya Light API Version 1
+[2023-06-14T20:42:32.544Z]     -- Maya array iterator has difference_type trait
+[2023-06-14T20:42:32.544Z]     -- Found Maya: P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/bin/maya.exe (found suitable version "2022", minimum required is "2018")
+[2023-06-14T20:42:32.759Z]     -- Found Python: P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/bin/mayapy2.exe (found suitable exact version "2.7.11") found components: Interpreter
+[2023-06-14T20:42:32.759Z]     -- Build MayaUSD with Python3 = OFF
+[2023-06-14T20:42:32.759Z]     --    PYTHON_INCLUDE_DIRS = P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/include/Python27/Python
+[2023-06-14T20:42:32.759Z]     --    PYTHON_LIBRARIES    = P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/lib/python27.lib
+[2023-06-14T20:42:32.759Z]     --    Python_EXECUTABLE   = P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/bin/mayapy2.exe
+[2023-06-14T20:42:32.871Z]     -- USD v0.21.11 has security patches.
+[2023-06-14T20:42:32.871Z]     -- Found USD: P:/shared/Artifactory/Windows/USD/9ab6422 (found suitable version "0.21.11", minimum required is "0.21.11")
+[2023-06-14T20:42:32.871Z]     --    USD include dir: P:/shared/Artifactory/Windows/USD/9ab6422/include
+[2023-06-14T20:42:32.871Z]     --    USD library dir: P:/shared/Artifactory/Windows/USD/9ab6422/lib
+[2023-06-14T20:42:32.871Z]     --    usdGenSchema: P:/shared/Artifactory/Windows/USD/9ab6422/bin/usdGenSchema
+[2023-06-14T20:42:32.871Z]     --    USD version: 0.21.11
+[2023-06-14T20:42:32.871Z]     --    Autodesk USD version: 0.21.11-ad1
+[2023-06-14T20:42:32.871Z]     --    USD Boost::boost version: 107000
+[2023-06-14T20:42:32.871Z]     Updated PYTHONPATH: P:\shared\Artifactory\Windows\USD\9ab6422\lib\python
+[2023-06-14T20:42:32.872Z]     Updated PATH: P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\bin;P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\bin2;P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\bin\HostX64\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCPackages;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\bin\Roslyn;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Performance Tools\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\\MSBuild\15.0\bin;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;P:\shared\Artifactory\Windows\USD\9ab6422\bin;P:\shared\Artifactory\Windows\USD\9ab6422\lib
+[2023-06-14T20:42:32.872Z]     -- UFE include dir: P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/devkitBase/devkit/ufe/include
+[2023-06-14T20:42:32.872Z]     -- UFE library: P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/devkitBase/devkit/ufe/lib/ufe_2.lib
+[2023-06-14T20:42:32.872Z]     -- UFE version: 2.0.0
+[2023-06-14T20:42:32.872Z]     -- UFE preview features: ufe
+[2023-06-14T20:42:32.872Z]     -- Building with UFE 2.0.0 features enabled.
+[2023-06-14T20:42:32.872Z]     CMake Warning at CMakeLists.txt:161 (message):
+[2023-06-14T20:42:32.872Z]       Disabling MaterialX VP2 rendering: it is not supported by this version of
+[2023-06-14T20:42:32.872Z]       Maya.
+[2023-06-14T20:42:32.872Z]     
+[2023-06-14T20:42:32.872Z]     
+[2023-06-14T20:42:32.872Z]     -- Found MaterialX
+[2023-06-14T20:42:32.872Z]     -- Setting Qt version to Qt 5.15
+[2023-06-14T20:42:32.872Z]     -- Building with Qt 5.15 features enabled.
+[2023-06-14T20:42:32.872Z]     -- **** Building Gulrak From Github Repository.
+[2023-06-14T20:42:32.872Z]     -- Populating gulrak
+[2023-06-14T20:42:33.085Z]     -- Configuring done
+[2023-06-14T20:42:33.085Z]     -- Generating done
+[2023-06-14T20:42:33.197Z]     -- Build files have been written to: W:/build/RelWithDebInfo/_deps/gulrak-subbuild
+[2023-06-14T20:42:33.311Z]     [1/9] Creating directories for 'gulrak-populate'
+[2023-06-14T20:42:33.311Z]     [1/9] Performing download step (git clone) for 'gulrak-populate'
+[2023-06-14T20:42:33.423Z]     Cloning into 'gulrak-src'...
+[2023-06-14T20:43:16.328Z]     HEAD is now at 4e21ab3 Version bump and updated readme.
+[2023-06-14T20:43:17.059Z]     [2/9] Performing update step for 'gulrak-populate'
+[2023-06-14T20:43:17.275Z]     [4/9] No patch step for 'gulrak-populate'
+[2023-06-14T20:43:17.275Z]     [5/9] No configure step for 'gulrak-populate'
+[2023-06-14T20:43:17.390Z]     [6/9] No build step for 'gulrak-populate'
+[2023-06-14T20:43:17.390Z]     [7/9] No install step for 'gulrak-populate'
+[2023-06-14T20:43:17.504Z]     [8/9] No test step for 'gulrak-populate'
+[2023-06-14T20:43:17.504Z]     [9/9] Completed 'gulrak-populate'
+[2023-06-14T20:43:17.923Z]     -- ========== Installing GoogleTest... ==========
+[2023-06-14T20:43:18.146Z]     -- Configuring done
+[2023-06-14T20:43:18.146Z]     -- Generating done
+[2023-06-14T20:43:18.146Z]     -- Build files have been written to: W:/build/RelWithDebInfo/googletest-config
+[2023-06-14T20:43:18.376Z]     [1/8] Creating directories for 'googletest'
+[2023-06-14T20:46:13.623Z]     [2/8] Performing download step (git clone) for 'googletest'
+[2023-06-14T20:46:13.623Z]     Cloning into 'googletest-src'...
+[2023-06-14T20:46:13.623Z]     HEAD is now at 703bd9ca Googletest export
+[2023-06-14T20:46:13.737Z]     [3/8] Performing update step for 'googletest'
+[2023-06-14T20:46:13.853Z]     [4/8] No patch step for 'googletest'
+[2023-06-14T20:46:15.794Z]     [5/8] Performing configure step for 'googletest'
+[2023-06-14T20:46:15.794Z]     Not searching for unused variables given on the command line.
+[2023-06-14T20:46:15.794Z]     CMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
+[2023-06-14T20:46:15.794Z]       Compatibility with CMake < 2.8.12 will be removed from a future version of
+[2023-06-14T20:46:15.794Z]       CMake.
+[2023-06-14T20:46:15.794Z]     
+[2023-06-14T20:46:15.794Z]       Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[2023-06-14T20:46:15.794Z]       CMake that the project does not need compatibility with older versions.
+[2023-06-14T20:46:15.794Z]     
+[2023-06-14T20:46:15.794Z]     
+[2023-06-14T20:46:15.794Z]     -- The C compiler identification is MSVC 19.16.27032.1
+[2023-06-14T20:46:15.794Z]     -- The CXX compiler identification is MSVC 19.16.27032.1
+[2023-06-14T20:46:15.794Z]     -- Detecting C compiler ABI info
+[2023-06-14T20:46:15.794Z]     -- Detecting C compiler ABI info - done
+[2023-06-14T20:46:15.794Z]     -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/cl.exe - skipped
+[2023-06-14T20:46:15.794Z]     -- Detecting C compile features
+[2023-06-14T20:46:15.794Z]     -- Detecting C compile features - done
+[2023-06-14T20:46:15.794Z]     -- Detecting CXX compiler ABI info
+[2023-06-14T20:46:15.794Z]     -- Detecting CXX compiler ABI info - done
+[2023-06-14T20:46:15.794Z]     -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/cl.exe - skipped
+[2023-06-14T20:46:15.794Z]     -- Detecting CXX compile features
+[2023-06-14T20:46:15.794Z]     -- Detecting CXX compile features - done
+[2023-06-14T20:46:15.794Z]     CMake Deprecation Warning at googletest/CMakeLists.txt:56 (cmake_minimum_required):
+[2023-06-14T20:46:15.794Z]       Compatibility with CMake < 2.8.12 will be removed from a future version of
+[2023-06-14T20:46:15.794Z]       CMake.
+[2023-06-14T20:46:15.794Z]     
+[2023-06-14T20:46:15.794Z]       Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[2023-06-14T20:46:15.794Z]       CMake that the project does not need compatibility with older versions.
+[2023-06-14T20:46:15.794Z]     
+[2023-06-14T20:46:15.794Z]     
+[2023-06-14T20:46:15.794Z]     -- Found PythonInterp: C:/Python27/python.exe (found version "2.7.18")
+[2023-06-14T20:46:15.794Z]     -- Looking for pthread.h
+[2023-06-14T20:46:15.794Z]     -- Looking for pthread.h - not found
+[2023-06-14T20:46:15.794Z]     -- Found Threads: TRUE
+[2023-06-14T20:46:15.794Z]     -- Configuring done
+[2023-06-14T20:46:15.794Z]     -- Generating done
+[2023-06-14T20:46:15.794Z]     -- Build files have been written to: W:/build/RelWithDebInfo/googletest-build
+[2023-06-14T20:46:20.161Z]     [6/8] Performing build step for 'googletest'
+[2023-06-14T20:46:20.161Z]     [1/4] Building CXX object googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj
+[2023-06-14T20:46:20.161Z]     [2/4] Building CXX object googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj
+[2023-06-14T20:46:20.161Z]     [3/4] Linking CXX shared library bin\gtest.dll
+[2023-06-14T20:46:20.161Z]     [4/4] Linking CXX shared library bin\gtest_main.dll
+[2023-06-14T20:46:20.374Z]     [7/8] Performing install step for 'googletest'
+[2023-06-14T20:46:20.374Z]     [0/1] Install the project...
+[2023-06-14T20:46:20.374Z]     -- Install configuration: "RelWithDebInfo"
+[2023-06-14T20:46:20.486Z]     [8/8] Completed 'googletest'
+[2023-06-14T20:46:20.486Z]     -- ========== ...  GoogleTest installed. ==========
+[2023-06-14T20:46:21.307Z]     -- USD_HAS_COLOR4_SDR_SUPPORT is FALSE
+[2023-06-14T20:46:21.307Z]     -- MAYA_HAS_DISPLAY_LAYER_API is FALSE
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/base/usdUfe.h.src
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/base/api.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/base/debugCodes.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/base/tokens.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/Global.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/StagesSubject.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdHierarchy.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdHierarchyHandler.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdRootChildHierarchy.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdSceneItem.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/Utils.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UfeVersionCompat.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdCamera.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdCameraHandler.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdObject3d.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdObject3dHandler.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoableCommand.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoAddNewPrimCommand.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoCreateGroupCommand.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoInsertChildCommand.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoReorderCommand.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoSetKindCommand.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoVisibleCommand.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/private/UfeNotifGuard.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/private/Utils.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/undo/UsdUndoBlock.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/undo/UsdUndoManager.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/undo/UsdUndoStateDelegate.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/undo/UsdUndoableItem.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/utils/editRouter.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/utils/editRouterContext.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/utils/layers.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/utils/loadRules.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/utils/usdUtils.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usdUfe/utils/Utils.h
+[2023-06-14T20:46:21.307Z]     -- MAYA_HAS_DEFAULT_MATERIAL_API is FALSE
+[2023-06-14T20:46:21.307Z]     -- MAYA_HAS_COLOR_MANAGEMENT_SUPPORT_API is FALSE
+[2023-06-14T20:46:21.307Z]     -- MAYA_NEW_POINT_SNAPPING_SUPPORT is FALSE
+[2023-06-14T20:46:21.307Z]     -- MAYA_HAS_CRASH_DETECTION is FALSE
+[2023-06-14T20:46:21.307Z]     -- MAYA_CURRENT_UFE_CAMERA_SUPPORT is FALSE
+[2023-06-14T20:46:21.307Z]     -- MAYA_MRENDERITEM_UFE_IDENTIFIER_SUPPORT is FALSE
+[2023-06-14T20:46:21.307Z]     -- MAYA_UPDATE_UFE_IDENTIFIER_SUPPORT is FALSE
+[2023-06-14T20:46:21.307Z]     -- MAYA_HAS_DISPLAY_STYLE_ALL_VIEWPORTS is FALSE
+[2023-06-14T20:46:21.307Z]     -- MAYA_ARRAY_ITERATOR_DIFFERENCE_TYPE_SUPPORT is TRUE
+[2023-06-14T20:46:21.307Z]     -- MAYA_HAS_GET_MEMBER_PATHS is FALSE
+[2023-06-14T20:46:21.307Z]     -- USD_HAS_COLOR4_SDR_SUPPORT is FALSE
+[2023-06-14T20:46:21.307Z]     -- MAYA_HAS_DISPLAY_LAYER_API is FALSE
+[2023-06-14T20:46:21.307Z]     -- MAYA_HAS_NEW_DISPLAY_LAYER_MESSAGING_API is FALSE
+[2023-06-14T20:46:21.307Z]     -- MAYA_HAS_RENDER_ITEM_HIDE_ON_PLAYBACK_API is FALSE
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/base/mayaUsd.h.src
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/base/api.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/base/debugCodes.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/base/id.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/base/syncId.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/base/tokens.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/abstractLayerEditorWindow.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/baseExportCommand.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/baseImportCommand.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/baseListJobContextsCommand.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/baseListShadingModesCommand.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/editTargetCommand.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/layerEditorCommand.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/layerEditorWindowCommand.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/fallbackPrimReader.h
+[2023-06-14T20:46:21.307Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/functorPrimReader.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/functorPrimWriter.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/importData.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/instancedNodeWriter.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobContextRegistry.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primReader.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primReaderArgs.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primReaderContext.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primReaderRegistry.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriter.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriterArgs.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriterContext.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriterRegistry.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/registryHelper.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/schemaApiAdaptor.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/schemaApiAdaptorRegistry.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shaderReader.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shaderReaderRegistry.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shaderWriter.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shaderWriterRegistry.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/transformWriter.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/writeJobContext.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/chaser/exportChaser.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/chaser/exportChaserRegistry.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/chaser/importChaserRegistry.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/chaser/importChaser.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobs/jobArgs.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobs/meshDataReadJob.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobs/modelKindProcessor.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobs/readJob.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobs/writeJob.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/rfmShaderMap.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/shadingModeExporter.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/shadingModeExporterContext.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/shadingModeImporter.h
+[2023-06-14T20:46:21.420Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/shadingModeRegistry.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/symmetricShaderReader.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/symmetricShaderWriter.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/skelBindingsProcessor.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorCamera.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorCurves.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorGprim.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorLight.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorMaterial.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorMayaReference.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorMesh.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorNurbsPatch.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorPrim.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorRfMLight.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorSkel.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorUtil.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorXformable.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/adaptor.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/jointWriteUtils.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/meshReadUtils.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/meshWriteUtils.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/readUtil.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/roundTripUtil.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/shadingUtil.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/userTaggedAttribute.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/writeUtil.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/xformStack.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/listeners/notice.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/listeners/proxyShapeNotice.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/listeners/stageNoticeListener.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/hdImagingShape.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/pointBasedDeformerNode.h
+[2023-06-14T20:46:21.421Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyAccessor.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyShapeBase.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyShapePlugin.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyStageProvider.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyShapeStageExtraData.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyShapeListenerBase.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/stageData.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/stageNode.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/usdPrimProvider.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/layerManager.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/px_vp20/glslProgram.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/px_vp20/utils.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/px_vp20/utils_legacy.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/batchRenderer.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/debugCodes.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/hdImagingShapeDrawOverride.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/hdImagingShapeUI.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/instancerImager.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/instancerShapeAdapter.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/proxyDrawOverride.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/proxyShapeUI.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/renderParams.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/sceneDelegate.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/shapeAdapter.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/softSelectHelper.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/usdProxyShapeAdapter.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/userData.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/vp2RenderDelegate/proxyRenderDelegate.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/render/vp2ShaderFragments/shaderFragments.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/Global.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/MayaStagesSubject.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/ProxyShapeHandler.h
+[2023-06-14T20:46:21.422Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/ProxyShapeHierarchy.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/ProxyShapeHierarchyHandler.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/SetVariantSelectionCommand.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPointInstanceModifierBase.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPointInstanceOrientationModifier.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPointInstancePositionModifier.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPointInstanceScaleModifier.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdRotatePivotTranslateUndoableCommand.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdRotateUndoableCommand.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdScaleUndoableCommand.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdSceneItemOps.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdSceneItemOpsHandler.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdStageMap.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTRSUndoableCommandBase.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3d.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dReadImpl.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dHandler.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTranslateUndoableCommand.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoDeleteCommand.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoDuplicateCommand.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoRenameCommand.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/Utils.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/MayaUsdObject3d.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/MayaUsdObject3dHandler.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/ProxyShapeContextOpsHandler.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/RotationUtils.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdAttribute.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdAttributeHolder.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdAttributes.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdAttributesHandler.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdContextOps.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdContextOpsHandler.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPointInstanceUndoableCommands.h
+[2023-06-14T20:46:21.423Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdSetXformOpUndoableCommandBase.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dBase.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dCommonAPI.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dFallbackMayaXformStack.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dMatrixOp.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dMayaXformStack.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dPointInstance.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dSetObjectMatrix.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dUndoableCommands.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUIInfoHandler.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUIUfeObserver.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoMaterialCommands.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/XformOpUtils.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/OpUndoItemList.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/OpUndoItemMuting.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/OpUndoItemRecorder.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/OpUndoItems.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/MayaUsdUndoBlock.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/blockSceneModificationContext.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/colorSpace.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/customLayerData.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/converter.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/diagnosticDelegate.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/dynamicAttribute.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/editability.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/hash.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/layerMuting.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/layers.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/loadRules.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/mayaEditRouter.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/query.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/plugRegistryHelper.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/progressBarScope.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/selectability.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/stageCache.h
+[2023-06-14T20:46:21.424Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/targetLayer.h
+[2023-06-14T20:46:21.425Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/traverseLayer.h
+[2023-06-14T20:46:21.425Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/trieVisitor.h
+[2023-06-14T20:46:21.425Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/undoHelperCommand.h
+[2023-06-14T20:46:21.425Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/util.h
+[2023-06-14T20:46:21.425Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/utilDictionary.h
+[2023-06-14T20:46:21.425Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/utilFileSystem.h
+[2023-06-14T20:46:21.425Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/utilSerialization.h
+[2023-06-14T20:46:21.425Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/variants.h
+[2023-06-14T20:46:21.425Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/json.h
+[2023-06-14T20:46:21.425Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/primActivation.h
+[2023-06-14T20:46:21.425Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/pxrUsdPreviewSurface/usdPreviewSurface.h
+[2023-06-14T20:46:21.425Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/pxrUsdPreviewSurface/usdPreviewSurfacePlugin.h
+[2023-06-14T20:46:21.538Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/schemas/api.h
+[2023-06-14T20:46:21.538Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/schemas/ALMayaReference.h
+[2023-06-14T20:46:21.538Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/schemas/MayaReference.h
+[2023-06-14T20:46:21.538Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/schemas/tokens.h
+[2023-06-14T20:46:21.752Z]     #################################################################################################
+[2023-06-14T20:46:21.752Z]     #  USD_DISABLE_PRIM_DEFINITIONS_FOR_USDGENSCHEMA is overridden to 'true'.  Default is 'false'.  #
+[2023-06-14T20:46:21.752Z]     #################################################################################################
+[2023-06-14T20:46:21.969Z]     Processing schema classes:
+[2023-06-14T20:46:21.969Z]     MayaReference, ALMayaReference
+[2023-06-14T20:46:21.969Z]     Loading Templates from p:\shared\Artifactory\Windows\USD\9ab6422\lib\usd\usd\resources\codegenTemplates
+[2023-06-14T20:46:21.969Z]     Writing API:
+[2023-06-14T20:46:21.969Z]     	    wrote W:\build\RelWithDebInfo\lib\usd\schemas\api.h
+[2023-06-14T20:46:21.969Z]     Writing Schema Tokens:
+[2023-06-14T20:46:21.969Z]     	    wrote W:\build\RelWithDebInfo\lib\usd\schemas\tokens.h
+[2023-06-14T20:46:21.969Z]     	    wrote W:\build\RelWithDebInfo\lib\usd\schemas\tokens.cpp
+[2023-06-14T20:46:21.969Z]     	    wrote W:\build\RelWithDebInfo\lib\usd\schemas\wrapTokens.cpp
+[2023-06-14T20:46:21.969Z]     Generating Classes:
+[2023-06-14T20:46:21.969Z]     	    wrote W:\build\RelWithDebInfo\lib\usd\schemas\MayaReference.h
+[2023-06-14T20:46:21.969Z]     	    wrote W:\build\RelWithDebInfo\lib\usd\schemas\MayaReference.cpp
+[2023-06-14T20:46:21.969Z]     	    wrote W:\build\RelWithDebInfo\lib\usd\schemas\wrapMayaReference.cpp
+[2023-06-14T20:46:21.969Z]     	    wrote W:\build\RelWithDebInfo\lib\usd\schemas\ALMayaReference.h
+[2023-06-14T20:46:21.969Z]     	    wrote W:\build\RelWithDebInfo\lib\usd\schemas\ALMayaReference.cpp
+[2023-06-14T20:46:21.969Z]     	    wrote W:\build\RelWithDebInfo\lib\usd\schemas\wrapALMayaReference.cpp
+[2023-06-14T20:46:21.969Z]     Loading Templates from p:\shared\Artifactory\Windows\USD\9ab6422\lib\usd\usd\resources\codegenTemplates
+[2023-06-14T20:46:21.969Z]     	    wrote W:\build\RelWithDebInfo\lib\usd\schemas\plugInfo.json
+[2023-06-14T20:46:21.969Z]     Generating Schematics:
+[2023-06-14T20:46:21.970Z]     	    wrote W:\build\RelWithDebInfo\lib\usd\schemas\generatedSchema.usda
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/utils/ALHalf.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/utils/Api.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/utils/DebugCodes.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/utils/DiffCore.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/utils/DiffPrims.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/utils/MergePrims.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/utils/MergePrimsOptions.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/utils/ForwardDeclares.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/utils/SIMD.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/ui/layerEditor/batchSaveLayersUIDelegate.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/IMayaMQtUtil.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/ItemDelegate.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/IUSDImportView.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/TreeItem.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/TreeModel.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/TreeModelFactory.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/USDImportDialog.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/USDImportDialogCmd.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/USDQtUtil.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/ui/api.h
+[2023-06-14T20:46:21.970Z]     -- promoting: S:/Jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows/ecg-maya-usd/maya-usd/lib/usd/ui/initStringResources.h
+[2023-06-14T20:46:21.970Z]     ========== Pixar USD Plugin ==========
+[2023-06-14T20:46:21.970Z]     Compiling W:/build/RelWithDebInfo/plugin/pxr/__init__.py ...
+[2023-06-14T20:46:22.082Z]     ========== AL USD Plugin ==========
+[2023-06-14T20:46:22.082Z]     CMake Deprecation Warning at plugin/al/CMakeLists.txt:7 (cmake_policy):
+[2023-06-14T20:46:22.082Z]       The OLD behavior for policy CMP0026 will be removed from a future version
+[2023-06-14T20:46:22.082Z]       of CMake.
+[2023-06-14T20:46:22.082Z]     
+[2023-06-14T20:46:22.082Z]       The cmake-policies(7) manual explains that the OLD behaviors of all
+[2023-06-14T20:46:22.082Z]       policies are deprecated and that a policy should be set to OLD only under
+[2023-06-14T20:46:22.082Z]       specific short-term circumstances.  Projects should be ported to the NEW
+[2023-06-14T20:46:22.082Z]       behavior and not rely on setting a policy to OLD.
+[2023-06-14T20:46:22.082Z]     
+[2023-06-14T20:46:22.082Z]     
+[2023-06-14T20:46:22.082Z]     -- Found Boost 1.70.0 at P:/shared/Artifactory/Windows/USD/9ab6422/lib/cmake/Boost-1.70.0
+[2023-06-14T20:46:22.082Z]     --   Requested configuration: QUIET REQUIRED
+[2023-06-14T20:46:22.082Z]     -- Found boost_headers 1.70.0 at P:/shared/Artifactory/Windows/USD/9ab6422/lib/cmake/boost_headers-1.70.0
+[2023-06-14T20:46:22.082Z]     -- Found Boost: P:/shared/Artifactory/Windows/USD/9ab6422/lib/cmake/Boost-1.70.0/BoostConfig.cmake (found version "1.70.0")
+[2023-06-14T20:46:22.082Z]     -- Found Boost 1.70.0 at P:/shared/Artifactory/Windows/USD/9ab6422/lib/cmake/Boost-1.70.0
+[2023-06-14T20:46:22.082Z]     --   Requested configuration: QUIET REQUIRED COMPONENTS python
+[2023-06-14T20:46:22.082Z]     -- Found boost_python 1.70.0 at P:/shared/Artifactory/Windows/USD/9ab6422/lib/cmake/boost_python-1.70.0
+[2023-06-14T20:46:22.082Z]     --   boost_python27-vc141-mt-x64-1_70.lib
+[2023-06-14T20:46:22.082Z]     -- Adding boost_python dependencies: headers
+[2023-06-14T20:46:22.082Z]     -- Found Boost: P:/shared/Artifactory/Windows/USD/9ab6422/lib/cmake/Boost-1.70.0/BoostConfig.cmake (found version "1.70.0") found components: python
+[2023-06-14T20:46:22.398Z]     -- Found GTest: W:/build/RelWithDebInfo/googletest-install/lib/gtest.lib
+[2023-06-14T20:46:23.321Z]     -- Building AL_USDMayaSchemas
+[2023-06-14T20:46:23.636Z]     #################################################################################################
+[2023-06-14T20:46:23.636Z]     #  USD_DISABLE_PRIM_DEFINITIONS_FOR_USDGENSCHEMA is overridden to 'true'.  Default is 'false'.  #
+[2023-06-14T20:46:23.636Z]     #################################################################################################
+[2023-06-14T20:46:23.851Z]     Processing schema classes:
+[2023-06-14T20:46:23.851Z]     ALModelAPI, ALFrameRange
+[2023-06-14T20:46:23.851Z]     Loading Templates from p:\shared\Artifactory\Windows\USD\9ab6422\lib\usd\usd\resources\codegenTemplates
+[2023-06-14T20:46:23.851Z]     Writing API:
+[2023-06-14T20:46:23.851Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\maya\api.h
+[2023-06-14T20:46:23.851Z]     Writing Schema Tokens:
+[2023-06-14T20:46:23.851Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\maya\tokens.h
+[2023-06-14T20:46:23.851Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\maya\tokens.cpp
+[2023-06-14T20:46:23.851Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\maya\wrapTokens.cpp
+[2023-06-14T20:46:23.851Z]     Generating Classes:
+[2023-06-14T20:46:23.851Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\maya\ModelAPI.h
+[2023-06-14T20:46:23.851Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\maya\ModelAPI.cpp
+[2023-06-14T20:46:23.851Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\maya\wrapModelAPI.cpp
+[2023-06-14T20:46:23.851Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\maya\FrameRange.h
+[2023-06-14T20:46:23.851Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\maya\FrameRange.cpp
+[2023-06-14T20:46:23.851Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\maya\wrapFrameRange.cpp
+[2023-06-14T20:46:23.851Z]     Loading Templates from p:\shared\Artifactory\Windows\USD\9ab6422\lib\usd\usd\resources\codegenTemplates
+[2023-06-14T20:46:23.851Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\maya\plugInfo.json
+[2023-06-14T20:46:23.851Z]     Generating Schematics:
+[2023-06-14T20:46:23.851Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\maya\generatedSchema.usda
+[2023-06-14T20:46:24.370Z]     #################################################################################################
+[2023-06-14T20:46:24.370Z]     #  USD_DISABLE_PRIM_DEFINITIONS_FOR_USDGENSCHEMA is overridden to 'true'.  Default is 'false'.  #
+[2023-06-14T20:46:24.370Z]     #################################################################################################
+[2023-06-14T20:46:24.586Z]     Processing schema classes:
+[2023-06-14T20:46:24.586Z]     ALExamplePolyCubeNode
+[2023-06-14T20:46:24.586Z]     Loading Templates from p:\shared\Artifactory\Windows\USD\9ab6422\lib\usd\usd\resources\codegenTemplates
+[2023-06-14T20:46:24.586Z]     Writing API:
+[2023-06-14T20:46:24.586Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\mayatest\api.h
+[2023-06-14T20:46:24.586Z]     Writing Schema Tokens:
+[2023-06-14T20:46:24.586Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\mayatest\tokens.h
+[2023-06-14T20:46:24.586Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\mayatest\tokens.cpp
+[2023-06-14T20:46:24.600Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\mayatest\wrapTokens.cpp
+[2023-06-14T20:46:24.600Z]     Generating Classes:
+[2023-06-14T20:46:24.600Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\mayatest\ExamplePolyCubeNode.h
+[2023-06-14T20:46:24.600Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\mayatest\ExamplePolyCubeNode.cpp
+[2023-06-14T20:46:24.600Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\mayatest\wrapExamplePolyCubeNode.cpp
+[2023-06-14T20:46:24.600Z]     Loading Templates from p:\shared\Artifactory\Windows\USD\9ab6422\lib\usd\usd\resources\codegenTemplates
+[2023-06-14T20:46:24.600Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\mayatest\plugInfo.json
+[2023-06-14T20:46:24.600Z]     Generating Schematics:
+[2023-06-14T20:46:24.600Z]     	    wrote W:\build\RelWithDebInfo\plugin\al\schemas\AL\usd\schemas\mayatest\generatedSchema.usda
+[2023-06-14T20:46:24.600Z]     -- Building AL_USDMayaTranslators
+[2023-06-14T20:46:24.600Z]     ========== ADSK USD Plugin ==========
+[2023-06-14T20:46:24.720Z]     -- Configuring done
+[2023-06-14T20:46:25.955Z]     -- Generating done
+[2023-06-14T20:46:26.060Z]     -- Build files have been written to: W:/build/RelWithDebInfo
+[2023-06-14T20:46:26.060Z]     
+[2023-06-14T20:46:26.060Z]         Building with settings:
+[2023-06-14T20:46:26.060Z]           Source directory          S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd
+[2023-06-14T20:46:26.060Z]           Workspace directory       W:\
+[2023-06-14T20:46:26.060Z]           Build directory           W:\build\RelWithDebInfo
+[2023-06-14T20:46:26.060Z]           Install directory         W:\install\RelWithDebInfo\MayaUSD
+[2023-06-14T20:46:26.060Z]           Variant                   RelWithDebInfo
+[2023-06-14T20:46:26.060Z]           Python Debug              Off
+[2023-06-14T20:46:26.060Z]           CMake generator           Ninja
+[2023-06-14T20:46:26.060Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe', '-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/include/Python27/Python', '-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/bin/mayapy2.exe', '-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/lib/python27.lib', '-DUSD_LIB_PREFIX=', '-DBUILD_HDMAYA=OFF']
+[2023-06-14T20:46:26.060Z]           Stages arguments          ['configure']
+[2023-06-14T20:46:26.060Z]           CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|testProxyShapeDrawUsdChangeProcessing', '--parallel 16']
+[2023-06-14T20:46:26.060Z]     Success MayaUSD build and install !!!!
+[2023-06-14T20:46:26.060Z]     Elapsed time: 00:03:57
+[Pipeline] bat
+[2023-06-14T20:46:26.363Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-06-14T20:46:26.660Z] Deleting alias drive P:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] timeout
+[2023-06-14T20:46:26.943Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[2023-06-14T20:46:27.129Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-06-14T20:46:27.434Z] Creating alias drive W: to S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows
+[Pipeline] bat
+[2023-06-14T20:46:27.952Z] "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-06-14T20:46:28.154Z] **********************************************************************
+[2023-06-14T20:46:28.154Z] ** Visual Studio 2017 Developer Command Prompt v15.9.15
+[2023-06-14T20:46:28.154Z] ** Copyright (c) 2017 Microsoft Corporation
+[2023-06-14T20:46:28.154Z] **********************************************************************
+[2023-06-14T20:46:28.968Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-06-14T20:46:28.968Z] python ecg-maya-usd/build.py --stages=build --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=1060 --git-commit=58d37b2af3bdbf1e8f7655a3a723fd823ddb68c2 --git-branch=master --variants=RelWithDebInfo --python=2.7 --pxrusd-version=min --interactive-tests=true --post-zips=false --build-retry=3 --maya-cut-config=maya-rundev-2022.yaml --maya-cut-id=202105191053-29bfc1879c --maya-package=rundev-2022 --stage-banner
+[2023-06-14T20:46:29.684Z] Finding Artifactory servers response times
+[2023-06-14T20:46:31.913Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:46:31.913Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:46:31.913Z] [DEBUG] Output:
+[2023-06-14T20:46:31.913Z] OK
+[2023-06-14T20:46:31.913Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:46:32.224Z] [VERBOSE] Start loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:46:32.224Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:46:32.224Z] [DEBUG] Output:
+[2023-06-14T20:46:32.224Z] OK
+[2023-06-14T20:46:32.224Z] [VERBOSE] End loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:46:32.224Z] [VERBOSE] Start loading URL (CURL): https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:46:32.224Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:46:32.224Z] [DEBUG] Output:
+[2023-06-14T20:46:32.224Z] OK
+[2023-06-14T20:46:32.224Z] [VERBOSE] End loading URL (CURL): https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-06-14T20:46:32.224Z] Checking server art-bobcat.autodesk.com for artifacts matching properties:
+[2023-06-14T20:46:32.224Z] 	cut_id=202105191053-29bfc1879c
+[2023-06-14T20:46:32.224Z] 	package=rundev-2022
+[2023-06-14T20:46:32.224Z] 	platform=win
+[2023-06-14T20:46:33.048Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-06-14T20:46:33.048Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X POST --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw -H Content-Type:text/plain --data items.find({"@cut_id": "202105191053-29bfc1879c", "@package": "rundev-2022", "@platform": "win", "$or": [{"repo": "team-maya-generic"}, {"repo": "oss-stg-generic"}, {"repo": "team-mayausd-post-generic"}, {"repo": "autodesk-3p-generic"}, {"repo": "adsk-build-tools-generic"}, {"repo": "team-ecg-generic"}]}) https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-06-14T20:46:33.048Z] [DEBUG] Output:
+[2023-06-14T20:46:33.048Z] {
+[2023-06-14T20:46:33.048Z] "results" : [ {
+[2023-06-14T20:46:33.048Z]   "repo" : "oss-stg-generic",
+[2023-06-14T20:46:33.048Z]   "path" : "Maya/2022/2021-05-19-10-53.Gold/windows",
+[2023-06-14T20:46:33.048Z]   "name" : "202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:46:33.048Z]   "type" : "file",
+[2023-06-14T20:46:33.048Z]   "size" : 1650110847,
+[2023-06-14T20:46:33.048Z]   "created" : "2021-05-19T19:02:46.222-07:00",
+[2023-06-14T20:46:33.048Z]   "created_by" : "svc_p_mescm",
+[2023-06-14T20:46:33.048Z]   "modified" : "2021-05-19T18:34:10.096-07:00",
+[2023-06-14T20:46:33.048Z]   "modified_by" : "svc_p_mescm",
+[2023-06-14T20:46:33.048Z]   "updated" : "2021-05-19T19:02:46.223-07:00"
+[2023-06-14T20:46:33.048Z] } ],
+[2023-06-14T20:46:33.048Z] "range" : {
+[2023-06-14T20:46:33.048Z]   "start_pos" : 0,
+[2023-06-14T20:46:33.048Z]   "end_pos" : 1,
+[2023-06-14T20:46:33.048Z]   "total" : 1
+[2023-06-14T20:46:33.048Z] }
+[2023-06-14T20:46:33.048Z] }
+[2023-06-14T20:46:33.048Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-06-14T20:46:33.048Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:46:33.048Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:46:33.048Z] [DEBUG] Output:
+[2023-06-14T20:46:33.048Z] {
+[2023-06-14T20:46:33.048Z]   "repo" : "oss-stg-generic",
+[2023-06-14T20:46:33.048Z]   "path" : "/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:46:33.048Z]   "created" : "2021-05-19T19:02:46.222-07:00",
+[2023-06-14T20:46:33.048Z]   "createdBy" : "svc_p_mescm",
+[2023-06-14T20:46:33.048Z]   "lastModified" : "2021-05-19T18:34:10.096-07:00",
+[2023-06-14T20:46:33.048Z]   "modifiedBy" : "svc_p_mescm",
+[2023-06-14T20:46:33.048Z]   "lastUpdated" : "2021-05-19T19:02:46.223-07:00",
+[2023-06-14T20:46:33.048Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:46:33.048Z]   "mimeType" : "application/zip",
+[2023-06-14T20:46:33.048Z]   "size" : "1650110847",
+[2023-06-14T20:46:33.048Z]   "checksums" : {
+[2023-06-14T20:46:33.048Z]     "sha1" : "75ce724ec25d6059a1485789ba50f46562c66b00",
+[2023-06-14T20:46:33.048Z]     "md5" : "f1ae76e064209fa12f3198469607ef12",
+[2023-06-14T20:46:33.048Z]     "sha256" : "d7f808390b03025e6387dda1e7ea7002436e08b56b0dad4067b44a58f37316e0"
+[2023-06-14T20:46:33.048Z]   },
+[2023-06-14T20:46:33.048Z]   "originalChecksums" : {
+[2023-06-14T20:46:33.048Z]     "sha1" : "75ce724ec25d6059a1485789ba50f46562c66b00",
+[2023-06-14T20:46:33.048Z]     "md5" : "f1ae76e064209fa12f3198469607ef12",
+[2023-06-14T20:46:33.048Z]     "sha256" : "d7f808390b03025e6387dda1e7ea7002436e08b56b0dad4067b44a58f37316e0"
+[2023-06-14T20:46:33.048Z]   },
+[2023-06-14T20:46:33.048Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip"
+[2023-06-14T20:46:33.048Z] }
+[2023-06-14T20:46:33.048Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:46:33.048Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:46:33.049Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:46:33.049Z] [DEBUG] Output:
+[2023-06-14T20:46:33.049Z] {
+[2023-06-14T20:46:33.049Z]   "repo" : "oss-stg-generic",
+[2023-06-14T20:46:33.049Z]   "path" : "/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:46:33.049Z]   "created" : "2021-05-19T19:02:46.222-07:00",
+[2023-06-14T20:46:33.049Z]   "createdBy" : "svc_p_mescm",
+[2023-06-14T20:46:33.049Z]   "lastModified" : "2021-05-19T18:34:10.096-07:00",
+[2023-06-14T20:46:33.049Z]   "modifiedBy" : "svc_p_mescm",
+[2023-06-14T20:46:33.049Z]   "lastUpdated" : "2021-05-19T19:02:46.223-07:00",
+[2023-06-14T20:46:33.049Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip",
+[2023-06-14T20:46:33.049Z]   "mimeType" : "application/zip",
+[2023-06-14T20:46:33.049Z]   "size" : "1650110847",
+[2023-06-14T20:46:33.049Z]   "checksums" : {
+[2023-06-14T20:46:33.049Z]     "sha1" : "75ce724ec25d6059a1485789ba50f46562c66b00",
+[2023-06-14T20:46:33.049Z]     "md5" : "f1ae76e064209fa12f3198469607ef12",
+[2023-06-14T20:46:33.049Z]     "sha256" : "d7f808390b03025e6387dda1e7ea7002436e08b56b0dad4067b44a58f37316e0"
+[2023-06-14T20:46:33.049Z]   },
+[2023-06-14T20:46:33.049Z]   "originalChecksums" : {
+[2023-06-14T20:46:33.049Z]     "sha1" : "75ce724ec25d6059a1485789ba50f46562c66b00",
+[2023-06-14T20:46:33.049Z]     "md5" : "f1ae76e064209fa12f3198469607ef12",
+[2023-06-14T20:46:33.049Z]     "sha256" : "d7f808390b03025e6387dda1e7ea7002436e08b56b0dad4067b44a58f37316e0"
+[2023-06-14T20:46:33.049Z]   },
+[2023-06-14T20:46:33.049Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip"
+[2023-06-14T20:46:33.049Z] }
+[2023-06-14T20:46:33.049Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip
+[2023-06-14T20:46:33.049Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip?properties
+[2023-06-14T20:46:33.049Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip?properties
+[2023-06-14T20:46:33.050Z] [DEBUG] Output:
+[2023-06-14T20:46:33.050Z] {
+[2023-06-14T20:46:33.050Z]   "properties" : {
+[2023-06-14T20:46:33.050Z]     "branch" : [ "2022" ],
+[2023-06-14T20:46:33.050Z]     "change_set" : [ "29bfc1879c" ],
+[2023-06-14T20:46:33.050Z]     "cut_id" : [ "202105191053-29bfc1879c" ],
+[2023-06-14T20:46:33.050Z]     "package" : [ "rundev-2022" ],
+[2023-06-14T20:46:33.050Z]     "platform" : [ "win" ]
+[2023-06-14T20:46:33.050Z]   },
+[2023-06-14T20:46:33.050Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip"
+[2023-06-14T20:46:33.050Z] }
+[2023-06-14T20:46:33.050Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2022/2021-05-19-10-53.Gold/windows/202105191053-29bfc1879c-RUNDEV.zip?properties
+[2023-06-14T20:46:33.050Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724
+[2023-06-14T20:46:33.050Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2022\a9777c7
+[2023-06-14T20:46:33.050Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\2.1.5\ffa3adf
+[2023-06-14T20:46:33.160Z] 
+[2023-06-14T20:46:33.160Z] ================================================================================
+[2023-06-14T20:46:33.160Z]                              build (RelWithDebInfo)
+[2023-06-14T20:46:33.160Z] ================================================================================
+[2023-06-14T20:46:33.160Z] Maya Python RelWithDebInfo Info:
+[2023-06-14T20:46:33.160Z]   mayapy executable   = P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\bin\mayapy2.exe
+[2023-06-14T20:46:33.160Z]   Include Folder      = P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\include\Python27\Python
+[2023-06-14T20:46:33.160Z]   Library             = P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\lib\python27.lib
+[2023-06-14T20:46:33.160Z]   site-package Folder = P:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\Python27\Lib\site-packages
+[2023-06-14T20:46:33.487Z] In workdir: S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd
+[2023-06-14T20:46:33.487Z] Executing: 'P:\\shared\\Artifactory\\Windows\\rundev-2022\\202105191053\\runtime\\75ce724\\runTime\\bin\\mayapy2.exe' 'S:\\Jenkins\\workspace\\ECP\\ecg-maya-usd\\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\\ecg-maya-usd\\maya-usd\\build.py' --generator Ninja --build-relwithdebug --maya-location 'P:\\shared\\Artifactory\\Windows\\rundev-2022\\202105191053\\runtime\\75ce724\\runTime' --devkit-location 'P:\\shared\\Artifactory\\Windows\\rundev-2022\\202105191053\\runtime\\75ce724\\devkitBase' --pxrusd-location 'P:\\shared\\Artifactory\\Windows\\USD\\9ab6422' --qt-location 'P:\\shared\\Artifactory\\Windows\\qt\\5.15.2\\c545fea' --materialx '--build-args=-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe,-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/include/Python27/Python,-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/bin/mayapy2.exe,-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/lib/python27.lib,-DUSD_LIB_PREFIX=,-DBUILD_HDMAYA=OFF' '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|testProxyShapeDrawUsdChangeProcessing,--parallel 16' --stages=build --redirect-outstream-file=False --install-location 'W:\\install\\RelWithDebInfo\\MayaUSD' 'W:\\'
+[2023-06-14T20:46:33.487Z] Modified environment variables:
+[2023-06-14T20:46:33.487Z]     PATH=P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\bin\HostX64\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCPackages;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\bin\Roslyn;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Performance Tools\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\\MSBuild\15.0\bin;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja
+[2023-06-14T20:46:34.414Z]     [1/690] Building CXX object test\lib\usd\plugin\CMakeFiles\usdTestInfoImportChaser.dir\plugin.cpp.obj
+[2023-06-14T20:46:34.414Z]     [2/690] Building CXX object test\lib\usd\plugin\CMakeFiles\usdTestMayaPlugin.dir\plugin.cpp.obj
+[2023-06-14T20:46:34.414Z]     [3/690] Building CXX object test\lib\usd\plugin\CMakeFiles\usdTestApiWriter.dir\plugin.cpp.obj
+[2023-06-14T20:46:34.741Z]     [4/690] Building CXX object test\lib\mayaUsd\utils\CMakeFiles\testLoadRules.dir\main.cpp.obj
+[2023-06-14T20:46:34.741Z]     [5/690] Building CXX object test\lib\mayaUsd\utils\CMakeFiles\testTargetLayer.dir\main.cpp.obj
+[2023-06-14T20:46:34.741Z]     [6/690] Building CXX object test\lib\mayaUsd\utils\CMakeFiles\testUtilsFileSystem.dir\main.cpp.obj
+[2023-06-14T20:46:34.741Z]     [7/690] Building CXX object test\lib\mayaUsd\utils\CMakeFiles\testSplitString.dir\main.cpp.obj
+[2023-06-14T20:46:35.468Z]     [8/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffCore.dir\main.cpp.obj
+[2023-06-14T20:46:35.790Z]     [9/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffValues.dir\main.cpp.obj
+[2023-06-14T20:46:36.007Z]     [10/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffCore.dir\test_DiffCore.cpp.obj
+[2023-06-14T20:46:39.262Z]     [11/690] Building CXX object test\lib\mayaUsd\utils\CMakeFiles\testUtilsFileSystem.dir\testUtilsFileSystem.cpp.obj
+[2023-06-14T20:46:40.709Z]     [12/690] Building CXX object test\lib\mayaUsd\utils\CMakeFiles\testLoadRules.dir\testLoadRules.cpp.obj
+[2023-06-14T20:46:40.957Z]     [13/690] Building CXX object test\lib\mayaUsd\utils\CMakeFiles\testTargetLayer.dir\testTargetLayer.cpp.obj
+[2023-06-14T20:46:41.186Z]     [14/690] Building CXX object test\lib\usd\plugin\CMakeFiles\usdTestApiWriter.dir\nullApiExporter.cpp.obj
+[2023-06-14T20:46:41.316Z]     [15/690] Building CXX object test\lib\usd\plugin\CMakeFiles\usdTestInfoImportChaser.dir\infoImportChaser.cpp.obj
+[2023-06-14T20:46:41.540Z]     [16/690] Building CXX object test\lib\usd\plugin\CMakeFiles\usdTestMayaPlugin.dir\mayaShaderTranslation.cpp.obj
+[2023-06-14T20:46:41.669Z]     [17/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffValues.dir\test_DiffValues.cpp.obj
+[2023-06-14T20:46:41.669Z]     [18/690] Building CXX object test\lib\usd\plugin\CMakeFiles\usdTestUsdPlugin.dir\mayaShaderTranslation.cpp.obj
+[2023-06-14T20:46:42.131Z]     [19/690] Building CXX object test\lib\usd\plugin\CMakeFiles\usdTestApiWriter.dir\bulletAdaptor.cpp.obj
+[2023-06-14T20:46:42.364Z]     [20/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffValues.dir\test_DiffValuesMatrices.cpp.obj
+[2023-06-14T20:46:42.364Z]     [21/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffPrims.dir\main.cpp.obj
+[2023-06-14T20:46:42.584Z]     [22/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffValues.dir\test_DiffValuesGeneric.cpp.obj
+[2023-06-14T20:46:43.213Z]     [23/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffLists.dir\main.cpp.obj
+[2023-06-14T20:46:43.545Z]     [24/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffAttributes.dir\main.cpp.obj
+[2023-06-14T20:46:43.674Z]     [25/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffValues.dir\test_DiffValuesArrays.cpp.obj
+[2023-06-14T20:46:44.549Z]     [26/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffDictionaries.dir\main.cpp.obj
+[2023-06-14T20:46:44.869Z]     [27/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffValues.dir\test_DiffValuesHalfVecs.cpp.obj
+[2023-06-14T20:46:44.986Z]     [28/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffValues.dir\test_DiffValuesQuaternions.cpp.obj
+[2023-06-14T20:46:44.986Z]     [29/690] Building CXX object test\lib\mayaUsd\utils\CMakeFiles\testSplitString.dir\testSplitString.cpp.obj
+[2023-06-14T20:46:45.109Z]     [30/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffValues.dir\test_DiffValuesDoubleVecs.cpp.obj
+[2023-06-14T20:46:45.109Z]     [31/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffRelationships.dir\main.cpp.obj
+[2023-06-14T20:46:45.629Z]     [32/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffMetadatas.dir\main.cpp.obj
+[2023-06-14T20:46:45.950Z]     [33/690] Building CXX object test\lib\usd\utils\CMakeFiles\testMergePrims.dir\main.cpp.obj
+[2023-06-14T20:46:46.168Z]     [34/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffComputeOverall.dir\main.cpp.obj
+[2023-06-14T20:46:49.330Z]     [35/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffValues.dir\test_DiffValuesFloatVecs.cpp.obj
+[2023-06-14T20:46:49.559Z]     [36/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffPrims.dir\test_DiffPrimsRelations.cpp.obj
+[2023-06-14T20:46:49.785Z]     [37/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffPrims.dir\test_DiffPrims.cpp.obj
+[2023-06-14T20:46:50.016Z]     [38/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffPrims.dir\test_DiffPrimsAttributes.cpp.obj
+[2023-06-14T20:46:50.352Z]     [39/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffAttributes.dir\test_DiffAttributes.cpp.obj
+[2023-06-14T20:46:50.574Z]     [40/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffPrims.dir\test_DiffPrimsChildren.cpp.obj
+[2023-06-14T20:46:50.574Z]     [41/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffValues.dir\test_DiffValuesIntVecs.cpp.obj
+[2023-06-14T20:46:50.899Z]     [42/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffLists.dir\test_DiffLists.cpp.obj
+[2023-06-14T20:46:50.899Z]     [43/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\base\tokens.cpp.obj
+[2023-06-14T20:46:51.734Z]     [44/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffRelationships.dir\test_DiffRelationships.cpp.obj
+[2023-06-14T20:46:51.851Z]     [45/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffMetadatas.dir\test_DiffMetadatas.cpp.obj
+[2023-06-14T20:46:53.084Z]     [46/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffDictionaries.dir\test_DiffDictionaries.cpp.obj
+[2023-06-14T20:46:53.084Z]     [47/690] Building CXX object test\lib\usd\utils\CMakeFiles\testDiffComputeOverall.dir\test_DiffComputeOverall.cpp.obj
+[2023-06-14T20:46:54.116Z]     [48/690] Building CXX object test\lib\usd\utils\CMakeFiles\testMergePrims.dir\test_MergePrims.cpp.obj
+[2023-06-14T20:46:54.537Z]     [49/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\StagesSubject.cpp.obj
+[2023-06-14T20:46:54.537Z]     FAILED: lib/usdUfe/CMakeFiles/usdUfe.dir/ufe/StagesSubject.cpp.obj
+[2023-06-14T20:46:54.537Z]     C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx64\x64\cl.exe  /nologo /TP -DBOOST_ALL_DYN_LINK -DBOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE -DHAVE_SNPRINTF -DMATERIALX_BUILD_SHARED_LIBS -DMFB_ALT_PACKAGE_NAME=\"usdUfe\" -DMFB_PACKAGE_MODULE=\"usdUfe\" -DMFB_PACKAGE_NAME=\"usdUfe\" -DNOMINMAX -DPXR_PYTHON_ENABLED=1 -DTBB_SUPPRESS_DEPRECATED_MESSAGES -DUSDUFE_EXPORT -DWANT_UFE_BUILD -DWIN32 -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS -DusdUfe_EXPORTS -IP:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\devkitBase\devkit\ufe\include -Iinclude -IP:\shared\Artifactory\Windows\USD\9ab6422\include -IP:\shared\Artifactory\Windows\USD\9ab6422\include\boost-1_70 -IP:\shared\Artifactory\Windows\rundev-2022\202105191053\runtime\75ce724\runTime\include\Python27\Python /DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -MD /wd4251 /W3 /WX /permissive- /Zi /Zc:rvalueCast /Zc:inline /MP /EHsc /w35038 /wd4244 /wd4267 /wd4273 /wd4305 /wd4506 /wd4996 /wd4180 /we4101 /we4189 -std:c++14 /showIncludes /Folib\usdUfe\CMakeFiles\usdUfe.dir\ufe\StagesSubject.cpp.obj /Fdlib\usdUfe\CMakeFiles\usdUfe.dir\ /FS -c S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp
+[2023-06-14T20:46:54.537Z]     S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp(138): error C2143: syntax error: missing ')' before '('
+[2023-06-14T20:46:54.537Z]     S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp(138): error C2065: 'changeType': undeclared identifier
+[2023-06-14T20:46:54.537Z]     S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp(138): error C2206: 'sendAttributeChanged': typedef cannot be used for function definition
+[2023-06-14T20:46:54.537Z]     S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp(138): error C2059: syntax error: ')'
+[2023-06-14T20:46:54.537Z]     S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp(139): error C2448: 'sendAttributeChanged': function-style initializer appears to be a function definition
+[2023-06-14T20:46:54.537Z]     S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp(213): error C3861: 'sendAttributeChanged': identifier not found
+[2023-06-14T20:46:54.537Z]     S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp(291): error C2143: syntax error: missing ')' before '('
+[2023-06-14T20:46:54.537Z]     S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp(291): error C2065: 'entries': undeclared identifier
+[2023-06-14T20:46:54.538Z]     S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp(291): error C2206: 'processAttributeChanges': typedef cannot be used for function definition
+[2023-06-14T20:46:54.538Z]     S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp(291): error C2059: syntax error: ')'
+[2023-06-14T20:46:54.538Z]     S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp(292): error C2448: 'processAttributeChanges': function-style initializer appears to be a function definition
+[2023-06-14T20:46:54.538Z]     S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp(397): error C3861: 'processAttributeChanges': identifier not found
+[2023-06-14T20:46:54.538Z]     S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp(506): error C3861: 'processAttributeChanges': identifier not found
+[2023-06-14T20:46:54.538Z]     S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\lib\usdUfe\ufe\StagesSubject.cpp(668): error C3861: 'sendAttributeChanged': identifier not found
+[2023-06-14T20:46:54.760Z]     [50/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\private\UfeNotifGuard.cpp.obj
+[2023-06-14T20:46:56.402Z]     [51/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\UsdUndoableCommand.cpp.obj
+[2023-06-14T20:46:57.027Z]     [52/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\Global.cpp.obj
+[2023-06-14T20:46:57.551Z]     [53/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\UsdHierarchy.cpp.obj
+[2023-06-14T20:46:59.997Z]     [54/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\UsdHierarchyHandler.cpp.obj
+[2023-06-14T20:47:00.321Z]     [55/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\UsdCameraHandler.cpp.obj
+[2023-06-14T20:47:00.321Z]     [56/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\UsdSceneItem.cpp.obj
+[2023-06-14T20:47:00.543Z]     [57/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\UsdRootChildHierarchy.cpp.obj
+[2023-06-14T20:47:00.763Z]     [58/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\UsdUndoCreateGroupCommand.cpp.obj
+[2023-06-14T20:47:00.763Z]     [59/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\UsdCamera.cpp.obj
+[2023-06-14T20:47:01.087Z]     [60/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\UsdObject3dHandler.cpp.obj
+[2023-06-14T20:47:01.407Z]     [61/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\UsdUndoAddNewPrimCommand.cpp.obj
+[2023-06-14T20:47:01.725Z]     [62/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\Utils.cpp.obj
+[2023-06-14T20:47:02.346Z]     [63/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\UsdObject3d.cpp.obj
+[2023-06-14T20:47:02.452Z]     [64/690] Building CXX object lib\usdUfe\CMakeFiles\usdUfe.dir\ufe\UsdUndoInsertChildCommand.cpp.obj
+[2023-06-14T20:47:02.452Z]     ninja: build stopped: subcommand failed.
+[2023-06-14T20:47:02.452Z]     
+[2023-06-14T20:47:02.452Z]         Building with settings:
+[2023-06-14T20:47:02.452Z]           Source directory          S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd
+[2023-06-14T20:47:02.452Z]           Workspace directory       W:\
+[2023-06-14T20:47:02.452Z]           Build directory           W:\build\RelWithDebInfo
+[2023-06-14T20:47:02.452Z]           Install directory         W:\install\RelWithDebInfo\MayaUSD
+[2023-06-14T20:47:02.452Z]           Variant                   RelWithDebInfo
+[2023-06-14T20:47:02.452Z]           Python Debug              Off
+[2023-06-14T20:47:02.452Z]           CMake generator           Ninja
+[2023-06-14T20:47:02.452Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe', '-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/include/Python27/Python', '-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/bin/mayapy2.exe', '-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-2022/202105191053/runtime/75ce724/runTime/lib/python27.lib', '-DUSD_LIB_PREFIX=', '-DBUILD_HDMAYA=OFF']
+[2023-06-14T20:47:02.452Z]           Stages arguments          ['build']
+[2023-06-14T20:47:02.452Z]           CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir|testProxyShapeDrawUsdChangeProcessing', '--parallel 16']
+[2023-06-14T20:47:02.452Z]     #####################################################################################
+[2023-06-14T20:47:02.452Z]     log date: 2023-06-14 13:46
+[2023-06-14T20:47:02.452Z]     commit sha: defd003dc7ce053df11b41c0c35b9f844e9a04d7
+[2023-06-14T20:47:02.452Z]     commit date: Tue Jun 13 15:29:30 2023 -0400
+[2023-06-14T20:47:02.452Z]     #####################################################################################
+[2023-06-14T20:47:02.452Z]     
+[2023-06-14T20:47:02.452Z]     cmake --build . --config RelWithDebInfo  -- -j16
+[2023-06-14T20:47:02.452Z]     
+[2023-06-14T20:47:02.452Z]     Traceback (most recent call last):
+[2023-06-14T20:47:02.452Z]       File "S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\build.py", line 636, in <module>
+[2023-06-14T20:47:02.452Z]         BuildAndInstall(context, context.buildArgs, context.stagesArgs)
+[2023-06-14T20:47:02.452Z]       File "S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\build.py", line 397, in BuildAndInstall
+[2023-06-14T20:47:02.452Z]         RunCMake(context, extraArgs, stagesArgs)
+[2023-06-14T20:47:02.452Z]       File "S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\build.py", line 308, in RunCMake
+[2023-06-14T20:47:02.452Z]         multiproc=FormatMultiProcs(context.numJobs, generator)))
+[2023-06-14T20:47:02.452Z]       File "S:\Jenkins\workspace\ECP\ecg-maya-usd\ecg-mayausd-branch-preflight-2022-python2-pxrusd-min-interactive-windows\ecg-maya-usd\maya-usd\build.py", line 179, in Run
+[2023-06-14T20:47:02.452Z]         .format(cmd=cmd, log=os.path.abspath(context.logFileLocation)))
+[2023-06-14T20:47:02.452Z]     RuntimeError: Failed to run 'cmake --build . --config RelWithDebInfo  -- -j16'
+[2023-06-14T20:47:02.452Z]     See W:\build\RelWithDebInfo\build_log.txt for more details.
+[2023-06-14T20:47:02.452Z] build.py: error: Command failed with error code: 1
+[Pipeline] bat
+[2023-06-14T20:47:02.752Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-06-14T20:47:03.059Z] Deleting alias drive P:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] emailextrecipients
+Not sending mail to unregistered user ecg.jenkins@autodesk.com because your SCM claimed this was associated with a user ID ‘ecg.jenkins' which your security realm does not recognize; you may need changes in your SCM plugin
+Not sending mail to unregistered user ecg.jenkins@autodesk.com because your SCM claimed this was associated with a user ID ‘ecg.jenkins' which your security realm does not recognize; you may need changes in your SCM plugin
+[Pipeline] echo
+No recipients to send notification.
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+[Checks API] No suitable checks publisher found.
+Finished: FAILURE
