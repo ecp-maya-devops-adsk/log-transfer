@@ -1,0 +1,1172 @@
+[2023-07-26T18:05:29.813Z] ================================================================================
+[2023-07-26T18:05:29.813Z]                              setup (RelWithDebInfo)
+[2023-07-26T18:05:29.813Z] ================================================================================
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clean)
+[Pipeline] timeout
+[2023-07-26T18:05:30.226Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[2023-07-26T18:05:31.287Z] + scl enable gcc-toolset-11 -
+[2023-07-26T18:05:31.287Z] + '[' enable = load -o enable = unload ']'
+[2023-07-26T18:05:31.287Z] + /usr/bin/scl enable gcc-toolset-11 -
+[2023-07-26T18:05:31.287Z] python ecg-maya-usd/build.py --stages=clean --workspace-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build --install-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/install --signing-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/signing --package-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/package --output-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/output --stash-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/stash --jenkins-build=238 --git-commit=7405eeccff5ca06745945b4d30e6c9ea05487854 --git-branch=master --variants=RelWithDebInfo --python=3.10 --pxrusd-version=mid3 --interactive-tests=true --post-zips=false --maya-cut-config=maya-rundev-2024.yaml --maya-cut-id=202304191415-7fa20164c6 --maya-package=rundev-2024 --stage-banner
+[2023-07-26T18:05:31.488Z] Finding Artifactory servers response times
+[2023-07-26T18:05:33.594Z] [VERBOSE] Start loading URL (CURL): https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:33.594Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:33.594Z] [DEBUG] Output:
+[2023-07-26T18:05:33.594Z] OK
+[2023-07-26T18:05:33.594Z] [VERBOSE] End loading URL (CURL): https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:33.594Z] [VERBOSE] Start loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:33.594Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:33.594Z] [DEBUG] Output:
+[2023-07-26T18:05:33.594Z] OK
+[2023-07-26T18:05:33.594Z] [VERBOSE] End loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:33.895Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:33.895Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:33.895Z] [DEBUG] Output:
+[2023-07-26T18:05:33.895Z] OK
+[2023-07-26T18:05:33.895Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:33.895Z] Checking server art-bear.autodesk.com for artifacts matching properties:
+[2023-07-26T18:05:33.895Z] 	cut_id=202304191415-7fa20164c6
+[2023-07-26T18:05:33.895Z] 	package=rundev-2024
+[2023-07-26T18:05:33.895Z] 	platform=lin
+[2023-07-26T18:05:34.898Z] [VERBOSE] Start loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:05:34.898Z] [DEBUG] Running: /usr/bin/curl -s -X POST --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw -H Content-Type:text/plain --data items.find({"@cut_id": "202304191415-7fa20164c6", "@package": "rundev-2024", "@platform": "lin", "$or": [{"repo": "team-maya-generic"}, {"repo": "oss-stg-generic"}, {"repo": "team-mayausd-post-generic"}, {"repo": "autodesk-3p-generic"}, {"repo": "adsk-build-tools-generic"}, {"repo": "team-ecg-generic"}]}) https://art-bear.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:05:34.898Z] [DEBUG] Output:
+[2023-07-26T18:05:34.898Z] {
+[2023-07-26T18:05:34.898Z] "results" : [  ],
+[2023-07-26T18:05:34.898Z] "range" : {
+[2023-07-26T18:05:34.898Z]   "start_pos" : 0,
+[2023-07-26T18:05:34.898Z]   "end_pos" : 0,
+[2023-07-26T18:05:34.898Z]   "total" : 0
+[2023-07-26T18:05:34.898Z] }
+[2023-07-26T18:05:34.898Z] }
+[2023-07-26T18:05:34.898Z] [VERBOSE] End loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:05:34.898Z] No artifacts matching properties found on server art-bear.autodesk.com.
+[2023-07-26T18:05:34.898Z] Unable to obtain the URL for an artifact matching properties on Artifactory server art-bear.autodesk.com. Retrying using alternative Artifactory servers...
+[2023-07-26T18:05:34.898Z] Checking server art-bobcat.autodesk.com for artifacts matching properties:
+[2023-07-26T18:05:34.898Z] 	cut_id=202304191415-7fa20164c6
+[2023-07-26T18:05:34.898Z] 	package=rundev-2024
+[2023-07-26T18:05:34.898Z] 	platform=lin
+[2023-07-26T18:05:36.802Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:05:36.802Z] [DEBUG] Running: /usr/bin/curl -s -X POST --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw -H Content-Type:text/plain --data items.find({"@cut_id": "202304191415-7fa20164c6", "@package": "rundev-2024", "@platform": "lin", "$or": [{"repo": "team-maya-generic"}, {"repo": "oss-stg-generic"}, {"repo": "team-mayausd-post-generic"}, {"repo": "autodesk-3p-generic"}, {"repo": "adsk-build-tools-generic"}, {"repo": "team-ecg-generic"}]}) https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:05:36.802Z] [DEBUG] Output:
+[2023-07-26T18:05:36.802Z] {
+[2023-07-26T18:05:36.802Z] "results" : [ {
+[2023-07-26T18:05:36.802Z]   "repo" : "oss-stg-generic",
+[2023-07-26T18:05:36.802Z]   "path" : "Maya/2024/2023-04-19-14-15.Update1/linux",
+[2023-07-26T18:05:36.802Z]   "name" : "202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:05:36.802Z]   "type" : "file",
+[2023-07-26T18:05:36.802Z]   "size" : 2443672254,
+[2023-07-26T18:05:36.802Z]   "created" : "2023-04-19T19:08:48.259-07:00",
+[2023-07-26T18:05:36.802Z]   "created_by" : "svc_p_mescm",
+[2023-07-26T18:05:36.802Z]   "modified" : "2023-04-19T19:03:18.222-07:00",
+[2023-07-26T18:05:36.802Z]   "modified_by" : "svc_p_mescm",
+[2023-07-26T18:05:36.802Z]   "updated" : "2023-04-19T19:08:48.260-07:00"
+[2023-07-26T18:05:36.802Z] } ],
+[2023-07-26T18:05:36.802Z] "range" : {
+[2023-07-26T18:05:36.802Z]   "start_pos" : 0,
+[2023-07-26T18:05:36.802Z]   "end_pos" : 1,
+[2023-07-26T18:05:36.802Z]   "total" : 1
+[2023-07-26T18:05:36.802Z] }
+[2023-07-26T18:05:36.802Z] }
+[2023-07-26T18:05:36.802Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:05:36.802Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:05:36.802Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:05:36.802Z] [DEBUG] Output:
+[2023-07-26T18:05:36.802Z] {
+[2023-07-26T18:05:36.802Z]   "repo" : "oss-stg-generic",
+[2023-07-26T18:05:36.802Z]   "path" : "/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:05:36.802Z]   "created" : "2023-04-19T19:08:48.259-07:00",
+[2023-07-26T18:05:36.802Z]   "createdBy" : "svc_p_mescm",
+[2023-07-26T18:05:36.802Z]   "lastModified" : "2023-04-19T19:03:18.222-07:00",
+[2023-07-26T18:05:36.802Z]   "modifiedBy" : "svc_p_mescm",
+[2023-07-26T18:05:36.802Z]   "lastUpdated" : "2023-04-19T19:08:48.260-07:00",
+[2023-07-26T18:05:36.802Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:05:36.802Z]   "mimeType" : "application/x-gzip",
+[2023-07-26T18:05:36.802Z]   "size" : "2443672254",
+[2023-07-26T18:05:36.802Z]   "checksums" : {
+[2023-07-26T18:05:36.802Z]     "sha1" : "cfe9dfc8d05c12822391063cd271d76dfbf9b66e",
+[2023-07-26T18:05:36.802Z]     "md5" : "9cfb67224c58a8d1eb884cbb4e19572a",
+[2023-07-26T18:05:36.802Z]     "sha256" : "89715bd591676721981087ebda9359844e612f3937a412f4f4fec49221c084ef"
+[2023-07-26T18:05:36.802Z]   },
+[2023-07-26T18:05:36.802Z]   "originalChecksums" : {
+[2023-07-26T18:05:36.802Z]     "sha1" : "cfe9dfc8d05c12822391063cd271d76dfbf9b66e",
+[2023-07-26T18:05:36.802Z]     "md5" : "9cfb67224c58a8d1eb884cbb4e19572a",
+[2023-07-26T18:05:36.802Z]     "sha256" : "89715bd591676721981087ebda9359844e612f3937a412f4f4fec49221c084ef"
+[2023-07-26T18:05:36.802Z]   },
+[2023-07-26T18:05:36.802Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz"
+[2023-07-26T18:05:36.802Z] }
+[2023-07-26T18:05:36.802Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:05:36.802Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:05:36.802Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:05:36.802Z] [DEBUG] Output:
+[2023-07-26T18:05:36.802Z] {
+[2023-07-26T18:05:36.802Z]   "repo" : "oss-stg-generic",
+[2023-07-26T18:05:36.802Z]   "path" : "/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:05:36.802Z]   "created" : "2023-04-19T19:08:48.259-07:00",
+[2023-07-26T18:05:36.802Z]   "createdBy" : "svc_p_mescm",
+[2023-07-26T18:05:36.802Z]   "lastModified" : "2023-04-19T19:03:18.222-07:00",
+[2023-07-26T18:05:36.802Z]   "modifiedBy" : "svc_p_mescm",
+[2023-07-26T18:05:36.802Z]   "lastUpdated" : "2023-04-19T19:08:48.260-07:00",
+[2023-07-26T18:05:36.802Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:05:36.802Z]   "mimeType" : "application/x-gzip",
+[2023-07-26T18:05:36.802Z]   "size" : "2443672254",
+[2023-07-26T18:05:36.802Z]   "checksums" : {
+[2023-07-26T18:05:36.802Z]     "sha1" : "cfe9dfc8d05c12822391063cd271d76dfbf9b66e",
+[2023-07-26T18:05:36.802Z]     "md5" : "9cfb67224c58a8d1eb884cbb4e19572a",
+[2023-07-26T18:05:36.802Z]     "sha256" : "89715bd591676721981087ebda9359844e612f3937a412f4f4fec49221c084ef"
+[2023-07-26T18:05:36.802Z]   },
+[2023-07-26T18:05:36.802Z]   "originalChecksums" : {
+[2023-07-26T18:05:36.802Z]     "sha1" : "cfe9dfc8d05c12822391063cd271d76dfbf9b66e",
+[2023-07-26T18:05:36.802Z]     "md5" : "9cfb67224c58a8d1eb884cbb4e19572a",
+[2023-07-26T18:05:36.802Z]     "sha256" : "89715bd591676721981087ebda9359844e612f3937a412f4f4fec49221c084ef"
+[2023-07-26T18:05:36.802Z]   },
+[2023-07-26T18:05:36.802Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz"
+[2023-07-26T18:05:36.802Z] }
+[2023-07-26T18:05:36.802Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:05:36.802Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz?properties
+[2023-07-26T18:05:36.802Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz?properties
+[2023-07-26T18:05:36.802Z] [DEBUG] Output:
+[2023-07-26T18:05:36.802Z] {
+[2023-07-26T18:05:36.802Z]   "properties" : {
+[2023-07-26T18:05:36.802Z]     "branch" : [ "2024" ],
+[2023-07-26T18:05:36.802Z]     "change_set" : [ "7fa20164c68e566351c194e2d0f16498aad41f6d" ],
+[2023-07-26T18:05:36.802Z]     "cut_id" : [ "202304191415-7fa20164c6" ],
+[2023-07-26T18:05:36.802Z]     "package" : [ "rundev-2024" ],
+[2023-07-26T18:05:36.802Z]     "platform" : [ "lin" ]
+[2023-07-26T18:05:36.802Z]   },
+[2023-07-26T18:05:36.802Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz"
+[2023-07-26T18:05:36.802Z] }
+[2023-07-26T18:05:36.802Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz?properties
+[2023-07-26T18:05:36.802Z] Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc
+[2023-07-26T18:05:36.802Z] 
+[2023-07-26T18:05:36.802Z] ================================================================================
+[2023-07-26T18:05:36.802Z]                              clean (RelWithDebInfo)
+[2023-07-26T18:05:36.802Z] ================================================================================
+[2023-07-26T18:05:36.802Z] Maya Python RelWithDebInfo Info:
+[2023-07-26T18:05:36.802Z]   mayapy executable   = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/mayapy
+[2023-07-26T18:05:36.802Z]   Include Folder      = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/include/Python310/Python
+[2023-07-26T18:05:36.802Z]   Library             = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/lib/libpython3.10.so.1.0
+[2023-07-26T18:05:36.802Z]   site-package Folder = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/lib/python3.10/site-packages
+[2023-07-26T18:05:37.303Z] In workdir: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd
+[2023-07-26T18:05:37.304Z] Executing: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/mayapy /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/build.py --generator Ninja --build-relwithdebug --maya-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime --devkit-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/devkitBase --pxrusd-location /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651 --qt-location /local/S/jenkins/workspace/shared/Artifactory/Linux/qt/5.15.2/1fc8e7a --materialx --build-args=-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.10.2/9ab399b/ninja,-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/include/Python310/Python,-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/mayapy,-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/lib/libpython3.10.so.1.0,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DBUILD_HDMAYA=OFF '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir,--parallel 16' --stages=clean --redirect-outstream-file=False --install-location /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/install/RelWithDebInfo/MayaUSD /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux
+[2023-07-26T18:05:37.304Z] Modified environment variables:
+[2023-07-26T18:05:37.304Z]     LD_LIBRARY_PATH=/opt/rh/gcc-toolset-11/root/usr/lib64:/opt/rh/gcc-toolset-11/root/usr/lib64:/opt/rh/gcc-toolset-11/root/usr/lib:/opt/rh/gcc-toolset-11/root/usr/lib64/dyninst:/opt/rh/gcc-toolset-11/root/usr/lib/dyninst
+[2023-07-26T18:05:37.304Z]     PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/cmake/3.20.3/ab685d7/bin:/opt/rh/gcc-toolset-11/root/usr/bin:/home/administrator/.local/bin:/home/administrator/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin
+[2023-07-26T18:05:37.504Z]     
+[2023-07-26T18:05:37.504Z]         Building with settings:
+[2023-07-26T18:05:37.504Z]           Source directory          /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd
+[2023-07-26T18:05:37.504Z]           Workspace directory       /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux
+[2023-07-26T18:05:37.504Z]           Build directory           /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo
+[2023-07-26T18:05:37.504Z]           Install directory         /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/install/RelWithDebInfo/MayaUSD
+[2023-07-26T18:05:37.504Z]           Variant                   RelWithDebInfo
+[2023-07-26T18:05:37.504Z]           Python Debug              Off
+[2023-07-26T18:05:37.504Z]           CMake generator           Ninja
+[2023-07-26T18:05:37.504Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.10.2/9ab399b/ninja', '-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/include/Python310/Python', '-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/mayapy', '-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/lib/libpython3.10.so.1.0', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DBUILD_HDMAYA=OFF']
+[2023-07-26T18:05:37.504Z]           Stages arguments          ['clean']
+[2023-07-26T18:05:37.504Z]           CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir', '--parallel 16']
+[2023-07-26T18:05:37.504Z]     Success MayaUSD build and install !!!!
+[2023-07-26T18:05:37.504Z]     Elapsed time: 00:00:00
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Configure)
+[Pipeline] timeout
+[2023-07-26T18:05:37.861Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[2023-07-26T18:05:38.922Z] + scl enable gcc-toolset-11 -
+[2023-07-26T18:05:38.922Z] + '[' enable = load -o enable = unload ']'
+[2023-07-26T18:05:38.922Z] + /usr/bin/scl enable gcc-toolset-11 -
+[2023-07-26T18:05:38.922Z] python ecg-maya-usd/build.py --stages=configure --workspace-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build --install-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/install --signing-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/signing --package-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/package --output-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/output --stash-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/stash --jenkins-build=238 --git-commit=7405eeccff5ca06745945b4d30e6c9ea05487854 --git-branch=master --variants=RelWithDebInfo --python=3.10 --pxrusd-version=mid3 --interactive-tests=true --post-zips=false --maya-cut-config=maya-rundev-2024.yaml --maya-cut-id=202304191415-7fa20164c6 --maya-package=rundev-2024 --stage-banner
+[2023-07-26T18:05:39.123Z] Finding Artifactory servers response times
+[2023-07-26T18:05:41.228Z] [VERBOSE] Start loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:41.228Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:41.228Z] [DEBUG] Output:
+[2023-07-26T18:05:41.228Z] OK
+[2023-07-26T18:05:41.228Z] [VERBOSE] End loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:41.228Z] [VERBOSE] Start loading URL (CURL): https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:41.228Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:41.228Z] [DEBUG] Output:
+[2023-07-26T18:05:41.228Z] OK
+[2023-07-26T18:05:41.228Z] [VERBOSE] End loading URL (CURL): https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:41.529Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:41.529Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:41.529Z] [DEBUG] Output:
+[2023-07-26T18:05:41.529Z] OK
+[2023-07-26T18:05:41.529Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:05:41.529Z] Checking server art-bear.autodesk.com for artifacts matching properties:
+[2023-07-26T18:05:41.529Z] 	cut_id=202304191415-7fa20164c6
+[2023-07-26T18:05:41.529Z] 	package=rundev-2024
+[2023-07-26T18:05:41.529Z] 	platform=lin
+[2023-07-26T18:05:42.431Z] [VERBOSE] Start loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:05:42.431Z] [DEBUG] Running: /usr/bin/curl -s -X POST --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw -H Content-Type:text/plain --data items.find({"@cut_id": "202304191415-7fa20164c6", "@package": "rundev-2024", "@platform": "lin", "$or": [{"repo": "team-maya-generic"}, {"repo": "oss-stg-generic"}, {"repo": "team-mayausd-post-generic"}, {"repo": "autodesk-3p-generic"}, {"repo": "adsk-build-tools-generic"}, {"repo": "team-ecg-generic"}]}) https://art-bear.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:05:42.431Z] [DEBUG] Output:
+[2023-07-26T18:05:42.431Z] {
+[2023-07-26T18:05:42.431Z] "results" : [  ],
+[2023-07-26T18:05:42.431Z] "range" : {
+[2023-07-26T18:05:42.431Z]   "start_pos" : 0,
+[2023-07-26T18:05:42.431Z]   "end_pos" : 0,
+[2023-07-26T18:05:42.431Z]   "total" : 0
+[2023-07-26T18:05:42.431Z] }
+[2023-07-26T18:05:42.431Z] }
+[2023-07-26T18:05:42.431Z] [VERBOSE] End loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:05:42.431Z] No artifacts matching properties found on server art-bear.autodesk.com.
+[2023-07-26T18:05:42.431Z] Unable to obtain the URL for an artifact matching properties on Artifactory server art-bear.autodesk.com. Retrying using alternative Artifactory servers...
+[2023-07-26T18:05:42.431Z] Checking server art-bobcat.autodesk.com for artifacts matching properties:
+[2023-07-26T18:05:42.431Z] 	cut_id=202304191415-7fa20164c6
+[2023-07-26T18:05:42.431Z] 	package=rundev-2024
+[2023-07-26T18:05:42.431Z] 	platform=lin
+[2023-07-26T18:05:44.335Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:05:44.335Z] [DEBUG] Running: /usr/bin/curl -s -X POST --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw -H Content-Type:text/plain --data items.find({"@cut_id": "202304191415-7fa20164c6", "@package": "rundev-2024", "@platform": "lin", "$or": [{"repo": "team-maya-generic"}, {"repo": "oss-stg-generic"}, {"repo": "team-mayausd-post-generic"}, {"repo": "autodesk-3p-generic"}, {"repo": "adsk-build-tools-generic"}, {"repo": "team-ecg-generic"}]}) https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:05:44.335Z] [DEBUG] Output:
+[2023-07-26T18:05:44.335Z] {
+[2023-07-26T18:05:44.335Z] "results" : [ {
+[2023-07-26T18:05:44.335Z]   "repo" : "oss-stg-generic",
+[2023-07-26T18:05:44.335Z]   "path" : "Maya/2024/2023-04-19-14-15.Update1/linux",
+[2023-07-26T18:05:44.335Z]   "name" : "202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:05:44.335Z]   "type" : "file",
+[2023-07-26T18:05:44.335Z]   "size" : 2443672254,
+[2023-07-26T18:05:44.335Z]   "created" : "2023-04-19T19:08:48.259-07:00",
+[2023-07-26T18:05:44.335Z]   "created_by" : "svc_p_mescm",
+[2023-07-26T18:05:44.335Z]   "modified" : "2023-04-19T19:03:18.222-07:00",
+[2023-07-26T18:05:44.335Z]   "modified_by" : "svc_p_mescm",
+[2023-07-26T18:05:44.335Z]   "updated" : "2023-04-19T19:08:48.260-07:00"
+[2023-07-26T18:05:44.335Z] } ],
+[2023-07-26T18:05:44.335Z] "range" : {
+[2023-07-26T18:05:44.335Z]   "start_pos" : 0,
+[2023-07-26T18:05:44.335Z]   "end_pos" : 1,
+[2023-07-26T18:05:44.335Z]   "total" : 1
+[2023-07-26T18:05:44.335Z] }
+[2023-07-26T18:05:44.335Z] }
+[2023-07-26T18:05:44.335Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:05:44.335Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:05:44.335Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:05:44.335Z] [DEBUG] Output:
+[2023-07-26T18:05:44.335Z] {
+[2023-07-26T18:05:44.335Z]   "repo" : "oss-stg-generic",
+[2023-07-26T18:05:44.335Z]   "path" : "/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:05:44.335Z]   "created" : "2023-04-19T19:08:48.259-07:00",
+[2023-07-26T18:05:44.335Z]   "createdBy" : "svc_p_mescm",
+[2023-07-26T18:05:44.335Z]   "lastModified" : "2023-04-19T19:03:18.222-07:00",
+[2023-07-26T18:05:44.335Z]   "modifiedBy" : "svc_p_mescm",
+[2023-07-26T18:05:44.335Z]   "lastUpdated" : "2023-04-19T19:08:48.260-07:00",
+[2023-07-26T18:05:44.335Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:05:44.335Z]   "mimeType" : "application/x-gzip",
+[2023-07-26T18:05:44.335Z]   "size" : "2443672254",
+[2023-07-26T18:05:44.335Z]   "checksums" : {
+[2023-07-26T18:05:44.335Z]     "sha1" : "cfe9dfc8d05c12822391063cd271d76dfbf9b66e",
+[2023-07-26T18:05:44.335Z]     "md5" : "9cfb67224c58a8d1eb884cbb4e19572a",
+[2023-07-26T18:05:44.335Z]     "sha256" : "89715bd591676721981087ebda9359844e612f3937a412f4f4fec49221c084ef"
+[2023-07-26T18:05:44.335Z]   },
+[2023-07-26T18:05:44.335Z]   "originalChecksums" : {
+[2023-07-26T18:05:44.335Z]     "sha1" : "cfe9dfc8d05c12822391063cd271d76dfbf9b66e",
+[2023-07-26T18:05:44.335Z]     "md5" : "9cfb67224c58a8d1eb884cbb4e19572a",
+[2023-07-26T18:05:44.335Z]     "sha256" : "89715bd591676721981087ebda9359844e612f3937a412f4f4fec49221c084ef"
+[2023-07-26T18:05:44.335Z]   },
+[2023-07-26T18:05:44.335Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz"
+[2023-07-26T18:05:44.335Z] }
+[2023-07-26T18:05:44.335Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:05:44.335Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:05:44.335Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:05:44.335Z] [DEBUG] Output:
+[2023-07-26T18:05:44.335Z] {
+[2023-07-26T18:05:44.335Z]   "repo" : "oss-stg-generic",
+[2023-07-26T18:05:44.335Z]   "path" : "/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:05:44.335Z]   "created" : "2023-04-19T19:08:48.259-07:00",
+[2023-07-26T18:05:44.335Z]   "createdBy" : "svc_p_mescm",
+[2023-07-26T18:05:44.335Z]   "lastModified" : "2023-04-19T19:03:18.222-07:00",
+[2023-07-26T18:05:44.335Z]   "modifiedBy" : "svc_p_mescm",
+[2023-07-26T18:05:44.335Z]   "lastUpdated" : "2023-04-19T19:08:48.260-07:00",
+[2023-07-26T18:05:44.335Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:05:44.335Z]   "mimeType" : "application/x-gzip",
+[2023-07-26T18:05:44.335Z]   "size" : "2443672254",
+[2023-07-26T18:05:44.335Z]   "checksums" : {
+[2023-07-26T18:05:44.335Z]     "sha1" : "cfe9dfc8d05c12822391063cd271d76dfbf9b66e",
+[2023-07-26T18:05:44.335Z]     "md5" : "9cfb67224c58a8d1eb884cbb4e19572a",
+[2023-07-26T18:05:44.335Z]     "sha256" : "89715bd591676721981087ebda9359844e612f3937a412f4f4fec49221c084ef"
+[2023-07-26T18:05:44.335Z]   },
+[2023-07-26T18:05:44.335Z]   "originalChecksums" : {
+[2023-07-26T18:05:44.335Z]     "sha1" : "cfe9dfc8d05c12822391063cd271d76dfbf9b66e",
+[2023-07-26T18:05:44.335Z]     "md5" : "9cfb67224c58a8d1eb884cbb4e19572a",
+[2023-07-26T18:05:44.335Z]     "sha256" : "89715bd591676721981087ebda9359844e612f3937a412f4f4fec49221c084ef"
+[2023-07-26T18:05:44.335Z]   },
+[2023-07-26T18:05:44.335Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz"
+[2023-07-26T18:05:44.335Z] }
+[2023-07-26T18:05:44.335Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:05:44.335Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz?properties
+[2023-07-26T18:05:44.335Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz?properties
+[2023-07-26T18:05:44.335Z] [DEBUG] Output:
+[2023-07-26T18:05:44.335Z] {
+[2023-07-26T18:05:44.335Z]   "properties" : {
+[2023-07-26T18:05:44.335Z]     "branch" : [ "2024" ],
+[2023-07-26T18:05:44.335Z]     "change_set" : [ "7fa20164c68e566351c194e2d0f16498aad41f6d" ],
+[2023-07-26T18:05:44.335Z]     "cut_id" : [ "202304191415-7fa20164c6" ],
+[2023-07-26T18:05:44.335Z]     "package" : [ "rundev-2024" ],
+[2023-07-26T18:05:44.335Z]     "platform" : [ "lin" ]
+[2023-07-26T18:05:44.335Z]   },
+[2023-07-26T18:05:44.335Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz"
+[2023-07-26T18:05:44.335Z] }
+[2023-07-26T18:05:44.335Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz?properties
+[2023-07-26T18:05:44.335Z] Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc
+[2023-07-26T18:05:44.335Z] 
+[2023-07-26T18:05:44.335Z] ================================================================================
+[2023-07-26T18:05:44.335Z]                            configure (RelWithDebInfo)
+[2023-07-26T18:05:44.335Z] ================================================================================
+[2023-07-26T18:05:44.335Z] Maya Python RelWithDebInfo Info:
+[2023-07-26T18:05:44.335Z]   mayapy executable   = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/mayapy
+[2023-07-26T18:05:44.335Z]   Include Folder      = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/include/Python310/Python
+[2023-07-26T18:05:44.335Z]   Library             = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/lib/libpython3.10.so.1.0
+[2023-07-26T18:05:44.335Z]   site-package Folder = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/lib/python3.10/site-packages
+[2023-07-26T18:05:44.736Z] In workdir: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd
+[2023-07-26T18:05:44.736Z] Executing: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/mayapy /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/build.py --generator Ninja --build-relwithdebug --maya-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime --devkit-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/devkitBase --pxrusd-location /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651 --qt-location /local/S/jenkins/workspace/shared/Artifactory/Linux/qt/5.15.2/1fc8e7a --materialx --build-args=-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.10.2/9ab399b/ninja,-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/include/Python310/Python,-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/mayapy,-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/lib/libpython3.10.so.1.0,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DBUILD_HDMAYA=OFF '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir,--parallel 16' --stages=configure --redirect-outstream-file=False --install-location /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/install/RelWithDebInfo/MayaUSD /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux
+[2023-07-26T18:05:44.736Z] Modified environment variables:
+[2023-07-26T18:05:44.736Z]     LD_LIBRARY_PATH=/opt/rh/gcc-toolset-11/root/usr/lib64:/opt/rh/gcc-toolset-11/root/usr/lib64:/opt/rh/gcc-toolset-11/root/usr/lib:/opt/rh/gcc-toolset-11/root/usr/lib64/dyninst:/opt/rh/gcc-toolset-11/root/usr/lib/dyninst
+[2023-07-26T18:05:44.736Z]     PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/cmake/3.20.3/ab685d7/bin:/opt/rh/gcc-toolset-11/root/usr/bin:/home/administrator/.local/bin:/home/administrator/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin
+[2023-07-26T18:05:45.037Z]     -- The C compiler identification is GNU 11.2.1
+[2023-07-26T18:05:45.037Z]     -- The CXX compiler identification is GNU 11.2.1
+[2023-07-26T18:05:45.037Z]     -- Detecting C compiler ABI info
+[2023-07-26T18:05:45.137Z]     -- Detecting C compiler ABI info - done
+[2023-07-26T18:05:45.137Z]     -- Check for working C compiler: /opt/rh/gcc-toolset-11/root/usr/bin/cc - skipped
+[2023-07-26T18:05:45.137Z]     -- Detecting C compile features
+[2023-07-26T18:05:45.137Z]     -- Detecting C compile features - done
+[2023-07-26T18:05:45.137Z]     -- Detecting CXX compiler ABI info
+[2023-07-26T18:05:45.238Z]     -- Detecting CXX compiler ABI info - done
+[2023-07-26T18:05:45.238Z]     -- Check for working CXX compiler: /opt/rh/gcc-toolset-11/root/usr/bin/c++ - skipped
+[2023-07-26T18:05:45.238Z]     -- Detecting CXX compile features
+[2023-07-26T18:05:45.238Z]     -- Detecting CXX compile features - done
+[2023-07-26T18:05:45.639Z]     -- Using Maya Light API Version 3
+[2023-07-26T18:05:45.639Z]     -- Maya has setDefaultMaterialHandling API
+[2023-07-26T18:05:45.639Z]     -- Maya has new point snapping API
+[2023-07-26T18:05:45.639Z]     -- Maya has getCurrentUfeCameraPath
+[2023-07-26T18:05:45.639Z]     -- Maya has isInCrashHandler API
+[2023-07-26T18:05:45.639Z]     -- Maya has setUfeIdentifiers API
+[2023-07-26T18:05:45.639Z]     -- Maya has updateUfeIdentifiers API
+[2023-07-26T18:05:45.639Z]     -- Maya has getDisplayStyleOfAllViewports API
+[2023-07-26T18:05:45.639Z]     -- Maya array iterator has difference_type trait
+[2023-07-26T18:05:45.639Z]     -- MFnSet has getMemberPaths function
+[2023-07-26T18:05:45.639Z]     -- MFnDisplayLayer exists
+[2023-07-26T18:05:45.639Z]     -- MDisplayLayerMessage has MDisplayLayerMemberChangedFunction
+[2023-07-26T18:05:45.740Z]     -- MRenderItem has HideOnPlayback API
+[2023-07-26T18:05:45.740Z]     -- Maya has UFE gizmo drawing
+[2023-07-26T18:05:45.740Z]     -- Linux: Maya was built with new cxx11 ABI
+[2023-07-26T18:05:45.740Z]     -- Found Maya: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/maya (found suitable version "2024", minimum required is "2022")
+[2023-07-26T18:05:46.241Z]     -- Found Python: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/mayapy (found suitable exact version "3.10.8") found components: Interpreter
+[2023-07-26T18:05:46.241Z]     -- Build MayaUSD with Python3 = ON
+[2023-07-26T18:05:46.241Z]     --    PYTHON_INCLUDE_DIRS = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/include/Python310/Python
+[2023-07-26T18:05:46.241Z]     --    PYTHON_LIBRARIES    = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/lib/libpython3.10.so.1.0
+[2023-07-26T18:05:46.241Z]     --    Python_EXECUTABLE   = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/mayapy
+[2023-07-26T18:05:46.341Z]     -- USD v0.22.11 has security patches.
+[2023-07-26T18:05:46.341Z]     -- USD has new Sdr.PropertyTypes.Color4
+[2023-07-26T18:05:46.742Z]     -- USD has MaterialX metadata support
+[2023-07-26T18:05:46.742Z]     -- Found USD: /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651 (found suitable version "0.22.11", minimum required is "0.21.11")
+[2023-07-26T18:05:46.742Z]     --    USD include dir: /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/include
+[2023-07-26T18:05:46.742Z]     --    USD library dir: /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/lib
+[2023-07-26T18:05:46.742Z]     --    usdGenSchema: /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/bin/usdGenSchema
+[2023-07-26T18:05:46.742Z]     --    USD version: 0.22.11
+[2023-07-26T18:05:46.742Z]     --    Autodesk USD version: 0.22.11-ad1
+[2023-07-26T18:05:46.742Z]     Updated PYTHONPATH: /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/lib/python
+[2023-07-26T18:05:46.742Z]     -- Found UFE: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/devkitBase/devkit/ufe/include (found suitable version "4.1.0", minimum required is "0.2.0")
+[2023-07-26T18:05:46.742Z]     -- Maya has UFE lights API
+[2023-07-26T18:05:46.742Z]     -- Maya has UFE materials API
+[2023-07-26T18:05:46.742Z]     -- Maya has UFE scene segment API
+[2023-07-26T18:05:46.742Z]     -- Maya has UFE TrieNode childrenComponents accessor
+[2023-07-26T18:05:46.742Z]     -- Maya has UFE UINodeGraphNode size interface
+[2023-07-26T18:05:46.742Z]     -- Build MayaUsd with UFE version 4.1.0
+[2023-07-26T18:05:46.742Z]     --    UFE include dir: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/devkitBase/devkit/ufe/include
+[2023-07-26T18:05:46.742Z]     --    UFE library: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/devkitBase/devkit/ufe/lib/libufe_4.so
+[2023-07-26T18:05:46.742Z]     --    UFE preview features: ufe;v4_BatchOps
+[2023-07-26T18:05:46.742Z]     -- Found MaterialX
+[2023-07-26T18:05:46.742Z]     -- Setting Qt version to Qt 5.15
+[2023-07-26T18:05:46.742Z]     -- Building with Qt 5.15 features enabled.
+[2023-07-26T18:05:46.742Z]     -- **** Building Gulrak From Github Repository.
+[2023-07-26T18:05:46.742Z]     -- Populating gulrak
+[2023-07-26T18:05:46.843Z]     -- Configuring done
+[2023-07-26T18:05:46.843Z]     -- Generating done
+[2023-07-26T18:05:46.843Z]     -- Build files have been written to: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/_deps/gulrak-subbuild
+[2023-07-26T18:05:46.843Z]     [1/9] Creating directories for 'gulrak-populate'
+[2023-07-26T18:05:46.843Z]     [1/9] Performing download step (git clone) for 'gulrak-populate'
+[2023-07-26T18:05:46.843Z]     Cloning into 'gulrak-src'...
+[2023-07-26T18:05:47.244Z]     HEAD is now at 4e21ab3 Version bump and updated readme.
+[2023-07-26T18:05:47.344Z]     [2/9] Performing update step for 'gulrak-populate'
+[2023-07-26T18:05:47.344Z]     [4/9] No patch step for 'gulrak-populate'
+[2023-07-26T18:05:47.344Z]     [5/9] No configure step for 'gulrak-populate'
+[2023-07-26T18:05:47.344Z]     [6/9] No build step for 'gulrak-populate'
+[2023-07-26T18:05:47.344Z]     [7/9] No install step for 'gulrak-populate'
+[2023-07-26T18:05:47.344Z]     [8/9] No test step for 'gulrak-populate'
+[2023-07-26T18:05:47.344Z]     [9/9] Completed 'gulrak-populate'
+[2023-07-26T18:05:47.344Z]     -- ========== Installing GoogleTest... ==========
+[2023-07-26T18:05:47.445Z]     -- Configuring done
+[2023-07-26T18:05:47.445Z]     -- Generating done
+[2023-07-26T18:05:47.445Z]     -- Build files have been written to: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/googletest-config
+[2023-07-26T18:05:47.445Z]     [1/8] Creating directories for 'googletest'
+[2023-07-26T18:05:48.547Z]     [2/8] Performing download step (git clone) for 'googletest'
+[2023-07-26T18:05:48.547Z]     Cloning into 'googletest-src'...
+[2023-07-26T18:05:48.547Z]     HEAD is now at 703bd9ca Googletest export
+[2023-07-26T18:05:48.547Z]     [3/8] Performing update step for 'googletest'
+[2023-07-26T18:05:48.547Z]     [4/8] No patch step for 'googletest'
+[2023-07-26T18:05:49.049Z]     [5/8] Performing configure step for 'googletest'
+[2023-07-26T18:05:49.049Z]     Not searching for unused variables given on the command line.
+[2023-07-26T18:05:49.049Z]     CMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
+[2023-07-26T18:05:49.049Z]       Compatibility with CMake < 2.8.12 will be removed from a future version of
+[2023-07-26T18:05:49.049Z]       CMake.
+[2023-07-26T18:05:49.049Z]     
+[2023-07-26T18:05:49.049Z]       Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[2023-07-26T18:05:49.049Z]       CMake that the project does not need compatibility with older versions.
+[2023-07-26T18:05:49.049Z]     
+[2023-07-26T18:05:49.049Z]     
+[2023-07-26T18:05:49.049Z]     -- The C compiler identification is GNU 11.2.1
+[2023-07-26T18:05:49.049Z]     -- The CXX compiler identification is GNU 11.2.1
+[2023-07-26T18:05:49.049Z]     -- Detecting C compiler ABI info
+[2023-07-26T18:05:49.049Z]     -- Detecting C compiler ABI info - done
+[2023-07-26T18:05:49.049Z]     -- Check for working C compiler: /opt/rh/gcc-toolset-11/root/usr/bin/cc - skipped
+[2023-07-26T18:05:49.049Z]     -- Detecting C compile features
+[2023-07-26T18:05:49.049Z]     -- Detecting C compile features - done
+[2023-07-26T18:05:49.049Z]     -- Detecting CXX compiler ABI info
+[2023-07-26T18:05:49.049Z]     -- Detecting CXX compiler ABI info - done
+[2023-07-26T18:05:49.049Z]     -- Check for working CXX compiler: /opt/rh/gcc-toolset-11/root/usr/bin/c++ - skipped
+[2023-07-26T18:05:49.049Z]     -- Detecting CXX compile features
+[2023-07-26T18:05:49.049Z]     -- Detecting CXX compile features - done
+[2023-07-26T18:05:49.049Z]     CMake Deprecation Warning at googletest/CMakeLists.txt:56 (cmake_minimum_required):
+[2023-07-26T18:05:49.049Z]       Compatibility with CMake < 2.8.12 will be removed from a future version of
+[2023-07-26T18:05:49.049Z]       CMake.
+[2023-07-26T18:05:49.049Z]     
+[2023-07-26T18:05:49.049Z]       Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[2023-07-26T18:05:49.049Z]       CMake that the project does not need compatibility with older versions.
+[2023-07-26T18:05:49.049Z]     
+[2023-07-26T18:05:49.049Z]     
+[2023-07-26T18:05:49.049Z]     -- Found PythonInterp: /usr/local/bin/python (found version "3.9.7")
+[2023-07-26T18:05:49.049Z]     -- Looking for pthread.h
+[2023-07-26T18:05:49.049Z]     -- Looking for pthread.h - found
+[2023-07-26T18:05:49.049Z]     -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2023-07-26T18:05:49.049Z]     -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2023-07-26T18:05:49.049Z]     -- Looking for pthread_create in pthreads
+[2023-07-26T18:05:49.049Z]     -- Looking for pthread_create in pthreads - not found
+[2023-07-26T18:05:49.049Z]     -- Looking for pthread_create in pthread
+[2023-07-26T18:05:49.049Z]     -- Looking for pthread_create in pthread - found
+[2023-07-26T18:05:49.049Z]     -- Found Threads: TRUE
+[2023-07-26T18:05:49.049Z]     -- Configuring done
+[2023-07-26T18:05:49.049Z]     -- Generating done
+[2023-07-26T18:05:49.049Z]     -- Build files have been written to: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/googletest-build
+[2023-07-26T18:05:58.671Z]     [6/8] Performing build step for 'googletest'
+[2023-07-26T18:05:58.671Z]     [1/4] Building CXX object googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[2023-07-26T18:05:58.671Z]     [2/4] Building CXX object googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[2023-07-26T18:05:58.671Z]     [3/4] Linking CXX shared library lib/libgtest.so
+[2023-07-26T18:05:58.671Z]     [4/4] Linking CXX shared library lib/libgtest_main.so
+[2023-07-26T18:05:58.671Z]     [7/8] Performing install step for 'googletest'
+[2023-07-26T18:05:58.671Z]     [0/1] Install the project...
+[2023-07-26T18:05:58.671Z]     -- Install configuration: "RelWithDebInfo"
+[2023-07-26T18:05:58.671Z]     -- Set runtime path of "/home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/googletest-install/lib64/libgtest_main.so" to ""
+[2023-07-26T18:05:58.671Z]     [8/8] Completed 'googletest'
+[2023-07-26T18:05:58.671Z]     -- ========== ...  GoogleTest installed. ==========
+[2023-07-26T18:05:59.473Z]     #################################################################################################
+[2023-07-26T18:05:59.473Z]     #  USD_DISABLE_PRIM_DEFINITIONS_FOR_USDGENSCHEMA is overridden to 'true'.  Default is 'false'.  #
+[2023-07-26T18:05:59.473Z]     #################################################################################################
+[2023-07-26T18:05:59.473Z]     Processing schema classes:
+[2023-07-26T18:05:59.473Z]     CustomRig
+[2023-07-26T18:05:59.473Z]     Loading Templates from /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/lib/usd/usd/resources/codegenTemplates
+[2023-07-26T18:05:59.473Z]     	unchanged /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/test/lib/mayaUsd/fileio/UsdCustomRigSchema/plugInfo.json
+[2023-07-26T18:05:59.473Z]     Generating Schematics:
+[2023-07-26T18:05:59.473Z]     	unchanged /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/test/lib/mayaUsd/fileio/UsdCustomRigSchema/generatedSchema.usda
+[2023-07-26T18:05:59.673Z]     -- USD_HAS_COLOR4_SDR_SUPPORT is TRUE
+[2023-07-26T18:05:59.673Z]     -- MAYA_HAS_DISPLAY_LAYER_API is TRUE
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/base/usdUfe.h.src
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/base/api.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/base/debugCodes.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/base/tokens.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/Global.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/StagesSubject.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UfeVersionCompat.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdCamera.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdCameraHandler.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdHierarchy.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdHierarchyHandler.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdObject3d.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdObject3dHandler.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdRootChildHierarchy.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdSceneItem.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoAddNewPrimCommand.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoAddPayloadCommand.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoAddRefOrPayloadCommand.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoAddReferenceCommand.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoClearPayloadsCommand.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoClearReferencesCommand.h
+[2023-07-26T18:05:59.673Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoCreateGroupCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoInsertChildCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoReorderCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoSelectAfterCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoSetKindCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoToggleActiveCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoToggleInstanceableCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoVisibleCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoableCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/Utils.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/UsdUndoUngroupCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/private/UfeNotifGuard.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/ufe/private/Utils.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/undo/UsdUndoBlock.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/undo/UsdUndoManager.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/undo/UsdUndoStateDelegate.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/undo/UsdUndoableItem.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/utils/editRouter.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/utils/editRouterContext.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/utils/layers.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/utils/loadRules.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/utils/usdUtils.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usdUfe/utils/Utils.h
+[2023-07-26T18:05:59.674Z]     -- MAYA_HAS_DEFAULT_MATERIAL_API is TRUE
+[2023-07-26T18:05:59.674Z]     -- MAYA_HAS_COLOR_MANAGEMENT_SUPPORT_API is FALSE
+[2023-07-26T18:05:59.674Z]     -- MAYA_NEW_POINT_SNAPPING_SUPPORT is TRUE
+[2023-07-26T18:05:59.674Z]     -- MAYA_HAS_CRASH_DETECTION is TRUE
+[2023-07-26T18:05:59.674Z]     -- MAYA_CURRENT_UFE_CAMERA_SUPPORT is TRUE
+[2023-07-26T18:05:59.674Z]     -- MAYA_MRENDERITEM_UFE_IDENTIFIER_SUPPORT is TRUE
+[2023-07-26T18:05:59.674Z]     -- MAYA_UPDATE_UFE_IDENTIFIER_SUPPORT is TRUE
+[2023-07-26T18:05:59.674Z]     -- MAYA_HAS_DISPLAY_STYLE_ALL_VIEWPORTS is TRUE
+[2023-07-26T18:05:59.674Z]     -- MAYA_ARRAY_ITERATOR_DIFFERENCE_TYPE_SUPPORT is TRUE
+[2023-07-26T18:05:59.674Z]     -- MAYA_HAS_GET_MEMBER_PATHS is TRUE
+[2023-07-26T18:05:59.674Z]     -- USD_HAS_COLOR4_SDR_SUPPORT is TRUE
+[2023-07-26T18:05:59.674Z]     -- MAYA_HAS_DISPLAY_LAYER_API is TRUE
+[2023-07-26T18:05:59.674Z]     -- MAYA_HAS_NEW_DISPLAY_LAYER_MESSAGING_API is TRUE
+[2023-07-26T18:05:59.674Z]     -- MAYA_HAS_RENDER_ITEM_HIDE_ON_PLAYBACK_API is TRUE
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/base/mayaUsd.h.src
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/base/api.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/base/debugCodes.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/base/id.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/base/syncId.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/base/tokens.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/abstractLayerEditorWindow.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/baseExportCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/baseImportCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/baseListJobContextsCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/baseListShadingModesCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/editTargetCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/layerEditorCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/layerEditorWindowCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/commands/PullPushCommands.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/fallbackPrimReader.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/flexibleSparseValueWriter.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/functorPrimReader.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/functorPrimWriter.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/importData.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/instancedNodeWriter.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobContextRegistry.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primReader.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primReaderArgs.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primReaderContext.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primReaderRegistry.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriter.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriterArgs.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriterContext.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriterRegistry.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/registryHelper.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/schemaApiAdaptor.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/schemaApiAdaptorRegistry.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shaderReader.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shaderReaderRegistry.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shaderWriter.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shaderWriterRegistry.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/transformWriter.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/writeJobContext.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/fallbackPrimUpdater.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primUpdater.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primUpdaterArgs.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primUpdaterContext.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primUpdaterRegistry.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primUpdaterManager.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/pullInformation.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/orphanedNodesManager.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/chaser/exportChaser.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/chaser/exportChaserRegistry.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/chaser/importChaserRegistry.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/chaser/importChaser.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobs/jobArgs.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobs/meshDataReadJob.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobs/modelKindProcessor.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobs/readJob.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/jobs/writeJob.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/rfmShaderMap.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/shadingModeExporter.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/shadingModeExporterContext.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/shadingModeImporter.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/shadingModeRegistry.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/symmetricShaderReader.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/shading/symmetricShaderWriter.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/skelBindingsProcessor.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorCamera.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorCurves.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorGprim.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorLight.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorMaterial.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorMayaReference.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorMesh.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorNurbsPatch.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorPrim.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorRfMLight.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorSkel.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorUtil.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/translators/translatorXformable.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/adaptor.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/jointWriteUtils.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/meshReadUtils.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/meshWriteUtils.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/readUtil.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/roundTripUtil.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/shadingUtil.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/userTaggedAttribute.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/writeUtil.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/xformStack.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/utils/orphanedNodesManagerUtil.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/listeners/notice.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/listeners/proxyShapeNotice.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/listeners/stageNoticeListener.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/hdImagingShape.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/layerManager.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/pointBasedDeformerNode.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyAccessor.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyShapeBase.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyShapePlugin.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyStageProvider.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyShapeStageExtraData.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/proxyShapeListenerBase.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/stageData.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/stageNode.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/nodes/usdPrimProvider.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/px_vp20/glslProgram.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/px_vp20/utils.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/px_vp20/utils_legacy.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/batchRenderer.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/debugCodes.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/hdImagingShapeDrawOverride.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/hdImagingShapeUI.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/instancerImager.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/instancerShapeAdapter.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/proxyDrawOverride.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/proxyShapeUI.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/renderParams.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/sceneDelegate.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/shapeAdapter.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/softSelectHelper.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/usdProxyShapeAdapter.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/pxrUsdMayaGL/userData.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/vp2RenderDelegate/proxyRenderDelegate.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/vp2ShaderFragments/shaderFragments.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/MaterialXGenOgsXml/GlslFragmentGenerator.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/MaterialXGenOgsXml/GlslOcioNodeImpl.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/MaterialXGenOgsXml/OgsFragment.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/render/MaterialXGenOgsXml/OgsXmlGenerator.h
+[2023-07-26T18:05:59.674Z]     -- Using latest libraries with MaterialX 1.38.5
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/sceneIndex/proxyShapeSceneIndexPlugin.h
+[2023-07-26T18:05:59.674Z]     -- UFE_PREVIEW has V4 BatchOps support
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/Global.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/MayaStagesSubject.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/MayaUsdObject3d.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/MayaUsdObject3dHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/ProxyShapeContextOpsHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/ProxyShapeHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/ProxyShapeHierarchy.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/ProxyShapeHierarchyHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/RotationUtils.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/SetVariantSelectionCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdAttribute.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdAttributeHolder.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdAttributes.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdAttributesHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdContextOps.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdContextOpsHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPointInstanceModifierBase.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPointInstanceOrientationModifier.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPointInstancePositionModifier.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPointInstanceScaleModifier.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPointInstanceUndoableCommands.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdRotatePivotTranslateUndoableCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdRotateUndoableCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdScaleUndoableCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdSceneItemOps.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdSceneItemOpsHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdSetXformOpUndoableCommandBase.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdStageMap.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTRSUndoableCommandBase.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dBase.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dCommonAPI.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dFallbackMayaXformStack.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dMatrixOp.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dMayaXformStack.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dPointInstance.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dReadImpl.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dSetObjectMatrix.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dUndoableCommands.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTranslateUndoableCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUIInfoHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUIUfeObserver.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoDeleteCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoDuplicateCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoMaterialCommands.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoPayloadCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoRenameCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/Utils.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/XformOpUtils.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/EditAsMayaCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/MayaUIInfoHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/MayaUsdHierarchy.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/MayaUsdHierarchyHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/MayaUsdRootChildHierarchy.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/PulledObjectHierarchy.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/PulledObjectHierarchyHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdPathMappingHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdLight.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdLightHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdMaterial.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdMaterialHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/ProxyShapeSceneSegmentHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdBatchOpsHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoDuplicateSelectionCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdShaderNodeDef.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdShaderNodeDefHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdShaderAttributeDef.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdShaderAttributeHolder.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoCreateFromNodeDefCommand.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/ProxyShapeCameraHandler.h
+[2023-07-26T18:05:59.674Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdConnections.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdConnectionHandler.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUINodeGraphNode.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUINodeGraphNodeHandler.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoAttributesCommands.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdTransform3dRead.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoConnectionCommands.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/ufe/UsdUndoCreateStageWithNewLayerCommand.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/OpUndoItemList.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/OpUndoItemMuting.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/OpUndoItemRecorder.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/OpUndoItemValidator.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/OpUndoItems.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/undo/MayaUsdUndoBlock.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/blockSceneModificationContext.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/colorSpace.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/customLayerData.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/converter.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/diagnosticDelegate.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/dynamicAttribute.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/editability.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/hash.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/json.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/layerMuting.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/layers.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/loadRules.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/mayaEditRouter.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/query.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/plugRegistryHelper.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/primActivation.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/progressBarScope.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/selectability.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/stageCache.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/targetLayer.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/traverseLayer.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/trieVisitor.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/undoHelperCommand.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/util.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/utilDictionary.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/utilFileSystem.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/utilSerialization.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/utils/variants.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/pxrUsdPreviewSurface/usdPreviewSurface.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/pxrUsdPreviewSurface/usdPreviewSurfacePlugin.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/schemas/api.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/schemas/ALMayaReference.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/schemas/MayaReference.h
+[2023-07-26T18:05:59.675Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/schemas/tokens.h
+[2023-07-26T18:05:59.876Z]     #################################################################################################
+[2023-07-26T18:05:59.876Z]     #  USD_DISABLE_PRIM_DEFINITIONS_FOR_USDGENSCHEMA is overridden to 'true'.  Default is 'false'.  #
+[2023-07-26T18:05:59.876Z]     #################################################################################################
+[2023-07-26T18:06:00.076Z]     Processing schema classes:
+[2023-07-26T18:06:00.076Z]     MayaReference, ALMayaReference
+[2023-07-26T18:06:00.076Z]     Loading Templates from /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/lib/usd/usd/resources/codegenTemplates
+[2023-07-26T18:06:00.076Z]     Writing API:
+[2023-07-26T18:06:00.076Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/lib/usd/schemas/api.h
+[2023-07-26T18:06:00.076Z]     Writing Schema Tokens:
+[2023-07-26T18:06:00.076Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/lib/usd/schemas/tokens.h
+[2023-07-26T18:06:00.076Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/lib/usd/schemas/tokens.cpp
+[2023-07-26T18:06:00.076Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/lib/usd/schemas/wrapTokens.cpp
+[2023-07-26T18:06:00.076Z]     Generating Classes:
+[2023-07-26T18:06:00.076Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/lib/usd/schemas/MayaReference.h
+[2023-07-26T18:06:00.076Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/lib/usd/schemas/MayaReference.cpp
+[2023-07-26T18:06:00.076Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/lib/usd/schemas/wrapMayaReference.cpp
+[2023-07-26T18:06:00.076Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/lib/usd/schemas/ALMayaReference.h
+[2023-07-26T18:06:00.076Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/lib/usd/schemas/ALMayaReference.cpp
+[2023-07-26T18:06:00.076Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/lib/usd/schemas/wrapALMayaReference.cpp
+[2023-07-26T18:06:00.076Z]     Loading Templates from /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/lib/usd/usd/resources/codegenTemplates
+[2023-07-26T18:06:00.076Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/lib/usd/schemas/plugInfo.json
+[2023-07-26T18:06:00.076Z]     Generating Schematics:
+[2023-07-26T18:06:00.076Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/lib/usd/schemas/generatedSchema.usda
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/utils/ALHalf.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/utils/Api.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/utils/DebugCodes.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/utils/DiffCore.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/utils/DiffPrims.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/utils/MergePrims.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/utils/MergePrimsOptions.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/utils/ForwardDeclares.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/utils/SIMD.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/ui/layerEditor/batchSaveLayersUIDelegate.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/IMayaMQtUtil.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/ItemDelegate.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/IUSDImportView.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/TreeItem.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/TreeModel.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/TreeModelFactory.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/USDImportDialog.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/USDImportDialogCmd.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/ui/importDialog/USDQtUtil.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/ui/api.h
+[2023-07-26T18:06:00.076Z]     -- promoting: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/usd/ui/initStringResources.h
+[2023-07-26T18:06:00.076Z]     ========== Pixar USD Plugin ==========
+[2023-07-26T18:06:00.178Z]     Compiling '/home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/pxr/__init__.py'...
+[2023-07-26T18:06:00.178Z]     ========== AL USD Plugin ==========
+[2023-07-26T18:06:00.178Z]     CMake Deprecation Warning at plugin/al/CMakeLists.txt:7 (cmake_policy):
+[2023-07-26T18:06:00.178Z]       The OLD behavior for policy CMP0026 will be removed from a future version
+[2023-07-26T18:06:00.178Z]       of CMake.
+[2023-07-26T18:06:00.178Z]     
+[2023-07-26T18:06:00.178Z]       The cmake-policies(7) manual explains that the OLD behaviors of all
+[2023-07-26T18:06:00.178Z]       policies are deprecated and that a policy should be set to OLD only under
+[2023-07-26T18:06:00.178Z]       specific short-term circumstances.  Projects should be ported to the NEW
+[2023-07-26T18:06:00.178Z]       behavior and not rely on setting a policy to OLD.
+[2023-07-26T18:06:00.178Z]     
+[2023-07-26T18:06:00.178Z]     
+[2023-07-26T18:06:00.178Z]     -- Found Boost: /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/lib/cmake/Boost-1.76.0/BoostConfig.cmake (found version "1.76.0")
+[2023-07-26T18:06:00.178Z]     -- Found Boost: /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/lib/cmake/Boost-1.76.0/BoostConfig.cmake (found version "1.76.0") found components: python
+[2023-07-26T18:06:00.178Z]     -- Found GTest: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/googletest-install/lib64/libgtest.so
+[2023-07-26T18:06:00.278Z]     -- Building AL_USDMayaSchemas
+[2023-07-26T18:06:00.479Z]     #################################################################################################
+[2023-07-26T18:06:00.479Z]     #  USD_DISABLE_PRIM_DEFINITIONS_FOR_USDGENSCHEMA is overridden to 'true'.  Default is 'false'.  #
+[2023-07-26T18:06:00.479Z]     #################################################################################################
+[2023-07-26T18:06:00.680Z]     Processing schema classes:
+[2023-07-26T18:06:00.680Z]     ALModelAPI, ALFrameRange
+[2023-07-26T18:06:00.680Z]     Loading Templates from /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/lib/usd/usd/resources/codegenTemplates
+[2023-07-26T18:06:00.680Z]     Writing API:
+[2023-07-26T18:06:00.680Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/api.h
+[2023-07-26T18:06:00.680Z]     Writing Schema Tokens:
+[2023-07-26T18:06:00.680Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/tokens.h
+[2023-07-26T18:06:00.680Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/tokens.cpp
+[2023-07-26T18:06:00.680Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/wrapTokens.cpp
+[2023-07-26T18:06:00.680Z]     Generating Classes:
+[2023-07-26T18:06:00.680Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/ModelAPI.h
+[2023-07-26T18:06:00.680Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/ModelAPI.cpp
+[2023-07-26T18:06:00.680Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/wrapModelAPI.cpp
+[2023-07-26T18:06:00.680Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/FrameRange.h
+[2023-07-26T18:06:00.680Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/FrameRange.cpp
+[2023-07-26T18:06:00.680Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/wrapFrameRange.cpp
+[2023-07-26T18:06:00.680Z]     Loading Templates from /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/lib/usd/usd/resources/codegenTemplates
+[2023-07-26T18:06:00.680Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/plugInfo.json
+[2023-07-26T18:06:00.680Z]     Generating Schematics:
+[2023-07-26T18:06:00.680Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/maya/generatedSchema.usda
+[2023-07-26T18:06:00.880Z]     #################################################################################################
+[2023-07-26T18:06:00.880Z]     #  USD_DISABLE_PRIM_DEFINITIONS_FOR_USDGENSCHEMA is overridden to 'true'.  Default is 'false'.  #
+[2023-07-26T18:06:00.880Z]     #################################################################################################
+[2023-07-26T18:06:01.081Z]     Processing schema classes:
+[2023-07-26T18:06:01.081Z]     ALExamplePolyCubeNode
+[2023-07-26T18:06:01.081Z]     Loading Templates from /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/lib/usd/usd/resources/codegenTemplates
+[2023-07-26T18:06:01.081Z]     Writing API:
+[2023-07-26T18:06:01.081Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/api.h
+[2023-07-26T18:06:01.081Z]     Writing Schema Tokens:
+[2023-07-26T18:06:01.081Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/tokens.h
+[2023-07-26T18:06:01.081Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/tokens.cpp
+[2023-07-26T18:06:01.081Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/wrapTokens.cpp
+[2023-07-26T18:06:01.081Z]     Generating Classes:
+[2023-07-26T18:06:01.081Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/ExamplePolyCubeNode.h
+[2023-07-26T18:06:01.081Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/ExamplePolyCubeNode.cpp
+[2023-07-26T18:06:01.081Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/wrapExamplePolyCubeNode.cpp
+[2023-07-26T18:06:01.081Z]     Loading Templates from /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/lib/usd/usd/resources/codegenTemplates
+[2023-07-26T18:06:01.081Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/plugInfo.json
+[2023-07-26T18:06:01.081Z]     Generating Schematics:
+[2023-07-26T18:06:01.081Z]     	    wrote /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/plugin/al/schemas/AL/usd/schemas/mayatest/generatedSchema.usda
+[2023-07-26T18:06:01.081Z]     -- Building AL_USDMayaTranslators
+[2023-07-26T18:06:01.081Z]     ========== ADSK USD Plugin ==========
+[2023-07-26T18:06:01.081Z]     -- Configuring done
+[2023-07-26T18:06:01.482Z]     -- Generating done
+[2023-07-26T18:06:01.582Z]     -- Build files have been written to: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo
+[2023-07-26T18:06:01.582Z]     
+[2023-07-26T18:06:01.582Z]         Building with settings:
+[2023-07-26T18:06:01.582Z]           Source directory          /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd
+[2023-07-26T18:06:01.582Z]           Workspace directory       /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux
+[2023-07-26T18:06:01.582Z]           Build directory           /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo
+[2023-07-26T18:06:01.583Z]           Install directory         /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/install/RelWithDebInfo/MayaUSD
+[2023-07-26T18:06:01.583Z]           Variant                   RelWithDebInfo
+[2023-07-26T18:06:01.583Z]           Python Debug              Off
+[2023-07-26T18:06:01.583Z]           CMake generator           Ninja
+[2023-07-26T18:06:01.583Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.10.2/9ab399b/ninja', '-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/include/Python310/Python', '-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/mayapy', '-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/lib/libpython3.10.so.1.0', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DBUILD_HDMAYA=OFF']
+[2023-07-26T18:06:01.583Z]           Stages arguments          ['configure']
+[2023-07-26T18:06:01.583Z]           CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir', '--parallel 16']
+[2023-07-26T18:06:01.583Z]     Success MayaUSD build and install !!!!
+[2023-07-26T18:06:01.583Z]     Elapsed time: 00:00:16
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] timeout
+[2023-07-26T18:06:01.951Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[2023-07-26T18:06:02.999Z] + scl enable gcc-toolset-11 -
+[2023-07-26T18:06:02.999Z] + '[' enable = load -o enable = unload ']'
+[2023-07-26T18:06:02.999Z] + /usr/bin/scl enable gcc-toolset-11 -
+[2023-07-26T18:06:02.999Z] python ecg-maya-usd/build.py --stages=build --workspace-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build --install-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/install --signing-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/signing --package-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/package --output-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/output --stash-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/stash --jenkins-build=238 --git-commit=7405eeccff5ca06745945b4d30e6c9ea05487854 --git-branch=master --variants=RelWithDebInfo --python=3.10 --pxrusd-version=mid3 --interactive-tests=true --post-zips=false --build-retry=3 --maya-cut-config=maya-rundev-2024.yaml --maya-cut-id=202304191415-7fa20164c6 --maya-package=rundev-2024 --stage-banner
+[2023-07-26T18:06:03.200Z] Finding Artifactory servers response times
+[2023-07-26T18:06:05.308Z] [VERBOSE] Start loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:06:05.308Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:06:05.308Z] [DEBUG] Output:
+[2023-07-26T18:06:05.308Z] OK
+[2023-07-26T18:06:05.308Z] [VERBOSE] End loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:06:05.308Z] [VERBOSE] Start loading URL (CURL): https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:06:05.308Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:06:05.308Z] [DEBUG] Output:
+[2023-07-26T18:06:05.308Z] OK
+[2023-07-26T18:06:05.308Z] [VERBOSE] End loading URL (CURL): https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:06:05.609Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:06:05.609Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:06:05.609Z] [DEBUG] Output:
+[2023-07-26T18:06:05.609Z] OK
+[2023-07-26T18:06:05.609Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-07-26T18:06:05.609Z] Checking server art-bear.autodesk.com for artifacts matching properties:
+[2023-07-26T18:06:05.609Z] 	cut_id=202304191415-7fa20164c6
+[2023-07-26T18:06:05.609Z] 	package=rundev-2024
+[2023-07-26T18:06:05.609Z] 	platform=lin
+[2023-07-26T18:06:06.511Z] [VERBOSE] Start loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:06:06.511Z] [DEBUG] Running: /usr/bin/curl -s -X POST --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw -H Content-Type:text/plain --data items.find({"@cut_id": "202304191415-7fa20164c6", "@package": "rundev-2024", "@platform": "lin", "$or": [{"repo": "team-maya-generic"}, {"repo": "oss-stg-generic"}, {"repo": "team-mayausd-post-generic"}, {"repo": "autodesk-3p-generic"}, {"repo": "adsk-build-tools-generic"}, {"repo": "team-ecg-generic"}]}) https://art-bear.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:06:06.511Z] [DEBUG] Output:
+[2023-07-26T18:06:06.511Z] {
+[2023-07-26T18:06:06.511Z] "results" : [  ],
+[2023-07-26T18:06:06.511Z] "range" : {
+[2023-07-26T18:06:06.511Z]   "start_pos" : 0,
+[2023-07-26T18:06:06.511Z]   "end_pos" : 0,
+[2023-07-26T18:06:06.511Z]   "total" : 0
+[2023-07-26T18:06:06.511Z] }
+[2023-07-26T18:06:06.511Z] }
+[2023-07-26T18:06:06.511Z] [VERBOSE] End loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:06:06.511Z] No artifacts matching properties found on server art-bear.autodesk.com.
+[2023-07-26T18:06:06.511Z] Unable to obtain the URL for an artifact matching properties on Artifactory server art-bear.autodesk.com. Retrying using alternative Artifactory servers...
+[2023-07-26T18:06:06.511Z] Checking server art-bobcat.autodesk.com for artifacts matching properties:
+[2023-07-26T18:06:06.511Z] 	cut_id=202304191415-7fa20164c6
+[2023-07-26T18:06:06.511Z] 	package=rundev-2024
+[2023-07-26T18:06:06.511Z] 	platform=lin
+[2023-07-26T18:06:08.516Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:06:08.516Z] [DEBUG] Running: /usr/bin/curl -s -X POST --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw -H Content-Type:text/plain --data items.find({"@cut_id": "202304191415-7fa20164c6", "@package": "rundev-2024", "@platform": "lin", "$or": [{"repo": "team-maya-generic"}, {"repo": "oss-stg-generic"}, {"repo": "team-mayausd-post-generic"}, {"repo": "autodesk-3p-generic"}, {"repo": "adsk-build-tools-generic"}, {"repo": "team-ecg-generic"}]}) https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:06:08.516Z] [DEBUG] Output:
+[2023-07-26T18:06:08.516Z] {
+[2023-07-26T18:06:08.516Z] "results" : [ {
+[2023-07-26T18:06:08.516Z]   "repo" : "oss-stg-generic",
+[2023-07-26T18:06:08.516Z]   "path" : "Maya/2024/2023-04-19-14-15.Update1/linux",
+[2023-07-26T18:06:08.516Z]   "name" : "202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:06:08.516Z]   "type" : "file",
+[2023-07-26T18:06:08.516Z]   "size" : 2443672254,
+[2023-07-26T18:06:08.516Z]   "created" : "2023-04-19T19:08:48.259-07:00",
+[2023-07-26T18:06:08.516Z]   "created_by" : "svc_p_mescm",
+[2023-07-26T18:06:08.516Z]   "modified" : "2023-04-19T19:03:18.222-07:00",
+[2023-07-26T18:06:08.516Z]   "modified_by" : "svc_p_mescm",
+[2023-07-26T18:06:08.516Z]   "updated" : "2023-04-19T19:08:48.260-07:00"
+[2023-07-26T18:06:08.516Z] } ],
+[2023-07-26T18:06:08.516Z] "range" : {
+[2023-07-26T18:06:08.516Z]   "start_pos" : 0,
+[2023-07-26T18:06:08.516Z]   "end_pos" : 1,
+[2023-07-26T18:06:08.516Z]   "total" : 1
+[2023-07-26T18:06:08.516Z] }
+[2023-07-26T18:06:08.516Z] }
+[2023-07-26T18:06:08.516Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/aql
+[2023-07-26T18:06:08.516Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:06:08.516Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:06:08.516Z] [DEBUG] Output:
+[2023-07-26T18:06:08.516Z] {
+[2023-07-26T18:06:08.516Z]   "repo" : "oss-stg-generic",
+[2023-07-26T18:06:08.516Z]   "path" : "/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:06:08.516Z]   "created" : "2023-04-19T19:08:48.259-07:00",
+[2023-07-26T18:06:08.516Z]   "createdBy" : "svc_p_mescm",
+[2023-07-26T18:06:08.516Z]   "lastModified" : "2023-04-19T19:03:18.222-07:00",
+[2023-07-26T18:06:08.516Z]   "modifiedBy" : "svc_p_mescm",
+[2023-07-26T18:06:08.516Z]   "lastUpdated" : "2023-04-19T19:08:48.260-07:00",
+[2023-07-26T18:06:08.516Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:06:08.516Z]   "mimeType" : "application/x-gzip",
+[2023-07-26T18:06:08.516Z]   "size" : "2443672254",
+[2023-07-26T18:06:08.516Z]   "checksums" : {
+[2023-07-26T18:06:08.516Z]     "sha1" : "cfe9dfc8d05c12822391063cd271d76dfbf9b66e",
+[2023-07-26T18:06:08.516Z]     "md5" : "9cfb67224c58a8d1eb884cbb4e19572a",
+[2023-07-26T18:06:08.516Z]     "sha256" : "89715bd591676721981087ebda9359844e612f3937a412f4f4fec49221c084ef"
+[2023-07-26T18:06:08.516Z]   },
+[2023-07-26T18:06:08.516Z]   "originalChecksums" : {
+[2023-07-26T18:06:08.516Z]     "sha1" : "cfe9dfc8d05c12822391063cd271d76dfbf9b66e",
+[2023-07-26T18:06:08.516Z]     "md5" : "9cfb67224c58a8d1eb884cbb4e19572a",
+[2023-07-26T18:06:08.516Z]     "sha256" : "89715bd591676721981087ebda9359844e612f3937a412f4f4fec49221c084ef"
+[2023-07-26T18:06:08.516Z]   },
+[2023-07-26T18:06:08.516Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz"
+[2023-07-26T18:06:08.516Z] }
+[2023-07-26T18:06:08.516Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:06:08.516Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:06:08.516Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:06:08.516Z] [DEBUG] Output:
+[2023-07-26T18:06:08.516Z] {
+[2023-07-26T18:06:08.516Z]   "repo" : "oss-stg-generic",
+[2023-07-26T18:06:08.516Z]   "path" : "/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:06:08.516Z]   "created" : "2023-04-19T19:08:48.259-07:00",
+[2023-07-26T18:06:08.516Z]   "createdBy" : "svc_p_mescm",
+[2023-07-26T18:06:08.516Z]   "lastModified" : "2023-04-19T19:03:18.222-07:00",
+[2023-07-26T18:06:08.516Z]   "modifiedBy" : "svc_p_mescm",
+[2023-07-26T18:06:08.516Z]   "lastUpdated" : "2023-04-19T19:08:48.260-07:00",
+[2023-07-26T18:06:08.516Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz",
+[2023-07-26T18:06:08.516Z]   "mimeType" : "application/x-gzip",
+[2023-07-26T18:06:08.516Z]   "size" : "2443672254",
+[2023-07-26T18:06:08.516Z]   "checksums" : {
+[2023-07-26T18:06:08.516Z]     "sha1" : "cfe9dfc8d05c12822391063cd271d76dfbf9b66e",
+[2023-07-26T18:06:08.516Z]     "md5" : "9cfb67224c58a8d1eb884cbb4e19572a",
+[2023-07-26T18:06:08.516Z]     "sha256" : "89715bd591676721981087ebda9359844e612f3937a412f4f4fec49221c084ef"
+[2023-07-26T18:06:08.516Z]   },
+[2023-07-26T18:06:08.516Z]   "originalChecksums" : {
+[2023-07-26T18:06:08.516Z]     "sha1" : "cfe9dfc8d05c12822391063cd271d76dfbf9b66e",
+[2023-07-26T18:06:08.516Z]     "md5" : "9cfb67224c58a8d1eb884cbb4e19572a",
+[2023-07-26T18:06:08.516Z]     "sha256" : "89715bd591676721981087ebda9359844e612f3937a412f4f4fec49221c084ef"
+[2023-07-26T18:06:08.516Z]   },
+[2023-07-26T18:06:08.516Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz"
+[2023-07-26T18:06:08.516Z] }
+[2023-07-26T18:06:08.516Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz
+[2023-07-26T18:06:08.516Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz?properties
+[2023-07-26T18:06:08.516Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz?properties
+[2023-07-26T18:06:08.516Z] [DEBUG] Output:
+[2023-07-26T18:06:08.516Z] {
+[2023-07-26T18:06:08.516Z]   "properties" : {
+[2023-07-26T18:06:08.516Z]     "branch" : [ "2024" ],
+[2023-07-26T18:06:08.516Z]     "change_set" : [ "7fa20164c68e566351c194e2d0f16498aad41f6d" ],
+[2023-07-26T18:06:08.516Z]     "cut_id" : [ "202304191415-7fa20164c6" ],
+[2023-07-26T18:06:08.516Z]     "package" : [ "rundev-2024" ],
+[2023-07-26T18:06:08.516Z]     "platform" : [ "lin" ]
+[2023-07-26T18:06:08.516Z]   },
+[2023-07-26T18:06:08.516Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz"
+[2023-07-26T18:06:08.516Z] }
+[2023-07-26T18:06:08.516Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/oss-stg-generic/Maya/2024/2023-04-19-14-15.Update1/linux/202304191415-7fa20164c6-RUNDEV.tgz?properties
+[2023-07-26T18:06:08.516Z] Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc
+[2023-07-26T18:06:08.516Z] 
+[2023-07-26T18:06:08.516Z] ================================================================================
+[2023-07-26T18:06:08.516Z]                              build (RelWithDebInfo)
+[2023-07-26T18:06:08.516Z] ================================================================================
+[2023-07-26T18:06:08.516Z] WARNING: No files found for filter: libicu*.so.50
+[2023-07-26T18:06:08.516Z] Maya Python RelWithDebInfo Info:
+[2023-07-26T18:06:08.516Z]   mayapy executable   = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/mayapy
+[2023-07-26T18:06:08.516Z]   Include Folder      = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/include/Python310/Python
+[2023-07-26T18:06:08.516Z]   Library             = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/lib/libpython3.10.so.1.0
+[2023-07-26T18:06:08.516Z]   site-package Folder = /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/lib/python3.10/site-packages
+[2023-07-26T18:06:09.017Z] In workdir: /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd
+[2023-07-26T18:06:09.017Z] Executing: /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/mayapy /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/build.py --generator Ninja --build-relwithdebug --maya-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime --devkit-location /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/devkitBase --pxrusd-location /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651 --qt-location /local/S/jenkins/workspace/shared/Artifactory/Linux/qt/5.15.2/1fc8e7a --materialx --build-args=-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.10.2/9ab399b/ninja,-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/include/Python310/Python,-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/mayapy,-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/lib/libpython3.10.so.1.0,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DBUILD_HDMAYA=OFF '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir,--parallel 16' --stages=build --redirect-outstream-file=False --install-location /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/install/RelWithDebInfo/MayaUSD /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux
+[2023-07-26T18:06:09.017Z] Modified environment variables:
+[2023-07-26T18:06:09.017Z]     LD_LIBRARY_PATH=/opt/rh/gcc-toolset-11/root/usr/lib64:/opt/rh/gcc-toolset-11/root/usr/lib64:/opt/rh/gcc-toolset-11/root/usr/lib:/opt/rh/gcc-toolset-11/root/usr/lib64/dyninst:/opt/rh/gcc-toolset-11/root/usr/lib/dyninst
+[2023-07-26T18:06:09.017Z]     PATH=/local/S/jenkins/workspace/shared/Artifactory/Linux/cmake/3.20.3/ab685d7/bin:/opt/rh/gcc-toolset-11/root/usr/bin:/home/administrator/.local/bin:/home/administrator/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin
+[2023-07-26T18:06:09.525Z]     [1/757] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestInfoImportChaser.dir/plugin.cpp.o
+[2023-07-26T18:06:09.626Z]     [2/757] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestApiWriter.dir/plugin.cpp.o
+[2023-07-26T18:06:09.727Z]     [3/757] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestMayaPlugin.dir/plugin.cpp.o
+[2023-07-26T18:06:10.131Z]     [4/757] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/main.cpp.o
+[2023-07-26T18:06:15.309Z]     [5/757] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestUsdPlugin.dir/mayaShaderTranslation.cpp.o
+[2023-07-26T18:06:15.511Z]     [6/757] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestInfoImportChaser.dir/infoImportChaser.cpp.o
+[2023-07-26T18:06:15.721Z]     [7/757] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestMayaPlugin.dir/mayaShaderTranslation.cpp.o
+[2023-07-26T18:06:15.922Z]     [8/757] Building CXX object lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/primWriterRegistry.cpp.o
+[2023-07-26T18:06:15.922Z]     FAILED: lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/primWriterRegistry.cpp.o
+[2023-07-26T18:06:15.922Z]     /opt/rh/gcc-toolset-11/root/usr/bin/c++ -DADSK_USD_VERSION=0.22.11-ad1 -DGLX_GLXEXT_PROTOTYPES -DGL_GLEXT_PROTOTYPES -DHAS_DEFAULT_MATERIAL_SUPPORT_API=1 -DHAS_ORPHANED_NODES_MANAGER=1 -DLINUX -DMATERIALX_BUILD_SHARED_LIBS -DMAYAUSD_CORE_EXPORT -DMAYAUSD_MACROS_EXPORT -DMAYAUSD_VERSION=0.25.0 -DMAYA_ARRAY_ITERATOR_DIFFERENCE_TYPE_SUPPORT=1 -DMAYA_CURRENT_UFE_CAMERA_SUPPORT=1 -DMAYA_ENABLE_NEW_PRIM_DELETE -DMAYA_HAS_CRASH_DETECTION=1 -DMAYA_HAS_DISPLAY_LAYER_API=1 -DMAYA_HAS_DISPLAY_STYLE_ALL_VIEWPORTS=1 -DMAYA_HAS_GET_MEMBER_PATHS=1 -DMAYA_HAS_NEW_DISPLAY_LAYER_MESSAGING_API=1 -DMAYA_HAS_RENDER_ITEM_HIDE_ON_PLAYBACK_API=1 -DMAYA_LIGHTAPI_VERSION_2=3 -DMAYA_MRENDERITEM_UFE_IDENTIFIER_SUPPORT=1 -DMAYA_NEW_POINT_SNAPPING_SUPPORT=1 -DMAYA_PY_VERSION=3 -DMAYA_UPDATE_UFE_IDENTIFIER_SUPPORT=1 -DMFB_ALT_PACKAGE_NAME=\"mayaUsd\" -DMFB_PACKAGE_MODULE=\"mayaUsd\" -DMFB_PACKAGE_NAME=\"mayaUsd\" -DMaterialX_DIR=\"/local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/lib/cmake/MaterialX\" -DPXR_PLUGINPATH_NAME=PXR_PLUGINPATH_NAME -DPXR_PYTHON_ENABLED=1 -DTBB_SUPPRESS_DEPRECATED_MESSAGES -DUFE_LIGHTS_SUPPORT=1 -DUFE_MATERIALS_SUPPORT=1 -DUFE_PREVIEW_BATCHOPS_SUPPORT=1 -DUFE_PREVIEW_VERSION_NUM=4100 -DUFE_SCENE_SEGMENT_SUPPORT=1 -DUFE_UINODEGRAPHNODE_HAS_SIZE=1 -DUSD_HAS_COLOR4_SDR_SUPPORT=1 -DWANT_MATERIALX_BUILD -DWANT_QT_BUILD -D_GLIBCXX_USE_CXX11_ABI=1 -DmayaUsd_EXPORTS -I/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/include -I/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/devkitBase/devkit/ufe/include -Iinclude -Iinclude/usdUfe/mayaUsd -I_deps/gulrak-src/include -isystem /local/S/jenkins/workspace/shared/Artifactory/Linux/USD/33bf651/include -isystem /local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/include/Python310/Python -O2 -g -DNDEBUG -fPIC -Wall -Werror -msse4.2 -Wno-deprecated -Wno-deprecated-declarations -Wno-unused-local-typedefs -std=c++14 -MD -MT lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/primWriterRegistry.cpp.o -MF lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/primWriterRegistry.cpp.o.d -o lib/mayaUsd/CMakeFiles/mayaUsd.dir/fileio/primWriterRegistry.cpp.o -c /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriterRegistry.cpp
+[2023-07-26T18:06:15.922Z]     /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriterRegistry.cpp: In static member function ‘static pxrInternal_v0_22__pxrReserved__::UsdMayaPrimWriterRegistry::WriterFactoryFn pxrInternal_v0_22__pxrReserved__::UsdMayaPrimWriterRegistry::Find(const string&, const pxrInternal_v0_22__pxrReserved__::UsdMayaJobExportArgs&, const Autodesk::Maya::OpenMaya20240000::MObject&)’:
+[2023-07-26T18:06:15.922Z]     /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/lib/mayaUsd/fileio/primWriterRegistry.cpp:185:14: error: format ‘%s’ expects argument of type ‘char*’, but argument 2 has type ‘const string’ {aka ‘const std::__cxx11::basic_string<char>’} [-Werror=format=]
+[2023-07-26T18:06:15.922Z]       185 |         .Msg("No usdMaya writer plugin for TfType %s. No maya plugin.\n", mayaTypeName);
+[2023-07-26T18:06:15.922Z]           |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2023-07-26T18:06:15.922Z]     cc1plus: all warnings being treated as errors
+[2023-07-26T18:06:16.232Z]     [9/757] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffAttributes.dir/main.cpp.o
+[2023-07-26T18:06:16.232Z]     [10/757] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesMatrices.cpp.o
+[2023-07-26T18:06:16.332Z]     [11/757] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValues.cpp.o
+[2023-07-26T18:06:16.433Z]     [12/757] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffCore.dir/main.cpp.o
+[2023-07-26T18:06:16.734Z]     [13/757] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestApiWriter.dir/nullApiExporter.cpp.o
+[2023-07-26T18:06:16.934Z]     [14/757] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesIntVecs.cpp.o
+[2023-07-26T18:06:16.934Z]     [15/757] Building CXX object test/lib/usd/plugin/CMakeFiles/usdTestApiWriter.dir/bulletAdaptor.cpp.o
+[2023-07-26T18:06:16.934Z]     [16/757] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesQuaternions.cpp.o
+[2023-07-26T18:06:17.636Z]     [17/757] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesGeneric.cpp.o
+[2023-07-26T18:06:18.238Z]     [18/757] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesArrays.cpp.o
+[2023-07-26T18:06:18.539Z]     [19/757] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffLists.dir/test_DiffLists.cpp.o
+[2023-07-26T18:06:18.739Z]     [20/757] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesDoubleVecs.cpp.o
+[2023-07-26T18:06:19.140Z]     [21/757] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesFloatVecs.cpp.o
+[2023-07-26T18:06:19.341Z]     [22/757] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffValues.dir/test_DiffValuesHalfVecs.cpp.o
+[2023-07-26T18:06:22.047Z]     [23/757] Building CXX object test/lib/usd/utils/CMakeFiles/testDiffAttributes.dir/test_DiffAttributes.cpp.o
+[2023-07-26T18:06:22.047Z]     ninja: build stopped: subcommand failed.
+[2023-07-26T18:06:22.147Z]     
+[2023-07-26T18:06:22.147Z]         Building with settings:
+[2023-07-26T18:06:22.147Z]           Source directory          /home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd
+[2023-07-26T18:06:22.147Z]           Workspace directory       /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux
+[2023-07-26T18:06:22.147Z]           Build directory           /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo
+[2023-07-26T18:06:22.147Z]           Install directory         /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/install/RelWithDebInfo/MayaUSD
+[2023-07-26T18:06:22.147Z]           Variant                   RelWithDebInfo
+[2023-07-26T18:06:22.147Z]           Python Debug              Off
+[2023-07-26T18:06:22.147Z]           CMake generator           Ninja
+[2023-07-26T18:06:22.147Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/Linux/ninja/1.10.2/9ab399b/ninja', '-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/include/Python310/Python', '-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/bin/mayapy', '-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/Linux/rundev-2024/202304191415/runtime/cfe9dfc/runTime/lib/libpython3.10.so.1.0', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DBUILD_HDMAYA=OFF']
+[2023-07-26T18:06:22.147Z]           Stages arguments          ['build']
+[2023-07-26T18:06:22.147Z]           CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir', '--parallel 16']
+[2023-07-26T18:06:22.147Z]     #####################################################################################
+[2023-07-26T18:06:22.147Z]     log date: 2023-07-26 11:06
+[2023-07-26T18:06:22.147Z]     commit sha: 65dcbfdacd5cb290f461f7360471c8afcb6c3187
+[2023-07-26T18:06:22.147Z]     commit date: Wed Jul 26 11:04:24 2023 -0700
+[2023-07-26T18:06:22.147Z]     #####################################################################################
+[2023-07-26T18:06:22.147Z]     
+[2023-07-26T18:06:22.147Z]     cmake --build . --config RelWithDebInfo  -- -j16
+[2023-07-26T18:06:22.147Z]     
+[2023-07-26T18:06:22.147Z]     Traceback (most recent call last):
+[2023-07-26T18:06:22.147Z]       File "/home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/build.py", line 636, in <module>
+[2023-07-26T18:06:22.147Z]         BuildAndInstall(context, context.buildArgs, context.stagesArgs)
+[2023-07-26T18:06:22.147Z]       File "/home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/build.py", line 397, in BuildAndInstall
+[2023-07-26T18:06:22.147Z]         RunCMake(context, extraArgs, stagesArgs)
+[2023-07-26T18:06:22.147Z]       File "/home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/build.py", line 305, in RunCMake
+[2023-07-26T18:06:22.147Z]         Run(context, "cmake --build . --config {variant} {installArg} -- {multiproc}"
+[2023-07-26T18:06:22.147Z]       File "/home/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/ecg-maya-usd/maya-usd/build.py", line 178, in Run
+[2023-07-26T18:06:22.147Z]         raise RuntimeError("Failed to run '{cmd}'\nSee {log} for more details."
+[2023-07-26T18:06:22.147Z]     RuntimeError: Failed to run 'cmake --build . --config RelWithDebInfo  -- -j16'
+[2023-07-26T18:06:22.147Z]     See /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-2024-python3-pxrusd-mid3-interactive-linux/build/RelWithDebInfo/build_log.txt for more details.
+[2023-07-26T18:06:22.147Z] build.py: error: Command failed with error code: 1
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] emailextrecipients
+Not sending mail to unregistered user ecg.jenkins@autodesk.com because your SCM claimed this was associated with a user ID ‘ecg.jenkins' which your security realm does not recognize; you may need changes in your SCM plugin
+Not sending mail to unregistered user ecg.jenkins@autodesk.com because your SCM claimed this was associated with a user ID ‘ecg.jenkins' which your security realm does not recognize; you may need changes in your SCM plugin
+[Pipeline] echo
+No recipients to send notification.
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+[Checks API] No suitable checks publisher found.
+Finished: FAILURE
