@@ -1,0 +1,516 @@
+[2023-08-16T17:05:16.217Z] ================================================================================
+[2023-08-16T17:05:16.217Z]                                  setup (Debug)
+[2023-08-16T17:05:16.217Z] ================================================================================
+[2023-08-16T17:05:16.217Z] Installing license file 'melicense.lic'.
+[Pipeline] sh
+[2023-08-16T17:05:17.731Z] + python ecg-maya-usd/build.py --stages=setup --workspace-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/build --install-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/install --signing-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/signing --package-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/package --output-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/output --stash-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/stash --jenkins-build=1230 --git-commit=3720d7b6b1b952dd7cfcb27fbcd1b42c70cb7525 --git-branch=master --variants=RelWithDebInfo --python=3.10 --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --extra-license-file=ecg-maya-usd/jenkins-o03-cot/melicense.lic --prune-versions=3 --prune-revisions=3 --maya-cut-config=maya-rundev-master.yaml --maya-package=rundev-master --stage-banner --prune-artifacts --force-pruning
+[2023-08-16T17:05:17.731Z] Getting rundev-master download URL from Maya SHA-1 hash
+[2023-08-16T17:05:17.731Z] Finding Artifactory servers response times
+[2023-08-16T17:05:20.667Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/checksum?repos=team-maya-generic,oss-stg-generic,team-mayausd-post-generic,autodesk-3p-generic,adsk-build-tools-generic,team-ecg-generic&sha1=7b6d1eaa0e6aeb933ed5e6ce40d149a69787d418
+[2023-08-16T17:05:20.667Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com/artifactory/api/search/checksum?repos=team-maya-generic,oss-stg-generic,team-mayausd-post-generic,autodesk-3p-generic,adsk-build-tools-generic,team-ecg-generic&sha1=7b6d1eaa0e6aeb933ed5e6ce40d149a69787d418
+[2023-08-16T17:05:20.667Z] [DEBUG] Output:
+[2023-08-16T17:05:20.667Z] {
+[2023-08-16T17:05:20.667Z]   "results" : [ {
+[2023-08-16T17:05:20.667Z]     "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg"
+[2023-08-16T17:05:20.667Z]   } ]
+[2023-08-16T17:05:20.667Z] }
+[2023-08-16T17:05:20.667Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/checksum?repos=team-maya-generic,oss-stg-generic,team-mayausd-post-generic,autodesk-3p-generic,adsk-build-tools-generic,team-ecg-generic&sha1=7b6d1eaa0e6aeb933ed5e6ce40d149a69787d418
+[2023-08-16T17:05:20.667Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg
+[2023-08-16T17:05:20.667Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg
+[2023-08-16T17:05:20.667Z] [DEBUG] Output:
+[2023-08-16T17:05:20.667Z] {
+[2023-08-16T17:05:20.667Z]   "repo" : "team-maya-generic",
+[2023-08-16T17:05:20.667Z]   "path" : "/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg",
+[2023-08-16T17:05:20.667Z]   "created" : "2023-08-11T17:45:27.671-07:00",
+[2023-08-16T17:05:20.667Z]   "createdBy" : "svc_p_mescm",
+[2023-08-16T17:05:20.667Z]   "lastModified" : "2023-08-11T17:40:48.631-07:00",
+[2023-08-16T17:05:20.667Z]   "modifiedBy" : "svc_p_mescm",
+[2023-08-16T17:05:20.667Z]   "lastUpdated" : "2023-08-11T17:45:27.672-07:00",
+[2023-08-16T17:05:20.667Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg",
+[2023-08-16T17:05:20.667Z]   "mimeType" : "application/octet-stream",
+[2023-08-16T17:05:20.667Z]   "size" : "2321586519",
+[2023-08-16T17:05:20.667Z]   "checksums" : {
+[2023-08-16T17:05:20.667Z]     "sha1" : "7b6d1eaa0e6aeb933ed5e6ce40d149a69787d418",
+[2023-08-16T17:05:20.667Z]     "md5" : "c8cdc36134511f09a5eb5b49c859d452",
+[2023-08-16T17:05:20.667Z]     "sha256" : "d22c94d00027736d02ac790e574b489e6b5300027383a6757008d1b1bdfae672"
+[2023-08-16T17:05:20.667Z]   },
+[2023-08-16T17:05:20.667Z]   "originalChecksums" : {
+[2023-08-16T17:05:20.667Z]     "sha1" : "7b6d1eaa0e6aeb933ed5e6ce40d149a69787d418",
+[2023-08-16T17:05:20.667Z]     "md5" : "c8cdc36134511f09a5eb5b49c859d452",
+[2023-08-16T17:05:20.667Z]     "sha256" : "d22c94d00027736d02ac790e574b489e6b5300027383a6757008d1b1bdfae672"
+[2023-08-16T17:05:20.667Z]   },
+[2023-08-16T17:05:20.667Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg"
+[2023-08-16T17:05:20.667Z] }
+[2023-08-16T17:05:20.667Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg
+[2023-08-16T17:05:20.667Z] Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea
+[2023-08-16T17:05:20.667Z] Using Maya ADSK Signatures from /local/S/jenkins/workspace/shared/Artifactory/OSX/adsk-plugin-signatures-maya/2023/3ae1ae7
+[2023-08-16T17:05:20.667Z] Using Maya Security Library from /local/S/jenkins/workspace/shared/Artifactory/OSX/maya-security-library/3.4.0/5e08f3e
+[2023-08-16T17:05:21.111Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg.multipart
+[2023-08-16T17:05:21.111Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg.multipart
+[2023-08-16T17:05:21.111Z] [DEBUG] Output:
+[2023-08-16T17:05:21.111Z] {
+[2023-08-16T17:05:21.111Z]   "errors" : [ {
+[2023-08-16T17:05:21.111Z]     "status" : 404,
+[2023-08-16T17:05:21.111Z]     "message" : "Unable to find item"
+[2023-08-16T17:05:21.111Z]   } ]
+[2023-08-16T17:05:21.111Z] }
+[2023-08-16T17:05:21.111Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg.multipart
+[2023-08-16T17:05:21.111Z] Downloading https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg to /local/S/jenkins/workspace/shared/Artifactory/OSX/tmp/tmppoe8waed
+[2023-08-16T17:05:21.554Z] [VERBOSE] Start downloading file (CURL): https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg
+[2023-08-16T17:05:21.554Z] [DEBUG] Running: /usr/bin/curl -sI -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg
+[2023-08-16T17:05:21.554Z] [DEBUG] Header:
+[2023-08-16T17:05:21.554Z] HTTP/1.1 200 
+[2023-08-16T17:05:21.554Z] Date: Wed, 16 Aug 2023 17:05:21 GMT
+[2023-08-16T17:05:21.554Z] Content-Type: application/octet-stream
+[2023-08-16T17:05:21.554Z] Content-Length: 2321586519
+[2023-08-16T17:05:21.554Z] Connection: close
+[2023-08-16T17:05:21.554Z] X-JFrog-Version: Artifactory/7.55.9 75509900
+[2023-08-16T17:05:21.554Z] X-Artifactory-Id: 91cbbcce6bf28d778fec0961bd34cdd0d80badfd
+[2023-08-16T17:05:21.554Z] X-Artifactory-Node-Id: ussclpdrsync010
+[2023-08-16T17:05:21.554Z] Last-Modified: Sat, 12 Aug 2023 00:40:48 GMT
+[2023-08-16T17:05:21.554Z] ETag: 7b6d1eaa0e6aeb933ed5e6ce40d149a69787d418
+[2023-08-16T17:05:21.554Z] X-Checksum-Sha1: 7b6d1eaa0e6aeb933ed5e6ce40d149a69787d418
+[2023-08-16T17:05:21.554Z] X-Checksum-Sha256: d22c94d00027736d02ac790e574b489e6b5300027383a6757008d1b1bdfae672
+[2023-08-16T17:05:21.554Z] X-Checksum-Md5: c8cdc36134511f09a5eb5b49c859d452
+[2023-08-16T17:05:21.554Z] Accept-Ranges: bytes
+[2023-08-16T17:05:21.554Z] X-Artifactory-Filename: 202308111535-9ffdc2da25-RUNDEV.dmg
+[2023-08-16T17:05:21.554Z] Content-Disposition: attachment; filename="202308111535-9ffdc2da25-RUNDEV.dmg"; filename*=UTF-8''"202308111535-9ffdc2da25-RUNDEV.dmg"
+[2023-08-16T17:05:21.554Z] Access-Control-Allow-Methods: GET, PUT, POST, OPTIONS, HEAD
+[2023-08-16T17:05:21.554Z] Access-Control-Allow-Headers: Authorization, Origin, X-Requested-With, Content-Type, Accept
+[2023-08-16T17:05:21.554Z] Access-Control-Allow-Credentials: true
+[2023-08-16T17:05:21.554Z] Set-Cookie: AlteonSC=1465459466.47873.0000; path=/; Httponly; Secure
+[2023-08-16T17:05:21.554Z] [DEBUG] Running: /usr/bin/curl --progress-bar -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg -o /local/S/jenkins/workspace/shared/Artifactory/OSX/tmp/tmppoe8waed/202308111535-9ffdc2da25-RUNDEV.dmg
+[2023-08-16T17:05:21.554Z]       0% complete.
+[2023-08-16T17:05:27.754Z]       1% complete.
+[2023-08-16T17:05:30.493Z]       2% complete.
+[2023-08-16T17:05:33.242Z]       3% complete.
+[2023-08-16T17:05:35.327Z]       4% complete.
+[2023-08-16T17:05:38.524Z]       5% complete.
+[2023-08-16T17:05:41.446Z]       6% complete.
+[2023-08-16T17:05:43.188Z]       7% complete.
+[2023-08-16T17:05:45.670Z]       8% complete.
+[2023-08-16T17:05:47.630Z]       9% complete.
+[2023-08-16T17:05:50.022Z]      10% complete.
+[2023-08-16T17:05:52.870Z]      11% complete.
+[2023-08-16T17:05:54.731Z]      12% complete.
+[2023-08-16T17:05:56.921Z]      13% complete.
+[2023-08-16T17:05:59.429Z]      14% complete.
+[2023-08-16T17:06:00.950Z]      15% complete.
+[2023-08-16T17:06:03.561Z]      16% complete.
+[2023-08-16T17:06:05.099Z]      17% complete.
+[2023-08-16T17:06:06.396Z]      18% complete.
+[2023-08-16T17:06:07.603Z]      19% complete.
+[2023-08-16T17:06:08.912Z]      20% complete.
+[2023-08-16T17:06:10.213Z]      21% complete.
+[2023-08-16T17:06:11.310Z]      22% complete.
+[2023-08-16T17:06:12.605Z]      23% complete.
+[2023-08-16T17:06:13.699Z]      24% complete.
+[2023-08-16T17:06:16.113Z]      25% complete.
+[2023-08-16T17:06:17.531Z]      26% complete.
+[2023-08-16T17:06:20.377Z]      27% complete.
+[2023-08-16T17:06:22.877Z]      28% complete.
+[2023-08-16T17:06:23.978Z]      29% complete.
+[2023-08-16T17:06:25.620Z]      30% complete.
+[2023-08-16T17:06:26.930Z]      31% complete.
+[2023-08-16T17:06:29.424Z]      32% complete.
+[2023-08-16T17:06:30.841Z]      33% complete.
+[2023-08-16T17:06:33.337Z]      34% complete.
+[2023-08-16T17:06:34.654Z]      35% complete.
+[2023-08-16T17:06:36.064Z]      36% complete.
+[2023-08-16T17:06:38.456Z]      37% complete.
+[2023-08-16T17:06:39.881Z]      38% complete.
+[2023-08-16T17:06:41.199Z]      39% complete.
+[2023-08-16T17:06:43.588Z]      40% complete.
+[2023-08-16T17:06:45.884Z]      41% complete.
+[2023-08-16T17:06:47.415Z]      42% complete.
+[2023-08-16T17:06:48.379Z]      43% complete.
+[2023-08-16T17:06:50.023Z]      44% complete.
+[2023-08-16T17:06:51.874Z]      45% complete.
+[2023-08-16T17:06:53.066Z]      46% complete.
+[2023-08-16T17:06:54.593Z]      47% complete.
+[2023-08-16T17:06:56.251Z]      48% complete.
+[2023-08-16T17:06:57.359Z]      49% complete.
+[2023-08-16T17:06:58.674Z]      50% complete.
+[2023-08-16T17:07:01.177Z]      51% complete.
+[2023-08-16T17:07:03.796Z]      52% complete.
+[2023-08-16T17:07:05.974Z]      53% complete.
+[2023-08-16T17:07:08.137Z]      54% complete.
+[2023-08-16T17:07:10.424Z]      55% complete.
+[2023-08-16T17:07:12.945Z]      56% complete.
+[2023-08-16T17:07:14.476Z]      57% complete.
+[2023-08-16T17:07:15.804Z]      58% complete.
+[2023-08-16T17:07:17.221Z]      59% complete.
+[2023-08-16T17:07:18.969Z]      60% complete.
+[2023-08-16T17:07:22.145Z]      61% complete.
+[2023-08-16T17:07:23.337Z]      62% complete.
+[2023-08-16T17:07:24.870Z]      63% complete.
+[2023-08-16T17:07:27.290Z]      64% complete.
+[2023-08-16T17:07:28.707Z]      65% complete.
+[2023-08-16T17:07:30.128Z]      66% complete.
+[2023-08-16T17:07:32.434Z]      67% complete.
+[2023-08-16T17:07:33.729Z]      68% complete.
+[2023-08-16T17:07:35.369Z]      69% complete.
+[2023-08-16T17:07:36.570Z]      70% complete.
+[2023-08-16T17:07:39.068Z]      71% complete.
+[2023-08-16T17:07:41.362Z]      72% complete.
+[2023-08-16T17:07:42.453Z]      73% complete.
+[2023-08-16T17:07:43.759Z]      74% complete.
+[2023-08-16T17:07:44.968Z]      75% complete.
+[2023-08-16T17:07:47.469Z]      76% complete.
+[2023-08-16T17:07:48.446Z]      77% complete.
+[2023-08-16T17:07:49.217Z]      78% complete.
+[2023-08-16T17:07:50.533Z]      79% complete.
+[2023-08-16T17:07:51.418Z]      80% complete.
+[2023-08-16T17:07:52.612Z]      81% complete.
+[2023-08-16T17:07:55.208Z]      82% complete.
+[2023-08-16T17:07:56.410Z]      83% complete.
+[2023-08-16T17:07:57.929Z]      84% complete.
+[2023-08-16T17:07:59.991Z]      85% complete.
+[2023-08-16T17:08:01.293Z]      86% complete.
+[2023-08-16T17:08:03.363Z]      87% complete.
+[2023-08-16T17:08:04.347Z]      88% complete.
+[2023-08-16T17:08:05.432Z]      89% complete.
+[2023-08-16T17:08:06.310Z]      90% complete.
+[2023-08-16T17:08:07.749Z]      91% complete.
+[2023-08-16T17:08:08.725Z]      92% complete.
+[2023-08-16T17:08:10.678Z]      93% complete.
+[2023-08-16T17:08:11.880Z]      94% complete.
+[2023-08-16T17:08:12.875Z]      95% complete.
+[2023-08-16T17:08:13.982Z]      96% complete.
+[2023-08-16T17:08:15.049Z]      97% complete.
+[2023-08-16T17:08:16.376Z]      98% complete.
+[2023-08-16T17:08:18.569Z]      99% complete.
+[2023-08-16T17:08:19.659Z]     100% complete.
+[2023-08-16T17:08:19.659Z] [VERBOSE] End downloading file (CURL): https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/pmac/2023-08-11-15-35_9ffdc2da25/202308111535-9ffdc2da25-RUNDEV.dmg
+[2023-08-16T17:08:19.659Z] Extracting 202308111535-9ffdc2da25-RUNDEV.dmg to /local/S/jenkins/workspace/shared/Artifactory/OSX/tmp/tmpno3t60l3
+[2023-08-16T17:09:09.268Z] Installing on /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea
+[2023-08-16T17:09:09.427Z] 
+[2023-08-16T17:09:09.427Z] ================================================================================
+[2023-08-16T17:09:09.427Z]                              setup (RelWithDebInfo)
+[2023-08-16T17:09:09.427Z] ================================================================================
+[2023-08-16T17:09:09.427Z] Installing license file 'melicense.lic'.
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clean)
+[Pipeline] timeout
+[2023-08-16T17:09:09.619Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[2023-08-16T17:09:11.021Z] + python ecg-maya-usd/build.py --stages=clean --workspace-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/build --install-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/install --signing-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/signing --package-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/package --output-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/output --stash-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/stash --jenkins-build=1230 --git-commit=3720d7b6b1b952dd7cfcb27fbcd1b42c70cb7525 --git-branch=master --variants=Debug --python=3.10 --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --maya-cut-config=maya-rundev-master-debug.yaml --maya-package=rundev-master-debug --stage-banner
+[2023-08-16T17:09:11.021Z] Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d
+[2023-08-16T17:09:11.021Z] Using Maya ADSK Signatures from /local/S/jenkins/workspace/shared/Artifactory/OSX/adsk-plugin-signatures-maya/2023/3ae1ae7
+[2023-08-16T17:09:11.021Z] Using Maya Security Library from /local/S/jenkins/workspace/shared/Artifactory/OSX/maya-security-library/3.4.0/5e08f3e
+[2023-08-16T17:09:11.021Z] 
+[2023-08-16T17:09:11.021Z] ================================================================================
+[2023-08-16T17:09:11.021Z]                                  clean (Debug)
+[2023-08-16T17:09:11.021Z] ================================================================================
+[2023-08-16T17:09:11.021Z] Maya Python Debug Info:
+[2023-08-16T17:09:11.021Z]   mayapy executable   = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/bin/mayapy
+[2023-08-16T17:09:11.021Z]   Include Folder      = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.10
+[2023-08-16T17:09:11.021Z]   Library             = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.10.dylib
+[2023-08-16T17:09:11.021Z]   site-package Folder = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.10/site-packages
+[2023-08-16T17:09:42.905Z] Adding Python package requirements: ['/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/bin/mayapy', '-m', 'pip', 'install', '-t', '/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.10/site-packages', '-r', 'python_requirements.txt']
+[2023-08-16T17:09:45.765Z] In workdir: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd
+[2023-08-16T17:09:45.765Z] Executing: arch -arch arm64 /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/bin/mayapy /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd/build.py --generator Ninja --build-debug --maya-location /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime --devkit-location /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/devkitBase --pxrusd-location /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0 --qt-location /local/S/jenkins/workspace/shared/Artifactory/OSX/qt/5.15.2/12f6c7d --materialx --build-args=-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja,-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.10,-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/bin/mayapy,-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.10.dylib,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DBUILD_UB2=ON,-DBUILD_HDMAYA=OFF '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir,-LE interactive,--parallel 8' --stages=clean --redirect-outstream-file=False --install-location /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/install/Debug/MayaUSD /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx
+[2023-08-16T17:09:45.765Z] Modified environment variables:
+[2023-08-16T17:09:45.765Z]     PATH=/local/S/jenkins/workspace/shared/Artifactory/OSX/cmake/3.20.3/2594509/bin:/opt/homebrew/bin:/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin
+[2023-08-16T17:09:45.987Z]     
+[2023-08-16T17:09:45.987Z]         Building with settings:
+[2023-08-16T17:09:45.987Z]           Source directory          /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd
+[2023-08-16T17:09:45.987Z]           Workspace directory       /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx
+[2023-08-16T17:09:45.987Z]           Build directory           /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/build/Debug
+[2023-08-16T17:09:45.987Z]           Install directory         /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/install/Debug/MayaUSD
+[2023-08-16T17:09:45.987Z]           Variant                   Debug
+[2023-08-16T17:09:45.987Z]           Python Debug              Off
+[2023-08-16T17:09:45.987Z]           CMake generator           Ninja
+[2023-08-16T17:09:45.987Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja', '-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.10', '-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/bin/mayapy', '-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.10.dylib', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DBUILD_UB2=ON', '-DBUILD_HDMAYA=OFF']
+[2023-08-16T17:09:45.987Z]           Stages arguments          ['clean']
+[2023-08-16T17:09:45.987Z]           CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir', '-LE interactive', '--parallel 8']
+[2023-08-16T17:09:45.987Z]     Success MayaUSD build and install !!!!
+[2023-08-16T17:09:45.987Z]     Elapsed time: 00:00:00
+[Pipeline] sh
+[2023-08-16T17:09:47.532Z] + python ecg-maya-usd/build.py --stages=clean --workspace-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/build --install-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/install --signing-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/signing --package-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/package --output-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/output --stash-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/stash --jenkins-build=1230 --git-commit=3720d7b6b1b952dd7cfcb27fbcd1b42c70cb7525 --git-branch=master --variants=RelWithDebInfo --python=3.10 --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --maya-cut-config=maya-rundev-master.yaml --maya-package=rundev-master --stage-banner
+[2023-08-16T17:09:47.532Z] Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea
+[2023-08-16T17:09:47.532Z] Using Maya ADSK Signatures from /local/S/jenkins/workspace/shared/Artifactory/OSX/adsk-plugin-signatures-maya/2023/3ae1ae7
+[2023-08-16T17:09:47.532Z] Using Maya Security Library from /local/S/jenkins/workspace/shared/Artifactory/OSX/maya-security-library/3.4.0/5e08f3e
+[2023-08-16T17:09:47.532Z] 
+[2023-08-16T17:09:47.532Z] ================================================================================
+[2023-08-16T17:09:47.532Z]                              clean (RelWithDebInfo)
+[2023-08-16T17:09:47.532Z] ================================================================================
+[2023-08-16T17:09:47.532Z] Maya Python RelWithDebInfo Info:
+[2023-08-16T17:09:47.532Z]   mayapy executable   = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/runTime/Maya.app/Contents/bin/mayapy
+[2023-08-16T17:09:47.532Z]   Include Folder      = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.10
+[2023-08-16T17:09:47.532Z]   Library             = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.10.dylib
+[2023-08-16T17:09:47.532Z]   site-package Folder = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.10/site-packages
+[2023-08-16T17:10:00.152Z] Adding Python package requirements: ['/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/runTime/Maya.app/Contents/bin/mayapy', '-m', 'pip', 'install', '-t', '/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.10/site-packages', '-r', 'python_requirements.txt']
+[2023-08-16T17:10:02.555Z] In workdir: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd
+[2023-08-16T17:10:02.555Z] Executing: arch -arch arm64 /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/runTime/Maya.app/Contents/bin/mayapy /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd/build.py --generator Ninja --build-relwithdebug --maya-location /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/runTime --devkit-location /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/devkitBase --pxrusd-location /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/e84c589 --qt-location /local/S/jenkins/workspace/shared/Artifactory/OSX/qt/5.15.2/12f6c7d --materialx --build-args=-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja,-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.10,-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/runTime/Maya.app/Contents/bin/mayapy,-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.10.dylib,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DBUILD_UB2=ON,-DBUILD_HDMAYA=OFF '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir,-LE interactive,--parallel 8' --stages=clean --redirect-outstream-file=False --install-location /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/install/RelWithDebInfo/MayaUSD /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx
+[2023-08-16T17:10:02.555Z] Modified environment variables:
+[2023-08-16T17:10:02.555Z]     PATH=/local/S/jenkins/workspace/shared/Artifactory/OSX/cmake/3.20.3/2594509/bin:/opt/homebrew/bin:/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin
+[2023-08-16T17:10:02.776Z]     
+[2023-08-16T17:10:02.776Z]         Building with settings:
+[2023-08-16T17:10:02.776Z]           Source directory          /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd
+[2023-08-16T17:10:02.776Z]           Workspace directory       /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx
+[2023-08-16T17:10:02.776Z]           Build directory           /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/build/RelWithDebInfo
+[2023-08-16T17:10:02.776Z]           Install directory         /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/install/RelWithDebInfo/MayaUSD
+[2023-08-16T17:10:02.776Z]           Variant                   RelWithDebInfo
+[2023-08-16T17:10:02.776Z]           Python Debug              Off
+[2023-08-16T17:10:02.776Z]           CMake generator           Ninja
+[2023-08-16T17:10:02.776Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja', '-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.10', '-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/runTime/Maya.app/Contents/bin/mayapy', '-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202308111535/runtime/7b6d1ea/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.10.dylib', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DBUILD_UB2=ON', '-DBUILD_HDMAYA=OFF']
+[2023-08-16T17:10:02.776Z]           Stages arguments          ['clean']
+[2023-08-16T17:10:02.776Z]           CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir', '-LE interactive', '--parallel 8']
+[2023-08-16T17:10:02.776Z]     Success MayaUSD build and install !!!!
+[2023-08-16T17:10:02.776Z]     Elapsed time: 00:00:00
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Configure)
+[Pipeline] timeout
+[2023-08-16T17:10:02.958Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[2023-08-16T17:10:04.256Z] + python ecg-maya-usd/build.py --stages=configure --workspace-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/build --install-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/install --signing-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/signing --package-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/package --output-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/output --stash-dir=/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/stash --jenkins-build=1230 --git-commit=3720d7b6b1b952dd7cfcb27fbcd1b42c70cb7525 --git-branch=master --variants=Debug --python=3.10 --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --maya-cut-config=maya-rundev-master-debug.yaml --maya-package=rundev-master-debug --stage-banner
+[2023-08-16T17:10:04.256Z] Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d
+[2023-08-16T17:10:04.256Z] Using Maya ADSK Signatures from /local/S/jenkins/workspace/shared/Artifactory/OSX/adsk-plugin-signatures-maya/2023/3ae1ae7
+[2023-08-16T17:10:04.256Z] Using Maya Security Library from /local/S/jenkins/workspace/shared/Artifactory/OSX/maya-security-library/3.4.0/5e08f3e
+[2023-08-16T17:10:04.256Z] 
+[2023-08-16T17:10:04.256Z] ================================================================================
+[2023-08-16T17:10:04.256Z]                                configure (Debug)
+[2023-08-16T17:10:04.256Z] ================================================================================
+[2023-08-16T17:10:04.256Z] Maya Python Debug Info:
+[2023-08-16T17:10:04.256Z]   mayapy executable   = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/bin/mayapy
+[2023-08-16T17:10:04.256Z]   Include Folder      = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.10
+[2023-08-16T17:10:04.256Z]   Library             = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.10.dylib
+[2023-08-16T17:10:04.256Z]   site-package Folder = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.10/site-packages
+[2023-08-16T17:10:04.476Z] In workdir: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd
+[2023-08-16T17:10:04.476Z] Executing: arch -arch arm64 /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/bin/mayapy /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd/build.py --generator Ninja --build-debug --maya-location /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime --devkit-location /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/devkitBase --pxrusd-location /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0 --qt-location /local/S/jenkins/workspace/shared/Artifactory/OSX/qt/5.15.2/12f6c7d --materialx --build-args=-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja,-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.10,-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/bin/mayapy,-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.10.dylib,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DBUILD_UB2=ON,-DBUILD_HDMAYA=OFF '--ctest-args=-E testUsdReferenceAssemblySelection|testUsdMayaAppDir,-LE interactive,--parallel 8' --stages=configure --redirect-outstream-file=False --install-location /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/install/Debug/MayaUSD /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx
+[2023-08-16T17:10:04.476Z] Modified environment variables:
+[2023-08-16T17:10:04.476Z]     PATH=/local/S/jenkins/workspace/shared/Artifactory/OSX/cmake/3.20.3/2594509/bin:/opt/homebrew/bin:/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin
+[2023-08-16T17:10:04.697Z]     -- The C compiler identification is AppleClang 13.1.6.13160021
+[2023-08-16T17:10:04.697Z]     -- The CXX compiler identification is AppleClang 13.1.6.13160021
+[2023-08-16T17:10:04.697Z]     -- Detecting C compiler ABI info
+[2023-08-16T17:10:04.804Z]     -- Detecting C compiler ABI info - done
+[2023-08-16T17:10:04.804Z]     -- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc - skipped
+[2023-08-16T17:10:04.804Z]     -- Detecting C compile features
+[2023-08-16T17:10:04.804Z]     -- Detecting C compile features - done
+[2023-08-16T17:10:04.804Z]     -- Detecting CXX compiler ABI info
+[2023-08-16T17:10:04.915Z]     -- Detecting CXX compiler ABI info - done
+[2023-08-16T17:10:04.915Z]     -- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ - skipped
+[2023-08-16T17:10:04.915Z]     -- Detecting CXX compile features
+[2023-08-16T17:10:04.915Z]     -- Detecting CXX compile features - done
+[2023-08-16T17:10:04.915Z]     -- Building with Universal Binary 2
+[2023-08-16T17:10:06.010Z]     -- Using Maya Light API Version 3
+[2023-08-16T17:10:06.010Z]     -- Maya has setDefaultMaterialHandling API
+[2023-08-16T17:10:06.010Z]     -- Maya has getColorManagementFragmentInfo API
+[2023-08-16T17:10:06.010Z]     -- Maya has new point snapping API
+[2023-08-16T17:10:06.010Z]     -- Maya has getCurrentUfeCameraPath
+[2023-08-16T17:10:06.010Z]     -- Maya has isInCrashHandler API
+[2023-08-16T17:10:06.010Z]     -- Maya has setUfeIdentifiers API
+[2023-08-16T17:10:06.010Z]     -- Maya has updateUfeIdentifiers API
+[2023-08-16T17:10:06.010Z]     -- Maya has getDisplayStyleOfAllViewports API
+[2023-08-16T17:10:06.010Z]     -- Maya array iterator has difference_type trait
+[2023-08-16T17:10:06.010Z]     -- MFnSet has getMemberPaths function
+[2023-08-16T17:10:06.010Z]     -- MFnDisplayLayer exists
+[2023-08-16T17:10:06.010Z]     -- MDisplayLayerMessage has MDisplayLayerMemberChangedFunction
+[2023-08-16T17:10:06.010Z]     -- MRenderItem has HideOnPlayback API
+[2023-08-16T17:10:06.010Z]     -- Maya has UFE gizmo drawing
+[2023-08-16T17:10:06.010Z]     -- MacOSX: Maya was built with Universal Binary 2 (x86_64/arm64)
+[2023-08-16T17:10:06.010Z]     -- Found Maya: /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/maya.app/Contents/MacOS/Maya (found suitable version "2025", minimum required is "2022")
+[2023-08-16T17:10:06.231Z]     -- Found Python: /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/bin/mayapy (found suitable exact version "3.10.8") found components: Interpreter
+[2023-08-16T17:10:06.231Z]     -- Build MayaUSD with Python3 = ON
+[2023-08-16T17:10:06.231Z]     --    PYTHON_INCLUDE_DIRS = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.10
+[2023-08-16T17:10:06.231Z]     --    PYTHON_LIBRARIES    = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.10.dylib
+[2023-08-16T17:10:06.231Z]     --    Python_EXECUTABLE   = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/bin/mayapy
+[2023-08-16T17:10:06.448Z]     -- Found Python3: /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.10 (found version "3.10.8") found components: Development Development.Module Development.Embed
+[2023-08-16T17:10:06.448Z]     -- USD has new Sdr.PropertyTypes.Color4
+[2023-08-16T17:10:06.559Z]     -- USD has MaterialX metadata support
+[2023-08-16T17:10:06.559Z]     -- Found USD: /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0 (found suitable version "0.23.02", minimum required is "0.21.11")
+[2023-08-16T17:10:06.559Z]     --    USD include dir: /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0/include
+[2023-08-16T17:10:06.559Z]     --    USD library dir: /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0/lib
+[2023-08-16T17:10:06.559Z]     --    usdGenSchema: /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0/bin/usdGenSchema
+[2023-08-16T17:10:06.559Z]     --    USD version: 0.23.02
+[2023-08-16T17:10:06.559Z]     --    Autodesk USD version: 0.23.02
+[2023-08-16T17:10:06.559Z]     Updated PYTHONPATH: /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0/lib/python
+[2023-08-16T17:10:06.669Z]     -- Maya has UFE code wrapper API
+[2023-08-16T17:10:06.669Z]     -- Found UFE: /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/devkitBase/devkit/ufe/include (found suitable version "0.5.7", minimum required is "0.2.0")
+[2023-08-16T17:10:06.669Z]     -- Maya has UFE lights API
+[2023-08-16T17:10:06.669Z]     -- Maya has UFE materials API
+[2023-08-16T17:10:06.669Z]     -- Maya has UFE scene segment API
+[2023-08-16T17:10:06.669Z]     -- Maya has UFE TrieNode childrenComponents accessor
+[2023-08-16T17:10:06.669Z]     -- Maya has UFE UINodeGraphNode size interface
+[2023-08-16T17:10:06.669Z]     -- Maya has UFE Attribute's getEnums interface
+[2023-08-16T17:10:06.669Z]     -- Build MayaUsd with UFE version 0.5.7
+[2023-08-16T17:10:06.669Z]     --    UFE include dir: /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/devkitBase/devkit/ufe/include
+[2023-08-16T17:10:06.669Z]     --    UFE library: /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/devkitBase/devkit/ufe/lib/libufe_0.dylib
+[2023-08-16T17:10:06.669Z]     --    UFE preview features: ufe;v4_BatchOps;CodeWrapperHandler
+[2023-08-16T17:10:06.669Z]     -- Found MaterialX
+[2023-08-16T17:10:06.669Z]     -- Setting Qt version to Qt 5.15
+[2023-08-16T17:10:06.780Z]     -- Building with Qt 5.15 features enabled.
+[2023-08-16T17:10:06.780Z]     -- **** Building Gulrak From Github Repository.
+[2023-08-16T17:10:06.780Z]     -- Populating gulrak
+[2023-08-16T17:10:06.780Z]     -- Configuring done
+[2023-08-16T17:10:06.780Z]     -- Generating done
+[2023-08-16T17:10:06.780Z]     -- Build files have been written to: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/build/Debug/_deps/gulrak-subbuild
+[2023-08-16T17:10:06.780Z]     [1/9] Creating directories for 'gulrak-populate'
+[2023-08-16T17:10:06.780Z]     [1/9] Performing download step (git clone) for 'gulrak-populate'
+[2023-08-16T17:10:06.890Z]     Cloning into 'gulrak-src'...
+[2023-08-16T17:10:07.313Z]     HEAD is now at 4e21ab3 Version bump and updated readme.
+[2023-08-16T17:10:07.413Z]     [2/9] Performing update step for 'gulrak-populate'
+[2023-08-16T17:10:07.413Z]     [4/9] No patch step for 'gulrak-populate'
+[2023-08-16T17:10:07.413Z]     [5/9] No configure step for 'gulrak-populate'
+[2023-08-16T17:10:07.413Z]     [6/9] No build step for 'gulrak-populate'
+[2023-08-16T17:10:07.413Z]     [7/9] No install step for 'gulrak-populate'
+[2023-08-16T17:10:07.413Z]     [8/9] No test step for 'gulrak-populate'
+[2023-08-16T17:10:07.413Z]     [9/9] Completed 'gulrak-populate'
+[2023-08-16T17:10:07.518Z]     -- ========== Installing GoogleTest... ==========
+[2023-08-16T17:10:07.518Z]     -- Configuring done
+[2023-08-16T17:10:07.518Z]     -- Generating done
+[2023-08-16T17:10:07.518Z]     -- Build files have been written to: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/build/Debug/googletest-config
+[2023-08-16T17:10:07.618Z]     [1/8] Creating directories for 'googletest'
+[2023-08-16T17:10:08.577Z]     [2/8] Performing download step (git clone) for 'googletest'
+[2023-08-16T17:10:08.577Z]     Cloning into 'googletest-src'...
+[2023-08-16T17:10:08.577Z]     HEAD is now at 703bd9ca Googletest export
+[2023-08-16T17:10:08.577Z]     [3/8] Performing update step for 'googletest'
+[2023-08-16T17:10:08.577Z]     [4/8] No patch step for 'googletest'
+[2023-08-16T17:10:09.226Z]     [5/8] Performing configure step for 'googletest'
+[2023-08-16T17:10:09.226Z]     Not searching for unused variables given on the command line.
+[2023-08-16T17:10:09.226Z]     CMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
+[2023-08-16T17:10:09.226Z]       Compatibility with CMake < 2.8.12 will be removed from a future version of
+[2023-08-16T17:10:09.226Z]       CMake.
+[2023-08-16T17:10:09.226Z]     
+[2023-08-16T17:10:09.226Z]       Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[2023-08-16T17:10:09.226Z]       CMake that the project does not need compatibility with older versions.
+[2023-08-16T17:10:09.226Z]     
+[2023-08-16T17:10:09.226Z]     
+[2023-08-16T17:10:09.226Z]     -- The C compiler identification is AppleClang 13.1.6.13160021
+[2023-08-16T17:10:09.226Z]     -- The CXX compiler identification is AppleClang 13.1.6.13160021
+[2023-08-16T17:10:09.226Z]     -- Detecting C compiler ABI info
+[2023-08-16T17:10:09.226Z]     -- Detecting C compiler ABI info - done
+[2023-08-16T17:10:09.226Z]     -- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc - skipped
+[2023-08-16T17:10:09.226Z]     -- Detecting C compile features
+[2023-08-16T17:10:09.226Z]     -- Detecting C compile features - done
+[2023-08-16T17:10:09.226Z]     -- Detecting CXX compiler ABI info
+[2023-08-16T17:10:09.226Z]     -- Detecting CXX compiler ABI info - done
+[2023-08-16T17:10:09.226Z]     -- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ - skipped
+[2023-08-16T17:10:09.226Z]     -- Detecting CXX compile features
+[2023-08-16T17:10:09.226Z]     -- Detecting CXX compile features - done
+[2023-08-16T17:10:09.226Z]     CMake Deprecation Warning at googletest/CMakeLists.txt:56 (cmake_minimum_required):
+[2023-08-16T17:10:09.226Z]       Compatibility with CMake < 2.8.12 will be removed from a future version of
+[2023-08-16T17:10:09.226Z]       CMake.
+[2023-08-16T17:10:09.226Z]     
+[2023-08-16T17:10:09.226Z]       Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[2023-08-16T17:10:09.226Z]       CMake that the project does not need compatibility with older versions.
+[2023-08-16T17:10:09.226Z]     
+[2023-08-16T17:10:09.226Z]     
+[2023-08-16T17:10:09.226Z]     -- Found PythonInterp: /usr/local/bin/python (found version "3.10.8")
+[2023-08-16T17:10:09.226Z]     -- Looking for pthread.h
+[2023-08-16T17:10:09.226Z]     -- Looking for pthread.h - found
+[2023-08-16T17:10:09.226Z]     -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2023-08-16T17:10:09.226Z]     -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2023-08-16T17:10:09.226Z]     -- Found Threads: TRUE
+[2023-08-16T17:10:09.226Z]     -- Configuring done
+[2023-08-16T17:10:09.226Z]     -- Generating done
+[2023-08-16T17:10:09.226Z]     -- Build files have been written to: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/build/Debug/googletest-build
+[2023-08-16T17:10:11.742Z]     [6/8] Performing build step for 'googletest'
+[2023-08-16T17:10:11.742Z]     [1/4] Building CXX object googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[2023-08-16T17:10:11.742Z]     [2/4] Building CXX object googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[2023-08-16T17:10:11.742Z]     [3/4] Linking CXX shared library lib/libgtestd.dylib
+[2023-08-16T17:10:11.742Z]     [4/4] Linking CXX shared library lib/libgtest_maind.dylib
+[2023-08-16T17:10:11.742Z]     [7/8] Performing install step for 'googletest'
+[2023-08-16T17:10:11.742Z]     [0/1] Install the project...
+[2023-08-16T17:10:11.742Z]     -- Install configuration: "Debug"
+[2023-08-16T17:10:11.742Z]     [8/8] Completed 'googletest'
+[2023-08-16T17:10:11.742Z]     -- ========== ...  GoogleTest installed. ==========
+[2023-08-16T17:10:12.514Z]     Traceback (most recent call last):
+[2023-08-16T17:10:12.514Z]       File "/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0/bin/usdGenSchema", line 59, in <module>
+[2023-08-16T17:10:12.514Z]         from pxr import Plug, Sdf, Usd, Vt, Tf
+[2023-08-16T17:10:12.514Z]       File "/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0/lib/python/pxr/Plug/__init__.py", line 28, in <module>
+[2023-08-16T17:10:12.514Z]         from pxr import Tf
+[2023-08-16T17:10:12.514Z]       File "/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0/lib/python/pxr/Tf/__init__.py", line 163, in <module>
+[2023-08-16T17:10:12.514Z]         PreparePythonModule()
+[2023-08-16T17:10:12.514Z]       File "/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0/lib/python/pxr/Tf/__init__.py", line 88, in PreparePythonModule
+[2023-08-16T17:10:12.514Z]         module = importlib.import_module(
+[2023-08-16T17:10:12.514Z]       File "/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.10/importlib/__init__.py", line 126, in import_module
+[2023-08-16T17:10:12.514Z]         return _bootstrap._gcd_import(name[level:], package, level)
+[2023-08-16T17:10:12.514Z]     ImportError: dlopen(/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0/lib/python/pxr/Tf/_tf.so, 0x0002): Symbol not found: __ZN32pxrInternal_v0_23__pxrReserved__19TfPyThrowValueErrorERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+[2023-08-16T17:10:12.514Z]       Referenced from: /Volumes/DATA/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0/lib/python/pxr/Tf/_tf.so
+[2023-08-16T17:10:12.514Z]       Expected in: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-usd-build/ecg-usd-full-python3.10-osx/build/Debug/lib/libusd_tf.dylib
+[2023-08-16T17:10:12.514Z]     CMake Error at test/lib/mayaUsd/fileio/CMakeLists.txt:72 (message):
+[2023-08-16T17:10:12.514Z]       Schemas generation failed
+[2023-08-16T17:10:12.514Z]     
+[2023-08-16T17:10:12.514Z]     
+[2023-08-16T17:10:12.514Z]     -- Configuring incomplete, errors occurred!
+[2023-08-16T17:10:12.514Z]     See also "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/build/Debug/CMakeFiles/CMakeOutput.log".
+[2023-08-16T17:10:12.514Z]     See also "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/build/Debug/CMakeFiles/CMakeError.log".
+[2023-08-16T17:10:12.625Z]     
+[2023-08-16T17:10:12.625Z]         Building with settings:
+[2023-08-16T17:10:12.625Z]           Source directory          /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd
+[2023-08-16T17:10:12.626Z]           Workspace directory       /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx
+[2023-08-16T17:10:12.626Z]           Build directory           /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/build/Debug
+[2023-08-16T17:10:12.626Z]           Install directory         /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/install/Debug/MayaUSD
+[2023-08-16T17:10:12.626Z]           Variant                   Debug
+[2023-08-16T17:10:12.626Z]           Python Debug              Off
+[2023-08-16T17:10:12.626Z]           CMake generator           Ninja
+[2023-08-16T17:10:12.626Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja', '-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.10', '-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/bin/mayapy', '-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.10.dylib', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DBUILD_UB2=ON', '-DBUILD_HDMAYA=OFF']
+[2023-08-16T17:10:12.626Z]           Stages arguments          ['configure']
+[2023-08-16T17:10:12.626Z]           CTest arguments           ['-E testUsdReferenceAssemblySelection|testUsdMayaAppDir', '-LE interactive', '--parallel 8']
+[2023-08-16T17:10:12.626Z]     #####################################################################################
+[2023-08-16T17:10:12.626Z]     log date: 2023-08-16 10:10
+[2023-08-16T17:10:12.626Z]     commit sha: 302d0683c7eb641381d6b39b957dde29f6462c79
+[2023-08-16T17:10:12.626Z]     commit date: Wed Aug 16 09:56:56 2023 -0700
+[2023-08-16T17:10:12.626Z]     #####################################################################################
+[2023-08-16T17:10:12.626Z]     
+[2023-08-16T17:10:12.626Z]     cmake -DCMAKE_INSTALL_PREFIX="/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/install/Debug/MayaUSD" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G "Ninja" -DMAYA_LOCATION="/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime" -DPXR_USD_LOCATION="/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0" -DMAYA_DEVKIT_LOCATION="/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/devkitBase" -DCMAKE_WANT_MATERIALX_BUILD=ON -DCMAKE_PREFIX_PATH="/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0" -DMAYAUSD_DEFINE_BOOST_DEBUG_PYTHON_FLAG=OFF -DQT_LOCATION="/local/S/jenkins/workspace/shared/Artifactory/OSX/qt/5.15.2/12f6c7d" -DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja -DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.10 -DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/bin/mayapy -DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.10.dylib -DBUILD_WITH_PYTHON_3=ON -DBUILD_WITH_PYTHON_3_VERSION=3.10 -DBUILD_UB2=ON -DBUILD_HDMAYA=OFF "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd"
+[2023-08-16T17:10:12.626Z]     
+[2023-08-16T17:10:12.626Z]     Traceback (most recent call last):
+[2023-08-16T17:10:12.626Z]       File "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd/build.py", line 636, in <module>
+[2023-08-16T17:10:12.626Z]         BuildAndInstall(context, context.buildArgs, context.stagesArgs)
+[2023-08-16T17:10:12.626Z]       File "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd/build.py", line 397, in BuildAndInstall
+[2023-08-16T17:10:12.626Z]         RunCMake(context, extraArgs, stagesArgs)
+[2023-08-16T17:10:12.626Z]       File "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd/build.py", line 286, in RunCMake
+[2023-08-16T17:10:12.626Z]         Run(context,
+[2023-08-16T17:10:12.626Z]       File "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd/build.py", line 178, in Run
+[2023-08-16T17:10:12.626Z]         raise RuntimeError("Failed to run '{cmd}'\nSee {log} for more details."
+[2023-08-16T17:10:12.626Z]     RuntimeError: Failed to run 'cmake -DCMAKE_INSTALL_PREFIX="/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/install/Debug/MayaUSD" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G "Ninja" -DMAYA_LOCATION="/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime" -DPXR_USD_LOCATION="/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0" -DMAYA_DEVKIT_LOCATION="/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/devkitBase" -DCMAKE_WANT_MATERIALX_BUILD=ON -DCMAKE_PREFIX_PATH="/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/cf69da0" -DMAYAUSD_DEFINE_BOOST_DEBUG_PYTHON_FLAG=OFF -DQT_LOCATION="/local/S/jenkins/workspace/shared/Artifactory/OSX/qt/5.15.2/12f6c7d" -DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja -DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.10 -DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/bin/mayapy -DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202308111535/runtime/2bca33d/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.10.dylib -DBUILD_WITH_PYTHON_3=ON -DBUILD_WITH_PYTHON_3_VERSION=3.10 -DBUILD_UB2=ON -DBUILD_HDMAYA=OFF "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/ecg-maya-usd/maya-usd"'
+[2023-08-16T17:10:12.626Z]     See /local/S/jenkins/workspace/ECP/ecg-maya-usd/ecg-mayausd-branch-preflight-python3-osx/build/Debug/build_log.txt for more details.
+[2023-08-16T17:10:12.626Z] build.py: error: Command failed with error code: 1
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] emailextrecipients
+Not sending mail to unregistered user ecg.jenkins@autodesk.com because your SCM claimed this was associated with a user ID ‘ecg.jenkins' which your security realm does not recognize; you may need changes in your SCM plugin
+Not sending mail to unregistered user ecg.jenkins@autodesk.com because your SCM claimed this was associated with a user ID ‘ecg.jenkins' which your security realm does not recognize; you may need changes in your SCM plugin
+[Pipeline] echo
+No recipients to send notification.
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+[Checks API] No suitable checks publisher found.
+Finished: FAILURE
