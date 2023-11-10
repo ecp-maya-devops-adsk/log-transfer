@@ -1,0 +1,1464 @@
+[2023-11-10T17:03:42.675Z] ================================================================================
+[2023-11-10T17:03:42.675Z]                                  setup (Debug)
+[2023-11-10T17:03:42.675Z] ================================================================================
+[Pipeline] bat
+[2023-11-10T17:03:43.266Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-11-10T17:03:43.858Z] Deleting alias drive P:
+[Pipeline] bat
+[2023-11-10T17:03:44.524Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-11-10T17:03:45.141Z] Creating alias drive W: to S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows
+[Pipeline] bat
+[2023-11-10T17:03:46.122Z] "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-11-10T17:03:46.453Z] **********************************************************************
+[2023-11-10T17:03:46.453Z] ** Visual Studio 2022 Developer Command Prompt v17.3.2
+[2023-11-10T17:03:46.453Z] ** Copyright (c) 2022 Microsoft Corporation
+[2023-11-10T17:03:46.453Z] **********************************************************************
+[2023-11-10T17:03:47.621Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-11-10T17:03:47.621Z] python ecg-maya-hydra/build.py --stages=setup --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=379 --git-commit=d590573d5109725985e142e015db204e230f9776 --git-branch=master --variants=RelWithDebInfo --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --extra-license-file=ecg-maya-hydra/jenkins-o03-cot/melicense.lic --prune-versions=3 --prune-revisions=3 --maya-cut-config=maya-rundev-master.yaml --maya-package=rundev-master --stage-banner --prune-artifacts --force-pruning
+[2023-11-10T17:03:48.778Z] Getting rundev-master download URL from Maya SHA-1 hash
+[2023-11-10T17:03:48.778Z] Finding Artifactory servers response times
+[2023-11-10T17:03:51.092Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-11-10T17:03:51.092Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-11-10T17:03:51.092Z] [DEBUG] Output:
+[2023-11-10T17:03:51.092Z] OK
+[2023-11-10T17:03:51.092Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/system/ping
+[2023-11-10T17:03:51.424Z] [VERBOSE] Start loading URL (CURL): https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-11-10T17:03:51.424Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-11-10T17:03:51.424Z] [DEBUG] Output:
+[2023-11-10T17:03:51.424Z] OK
+[2023-11-10T17:03:51.424Z] [VERBOSE] End loading URL (CURL): https://art-marmotte.autodesk.com/artifactory/api/system/ping
+[2023-11-10T17:03:51.424Z] [VERBOSE] Start loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-11-10T17:03:51.424Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-11-10T17:03:51.424Z] [DEBUG] Output:
+[2023-11-10T17:03:51.424Z] OK
+[2023-11-10T17:03:51.424Z] [VERBOSE] End loading URL (CURL): https://art-bear.autodesk.com/artifactory/api/system/ping
+[2023-11-10T17:03:51.755Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/checksum?repos=autodesk-3p-generic,adsk-build-tools-generic,team-ecg-generic,team-maya-generic,oss-stg-generic&sha1=1cbda2fc236e88e5c132daa7c59dc6ac3046350c
+[2023-11-10T17:03:51.755Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com/artifactory/api/search/checksum?repos=autodesk-3p-generic,adsk-build-tools-generic,team-ecg-generic,team-maya-generic,oss-stg-generic&sha1=1cbda2fc236e88e5c132daa7c59dc6ac3046350c
+[2023-11-10T17:03:51.755Z] [DEBUG] Output:
+[2023-11-10T17:03:51.755Z] {
+[2023-11-10T17:03:51.755Z]   "results" : [ {
+[2023-11-10T17:03:51.755Z]     "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip"
+[2023-11-10T17:03:51.755Z]   } ]
+[2023-11-10T17:03:51.755Z] }
+[2023-11-10T17:03:51.755Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/checksum?repos=autodesk-3p-generic,adsk-build-tools-generic,team-ecg-generic,team-maya-generic,oss-stg-generic&sha1=1cbda2fc236e88e5c132daa7c59dc6ac3046350c
+[2023-11-10T17:03:51.755Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip
+[2023-11-10T17:03:51.755Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip
+[2023-11-10T17:03:51.755Z] [DEBUG] Output:
+[2023-11-10T17:03:51.755Z] {
+[2023-11-10T17:03:51.755Z]   "repo" : "team-maya-generic",
+[2023-11-10T17:03:51.755Z]   "path" : "/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip",
+[2023-11-10T17:03:51.755Z]   "created" : "2023-11-06T03:57:20.399-08:00",
+[2023-11-10T17:03:51.755Z]   "createdBy" : "svc_p_mescm",
+[2023-11-10T17:03:51.755Z]   "lastModified" : "2023-11-06T03:51:15.132-08:00",
+[2023-11-10T17:03:51.755Z]   "modifiedBy" : "svc_p_mescm",
+[2023-11-10T17:03:51.755Z]   "lastUpdated" : "2023-11-06T03:57:20.400-08:00",
+[2023-11-10T17:03:51.755Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip",
+[2023-11-10T17:03:51.755Z]   "mimeType" : "application/zip",
+[2023-11-10T17:03:51.755Z]   "size" : "2587351375",
+[2023-11-10T17:03:51.755Z]   "checksums" : {
+[2023-11-10T17:03:51.755Z]     "sha1" : "1cbda2fc236e88e5c132daa7c59dc6ac3046350c",
+[2023-11-10T17:03:51.755Z]     "md5" : "ee839e72ff4822c38c086e8cc45884de",
+[2023-11-10T17:03:51.755Z]     "sha256" : "554e1734b6ab61a8a047de80c11f3ce0606416e84895edd6f4c347f02f8ecec8"
+[2023-11-10T17:03:51.755Z]   },
+[2023-11-10T17:03:51.755Z]   "originalChecksums" : {
+[2023-11-10T17:03:51.755Z]     "sha1" : "1cbda2fc236e88e5c132daa7c59dc6ac3046350c",
+[2023-11-10T17:03:51.755Z]     "md5" : "ee839e72ff4822c38c086e8cc45884de",
+[2023-11-10T17:03:51.756Z]     "sha256" : "554e1734b6ab61a8a047de80c11f3ce0606416e84895edd6f4c347f02f8ecec8"
+[2023-11-10T17:03:51.756Z]   },
+[2023-11-10T17:03:51.756Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip"
+[2023-11-10T17:03:51.756Z] }
+[2023-11-10T17:03:51.756Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip
+[2023-11-10T17:03:51.756Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f
+[2023-11-10T17:03:51.756Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2023\3ae1ae7
+[2023-11-10T17:03:51.756Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\3.4.0\284407f
+[2023-11-10T17:03:51.756Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip.multipart
+[2023-11-10T17:03:51.756Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip.multipart
+[2023-11-10T17:03:51.756Z] [DEBUG] Output:
+[2023-11-10T17:03:51.756Z] {
+[2023-11-10T17:03:51.756Z]   "errors" : [ {
+[2023-11-10T17:03:51.756Z]     "status" : 404,
+[2023-11-10T17:03:51.756Z]     "message" : "Unable to find item"
+[2023-11-10T17:03:51.756Z]   } ]
+[2023-11-10T17:03:51.756Z] }
+[2023-11-10T17:03:51.756Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip.multipart
+[2023-11-10T17:03:51.756Z] Downloading https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip to P:\shared\Artifactory\Windows\tmp\tmpgbwyxy
+[2023-11-10T17:03:52.087Z] [VERBOSE] Start downloading file (CURL): https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip
+[2023-11-10T17:03:52.087Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe -sI -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip
+[2023-11-10T17:03:52.087Z] [DEBUG] Header:
+[2023-11-10T17:03:52.087Z] HTTP/1.1 200 
+[2023-11-10T17:03:52.087Z] Date: Fri, 10 Nov 2023 17:03:51 GMT
+[2023-11-10T17:03:52.087Z] Content-Type: application/zip
+[2023-11-10T17:03:52.087Z] Content-Length: 2587351375
+[2023-11-10T17:03:52.087Z] Connection: close
+[2023-11-10T17:03:52.087Z] X-JFrog-Version: Artifactory/7.55.9 75509900
+[2023-11-10T17:03:52.087Z] X-Artifactory-Id: 3ae3a5ee55e349ae80f0a4421f74725717e50dd3
+[2023-11-10T17:03:52.087Z] X-Artifactory-Node-Id: ussclpdrsync010
+[2023-11-10T17:03:52.087Z] Last-Modified: Mon, 06 Nov 2023 11:51:15 GMT
+[2023-11-10T17:03:52.087Z] ETag: 1cbda2fc236e88e5c132daa7c59dc6ac3046350c
+[2023-11-10T17:03:52.087Z] X-Checksum-Sha1: 1cbda2fc236e88e5c132daa7c59dc6ac3046350c
+[2023-11-10T17:03:52.087Z] X-Checksum-Sha256: 554e1734b6ab61a8a047de80c11f3ce0606416e84895edd6f4c347f02f8ecec8
+[2023-11-10T17:03:52.087Z] X-Checksum-Md5: ee839e72ff4822c38c086e8cc45884de
+[2023-11-10T17:03:52.087Z] Accept-Ranges: bytes
+[2023-11-10T17:03:52.087Z] X-Artifactory-Filename: 202311060140-068e1a5022-RUNDEV.zip
+[2023-11-10T17:03:52.087Z] Content-Disposition: attachment; filename="202311060140-068e1a5022-RUNDEV.zip"; filename*=UTF-8''"202311060140-068e1a5022-RUNDEV.zip"
+[2023-11-10T17:03:52.088Z] Access-Control-Allow-Methods: GET, PUT, POST, OPTIONS, HEAD
+[2023-11-10T17:03:52.088Z] Access-Control-Allow-Headers: Authorization, Origin, X-Requested-With, Content-Type, Accept
+[2023-11-10T17:03:52.088Z] Access-Control-Allow-Credentials: true
+[2023-11-10T17:03:52.088Z] Set-Cookie: AlteonSC=1465459466.47873.0000; path=/; Httponly; Secure
+[2023-11-10T17:03:52.088Z] [DEBUG] Running: C:\WINDOWS\system32\curl.exe --progress-bar -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 1800 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip -o P:\shared\Artifactory\Windows\tmp\tmpgbwyxy\202311060140-068e1a5022-RUNDEV.zip
+[2023-11-10T17:03:52.088Z]       0% complete.
+[2023-11-10T17:03:52.422Z]       1% complete.
+[2023-11-10T17:03:52.422Z]       2% complete.
+[2023-11-10T17:03:52.754Z]       3% complete.
+[2023-11-10T17:03:53.086Z]       4% complete.
+[2023-11-10T17:03:53.086Z]       5% complete.
+[2023-11-10T17:03:53.417Z]       6% complete.
+[2023-11-10T17:03:53.749Z]       7% complete.
+[2023-11-10T17:03:53.749Z]       8% complete.
+[2023-11-10T17:03:54.081Z]       9% complete.
+[2023-11-10T17:03:54.081Z]      10% complete.
+[2023-11-10T17:03:54.413Z]      11% complete.
+[2023-11-10T17:03:54.745Z]      12% complete.
+[2023-11-10T17:03:54.745Z]      13% complete.
+[2023-11-10T17:03:55.078Z]      14% complete.
+[2023-11-10T17:03:55.078Z]      15% complete.
+[2023-11-10T17:03:55.479Z]      16% complete.
+[2023-11-10T17:03:55.479Z]      17% complete.
+[2023-11-10T17:03:55.835Z]      18% complete.
+[2023-11-10T17:03:56.168Z]      19% complete.
+[2023-11-10T17:03:56.168Z]      20% complete.
+[2023-11-10T17:03:56.501Z]      21% complete.
+[2023-11-10T17:03:56.501Z]      22% complete.
+[2023-11-10T17:03:56.833Z]      23% complete.
+[2023-11-10T17:03:57.166Z]      24% complete.
+[2023-11-10T17:03:57.166Z]      25% complete.
+[2023-11-10T17:03:57.501Z]      26% complete.
+[2023-11-10T17:03:57.501Z]      27% complete.
+[2023-11-10T17:03:57.834Z]      28% complete.
+[2023-11-10T17:03:58.167Z]      29% complete.
+[2023-11-10T17:03:58.167Z]      30% complete.
+[2023-11-10T17:03:58.567Z]      31% complete.
+[2023-11-10T17:03:58.567Z]      32% complete.
+[2023-11-10T17:03:58.899Z]      33% complete.
+[2023-11-10T17:03:58.899Z]      34% complete.
+[2023-11-10T17:03:59.231Z]      35% complete.
+[2023-11-10T17:03:59.563Z]      36% complete.
+[2023-11-10T17:03:59.563Z]      37% complete.
+[2023-11-10T17:03:59.897Z]      38% complete.
+[2023-11-10T17:04:00.230Z]      39% complete.
+[2023-11-10T17:04:00.230Z]      40% complete.
+[2023-11-10T17:04:00.562Z]      41% complete.
+[2023-11-10T17:04:00.562Z]      42% complete.
+[2023-11-10T17:04:00.958Z]      43% complete.
+[2023-11-10T17:04:00.958Z]      44% complete.
+[2023-11-10T17:04:01.291Z]      45% complete.
+[2023-11-10T17:04:01.624Z]      46% complete.
+[2023-11-10T17:04:01.624Z]      47% complete.
+[2023-11-10T17:04:01.988Z]      48% complete.
+[2023-11-10T17:04:02.320Z]      49% complete.
+[2023-11-10T17:04:02.320Z]      50% complete.
+[2023-11-10T17:04:02.653Z]      51% complete.
+[2023-11-10T17:04:02.653Z]      52% complete.
+[2023-11-10T17:04:02.986Z]      53% complete.
+[2023-11-10T17:04:03.318Z]      54% complete.
+[2023-11-10T17:04:03.318Z]      55% complete.
+[2023-11-10T17:04:03.650Z]      56% complete.
+[2023-11-10T17:04:03.992Z]      57% complete.
+[2023-11-10T17:04:03.992Z]      58% complete.
+[2023-11-10T17:04:04.330Z]      59% complete.
+[2023-11-10T17:04:04.670Z]      60% complete.
+[2023-11-10T17:04:04.670Z]      61% complete.
+[2023-11-10T17:04:04.670Z]      62% complete.
+[2023-11-10T17:04:05.002Z]      63% complete.
+[2023-11-10T17:04:05.334Z]      64% complete.
+[2023-11-10T17:04:05.334Z]      65% complete.
+[2023-11-10T17:04:05.666Z]      66% complete.
+[2023-11-10T17:04:06.013Z]      67% complete.
+[2023-11-10T17:04:06.013Z]      68% complete.
+[2023-11-10T17:04:06.368Z]      69% complete.
+[2023-11-10T17:04:06.368Z]      70% complete.
+[2023-11-10T17:04:06.701Z]      71% complete.
+[2023-11-10T17:04:07.089Z]      72% complete.
+[2023-11-10T17:04:07.089Z]      73% complete.
+[2023-11-10T17:04:07.422Z]      74% complete.
+[2023-11-10T17:04:07.422Z]      75% complete.
+[2023-11-10T17:04:07.756Z]      76% complete.
+[2023-11-10T17:04:07.756Z]      77% complete.
+[2023-11-10T17:04:08.088Z]      78% complete.
+[2023-11-10T17:04:08.421Z]      79% complete.
+[2023-11-10T17:04:08.421Z]      80% complete.
+[2023-11-10T17:04:08.822Z]      81% complete.
+[2023-11-10T17:04:08.822Z]      82% complete.
+[2023-11-10T17:04:09.159Z]      83% complete.
+[2023-11-10T17:04:09.159Z]      84% complete.
+[2023-11-10T17:04:09.493Z]      85% complete.
+[2023-11-10T17:04:09.829Z]      86% complete.
+[2023-11-10T17:04:09.829Z]      87% complete.
+[2023-11-10T17:04:10.162Z]      88% complete.
+[2023-11-10T17:04:10.162Z]      89% complete.
+[2023-11-10T17:04:10.495Z]      90% complete.
+[2023-11-10T17:04:10.829Z]      91% complete.
+[2023-11-10T17:04:10.829Z]      92% complete.
+[2023-11-10T17:04:11.167Z]      93% complete.
+[2023-11-10T17:04:11.167Z]      94% complete.
+[2023-11-10T17:04:11.504Z]      95% complete.
+[2023-11-10T17:04:11.838Z]      96% complete.
+[2023-11-10T17:04:11.838Z]      97% complete.
+[2023-11-10T17:04:12.171Z]      98% complete.
+[2023-11-10T17:04:12.171Z]      99% complete.
+[2023-11-10T17:04:12.509Z]     100% complete.
+[2023-11-10T17:04:12.509Z] [VERBOSE] End downloading file (CURL): https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/px64/2023-11-06-01-40_068e1a5022/202311060140-068e1a5022-RUNDEV.zip
+[2023-11-10T17:04:12.509Z] Extracting 202311060140-068e1a5022-RUNDEV.zip to P:\shared\Artifactory\Windows\tmp\tmp0tvrsl
+[2023-11-10T17:04:12.509Z] 
+[2023-11-10T17:04:12.509Z] 7-Zip 19.00 (x64) : Copyright (c) 1999-2018 Igor Pavlov : 2019-02-21
+[2023-11-10T17:04:12.509Z] 
+[2023-11-10T17:04:12.509Z] Scanning the drive for archives:
+[2023-11-10T17:04:12.509Z] 1 file, 2587351375 bytes (2468 MiB)
+[2023-11-10T17:04:12.509Z] 
+[2023-11-10T17:04:12.509Z] Extracting archive: P:\shared\Artifactory\Windows\tmp\tmpgbwyxy\202311060140-068e1a5022-RUNDEV.zip
+[2023-11-10T17:06:06.107Z] --
+[2023-11-10T17:06:06.107Z] Path = P:\shared\Artifactory\Windows\tmp\tmpgbwyxy\202311060140-068e1a5022-RUNDEV.zip
+[2023-11-10T17:06:06.107Z] Type = zip
+[2023-11-10T17:06:06.107Z] Physical Size = 2587351375
+[2023-11-10T17:06:06.107Z] 
+[2023-11-10T17:06:06.107Z] Everything is Ok
+[2023-11-10T17:06:06.107Z] 
+[2023-11-10T17:06:06.107Z] Folders: 1869
+[2023-11-10T17:06:06.107Z] Files: 26095
+[2023-11-10T17:06:06.107Z] Size:       5223138688
+[2023-11-10T17:06:06.107Z] Compressed: 2587351375
+[2023-11-10T17:06:06.107Z] Installing on P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f
+[2023-11-10T17:06:06.107Z] 
+[2023-11-10T17:06:06.107Z] ================================================================================
+[2023-11-10T17:06:06.107Z]                              setup (RelWithDebInfo)
+[2023-11-10T17:06:06.107Z] ================================================================================
+[2023-11-10T17:06:06.107Z] Installing license file 'melicense.lic'.
+[Pipeline] bat
+[2023-11-10T17:06:06.785Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-11-10T17:06:07.413Z] Deleting alias drive P:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clean)
+[Pipeline] timeout
+[2023-11-10T17:06:08.011Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[2023-11-10T17:06:08.770Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-11-10T17:06:09.406Z] Creating alias drive W: to S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows
+[Pipeline] bat
+[2023-11-10T17:06:10.366Z] "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-11-10T17:06:10.703Z] **********************************************************************
+[2023-11-10T17:06:10.703Z] ** Visual Studio 2022 Developer Command Prompt v17.3.2
+[2023-11-10T17:06:10.703Z] ** Copyright (c) 2022 Microsoft Corporation
+[2023-11-10T17:06:10.703Z] **********************************************************************
+[2023-11-10T17:06:11.934Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-11-10T17:06:11.934Z] python ecg-maya-hydra/build.py --stages=clean --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=379 --git-commit=d590573d5109725985e142e015db204e230f9776 --git-branch=master --variants=Debug --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --maya-cut-config=maya-rundev-master-debug.yaml --maya-package=rundev-master-debug --stage-banner
+[2023-11-10T17:06:13.100Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a
+[2023-11-10T17:06:13.100Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2023\3ae1ae7
+[2023-11-10T17:06:13.100Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\3.4.0\284407f
+[2023-11-10T17:06:13.100Z] 
+[2023-11-10T17:06:13.100Z] ================================================================================
+[2023-11-10T17:06:13.100Z]                                  clean (Debug)
+[2023-11-10T17:06:13.100Z] ================================================================================
+[2023-11-10T17:06:13.100Z] Maya Python Debug Info:
+[2023-11-10T17:06:13.100Z]   mayapy executable   = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\bin\mayapy.exe
+[2023-11-10T17:06:13.100Z]   Include Folder      = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\include\Python310\Python
+[2023-11-10T17:06:13.100Z]   Library             = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\lib\python310_d.lib
+[2023-11-10T17:06:13.100Z]   site-package Folder = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\Python\Lib\site-packages
+[2023-11-10T17:06:15.413Z] In workdir: S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:06:15.413Z] Executing: 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202310260154\\runtime\\2caf91a\\runTime\\bin\\mayapy.exe' 'S:\\jenkins\\workspace\\ECP\\ecg-maya-hydra\\ecg-maya-hydra-branch-preflight-python3-windows\\ecg-maya-hydra\\maya-hydra\\build.py' --generator Ninja --build-debug --maya-location 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202310260154\\runtime\\2caf91a\\runTime' --devkit-location 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202310260154\\runtime\\2caf91a\\devkitBase' --pxrusd-location 'P:\\shared\\Artifactory\\Windows\\USD\\972e371' '--build-args=-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe,-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/include/Python310/Python,-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/bin/mayapy.exe,-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/lib/python310_d.lib,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\972e371' --debug-python '--ctest-args=--parallel 16' --stages=clean --redirect-outstream-file=False --install-location 'W:\\install\\Debug\\MayaHydra' 'W:\\'
+[2023-11-10T17:06:15.413Z] Modified environment variables:
+[2023-11-10T17:06:15.413Z]     PATH=P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\\MSBuild\Current\Bin\amd64;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\.dotnet\tools;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\Linux\bin\ConnectionManagerExe
+[2023-11-10T17:06:16.593Z]     
+[2023-11-10T17:06:16.593Z]         Building with settings:
+[2023-11-10T17:06:16.593Z]           Source directory          S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:06:16.593Z]           Workspace directory       W:\
+[2023-11-10T17:06:16.593Z]           Build directory           W:\build\Debug
+[2023-11-10T17:06:16.593Z]           Install directory         W:\install\Debug\MayaHydra
+[2023-11-10T17:06:16.593Z]           Variant                   Debug
+[2023-11-10T17:06:16.593Z]           Python Debug              On
+[2023-11-10T17:06:16.593Z]           CMake generator           Ninja
+[2023-11-10T17:06:16.593Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe', '-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/include/Python310/Python', '-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/bin/mayapy.exe', '-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/lib/python310_d.lib', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\972e371']
+[2023-11-10T17:06:16.593Z]           Stages arguments          ['clean']
+[2023-11-10T17:06:16.593Z]           CTest arguments           ['--parallel 16']
+[2023-11-10T17:06:16.593Z]     Success MayaHydra build and install !!!!
+[2023-11-10T17:06:16.593Z]     Elapsed time: 00:00:00
+[Pipeline] bat
+[2023-11-10T17:06:17.227Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-11-10T17:06:17.919Z] Deleting alias drive P:
+[Pipeline] bat
+[2023-11-10T17:06:18.704Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-11-10T17:06:19.546Z] Creating alias drive W: to S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows
+[Pipeline] bat
+[2023-11-10T17:06:20.929Z] "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-11-10T17:06:21.265Z] **********************************************************************
+[2023-11-10T17:06:21.265Z] ** Visual Studio 2022 Developer Command Prompt v17.3.2
+[2023-11-10T17:06:21.265Z] ** Copyright (c) 2022 Microsoft Corporation
+[2023-11-10T17:06:21.265Z] **********************************************************************
+[2023-11-10T17:06:22.439Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-11-10T17:06:22.439Z] python ecg-maya-hydra/build.py --stages=clean --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=379 --git-commit=d590573d5109725985e142e015db204e230f9776 --git-branch=master --variants=RelWithDebInfo --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --maya-cut-config=maya-rundev-master.yaml --maya-package=rundev-master --stage-banner
+[2023-11-10T17:06:23.611Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f
+[2023-11-10T17:06:23.611Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2023\3ae1ae7
+[2023-11-10T17:06:23.611Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\3.4.0\284407f
+[2023-11-10T17:06:23.611Z] 
+[2023-11-10T17:06:23.611Z] ================================================================================
+[2023-11-10T17:06:23.611Z]                              clean (RelWithDebInfo)
+[2023-11-10T17:06:23.611Z] ================================================================================
+[2023-11-10T17:06:23.611Z] Maya Python RelWithDebInfo Info:
+[2023-11-10T17:06:23.611Z]   mayapy executable   = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\bin\mayapy.exe
+[2023-11-10T17:06:23.611Z]   Include Folder      = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\include\Python310\Python
+[2023-11-10T17:06:23.611Z]   Library             = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\lib\python310.lib
+[2023-11-10T17:06:23.611Z]   site-package Folder = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\Python\Lib\site-packages
+[2023-11-10T17:06:27.761Z] Adding Python package requirements: ['P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\runTime\\bin\\mayapy.exe', '-m', 'pip', 'install', '-t', 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\runTime\\Python\\Lib\\site-packages', '-r', 'python_requirements.txt']
+[2023-11-10T17:06:41.605Z] In workdir: S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:06:41.605Z] Executing: 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\runTime\\bin\\mayapy.exe' 'S:\\jenkins\\workspace\\ECP\\ecg-maya-hydra\\ecg-maya-hydra-branch-preflight-python3-windows\\ecg-maya-hydra\\maya-hydra\\build.py' --generator Ninja --build-relwithdebug --maya-location 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\runTime' --devkit-location 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\devkitBase' --pxrusd-location 'P:\\shared\\Artifactory\\Windows\\USD\\ce619c6' '--build-args=-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe,-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/include/Python310/Python,-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/bin/mayapy.exe,-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/lib/python310.lib,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\ce619c6' '--ctest-args=--parallel 16' --stages=clean --redirect-outstream-file=False --install-location 'W:\\install\\RelWithDebInfo\\MayaHydra' 'W:\\'
+[2023-11-10T17:06:41.605Z] Modified environment variables:
+[2023-11-10T17:06:41.605Z]     PATH=P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\\MSBuild\Current\Bin\amd64;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\.dotnet\tools;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\Linux\bin\ConnectionManagerExe
+[2023-11-10T17:06:41.605Z]     
+[2023-11-10T17:06:41.605Z]         Building with settings:
+[2023-11-10T17:06:41.605Z]           Source directory          S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:06:41.605Z]           Workspace directory       W:\
+[2023-11-10T17:06:41.605Z]           Build directory           W:\build\RelWithDebInfo
+[2023-11-10T17:06:41.605Z]           Install directory         W:\install\RelWithDebInfo\MayaHydra
+[2023-11-10T17:06:41.605Z]           Variant                   RelWithDebInfo
+[2023-11-10T17:06:41.605Z]           Python Debug              Off
+[2023-11-10T17:06:41.605Z]           CMake generator           Ninja
+[2023-11-10T17:06:41.605Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe', '-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/include/Python310/Python', '-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/bin/mayapy.exe', '-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/lib/python310.lib', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\ce619c6']
+[2023-11-10T17:06:41.605Z]           Stages arguments          ['clean']
+[2023-11-10T17:06:41.605Z]           CTest arguments           ['--parallel 16']
+[2023-11-10T17:06:41.605Z]     Success MayaHydra build and install !!!!
+[2023-11-10T17:06:41.605Z]     Elapsed time: 00:00:00
+[Pipeline] bat
+[2023-11-10T17:06:42.289Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-11-10T17:06:42.913Z] Deleting alias drive P:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Configure)
+[Pipeline] timeout
+[2023-11-10T17:06:43.351Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[2023-11-10T17:06:44.090Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-11-10T17:06:44.975Z] Creating alias drive W: to S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows
+[Pipeline] bat
+[2023-11-10T17:06:47.728Z] "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-11-10T17:06:47.728Z] **********************************************************************
+[2023-11-10T17:06:47.728Z] ** Visual Studio 2022 Developer Command Prompt v17.3.2
+[2023-11-10T17:06:47.728Z] ** Copyright (c) 2022 Microsoft Corporation
+[2023-11-10T17:06:47.728Z] **********************************************************************
+[2023-11-10T17:06:49.044Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-11-10T17:06:49.044Z] python ecg-maya-hydra/build.py --stages=configure --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=379 --git-commit=d590573d5109725985e142e015db204e230f9776 --git-branch=master --variants=Debug --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --maya-cut-config=maya-rundev-master-debug.yaml --maya-package=rundev-master-debug --stage-banner
+[2023-11-10T17:06:50.251Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a
+[2023-11-10T17:06:50.251Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2023\3ae1ae7
+[2023-11-10T17:06:50.251Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\3.4.0\284407f
+[2023-11-10T17:06:50.251Z] 
+[2023-11-10T17:06:50.251Z] ================================================================================
+[2023-11-10T17:06:50.251Z]                                configure (Debug)
+[2023-11-10T17:06:50.251Z] ================================================================================
+[2023-11-10T17:06:50.251Z] Maya Python Debug Info:
+[2023-11-10T17:06:50.251Z]   mayapy executable   = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\bin\mayapy.exe
+[2023-11-10T17:06:50.251Z]   Include Folder      = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\include\Python310\Python
+[2023-11-10T17:06:50.251Z]   Library             = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\lib\python310_d.lib
+[2023-11-10T17:06:50.251Z]   site-package Folder = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\Python\Lib\site-packages
+[2023-11-10T17:06:52.606Z] In workdir: S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:06:52.606Z] Executing: 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202310260154\\runtime\\2caf91a\\runTime\\bin\\mayapy.exe' 'S:\\jenkins\\workspace\\ECP\\ecg-maya-hydra\\ecg-maya-hydra-branch-preflight-python3-windows\\ecg-maya-hydra\\maya-hydra\\build.py' --generator Ninja --build-debug --maya-location 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202310260154\\runtime\\2caf91a\\runTime' --devkit-location 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202310260154\\runtime\\2caf91a\\devkitBase' --pxrusd-location 'P:\\shared\\Artifactory\\Windows\\USD\\972e371' '--build-args=-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe,-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/include/Python310/Python,-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/bin/mayapy.exe,-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/lib/python310_d.lib,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\972e371' --debug-python '--ctest-args=--parallel 16' --stages=configure --redirect-outstream-file=False --install-location 'W:\\install\\Debug\\MayaHydra' 'W:\\'
+[2023-11-10T17:06:52.606Z] Modified environment variables:
+[2023-11-10T17:06:52.607Z]     PATH=P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\\MSBuild\Current\Bin\amd64;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\.dotnet\tools;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\Linux\bin\ConnectionManagerExe
+[2023-11-10T17:06:55.066Z]     -- The C compiler identification is MSVC 19.33.31629.0
+[2023-11-10T17:06:55.066Z]     -- The CXX compiler identification is MSVC 19.33.31629.0
+[2023-11-10T17:06:55.066Z]     -- Detecting C compiler ABI info
+[2023-11-10T17:06:56.232Z]     -- Detecting C compiler ABI info - done
+[2023-11-10T17:06:56.232Z]     -- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/cl.exe - skipped
+[2023-11-10T17:06:56.232Z]     -- Detecting C compile features
+[2023-11-10T17:06:56.232Z]     -- Detecting C compile features - done
+[2023-11-10T17:06:56.232Z]     -- Detecting CXX compiler ABI info
+[2023-11-10T17:06:56.981Z]     -- Detecting CXX compiler ABI info - done
+[2023-11-10T17:06:56.981Z]     -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/cl.exe - skipped
+[2023-11-10T17:06:56.981Z]     -- Detecting CXX compile features
+[2023-11-10T17:06:56.981Z]     -- Detecting CXX compile features - done
+[2023-11-10T17:06:58.406Z]     -- Using Maya Light API Version 3
+[2023-11-10T17:06:58.406Z]     -- Maya has setDefaultMaterialHandling API
+[2023-11-10T17:06:58.406Z]     -- Maya has new point snapping API
+[2023-11-10T17:06:58.406Z]     -- Maya has isInCrashHandler API
+[2023-11-10T17:06:58.406Z]     -- Maya has getDisplayStyleOfAllViewports API
+[2023-11-10T17:06:58.406Z]     -- Maya array iterator has difference_type trait
+[2023-11-10T17:06:58.406Z]     -- MFnSet has getMemberPaths function
+[2023-11-10T17:06:58.406Z]     -- MFnDisplayLayer exists
+[2023-11-10T17:06:58.406Z]     -- MDisplayLayerMessage has MDisplayLayerMemberChangedFunction
+[2023-11-10T17:06:58.406Z]     -- MRenderItem has HideOnPlayback API
+[2023-11-10T17:06:58.406Z]     -- Found Maya: P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/bin/maya.exe (found suitable version "2025", minimum required is "2024")
+[2023-11-10T17:07:01.706Z]     -- Found Python: P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/bin/mayapy.exe (found suitable exact version "3.10.8") found components: Interpreter
+[2023-11-10T17:07:01.706Z]     -- Build mayaHydra with Python3 = ON
+[2023-11-10T17:07:01.706Z]     --    PYTHON_INCLUDE_DIRS = P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/include/Python310/Python
+[2023-11-10T17:07:01.706Z]     --    PYTHON_LIBRARIES    = P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/lib/python310_d.lib
+[2023-11-10T17:07:01.706Z]     --    Python_EXECUTABLE   = P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/bin/mayapy.exe
+[2023-11-10T17:07:01.706Z]     -- Found Python3: optimized;P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime/lib/python310_d.lib;debug;P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/lib/python310_d.lib (found suitable exact version "3.10.8") found components: Development Development.Module Development.Embed
+[2023-11-10T17:07:01.706Z]     -- USD has new Sdr.PropertyTypes.Color4
+[2023-11-10T17:07:02.053Z]     -- USD has MaterialX metadata support
+[2023-11-10T17:07:02.053Z]     -- USD include dir: P:/shared/Artifactory/Windows/USD/972e371/include
+[2023-11-10T17:07:02.053Z]     -- USD library dir: P:/shared/Artifactory/Windows/USD/972e371/lib
+[2023-11-10T17:07:02.053Z]     -- USD version: 0.23.8
+[2023-11-10T17:07:02.053Z]     -- USD Boost::boost version: 107800
+[2023-11-10T17:07:02.053Z]     -- Found USD: P:/shared/Artifactory/Windows/USD/972e371 (found suitable version "0.23.8", minimum required is "0.22.11")
+[2023-11-10T17:07:02.053Z]     Updated PYTHONPATH: P:\shared\Artifactory\Windows\USD\972e371\lib\python
+[2023-11-10T17:07:02.053Z]     Updated PATH: P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\\MSBuild\Current\Bin\amd64;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\.dotnet\tools;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;P:\shared\Artifactory\Windows\USD\972e371\bin;P:\shared\Artifactory\Windows\USD\972e371\lib
+[2023-11-10T17:07:02.053Z]     -- Found UFE: P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/devkitBase/devkit/ufe/include (found version "0.5.11")
+[2023-11-10T17:07:02.053Z]     -- UFE include dir: P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/devkitBase/devkit/ufe/include
+[2023-11-10T17:07:02.053Z]     -- UFE library: P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/devkitBase/devkit/ufe/lib/ufe_0.lib
+[2023-11-10T17:07:02.053Z]     -- UFE version: 0.5.11
+[2023-11-10T17:07:02.053Z]     -- Maya has UFE lights API
+[2023-11-10T17:07:02.053Z]     -- Maya has UFE scene segment API
+[2023-11-10T17:07:02.053Z]     -- Maya has UFE TrieNode childrenComponents accessor
+[2023-11-10T17:07:02.053Z]     -- Building with UFE 0.5.11.
+[2023-11-10T17:07:02.053Z]     -- Found MaterialX
+[2023-11-10T17:07:02.401Z]     -- Performing Test HAVE_STDATOMIC
+[2023-11-10T17:07:03.212Z]     -- Performing Test HAVE_STDATOMIC - Success
+[2023-11-10T17:07:03.212Z]     -- Found OpenGL: opengl32
+[2023-11-10T17:07:04.406Z]     -- Check if linker can resolve circular dependencies - TRUE
+[2023-11-10T17:07:04.406Z]     -- Found Qt 6.5.2 in Maya devkit. Hydra Scene Browser will be built.
+[2023-11-10T17:07:04.406Z]     -- **** Building Gulrak From Github Repository.
+[2023-11-10T17:07:04.406Z]     -- Populating gulrak
+[2023-11-10T17:07:04.406Z]     -- Configuring done
+[2023-11-10T17:07:04.768Z]     -- Generating done
+[2023-11-10T17:07:04.768Z]     -- Build files have been written to: W:/build/Debug/_deps/gulrak-subbuild
+[2023-11-10T17:07:05.164Z]     [1/9] Creating directories for 'gulrak-populate'
+[2023-11-10T17:07:05.164Z]     [1/9] Performing download step (git clone) for 'gulrak-populate'
+[2023-11-10T17:07:05.555Z]     Cloning into 'gulrak-src'...
+[2023-11-10T17:07:06.817Z]     HEAD is now at 4e21ab3 Version bump and updated readme.
+[2023-11-10T17:07:08.513Z]     [2/9] Performing update step for 'gulrak-populate'
+[2023-11-10T17:07:08.938Z]     [4/9] No patch step for 'gulrak-populate'
+[2023-11-10T17:07:09.287Z]     [5/9] No configure step for 'gulrak-populate'
+[2023-11-10T17:07:09.287Z]     [6/9] No build step for 'gulrak-populate'
+[2023-11-10T17:07:09.644Z]     [7/9] No install step for 'gulrak-populate'
+[2023-11-10T17:07:09.644Z]     [8/9] No test step for 'gulrak-populate'
+[2023-11-10T17:07:09.982Z]     [9/9] Completed 'gulrak-populate'
+[2023-11-10T17:07:11.156Z]     -- ========== Installing GoogleTest... ==========
+[2023-11-10T17:07:11.156Z]     -- Configuring done
+[2023-11-10T17:07:11.156Z]     -- Generating done
+[2023-11-10T17:07:11.501Z]     -- Build files have been written to: W:/build/Debug/googletest-config
+[2023-11-10T17:07:11.837Z]     [1/8] Creating directories for 'googletest'
+[2023-11-10T17:07:19.389Z]     [2/8] Performing download step (git clone) for 'googletest'
+[2023-11-10T17:07:19.389Z]     Cloning into 'googletest-src'...
+[2023-11-10T17:07:19.389Z]     HEAD is now at 703bd9ca Googletest export
+[2023-11-10T17:07:19.389Z]     [3/8] Performing update step for 'googletest'
+[2023-11-10T17:07:19.389Z]     [4/8] No patch step for 'googletest'
+[2023-11-10T17:07:22.581Z]     [5/8] Performing configure step for 'googletest'
+[2023-11-10T17:07:22.581Z]     Not searching for unused variables given on the command line.
+[2023-11-10T17:07:22.581Z]     CMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
+[2023-11-10T17:07:22.581Z]       Compatibility with CMake < 2.8.12 will be removed from a future version of
+[2023-11-10T17:07:22.581Z]       CMake.
+[2023-11-10T17:07:22.581Z]     
+[2023-11-10T17:07:22.581Z]       Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[2023-11-10T17:07:22.581Z]       CMake that the project does not need compatibility with older versions.
+[2023-11-10T17:07:22.581Z]     
+[2023-11-10T17:07:22.581Z]     
+[2023-11-10T17:07:22.581Z]     -- The C compiler identification is MSVC 19.33.31629.0
+[2023-11-10T17:07:22.581Z]     -- The CXX compiler identification is MSVC 19.33.31629.0
+[2023-11-10T17:07:22.581Z]     -- Detecting C compiler ABI info
+[2023-11-10T17:07:22.581Z]     -- Detecting C compiler ABI info - done
+[2023-11-10T17:07:22.581Z]     -- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/cl.exe - skipped
+[2023-11-10T17:07:22.581Z]     -- Detecting C compile features
+[2023-11-10T17:07:22.581Z]     -- Detecting C compile features - done
+[2023-11-10T17:07:22.581Z]     -- Detecting CXX compiler ABI info
+[2023-11-10T17:07:22.581Z]     -- Detecting CXX compiler ABI info - done
+[2023-11-10T17:07:22.581Z]     -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/cl.exe - skipped
+[2023-11-10T17:07:22.581Z]     -- Detecting CXX compile features
+[2023-11-10T17:07:22.581Z]     -- Detecting CXX compile features - done
+[2023-11-10T17:07:22.581Z]     CMake Deprecation Warning at googletest/CMakeLists.txt:56 (cmake_minimum_required):
+[2023-11-10T17:07:22.581Z]       Compatibility with CMake < 2.8.12 will be removed from a future version of
+[2023-11-10T17:07:22.581Z]       CMake.
+[2023-11-10T17:07:22.581Z]     
+[2023-11-10T17:07:22.581Z]       Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[2023-11-10T17:07:22.581Z]       CMake that the project does not need compatibility with older versions.
+[2023-11-10T17:07:22.581Z]     
+[2023-11-10T17:07:22.581Z]     
+[2023-11-10T17:07:22.581Z]     -- Found PythonInterp: C:/Python27/python.exe (found version "2.7.18")
+[2023-11-10T17:07:22.581Z]     -- Looking for pthread.h
+[2023-11-10T17:07:22.581Z]     -- Looking for pthread.h - not found
+[2023-11-10T17:07:22.581Z]     -- Found Threads: TRUE
+[2023-11-10T17:07:22.581Z]     -- Configuring done
+[2023-11-10T17:07:22.581Z]     -- Generating done
+[2023-11-10T17:07:22.581Z]     -- Build files have been written to: W:/build/Debug/googletest-build
+[2023-11-10T17:07:25.738Z]     [6/8] Performing build step for 'googletest'
+[2023-11-10T17:07:25.738Z]     [1/4] Building CXX object googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj
+[2023-11-10T17:07:25.738Z]     [2/4] Building CXX object googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj
+[2023-11-10T17:07:25.738Z]     [3/4] Linking CXX shared library bin\gtestd.dll
+[2023-11-10T17:07:25.738Z]     [4/4] Linking CXX shared library bin\gtest_maind.dll
+[2023-11-10T17:07:26.091Z]     [7/8] Performing install step for 'googletest'
+[2023-11-10T17:07:26.091Z]     [0/1] Install the project...
+[2023-11-10T17:07:26.091Z]     -- Install configuration: "Debug"
+[2023-11-10T17:07:26.091Z]     [8/8] Completed 'googletest'
+[2023-11-10T17:07:26.091Z]     -- ========== ...  GoogleTest installed. ==========
+[2023-11-10T17:07:29.146Z]     -- Found GTest: W:/build/Debug/googletest-install/lib/gtestd.lib
+[2023-11-10T17:07:29.146Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/mayaPlugin/pluginUtils.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/api.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/debugCodes.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/hydraUtils.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/interface.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/interfaceImp.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/mayaUtils.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/mixedUtils.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/mayaHydraSceneProducer.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/adapter.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/adapterDebugCodes.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/adapterRegistry.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/cameraAdapter.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/constantShadowMatrix.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/dagAdapter.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/renderItemAdapter.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/lightAdapter.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/materialAdapter.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/materialNetworkConverter.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/mayaAttrs.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/shapeAdapter.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/tokens.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/delegate.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/delegateCtx.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/delegateDebugCodes.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/delegateRegistry.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/params.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/sceneDelegate.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/defaultLightDelegate.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/testDelegate.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/registration.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraSceneIndex.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraDataSource.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraPrimvarDataSource.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraDisplayStyleDataSource.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraCameraDataSource.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraLightDataSource.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraDefaultLightDataSource.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/ufeExtensions/api.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/ufeExtensions/Global.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/api.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/debugCodes.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/global.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/tokens.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/colorPreferences/fvpColorChanged.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/colorPreferences/fvpColorPreferences.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/colorPreferences/fvpColorPreferencesTokens.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/colorPreferences/fvpColorPreferencesTranslator.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpMergingSceneIndex.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpPassThroughSelectionInterfaceSceneIndex.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpPathInterface.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpPathInterfaceSceneIndex.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpRenderIndexProxy.h
+[2023-11-10T17:07:29.147Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpSelectionInterface.h
+[2023-11-10T17:07:29.148Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpSelectionSceneIndex.h
+[2023-11-10T17:07:29.148Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpWireframeSelectionHighlightSceneIndex.h
+[2023-11-10T17:07:29.148Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpSelectionClient.h
+[2023-11-10T17:07:29.148Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpFlowSelectionInterface.h
+[2023-11-10T17:07:29.148Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpVersionInterface.h
+[2023-11-10T17:07:29.148Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/interfacesImp/fvpSelectionInterfaceImp.h
+[2023-11-10T17:07:29.148Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/interfacesImp/fvpVersionInterfaceImp.h
+[2023-11-10T17:07:29.148Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/samples/fvpSelectionClientExample.h
+[2023-11-10T17:07:29.148Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/selection/fvpSelectionTracker.h
+[2023-11-10T17:07:29.148Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/selection/fvpSelectionTask.h
+[2023-11-10T17:07:32.306Z]     -- Configuring done
+[2023-11-10T17:07:32.679Z]     -- Generating done
+[2023-11-10T17:07:32.679Z]     -- Build files have been written to: W:/build/Debug
+[2023-11-10T17:07:33.017Z]     
+[2023-11-10T17:07:33.017Z]         Building with settings:
+[2023-11-10T17:07:33.017Z]           Source directory          S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:07:33.017Z]           Workspace directory       W:\
+[2023-11-10T17:07:33.017Z]           Build directory           W:\build\Debug
+[2023-11-10T17:07:33.017Z]           Install directory         W:\install\Debug\MayaHydra
+[2023-11-10T17:07:33.017Z]           Variant                   Debug
+[2023-11-10T17:07:33.017Z]           Python Debug              On
+[2023-11-10T17:07:33.017Z]           CMake generator           Ninja
+[2023-11-10T17:07:33.017Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe', '-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/include/Python310/Python', '-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/bin/mayapy.exe', '-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/lib/python310_d.lib', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\972e371']
+[2023-11-10T17:07:33.017Z]           Stages arguments          ['configure']
+[2023-11-10T17:07:33.017Z]           CTest arguments           ['--parallel 16']
+[2023-11-10T17:07:33.017Z]     STATUS: Found Maya Qt headers in: P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\devkitBase
+[2023-11-10T17:07:33.017Z]     Success MayaHydra build and install !!!!
+[2023-11-10T17:07:33.017Z]     Elapsed time: 00:00:39
+[Pipeline] bat
+[2023-11-10T17:07:33.651Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-11-10T17:07:34.279Z] Deleting alias drive P:
+[Pipeline] bat
+[2023-11-10T17:07:35.199Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-11-10T17:07:35.851Z] Creating alias drive W: to S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows
+[Pipeline] bat
+[2023-11-10T17:07:36.858Z] "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-11-10T17:07:36.858Z] **********************************************************************
+[2023-11-10T17:07:36.858Z] ** Visual Studio 2022 Developer Command Prompt v17.3.2
+[2023-11-10T17:07:36.858Z] ** Copyright (c) 2022 Microsoft Corporation
+[2023-11-10T17:07:36.858Z] **********************************************************************
+[2023-11-10T17:07:38.778Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-11-10T17:07:38.778Z] python ecg-maya-hydra/build.py --stages=configure --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=379 --git-commit=d590573d5109725985e142e015db204e230f9776 --git-branch=master --variants=RelWithDebInfo --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --maya-cut-config=maya-rundev-master.yaml --maya-package=rundev-master --stage-banner
+[2023-11-10T17:07:39.532Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f
+[2023-11-10T17:07:39.532Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2023\3ae1ae7
+[2023-11-10T17:07:39.532Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\3.4.0\284407f
+[2023-11-10T17:07:39.532Z] 
+[2023-11-10T17:07:39.532Z] ================================================================================
+[2023-11-10T17:07:39.532Z]                            configure (RelWithDebInfo)
+[2023-11-10T17:07:39.532Z] ================================================================================
+[2023-11-10T17:07:39.532Z] Maya Python RelWithDebInfo Info:
+[2023-11-10T17:07:39.532Z]   mayapy executable   = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\bin\mayapy.exe
+[2023-11-10T17:07:39.532Z]   Include Folder      = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\include\Python310\Python
+[2023-11-10T17:07:39.532Z]   Library             = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\lib\python310.lib
+[2023-11-10T17:07:39.532Z]   site-package Folder = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\Python\Lib\site-packages
+[2023-11-10T17:07:40.800Z] In workdir: S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:07:40.800Z] Executing: 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\runTime\\bin\\mayapy.exe' 'S:\\jenkins\\workspace\\ECP\\ecg-maya-hydra\\ecg-maya-hydra-branch-preflight-python3-windows\\ecg-maya-hydra\\maya-hydra\\build.py' --generator Ninja --build-relwithdebug --maya-location 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\runTime' --devkit-location 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\devkitBase' --pxrusd-location 'P:\\shared\\Artifactory\\Windows\\USD\\ce619c6' '--build-args=-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe,-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/include/Python310/Python,-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/bin/mayapy.exe,-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/lib/python310.lib,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\ce619c6' '--ctest-args=--parallel 16' --stages=configure --redirect-outstream-file=False --install-location 'W:\\install\\RelWithDebInfo\\MayaHydra' 'W:\\'
+[2023-11-10T17:07:40.800Z] Modified environment variables:
+[2023-11-10T17:07:40.800Z]     PATH=P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\\MSBuild\Current\Bin\amd64;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\.dotnet\tools;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\Linux\bin\ConnectionManagerExe
+[2023-11-10T17:08:29.610Z]     -- The C compiler identification is MSVC 19.33.31629.0
+[2023-11-10T17:08:29.610Z]     -- The CXX compiler identification is MSVC 19.33.31629.0
+[2023-11-10T17:08:29.610Z]     -- Detecting C compiler ABI info
+[2023-11-10T17:08:29.610Z]     -- Detecting C compiler ABI info - done
+[2023-11-10T17:08:29.610Z]     -- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/cl.exe - skipped
+[2023-11-10T17:08:29.610Z]     -- Detecting C compile features
+[2023-11-10T17:08:29.610Z]     -- Detecting C compile features - done
+[2023-11-10T17:08:29.610Z]     -- Detecting CXX compiler ABI info
+[2023-11-10T17:08:29.610Z]     -- Detecting CXX compiler ABI info - done
+[2023-11-10T17:08:29.610Z]     -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/cl.exe - skipped
+[2023-11-10T17:08:29.610Z]     -- Detecting CXX compile features
+[2023-11-10T17:08:29.610Z]     -- Detecting CXX compile features - done
+[2023-11-10T17:08:29.610Z]     -- Using Maya Light API Version 3
+[2023-11-10T17:08:29.610Z]     -- Maya has setDefaultMaterialHandling API
+[2023-11-10T17:08:29.610Z]     -- Maya has new point snapping API
+[2023-11-10T17:08:29.610Z]     -- Maya has isInCrashHandler API
+[2023-11-10T17:08:29.610Z]     -- Maya has getDisplayStyleOfAllViewports API
+[2023-11-10T17:08:29.610Z]     -- Maya array iterator has difference_type trait
+[2023-11-10T17:08:29.610Z]     -- MFnSet has getMemberPaths function
+[2023-11-10T17:08:29.610Z]     -- MFnDisplayLayer exists
+[2023-11-10T17:08:29.610Z]     -- MDisplayLayerMessage has MDisplayLayerMemberChangedFunction
+[2023-11-10T17:08:29.610Z]     -- MRenderItem has HideOnPlayback API
+[2023-11-10T17:08:29.610Z]     -- Found Maya: P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/bin/maya.exe (found suitable version "2025", minimum required is "2024")
+[2023-11-10T17:08:29.610Z]     -- Found Python: P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/bin/mayapy.exe (found suitable exact version "3.10.8") found components: Interpreter
+[2023-11-10T17:08:29.610Z]     -- Build mayaHydra with Python3 = ON
+[2023-11-10T17:08:29.610Z]     --    PYTHON_INCLUDE_DIRS = P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/include/Python310/Python
+[2023-11-10T17:08:29.610Z]     --    PYTHON_LIBRARIES    = P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/lib/python310.lib
+[2023-11-10T17:08:29.610Z]     --    Python_EXECUTABLE   = P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/bin/mayapy.exe
+[2023-11-10T17:08:29.610Z]     -- Found Python3: P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime/lib/python310.lib (found suitable exact version "3.10.8") found components: Development Development.Module Development.Embed
+[2023-11-10T17:08:29.610Z]     -- USD has new Sdr.PropertyTypes.Color4
+[2023-11-10T17:08:29.610Z]     -- USD has MaterialX metadata support
+[2023-11-10T17:08:29.610Z]     -- USD include dir: P:/shared/Artifactory/Windows/USD/ce619c6/include
+[2023-11-10T17:08:29.610Z]     -- USD library dir: P:/shared/Artifactory/Windows/USD/ce619c6/lib
+[2023-11-10T17:08:29.610Z]     -- USD version: 0.23.8
+[2023-11-10T17:08:29.610Z]     -- USD Boost::boost version: 107800
+[2023-11-10T17:08:29.610Z]     -- Found USD: P:/shared/Artifactory/Windows/USD/ce619c6 (found suitable version "0.23.8", minimum required is "0.22.11")
+[2023-11-10T17:08:29.610Z]     Updated PYTHONPATH: P:\shared\Artifactory\Windows\USD\ce619c6\lib\python
+[2023-11-10T17:08:29.611Z]     Updated PATH: P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\\MSBuild\Current\Bin\amd64;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\.dotnet\tools;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;P:\shared\Artifactory\Windows\USD\ce619c6\bin;P:\shared\Artifactory\Windows\USD\ce619c6\lib
+[2023-11-10T17:08:29.611Z]     -- Found UFE: P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/devkitBase/devkit/ufe/include (found version "0.5.11")
+[2023-11-10T17:08:29.611Z]     -- UFE include dir: P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/devkitBase/devkit/ufe/include
+[2023-11-10T17:08:29.611Z]     -- UFE library: P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/devkitBase/devkit/ufe/lib/ufe_0.lib
+[2023-11-10T17:08:29.611Z]     -- UFE version: 0.5.11
+[2023-11-10T17:08:29.611Z]     -- Maya has UFE lights API
+[2023-11-10T17:08:29.611Z]     -- Maya has UFE scene segment API
+[2023-11-10T17:08:29.611Z]     -- Maya has UFE TrieNode childrenComponents accessor
+[2023-11-10T17:08:29.611Z]     -- Building with UFE 0.5.11.
+[2023-11-10T17:08:29.611Z]     -- Found MaterialX
+[2023-11-10T17:08:29.611Z]     -- Performing Test HAVE_STDATOMIC
+[2023-11-10T17:08:29.611Z]     -- Performing Test HAVE_STDATOMIC - Success
+[2023-11-10T17:08:29.611Z]     -- Found OpenGL: opengl32
+[2023-11-10T17:08:30.061Z]     -- Check if linker can resolve circular dependencies - TRUE
+[2023-11-10T17:08:30.061Z]     -- Found Qt 6.5.2 in Maya devkit. Hydra Scene Browser will be built.
+[2023-11-10T17:08:30.061Z]     -- **** Building Gulrak From Github Repository.
+[2023-11-10T17:08:30.061Z]     -- Populating gulrak
+[2023-11-10T17:08:30.396Z]     -- Configuring done
+[2023-11-10T17:08:30.396Z]     -- Generating done
+[2023-11-10T17:08:30.396Z]     -- Build files have been written to: W:/build/RelWithDebInfo/_deps/gulrak-subbuild
+[2023-11-10T17:08:30.732Z]     [1/9] Creating directories for 'gulrak-populate'
+[2023-11-10T17:08:30.732Z]     [1/9] Performing download step (git clone) for 'gulrak-populate'
+[2023-11-10T17:08:31.090Z]     Cloning into 'gulrak-src'...
+[2023-11-10T17:08:32.357Z]     HEAD is now at 4e21ab3 Version bump and updated readme.
+[2023-11-10T17:08:34.259Z]     [2/9] Performing update step for 'gulrak-populate'
+[2023-11-10T17:08:35.005Z]     [4/9] No patch step for 'gulrak-populate'
+[2023-11-10T17:08:35.005Z]     [5/9] No configure step for 'gulrak-populate'
+[2023-11-10T17:08:35.394Z]     [6/9] No build step for 'gulrak-populate'
+[2023-11-10T17:08:35.394Z]     [7/9] No install step for 'gulrak-populate'
+[2023-11-10T17:08:35.394Z]     [8/9] No test step for 'gulrak-populate'
+[2023-11-10T17:08:35.774Z]     [9/9] Completed 'gulrak-populate'
+[2023-11-10T17:08:36.611Z]     -- ========== Installing GoogleTest... ==========
+[2023-11-10T17:08:36.993Z]     -- Configuring done
+[2023-11-10T17:08:36.993Z]     -- Generating done
+[2023-11-10T17:08:37.388Z]     -- Build files have been written to: W:/build/RelWithDebInfo/googletest-config
+[2023-11-10T17:08:37.724Z]     [1/8] Creating directories for 'googletest'
+[2023-11-10T17:08:42.887Z]     [2/8] Performing download step (git clone) for 'googletest'
+[2023-11-10T17:08:42.887Z]     Cloning into 'googletest-src'...
+[2023-11-10T17:08:42.887Z]     HEAD is now at 703bd9ca Googletest export
+[2023-11-10T17:08:43.352Z]     [3/8] Performing update step for 'googletest'
+[2023-11-10T17:08:43.352Z]     [4/8] No patch step for 'googletest'
+[2023-11-10T17:08:46.485Z]     [5/8] Performing configure step for 'googletest'
+[2023-11-10T17:08:46.485Z]     Not searching for unused variables given on the command line.
+[2023-11-10T17:08:46.485Z]     CMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
+[2023-11-10T17:08:46.485Z]       Compatibility with CMake < 2.8.12 will be removed from a future version of
+[2023-11-10T17:08:46.485Z]       CMake.
+[2023-11-10T17:08:46.485Z]     
+[2023-11-10T17:08:46.485Z]       Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[2023-11-10T17:08:46.485Z]       CMake that the project does not need compatibility with older versions.
+[2023-11-10T17:08:46.485Z]     
+[2023-11-10T17:08:46.485Z]     
+[2023-11-10T17:08:46.485Z]     -- The C compiler identification is MSVC 19.33.31629.0
+[2023-11-10T17:08:46.485Z]     -- The CXX compiler identification is MSVC 19.33.31629.0
+[2023-11-10T17:08:46.485Z]     -- Detecting C compiler ABI info
+[2023-11-10T17:08:46.485Z]     -- Detecting C compiler ABI info - done
+[2023-11-10T17:08:46.485Z]     -- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/cl.exe - skipped
+[2023-11-10T17:08:46.485Z]     -- Detecting C compile features
+[2023-11-10T17:08:46.485Z]     -- Detecting C compile features - done
+[2023-11-10T17:08:46.485Z]     -- Detecting CXX compiler ABI info
+[2023-11-10T17:08:46.485Z]     -- Detecting CXX compiler ABI info - done
+[2023-11-10T17:08:46.485Z]     -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/cl.exe - skipped
+[2023-11-10T17:08:46.485Z]     -- Detecting CXX compile features
+[2023-11-10T17:08:46.485Z]     -- Detecting CXX compile features - done
+[2023-11-10T17:08:46.485Z]     CMake Deprecation Warning at googletest/CMakeLists.txt:56 (cmake_minimum_required):
+[2023-11-10T17:08:46.485Z]       Compatibility with CMake < 2.8.12 will be removed from a future version of
+[2023-11-10T17:08:46.485Z]       CMake.
+[2023-11-10T17:08:46.485Z]     
+[2023-11-10T17:08:46.485Z]       Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[2023-11-10T17:08:46.485Z]       CMake that the project does not need compatibility with older versions.
+[2023-11-10T17:08:46.485Z]     
+[2023-11-10T17:08:46.485Z]     
+[2023-11-10T17:08:46.485Z]     -- Found PythonInterp: C:/Python27/python.exe (found version "2.7.18")
+[2023-11-10T17:08:46.485Z]     -- Looking for pthread.h
+[2023-11-10T17:08:46.485Z]     -- Looking for pthread.h - not found
+[2023-11-10T17:08:46.485Z]     -- Found Threads: TRUE
+[2023-11-10T17:08:46.485Z]     -- Configuring done
+[2023-11-10T17:08:46.485Z]     -- Generating done
+[2023-11-10T17:08:46.485Z]     -- Build files have been written to: W:/build/RelWithDebInfo/googletest-build
+[2023-11-10T17:08:51.420Z]     [6/8] Performing build step for 'googletest'
+[2023-11-10T17:08:51.420Z]     [1/4] Building CXX object googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj
+[2023-11-10T17:08:51.420Z]     [2/4] Building CXX object googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj
+[2023-11-10T17:08:51.420Z]     [3/4] Linking CXX shared library bin\gtest.dll
+[2023-11-10T17:08:51.420Z]     [4/4] Linking CXX shared library bin\gtest_main.dll
+[2023-11-10T17:08:51.420Z]     [7/8] Performing install step for 'googletest'
+[2023-11-10T17:08:51.420Z]     [0/1] Install the project...
+[2023-11-10T17:08:51.420Z]     -- Install configuration: "RelWithDebInfo"
+[2023-11-10T17:08:51.420Z]     [8/8] Completed 'googletest'
+[2023-11-10T17:08:51.420Z]     -- ========== ...  GoogleTest installed. ==========
+[2023-11-10T17:08:53.107Z]     -- Found GTest: W:/build/RelWithDebInfo/googletest-install/lib/gtest.lib
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/mayaPlugin/pluginUtils.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/api.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/debugCodes.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/hydraUtils.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/interface.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/interfaceImp.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/mayaUtils.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/mixedUtils.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/mayaHydraSceneProducer.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/adapter.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/adapterDebugCodes.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/adapterRegistry.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/cameraAdapter.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/constantShadowMatrix.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/dagAdapter.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/renderItemAdapter.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/lightAdapter.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/materialAdapter.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/materialNetworkConverter.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/mayaAttrs.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/shapeAdapter.h
+[2023-11-10T17:08:53.107Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/tokens.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/delegate.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/delegateCtx.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/delegateDebugCodes.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/delegateRegistry.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/params.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/sceneDelegate.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/defaultLightDelegate.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/testDelegate.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/registration.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraSceneIndex.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraDataSource.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraPrimvarDataSource.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraDisplayStyleDataSource.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraCameraDataSource.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraLightDataSource.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraDefaultLightDataSource.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/ufeExtensions/api.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/mayaHydra/ufeExtensions/Global.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/api.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/debugCodes.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/global.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/tokens.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/colorPreferences/fvpColorChanged.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/colorPreferences/fvpColorPreferences.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/colorPreferences/fvpColorPreferencesTokens.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/colorPreferences/fvpColorPreferencesTranslator.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpMergingSceneIndex.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpPassThroughSelectionInterfaceSceneIndex.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpPathInterface.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpPathInterfaceSceneIndex.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpRenderIndexProxy.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpSelectionInterface.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpSelectionSceneIndex.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpWireframeSelectionHighlightSceneIndex.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpSelectionClient.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpFlowSelectionInterface.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpVersionInterface.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/interfacesImp/fvpSelectionInterfaceImp.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/interfacesImp/fvpVersionInterfaceImp.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/samples/fvpSelectionClientExample.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/selection/fvpSelectionTracker.h
+[2023-11-10T17:08:53.108Z]     -- promoting: S:/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-windows/ecg-maya-hydra/maya-hydra/lib/flowViewport/selection/fvpSelectionTask.h
+[2023-11-10T17:08:55.456Z]     -- Configuring done
+[2023-11-10T17:08:56.295Z]     -- Generating done
+[2023-11-10T17:08:56.295Z]     -- Build files have been written to: W:/build/RelWithDebInfo
+[2023-11-10T17:08:56.295Z]     
+[2023-11-10T17:08:56.295Z]         Building with settings:
+[2023-11-10T17:08:56.295Z]           Source directory          S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:08:56.295Z]           Workspace directory       W:\
+[2023-11-10T17:08:56.295Z]           Build directory           W:\build\RelWithDebInfo
+[2023-11-10T17:08:56.295Z]           Install directory         W:\install\RelWithDebInfo\MayaHydra
+[2023-11-10T17:08:56.295Z]           Variant                   RelWithDebInfo
+[2023-11-10T17:08:56.295Z]           Python Debug              Off
+[2023-11-10T17:08:56.295Z]           CMake generator           Ninja
+[2023-11-10T17:08:56.295Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe', '-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/include/Python310/Python', '-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/bin/mayapy.exe', '-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/lib/python310.lib', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\ce619c6']
+[2023-11-10T17:08:56.295Z]           Stages arguments          ['configure']
+[2023-11-10T17:08:56.295Z]           CTest arguments           ['--parallel 16']
+[2023-11-10T17:08:56.295Z]     STATUS: Could not find Maya Qt6.
+[2023-11-10T17:08:56.295Z]     STATUS:   Extracting 'P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\devkitBase\Qt.zip' to 'P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\devkitBase'
+[2023-11-10T17:08:56.295Z]     Success MayaHydra build and install !!!!
+[2023-11-10T17:08:56.295Z]     Elapsed time: 00:00:34
+[Pipeline] bat
+[2023-11-10T17:08:56.912Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-11-10T17:08:57.540Z] Deleting alias drive P:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] timeout
+[2023-11-10T17:08:57.781Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[2023-11-10T17:08:58.464Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-11-10T17:08:59.131Z] Creating alias drive W: to S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows
+[Pipeline] bat
+[2023-11-10T17:09:00.266Z] "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-11-10T17:09:00.607Z] **********************************************************************
+[2023-11-10T17:09:00.607Z] ** Visual Studio 2022 Developer Command Prompt v17.3.2
+[2023-11-10T17:09:00.607Z] ** Copyright (c) 2022 Microsoft Corporation
+[2023-11-10T17:09:00.607Z] **********************************************************************
+[2023-11-10T17:09:01.902Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-11-10T17:09:01.902Z] python ecg-maya-hydra/build.py --stages=build --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=379 --git-commit=d590573d5109725985e142e015db204e230f9776 --git-branch=master --variants=Debug --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --build-retry=3 --maya-cut-config=maya-rundev-master-debug.yaml --maya-package=rundev-master-debug --stage-banner
+[2023-11-10T17:09:03.197Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a
+[2023-11-10T17:09:03.197Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2023\3ae1ae7
+[2023-11-10T17:09:03.197Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\3.4.0\284407f
+[2023-11-10T17:09:03.197Z] 
+[2023-11-10T17:09:03.197Z] ================================================================================
+[2023-11-10T17:09:03.197Z]                                  build (Debug)
+[2023-11-10T17:09:03.197Z] ================================================================================
+[2023-11-10T17:09:03.197Z] Maya Python Debug Info:
+[2023-11-10T17:09:03.198Z]   mayapy executable   = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\bin\mayapy.exe
+[2023-11-10T17:09:03.198Z]   Include Folder      = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\include\Python310\Python
+[2023-11-10T17:09:03.198Z]   Library             = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\lib\python310_d.lib
+[2023-11-10T17:09:03.198Z]   site-package Folder = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\Python\Lib\site-packages
+[2023-11-10T17:09:05.646Z] In workdir: S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:09:05.646Z] Executing: 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202310260154\\runtime\\2caf91a\\runTime\\bin\\mayapy.exe' 'S:\\jenkins\\workspace\\ECP\\ecg-maya-hydra\\ecg-maya-hydra-branch-preflight-python3-windows\\ecg-maya-hydra\\maya-hydra\\build.py' --generator Ninja --build-debug --maya-location 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202310260154\\runtime\\2caf91a\\runTime' --devkit-location 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202310260154\\runtime\\2caf91a\\devkitBase' --pxrusd-location 'P:\\shared\\Artifactory\\Windows\\USD\\972e371' '--build-args=-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe,-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/include/Python310/Python,-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/bin/mayapy.exe,-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/lib/python310_d.lib,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\972e371' --debug-python '--ctest-args=--parallel 16' --stages=build --redirect-outstream-file=False --install-location 'W:\\install\\Debug\\MayaHydra' 'W:\\'
+[2023-11-10T17:09:05.646Z] Modified environment variables:
+[2023-11-10T17:09:05.646Z]     PATH=P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\\MSBuild\Current\Bin\amd64;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\.dotnet\tools;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\Linux\bin\ConnectionManagerExe
+[2023-11-10T17:09:07.999Z]     [1/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpSelectionInterface.cpp.obj
+[2023-11-10T17:09:07.999Z]     [2/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpPathInterface.cpp.obj
+[2023-11-10T17:09:07.999Z]     [3/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\API\interfacesImp\fvpVersionInterfaceImp.cpp.obj
+[2023-11-10T17:09:07.999Z]     [4/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\debugCodes.cpp.obj
+[2023-11-10T17:09:07.999Z]     [5/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\tokens.cpp.obj
+[2023-11-10T17:09:07.999Z]     [6/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\colorPreferences\fvpColorPreferencesTokens.cpp.obj
+[2023-11-10T17:09:08.360Z]     [7/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\colorPreferences\fvpColorChanged.cpp.obj
+[2023-11-10T17:09:08.360Z]     [8/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\global.cpp.obj
+[2023-11-10T17:09:08.787Z]     [9/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\colorPreferences\fvpColorPreferences.cpp.obj
+[2023-11-10T17:09:08.787Z]     [10/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\API\interfacesImp\fvpSelectionInterfaceImp.cpp.obj
+[2023-11-10T17:09:09.124Z]     [11/100] Building CXX object lib\mayaHydra\ufeExtensions\CMakeFiles\ufeExtensions.dir\Global.cpp.obj
+[2023-11-10T17:09:09.461Z]     [12/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\API\samples\fvpSelectionClientExample.cpp.obj
+[2023-11-10T17:09:09.461Z]     [13/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testCppFramework.cpp.obj
+[2023-11-10T17:09:09.799Z]     [14/100] Linking CXX shared library lib\mayaHydra\ufeExtensions\ufeExtensions.dll
+[2023-11-10T17:09:09.799Z]     [15/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\mayaHydraCppTestsCmd.cpp.obj
+[2023-11-10T17:09:10.720Z]     [16/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testColorPreferences.cpp.obj
+[2023-11-10T17:09:12.623Z]     [17/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpPassThroughSelectionInterfaceSceneIndex.cpp.obj
+[2023-11-10T17:09:12.623Z]     [18/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpPathInterfaceSceneIndex.cpp.obj
+[2023-11-10T17:09:12.623Z]     [19/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpRenderIndexProxy.cpp.obj
+[2023-11-10T17:09:13.036Z]     [20/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpMergingSceneIndex.cpp.obj
+[2023-11-10T17:09:13.424Z]     [21/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpSelectionSceneIndex.cpp.obj
+[2023-11-10T17:09:13.424Z]     [22/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\colorNotFoundException.cpp.obj
+[2023-11-10T17:09:13.424Z]     [23/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\pluginDebugCodes.cpp.obj
+[2023-11-10T17:09:13.424Z]     [24/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\tokens.cpp.obj
+[2023-11-10T17:09:14.152Z]     [25/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpWireframeSelectionHighlightSceneIndex.cpp.obj
+[2023-11-10T17:09:14.927Z]     [26/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testUtils.cpp.obj
+[2023-11-10T17:09:15.338Z]     [27/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testMayaUsdUfeItems.cpp.obj
+[2023-11-10T17:09:15.338Z]     [28/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\mayaColorPreferencesTranslator.cpp.obj
+[2023-11-10T17:09:15.780Z]     [29/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testMayaSceneFlattening.cpp.obj
+[2023-11-10T17:09:15.780Z]     [30/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\selection\fvpSelectionTask.cpp.obj
+[2023-11-10T17:09:15.780Z]     [31/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testSelectionSceneIndex.cpp.obj
+[2023-11-10T17:09:15.780Z]     [32/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\selection\fvpSelectionTracker.cpp.obj
+[2023-11-10T17:09:15.780Z]     [33/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\debugCodes.cpp.obj
+[2023-11-10T17:09:16.154Z]     [34/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\mayaUtils.cpp.obj
+[2023-11-10T17:09:16.490Z]     [35/100] Linking CXX shared library lib\flowViewport\flowViewport.dll
+[2023-11-10T17:09:16.842Z]     [36/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\adapterDebugCodes.cpp.obj
+[2023-11-10T17:09:16.842Z]     [37/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testWireframeSelectionHighlightSceneIndex.cpp.obj
+[2023-11-10T17:09:19.207Z]     [38/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\interfaceImp.cpp.obj
+[2023-11-10T17:09:19.207Z]     [39/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testMergingSceneIndex.cpp.obj
+[2023-11-10T17:09:19.929Z]     [40/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\mixedUtils.cpp.obj
+[2023-11-10T17:09:20.345Z]     [41/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\renderOverride.cpp.obj
+[2023-11-10T17:09:21.068Z]     [42/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\hydraUtils.cpp.obj
+[2023-11-10T17:09:21.068Z]     [43/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\pluginUtils.cpp.obj
+[2023-11-10T17:09:22.281Z]     [44/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\mayaAttrs.cpp.obj
+[2023-11-10T17:09:22.621Z]     [45/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\renderGlobals.cpp.obj
+[2023-11-10T17:09:23.011Z]     [46/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\delegates\delegateDebugCodes.cpp.obj
+[2023-11-10T17:09:23.011Z]     [47/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\viewCommand.cpp.obj
+[2023-11-10T17:09:23.011Z]     MAYAHYDRA_CUT_ID is not defined
+[2023-11-10T17:09:23.011Z]     [48/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\plugin.cpp.obj
+[2023-11-10T17:09:26.363Z]     [49/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\adapterRegistry.cpp.obj
+[2023-11-10T17:09:26.363Z]     [50/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\cameraAdapter.cpp.obj
+[2023-11-10T17:09:26.722Z]     [51/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\areaLightAdapter.cpp.obj
+[2023-11-10T17:09:27.443Z]     [52/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\adapter.cpp.obj
+[2023-11-10T17:09:27.778Z]     [53/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\aiSkydomeLightAdapter.cpp.obj
+[2023-11-10T17:09:27.778Z]     [54/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\dagAdapter.cpp.obj
+[2023-11-10T17:09:30.824Z]     [55/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\directionalLightAdapter.cpp.obj
+[2023-11-10T17:09:30.824Z]     [56/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\lightAdapter.cpp.obj
+[2023-11-10T17:09:31.545Z]     [57/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\mayaHydraSceneProducer.cpp.obj
+[2023-11-10T17:09:31.880Z]     [58/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\renderItemAdapter.cpp.obj
+[2023-11-10T17:09:31.880Z]     [59/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\materialAdapter.cpp.obj
+[2023-11-10T17:09:31.880Z]     [60/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\tokens.cpp.obj
+[2023-11-10T17:09:32.222Z]     [61/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\materialNetworkConverter.cpp.obj
+[2023-11-10T17:09:32.222Z]     [62/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\delegates\delegateCtx.cpp.obj
+[2023-11-10T17:09:32.222Z]     [63/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\delegates\delegate.cpp.obj
+[2023-11-10T17:09:32.960Z]     [64/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\delegates\delegateRegistry.cpp.obj
+[2023-11-10T17:09:34.648Z]     [65/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\delegates\sceneDelegate.cpp.obj
+[2023-11-10T17:09:36.958Z]     [66/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\shapeAdapter.cpp.obj
+[2023-11-10T17:09:37.737Z]     [67/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\pointLightAdapter.cpp.obj
+[2023-11-10T17:09:39.488Z]     [68/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\registration.cpp.obj
+[2023-11-10T17:09:39.488Z]     [69/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\spotLightAdapter.cpp.obj
+[2023-11-10T17:09:39.488Z]     [70/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\meshAdapter.cpp.obj
+[2023-11-10T17:09:39.887Z]     [71/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\nurbsCurveAdapter.cpp.obj
+[2023-11-10T17:09:40.223Z]     [72/100] Automatic MOC for target adskHydraSceneBrowser
+[2023-11-10T17:09:42.517Z]     [73/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\mayaHydraPrimvarDataSource.cpp.obj
+[2023-11-10T17:09:43.255Z]     [74/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\delegates\defaultLightDelegate.cpp.obj
+[2023-11-10T17:09:43.255Z]     [75/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\mayaHydraCameraDataSource.cpp.obj
+[2023-11-10T17:09:44.457Z]     [76/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\mayaHydraDisplayStyleDataSource.cpp.obj
+[2023-11-10T17:09:44.457Z]     [77/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\mayaHydraLightDataSource.cpp.obj
+[2023-11-10T17:09:44.808Z]     [78/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\mayaHydraDefaultLightDataSource.cpp.obj
+[2023-11-10T17:09:44.808Z]     [79/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\mayaHydraDataSource.cpp.obj
+[2023-11-10T17:09:45.143Z]     [80/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\mayaHydraSceneIndex.cpp.obj
+[2023-11-10T17:09:47.573Z]     [81/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\delegates\testDelegate.cpp.obj
+[2023-11-10T17:09:47.573Z]     [82/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\src\patch\registeredSceneIndexChooser.cpp.obj
+[2023-11-10T17:09:47.573Z]     [83/100] Building CXX object plugin\mayaHydraSceneBrowser\CMakeFiles\mayaHydraSceneBrowser.dir\mayaHydraSceneBrowser.cpp.obj
+[2023-11-10T17:09:47.909Z]     [84/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\src\patch\sceneIndexObserverLoggingTreeView.cpp.obj
+[2023-11-10T17:09:47.909Z]     [85/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\src\patch\dataSourceValueTreeView.cpp.obj
+[2023-11-10T17:09:47.909Z]     [86/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\src\patch\sceneIndexDebuggerWidget.cpp.obj
+[2023-11-10T17:09:48.667Z]     [87/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\adskHydraSceneBrowser_autogen\mocs_compilation.cpp.obj
+[2023-11-10T17:09:48.667Z]     [88/100] Linking CXX shared library lib\mayaHydra\hydraExtensions\mayaHydraLib.dll
+[2023-11-10T17:09:48.667Z]     [89/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\src\patch\dataSourceTreeWidget.cpp.obj
+[2023-11-10T17:09:49.405Z]     [90/100] Linking CXX shared library test\lib\mayaUsd\render\mayaToHydra\cpp\mayaHydraCppTests.mll
+[2023-11-10T17:09:49.405Z]     [91/100] Linking CXX shared library lib\mayaHydra\mayaPlugin\mayaHydra.mll
+[2023-11-10T17:09:50.152Z]     [92/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\src\patch\sceneIndexObserverLoggingWidget.cpp.obj
+[2023-11-10T17:09:50.152Z]     [93/100] Building CXX object plugin\mayaHydraSceneBrowserTest\CMakeFiles\mayaHydraSceneBrowserTest.dir\mayaHydraSceneBrowserTestCmd.cpp.obj
+[2023-11-10T17:09:50.959Z]     [94/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\src\patch\sceneIndexTreeWidget.cpp.obj
+[2023-11-10T17:09:51.694Z]     [95/100] Linking CXX shared library lib\adskHydraSceneBrowser\lib\adskHydraSceneBrowser.dll
+[2023-11-10T17:09:51.694Z]     [96/100] Building CXX object lib\adskHydraSceneBrowser\test\CMakeFiles\adskHydraSceneBrowserTesting.dir\adskHydraSceneBrowserTestFixture.cpp.obj
+[2023-11-10T17:09:52.080Z]     [97/100] Linking CXX shared library plugin\mayaHydraSceneBrowser\mayaHydraSceneBrowser.mll
+[2023-11-10T17:09:52.080Z]     [98/100] Building CXX object lib\adskHydraSceneBrowser\test\CMakeFiles\adskHydraSceneBrowserTesting.dir\adskHydraSceneBrowserTesting.cpp.obj
+[2023-11-10T17:09:52.841Z]     [99/100] Linking CXX shared library lib\adskHydraSceneBrowser\test\adskHydraSceneBrowserTesting.dll
+[2023-11-10T17:09:53.564Z]     [100/100] Linking CXX shared library plugin\mayaHydraSceneBrowserTest\mayaHydraSceneBrowserTest.mll
+[2023-11-10T17:09:53.564Z]     
+[2023-11-10T17:09:53.564Z]         Building with settings:
+[2023-11-10T17:09:53.564Z]           Source directory          S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:09:53.564Z]           Workspace directory       W:\
+[2023-11-10T17:09:53.564Z]           Build directory           W:\build\Debug
+[2023-11-10T17:09:53.564Z]           Install directory         W:\install\Debug\MayaHydra
+[2023-11-10T17:09:53.564Z]           Variant                   Debug
+[2023-11-10T17:09:53.564Z]           Python Debug              On
+[2023-11-10T17:09:53.564Z]           CMake generator           Ninja
+[2023-11-10T17:09:53.564Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe', '-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/include/Python310/Python', '-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/bin/mayapy.exe', '-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/lib/python310_d.lib', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\972e371']
+[2023-11-10T17:09:53.564Z]           Stages arguments          ['build']
+[2023-11-10T17:09:53.564Z]           CTest arguments           ['--parallel 16']
+[2023-11-10T17:09:53.564Z]     Success MayaHydra build and install !!!!
+[2023-11-10T17:09:53.564Z]     Elapsed time: 00:00:46
+[Pipeline] bat
+[2023-11-10T17:09:54.217Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-11-10T17:09:54.836Z] Deleting alias drive P:
+[Pipeline] bat
+[2023-11-10T17:09:55.501Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-11-10T17:09:56.132Z] Creating alias drive W: to S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows
+[Pipeline] bat
+[2023-11-10T17:09:57.146Z] "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-11-10T17:09:57.146Z] **********************************************************************
+[2023-11-10T17:09:57.146Z] ** Visual Studio 2022 Developer Command Prompt v17.3.2
+[2023-11-10T17:09:57.146Z] ** Copyright (c) 2022 Microsoft Corporation
+[2023-11-10T17:09:57.146Z] **********************************************************************
+[2023-11-10T17:09:58.942Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-11-10T17:09:58.942Z] python ecg-maya-hydra/build.py --stages=build --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=379 --git-commit=d590573d5109725985e142e015db204e230f9776 --git-branch=master --variants=RelWithDebInfo --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --build-retry=3 --maya-cut-config=maya-rundev-master.yaml --maya-package=rundev-master --stage-banner
+[2023-11-10T17:09:59.664Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f
+[2023-11-10T17:09:59.664Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2023\3ae1ae7
+[2023-11-10T17:09:59.664Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\3.4.0\284407f
+[2023-11-10T17:09:59.664Z] 
+[2023-11-10T17:09:59.664Z] ================================================================================
+[2023-11-10T17:09:59.664Z]                              build (RelWithDebInfo)
+[2023-11-10T17:09:59.664Z] ================================================================================
+[2023-11-10T17:09:59.664Z] Maya Python RelWithDebInfo Info:
+[2023-11-10T17:09:59.664Z]   mayapy executable   = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\bin\mayapy.exe
+[2023-11-10T17:09:59.664Z]   Include Folder      = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\include\Python310\Python
+[2023-11-10T17:09:59.664Z]   Library             = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\lib\python310.lib
+[2023-11-10T17:09:59.664Z]   site-package Folder = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\Python\Lib\site-packages
+[2023-11-10T17:10:00.845Z] In workdir: S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:10:00.846Z] Executing: 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\runTime\\bin\\mayapy.exe' 'S:\\jenkins\\workspace\\ECP\\ecg-maya-hydra\\ecg-maya-hydra-branch-preflight-python3-windows\\ecg-maya-hydra\\maya-hydra\\build.py' --generator Ninja --build-relwithdebug --maya-location 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\runTime' --devkit-location 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\devkitBase' --pxrusd-location 'P:\\shared\\Artifactory\\Windows\\USD\\ce619c6' '--build-args=-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe,-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/include/Python310/Python,-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/bin/mayapy.exe,-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/lib/python310.lib,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\ce619c6' '--ctest-args=--parallel 16' --stages=build --redirect-outstream-file=False --install-location 'W:\\install\\RelWithDebInfo\\MayaHydra' 'W:\\'
+[2023-11-10T17:10:00.846Z] Modified environment variables:
+[2023-11-10T17:10:00.846Z]     PATH=P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\\MSBuild\Current\Bin\amd64;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\.dotnet\tools;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\Linux\bin\ConnectionManagerExe
+[2023-11-10T17:10:02.021Z]     [1/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpPathInterface.cpp.obj
+[2023-11-10T17:10:02.021Z]     [2/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpSelectionInterface.cpp.obj
+[2023-11-10T17:10:02.021Z]     [3/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\API\interfacesImp\fvpVersionInterfaceImp.cpp.obj
+[2023-11-10T17:10:02.370Z]     [4/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\debugCodes.cpp.obj
+[2023-11-10T17:10:02.706Z]     [5/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\colorPreferences\fvpColorPreferencesTokens.cpp.obj
+[2023-11-10T17:10:03.081Z]     [6/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\colorPreferences\fvpColorPreferences.cpp.obj
+[2023-11-10T17:10:03.081Z]     [7/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\global.cpp.obj
+[2023-11-10T17:10:03.431Z]     [8/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\API\interfacesImp\fvpSelectionInterfaceImp.cpp.obj
+[2023-11-10T17:10:03.431Z]     [9/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\API\samples\fvpSelectionClientExample.cpp.obj
+[2023-11-10T17:10:03.766Z]     [10/100] Building CXX object lib\mayaHydra\ufeExtensions\CMakeFiles\ufeExtensions.dir\Global.cpp.obj
+[2023-11-10T17:10:03.766Z]     [11/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testCppFramework.cpp.obj
+[2023-11-10T17:10:04.101Z]     [12/100] Linking CXX shared library lib\mayaHydra\ufeExtensions\ufeExtensions.dll
+[2023-11-10T17:10:04.437Z]     [13/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\mayaHydraCppTestsCmd.cpp.obj
+[2023-11-10T17:10:05.229Z]     [14/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\pluginDebugCodes.cpp.obj
+[2023-11-10T17:10:05.229Z]     [15/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testColorPreferences.cpp.obj
+[2023-11-10T17:10:07.018Z]     [16/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpPassThroughSelectionInterfaceSceneIndex.cpp.obj
+[2023-11-10T17:10:07.018Z]     [17/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpMergingSceneIndex.cpp.obj
+[2023-11-10T17:10:07.018Z]     [18/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpRenderIndexProxy.cpp.obj
+[2023-11-10T17:10:07.408Z]     [19/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpPathInterfaceSceneIndex.cpp.obj
+[2023-11-10T17:10:07.743Z]     [20/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpSelectionSceneIndex.cpp.obj
+[2023-11-10T17:10:07.743Z]     [21/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\tokens.cpp.obj
+[2023-11-10T17:10:08.082Z]     [22/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\colorNotFoundException.cpp.obj
+[2023-11-10T17:10:08.830Z]     [23/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\sceneIndex\fvpWireframeSelectionHighlightSceneIndex.cpp.obj
+[2023-11-10T17:10:08.830Z]     [24/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testMayaSceneFlattening.cpp.obj
+[2023-11-10T17:10:09.653Z]     [25/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\selection\fvpSelectionTask.cpp.obj
+[2023-11-10T17:10:09.653Z]     [26/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\selection\fvpSelectionTracker.cpp.obj
+[2023-11-10T17:10:09.653Z]     [27/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testMayaUsdUfeItems.cpp.obj
+[2023-11-10T17:10:09.989Z]     [28/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\mayaColorPreferencesTranslator.cpp.obj
+[2023-11-10T17:10:10.334Z]     [29/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\debugCodes.cpp.obj
+[2023-11-10T17:10:10.669Z]     [30/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\mayaUtils.cpp.obj
+[2023-11-10T17:10:10.669Z]     [31/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testUtils.cpp.obj
+[2023-11-10T17:10:11.012Z]     [32/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testSelectionSceneIndex.cpp.obj
+[2023-11-10T17:10:12.721Z]     [33/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testWireframeSelectionHighlightSceneIndex.cpp.obj
+[2023-11-10T17:10:13.441Z]     [34/100] Building CXX object test\lib\mayaUsd\render\mayaToHydra\cpp\CMakeFiles\mayaHydraCppTests.dir\testMergingSceneIndex.cpp.obj
+[2023-11-10T17:10:13.441Z]     [35/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\adapterDebugCodes.cpp.obj
+[2023-11-10T17:10:14.165Z]     [36/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\pluginUtils.cpp.obj
+[2023-11-10T17:10:14.165Z]     [37/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\interfaceImp.cpp.obj
+[2023-11-10T17:10:14.165Z]     [38/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\mixedUtils.cpp.obj
+[2023-11-10T17:10:15.880Z]     [39/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\renderOverride.cpp.obj
+[2023-11-10T17:10:16.218Z]     [40/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\hydraUtils.cpp.obj
+[2023-11-10T17:10:17.959Z]     [41/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\viewCommand.cpp.obj
+[2023-11-10T17:10:17.959Z]     MAYAHYDRA_CUT_ID is not defined
+[2023-11-10T17:10:17.959Z]     [42/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\plugin.cpp.obj
+[2023-11-10T17:10:21.924Z]     [43/100] Building CXX object lib\mayaHydra\mayaPlugin\CMakeFiles\mayaHydra.dir\renderGlobals.cpp.obj
+[2023-11-10T17:10:22.271Z]     [44/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\materialAdapter.cpp.obj
+[2023-11-10T17:10:22.607Z]     [45/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\directionalLightAdapter.cpp.obj
+[2023-11-10T17:10:23.401Z]     [46/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\materialNetworkConverter.cpp.obj
+[2023-11-10T17:10:23.737Z]     [47/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\renderItemAdapter.cpp.obj
+[2023-11-10T17:10:23.737Z]     [48/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\lightAdapter.cpp.obj
+[2023-11-10T17:10:23.737Z]     [49/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\mayaAttrs.cpp.obj
+[2023-11-10T17:10:24.978Z]     [50/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\delegates\delegateDebugCodes.cpp.obj
+[2023-11-10T17:10:25.380Z]     [51/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\tokens.cpp.obj
+[2023-11-10T17:10:25.739Z]     [52/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\aiSkydomeLightAdapter.cpp.obj
+[2023-11-10T17:10:26.573Z]     [53/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\adapterRegistry.cpp.obj
+[2023-11-10T17:10:26.573Z]     [54/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\mayaHydraSceneProducer.cpp.obj
+[2023-11-10T17:10:26.573Z]     [55/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\areaLightAdapter.cpp.obj
+[2023-11-10T17:10:28.931Z]     [56/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\cameraAdapter.cpp.obj
+[2023-11-10T17:10:28.931Z]     [57/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\adapter.cpp.obj
+[2023-11-10T17:10:29.687Z]     [58/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\dagAdapter.cpp.obj
+[2023-11-10T17:10:31.511Z]     [59/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\pointLightAdapter.cpp.obj
+[2023-11-10T17:10:31.511Z]     [60/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\meshAdapter.cpp.obj
+[2023-11-10T17:10:31.511Z]     [61/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\shapeAdapter.cpp.obj
+[2023-11-10T17:10:32.738Z]     [62/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\colorPreferences\fvpColorChanged.cpp.obj
+[2023-11-10T17:10:34.470Z]     [63/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\delegates\delegate.cpp.obj
+[2023-11-10T17:10:35.347Z]     [64/100] Building CXX object lib\flowViewport\CMakeFiles\flowViewport.dir\tokens.cpp.obj
+[2023-11-10T17:10:35.347Z]     [65/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\delegates\delegateCtx.cpp.obj
+[2023-11-10T17:10:36.548Z]     [66/100] Linking CXX shared library lib\flowViewport\flowViewport.dll
+[2023-11-10T17:10:36.548Z]     [67/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\delegates\delegateRegistry.cpp.obj
+[2023-11-10T17:10:36.890Z]     [68/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\spotLightAdapter.cpp.obj
+[2023-11-10T17:10:37.225Z]     [69/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\registration.cpp.obj
+[2023-11-10T17:10:38.443Z]     [70/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\adapters\nurbsCurveAdapter.cpp.obj
+[2023-11-10T17:10:40.735Z]     [71/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\mayaHydraSceneIndex.cpp.obj
+[2023-11-10T17:10:41.907Z]     [72/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\delegates\sceneDelegate.cpp.obj
+[2023-11-10T17:10:42.242Z]     [73/100] Automatic MOC for target adskHydraSceneBrowser
+[2023-11-10T17:10:42.242Z]     [74/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\mayaHydraCameraDataSource.cpp.obj
+[2023-11-10T17:10:42.622Z]     [75/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\mayaHydraDataSource.cpp.obj
+[2023-11-10T17:10:42.962Z]     [76/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\delegates\testDelegate.cpp.obj
+[2023-11-10T17:10:43.686Z]     [77/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\mayaHydraDisplayStyleDataSource.cpp.obj
+[2023-11-10T17:10:43.686Z]     [78/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\mayaHydraPrimvarDataSource.cpp.obj
+[2023-11-10T17:10:44.494Z]     [79/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\mayaHydraLightDataSource.cpp.obj
+[2023-11-10T17:10:45.662Z]     [80/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\sceneIndex\mayaHydraDefaultLightDataSource.cpp.obj
+[2023-11-10T17:10:47.001Z]     [81/100] Building CXX object lib\mayaHydra\hydraExtensions\CMakeFiles\mayaHydraLib.dir\delegates\defaultLightDelegate.cpp.obj
+[2023-11-10T17:10:48.686Z]     [82/100] Linking CXX shared library lib\mayaHydra\hydraExtensions\mayaHydraLib.dll
+[2023-11-10T17:10:49.022Z]     [83/100] Linking CXX shared library test\lib\mayaUsd\render\mayaToHydra\cpp\mayaHydraCppTests.mll
+[2023-11-10T17:10:49.022Z]     [84/100] Linking CXX shared library lib\mayaHydra\mayaPlugin\mayaHydra.mll
+[2023-11-10T17:10:49.743Z]     [85/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\src\patch\registeredSceneIndexChooser.cpp.obj
+[2023-11-10T17:10:49.743Z]     [86/100] Building CXX object plugin\mayaHydraSceneBrowserTest\CMakeFiles\mayaHydraSceneBrowserTest.dir\mayaHydraSceneBrowserTestCmd.cpp.obj
+[2023-11-10T17:10:49.743Z]     [87/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\src\patch\sceneIndexObserverLoggingWidget.cpp.obj
+[2023-11-10T17:10:50.084Z]     [88/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\src\patch\sceneIndexObserverLoggingTreeView.cpp.obj
+[2023-11-10T17:10:50.084Z]     [89/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\src\patch\dataSourceValueTreeView.cpp.obj
+[2023-11-10T17:10:50.423Z]     [90/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\src\patch\sceneIndexDebuggerWidget.cpp.obj
+[2023-11-10T17:10:50.786Z]     [91/100] Building CXX object plugin\mayaHydraSceneBrowser\CMakeFiles\mayaHydraSceneBrowser.dir\mayaHydraSceneBrowser.cpp.obj
+[2023-11-10T17:10:50.786Z]     [92/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\src\patch\sceneIndexTreeWidget.cpp.obj
+[2023-11-10T17:10:51.144Z]     [93/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\adskHydraSceneBrowser_autogen\mocs_compilation.cpp.obj
+[2023-11-10T17:10:51.144Z]     [94/100] Building CXX object lib\adskHydraSceneBrowser\test\CMakeFiles\adskHydraSceneBrowserTesting.dir\adskHydraSceneBrowserTesting.cpp.obj
+[2023-11-10T17:10:51.482Z]     [95/100] Building CXX object lib\adskHydraSceneBrowser\lib\CMakeFiles\adskHydraSceneBrowser.dir\src\patch\dataSourceTreeWidget.cpp.obj
+[2023-11-10T17:10:51.866Z]     [96/100] Building CXX object lib\adskHydraSceneBrowser\test\CMakeFiles\adskHydraSceneBrowserTesting.dir\adskHydraSceneBrowserTestFixture.cpp.obj
+[2023-11-10T17:10:52.202Z]     [97/100] Linking CXX shared library lib\adskHydraSceneBrowser\lib\adskHydraSceneBrowser.dll
+[2023-11-10T17:10:52.540Z]     [98/100] Linking CXX shared library plugin\mayaHydraSceneBrowser\mayaHydraSceneBrowser.mll
+[2023-11-10T17:10:52.540Z]     [99/100] Linking CXX shared library lib\adskHydraSceneBrowser\test\adskHydraSceneBrowserTesting.dll
+[2023-11-10T17:10:53.261Z]     [100/100] Linking CXX shared library plugin\mayaHydraSceneBrowserTest\mayaHydraSceneBrowserTest.mll
+[2023-11-10T17:10:53.261Z]     
+[2023-11-10T17:10:53.261Z]         Building with settings:
+[2023-11-10T17:10:53.261Z]           Source directory          S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:10:53.261Z]           Workspace directory       W:\
+[2023-11-10T17:10:53.261Z]           Build directory           W:\build\RelWithDebInfo
+[2023-11-10T17:10:53.261Z]           Install directory         W:\install\RelWithDebInfo\MayaHydra
+[2023-11-10T17:10:53.261Z]           Variant                   RelWithDebInfo
+[2023-11-10T17:10:53.261Z]           Python Debug              Off
+[2023-11-10T17:10:53.261Z]           CMake generator           Ninja
+[2023-11-10T17:10:53.261Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe', '-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/include/Python310/Python', '-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/bin/mayapy.exe', '-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/lib/python310.lib', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\ce619c6']
+[2023-11-10T17:10:53.261Z]           Stages arguments          ['build']
+[2023-11-10T17:10:53.261Z]           CTest arguments           ['--parallel 16']
+[2023-11-10T17:10:53.261Z]     Success MayaHydra build and install !!!!
+[2023-11-10T17:10:53.261Z]     Elapsed time: 00:00:52
+[Pipeline] bat
+[2023-11-10T17:10:53.867Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-11-10T17:10:54.485Z] Deleting alias drive P:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Install)
+[Pipeline] timeout
+[2023-11-10T17:10:54.692Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[2023-11-10T17:10:55.315Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-11-10T17:10:55.941Z] Creating alias drive W: to S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows
+[Pipeline] bat
+[2023-11-10T17:10:56.951Z] "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-11-10T17:10:57.323Z] **********************************************************************
+[2023-11-10T17:10:57.323Z] ** Visual Studio 2022 Developer Command Prompt v17.3.2
+[2023-11-10T17:10:57.323Z] ** Copyright (c) 2022 Microsoft Corporation
+[2023-11-10T17:10:57.323Z] **********************************************************************
+[2023-11-10T17:10:58.563Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-11-10T17:10:58.563Z] python ecg-maya-hydra/build.py --stages=install --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=379 --git-commit=d590573d5109725985e142e015db204e230f9776 --git-branch=master --variants=Debug --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --maya-cut-config=maya-rundev-master-debug.yaml --maya-package=rundev-master-debug --stage-banner
+[2023-11-10T17:10:59.731Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a
+[2023-11-10T17:10:59.731Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2023\3ae1ae7
+[2023-11-10T17:10:59.731Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\3.4.0\284407f
+[2023-11-10T17:10:59.731Z] 
+[2023-11-10T17:10:59.731Z] ================================================================================
+[2023-11-10T17:10:59.731Z]                                 install (Debug)
+[2023-11-10T17:10:59.731Z] ================================================================================
+[2023-11-10T17:10:59.731Z] Maya Python Debug Info:
+[2023-11-10T17:10:59.731Z]   mayapy executable   = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\bin\mayapy.exe
+[2023-11-10T17:10:59.731Z]   Include Folder      = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\include\Python310\Python
+[2023-11-10T17:10:59.731Z]   Library             = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\lib\python310_d.lib
+[2023-11-10T17:10:59.731Z]   site-package Folder = P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a\runTime\Python\Lib\site-packages
+[2023-11-10T17:11:02.089Z] In workdir: S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:11:02.089Z] Executing: 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202310260154\\runtime\\2caf91a\\runTime\\bin\\mayapy.exe' 'S:\\jenkins\\workspace\\ECP\\ecg-maya-hydra\\ecg-maya-hydra-branch-preflight-python3-windows\\ecg-maya-hydra\\maya-hydra\\build.py' --generator Ninja --build-debug --maya-location 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202310260154\\runtime\\2caf91a\\runTime' --devkit-location 'P:\\shared\\Artifactory\\Windows\\rundev-master-debug\\202310260154\\runtime\\2caf91a\\devkitBase' --pxrusd-location 'P:\\shared\\Artifactory\\Windows\\USD\\972e371' '--build-args=-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe,-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/include/Python310/Python,-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/bin/mayapy.exe,-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/lib/python310_d.lib,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\972e371' --debug-python '--ctest-args=--parallel 16' --stages=install --redirect-outstream-file=False --install-location 'W:\\install\\Debug\\MayaHydra' 'W:\\'
+[2023-11-10T17:11:02.089Z] Modified environment variables:
+[2023-11-10T17:11:02.089Z]     PATH=P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\\MSBuild\Current\Bin\amd64;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\.dotnet\tools;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\Linux\bin\ConnectionManagerExe
+[2023-11-10T17:11:03.319Z]     [0/1] Install the project...
+[2023-11-10T17:11:03.655Z]     -- Install configuration: "Debug"
+[2023-11-10T17:11:04.379Z]     
+[2023-11-10T17:11:04.379Z]         Building with settings:
+[2023-11-10T17:11:04.379Z]           Source directory          S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:11:04.379Z]           Workspace directory       W:\
+[2023-11-10T17:11:04.379Z]           Build directory           W:\build\Debug
+[2023-11-10T17:11:04.379Z]           Install directory         W:\install\Debug\MayaHydra
+[2023-11-10T17:11:04.379Z]           Variant                   Debug
+[2023-11-10T17:11:04.379Z]           Python Debug              On
+[2023-11-10T17:11:04.379Z]           CMake generator           Ninja
+[2023-11-10T17:11:04.379Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe', '-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/include/Python310/Python', '-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/bin/mayapy.exe', '-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master-debug/202310260154/runtime/2caf91a/runTime/lib/python310_d.lib', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\972e371']
+[2023-11-10T17:11:04.379Z]           Stages arguments          ['install']
+[2023-11-10T17:11:04.379Z]           CTest arguments           ['--parallel 16']
+[2023-11-10T17:11:04.379Z]     Success MayaHydra build and install !!!!
+[2023-11-10T17:11:04.379Z]     Elapsed time: 00:00:01
+[Pipeline] bat
+[2023-11-10T17:11:05.356Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-11-10T17:11:05.979Z] Deleting alias drive P:
+[Pipeline] bat
+[2023-11-10T17:11:06.726Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-11-10T17:11:07.358Z] Creating alias drive W: to S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows
+[Pipeline] bat
+[2023-11-10T17:11:08.324Z] "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-11-10T17:11:08.661Z] **********************************************************************
+[2023-11-10T17:11:08.661Z] ** Visual Studio 2022 Developer Command Prompt v17.3.2
+[2023-11-10T17:11:08.661Z] ** Copyright (c) 2022 Microsoft Corporation
+[2023-11-10T17:11:08.661Z] **********************************************************************
+[2023-11-10T17:11:09.835Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-11-10T17:11:09.835Z] python ecg-maya-hydra/build.py --stages=install --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=379 --git-commit=d590573d5109725985e142e015db204e230f9776 --git-branch=master --variants=RelWithDebInfo --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --maya-cut-config=maya-rundev-master.yaml --maya-package=rundev-master --stage-banner
+[2023-11-10T17:11:11.004Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f
+[2023-11-10T17:11:11.004Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2023\3ae1ae7
+[2023-11-10T17:11:11.004Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\3.4.0\284407f
+[2023-11-10T17:11:11.004Z] 
+[2023-11-10T17:11:11.004Z] ================================================================================
+[2023-11-10T17:11:11.004Z]                             install (RelWithDebInfo)
+[2023-11-10T17:11:11.004Z] ================================================================================
+[2023-11-10T17:11:11.004Z] Maya Python RelWithDebInfo Info:
+[2023-11-10T17:11:11.004Z]   mayapy executable   = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\bin\mayapy.exe
+[2023-11-10T17:11:11.004Z]   Include Folder      = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\include\Python310\Python
+[2023-11-10T17:11:11.004Z]   Library             = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\lib\python310.lib
+[2023-11-10T17:11:11.004Z]   site-package Folder = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\Python\Lib\site-packages
+[2023-11-10T17:11:12.186Z] In workdir: S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:11:12.187Z] Executing: 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\runTime\\bin\\mayapy.exe' 'S:\\jenkins\\workspace\\ECP\\ecg-maya-hydra\\ecg-maya-hydra-branch-preflight-python3-windows\\ecg-maya-hydra\\maya-hydra\\build.py' --generator Ninja --build-relwithdebug --maya-location 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\runTime' --devkit-location 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\devkitBase' --pxrusd-location 'P:\\shared\\Artifactory\\Windows\\USD\\ce619c6' '--build-args=-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe,-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/include/Python310/Python,-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/bin/mayapy.exe,-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/lib/python310.lib,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\ce619c6' '--ctest-args=--parallel 16' --stages=install --redirect-outstream-file=False --install-location 'W:\\install\\RelWithDebInfo\\MayaHydra' 'W:\\'
+[2023-11-10T17:11:12.187Z] Modified environment variables:
+[2023-11-10T17:11:12.187Z]     PATH=P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\\MSBuild\Current\Bin\amd64;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\.dotnet\tools;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\Linux\bin\ConnectionManagerExe
+[2023-11-10T17:11:12.951Z]     [0/1] Install the project...
+[2023-11-10T17:11:12.951Z]     -- Install configuration: "RelWithDebInfo"
+[2023-11-10T17:11:13.736Z]     
+[2023-11-10T17:11:13.736Z]         Building with settings:
+[2023-11-10T17:11:13.736Z]           Source directory          S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:11:13.736Z]           Workspace directory       W:\
+[2023-11-10T17:11:13.736Z]           Build directory           W:\build\RelWithDebInfo
+[2023-11-10T17:11:13.736Z]           Install directory         W:\install\RelWithDebInfo\MayaHydra
+[2023-11-10T17:11:13.736Z]           Variant                   RelWithDebInfo
+[2023-11-10T17:11:13.736Z]           Python Debug              Off
+[2023-11-10T17:11:13.736Z]           CMake generator           Ninja
+[2023-11-10T17:11:13.736Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe', '-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/include/Python310/Python', '-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/bin/mayapy.exe', '-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/lib/python310.lib', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\ce619c6']
+[2023-11-10T17:11:13.736Z]           Stages arguments          ['install']
+[2023-11-10T17:11:13.736Z]           CTest arguments           ['--parallel 16']
+[2023-11-10T17:11:13.736Z]     Success MayaHydra build and install !!!!
+[2023-11-10T17:11:13.736Z]     Elapsed time: 00:00:01
+[Pipeline] bat
+[2023-11-10T17:11:14.389Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-11-10T17:11:15.008Z] Deleting alias drive P:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] timeout
+[2023-11-10T17:11:15.255Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[2023-11-10T17:11:15.967Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-11-10T17:11:16.594Z] Creating alias drive W: to S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows
+[Pipeline] bat
+[2023-11-10T17:11:17.947Z] "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-11-10T17:11:17.947Z] **********************************************************************
+[2023-11-10T17:11:17.947Z] ** Visual Studio 2022 Developer Command Prompt v17.3.2
+[2023-11-10T17:11:17.947Z] ** Copyright (c) 2022 Microsoft Corporation
+[2023-11-10T17:11:17.947Z] **********************************************************************
+[2023-11-10T17:11:19.907Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-11-10T17:11:19.907Z] python ecg-maya-hydra/build.py --stages=test --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=379 --git-commit=d590573d5109725985e142e015db204e230f9776 --git-branch=master --variants=RelWithDebInfo --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --test-jobs=0 --failed-test-retry=3 --maya-cut-config=maya-rundev-master.yaml --maya-package=rundev-master --stage-banner --progressive-timeout
+[2023-11-10T17:11:20.681Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f
+[2023-11-10T17:11:20.681Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2023\3ae1ae7
+[2023-11-10T17:11:20.681Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\3.4.0\284407f
+[2023-11-10T17:11:20.681Z] 
+[2023-11-10T17:11:20.681Z] ================================================================================
+[2023-11-10T17:11:20.681Z]                              test (RelWithDebInfo)
+[2023-11-10T17:11:20.681Z] ================================================================================
+[2023-11-10T17:11:20.681Z] Maya Python RelWithDebInfo Info:
+[2023-11-10T17:11:20.681Z]   mayapy executable   = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\bin\mayapy.exe
+[2023-11-10T17:11:20.681Z]   Include Folder      = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\include\Python310\Python
+[2023-11-10T17:11:20.681Z]   Library             = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\lib\python310.lib
+[2023-11-10T17:11:20.681Z]   site-package Folder = P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f\runTime\Python\Lib\site-packages
+[2023-11-10T17:11:21.486Z] In workdir: S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:11:21.486Z] Executing: 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\runTime\\bin\\mayapy.exe' 'S:\\jenkins\\workspace\\ECP\\ecg-maya-hydra\\ecg-maya-hydra-branch-preflight-python3-windows\\ecg-maya-hydra\\maya-hydra\\build.py' --generator Ninja --build-relwithdebug --maya-location 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\runTime' --devkit-location 'P:\\shared\\Artifactory\\Windows\\rundev-master\\202311060140\\runtime\\1cbda2f\\devkitBase' --pxrusd-location 'P:\\shared\\Artifactory\\Windows\\USD\\ce619c6' '--build-args=-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe,-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/include/Python310/Python,-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/bin/mayapy.exe,-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/lib/python310.lib,-DBUILD_WITH_PYTHON_3=ON,-DBUILD_WITH_PYTHON_3_VERSION=3.10,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\ce619c6' '--ctest-args=--parallel 16' --stages=test --redirect-outstream-file=False --install-location 'W:\\install\\RelWithDebInfo\\MayaHydra' 'W:\\'
+[2023-11-10T17:11:21.486Z] Modified environment variables:
+[2023-11-10T17:11:21.486Z]     PATH=P:\shared\Artifactory\Windows\cmake\3.20.3\afe857a\bin;C:\Python27\lib\site-packages\pywin32_system32;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\\MSBuild\Current\Bin\amd64;C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\WiX Toolset v3.7\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files\Zulu\zulu-11\bin\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\bin;C:\Python38\;C:\Python38\Scripts;C:\StoreBoxClientWindows;C:\Program Files\Electric Cloud\ElectricCommander\bin;C:\Program Files\WinRAR;C:\Program Files\7-Zip;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\.dotnet\tools;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\Linux\bin\ConnectionManagerExe
+[2023-11-10T17:11:22.220Z]     Test project W:/build/RelWithDebInfo
+[2023-11-10T17:11:22.220Z]           Start  1: _Interactive_Maya
+[2023-11-10T17:11:22.220Z]      1/18 Test  #1: _Interactive_Maya ...........................***Not Run (Disabled)   0.00 sec
+[2023-11-10T17:11:22.220Z]           Start  2: testImageDiffing
+[2023-11-10T17:11:22.220Z]           Start  3: testMtohCommand
+[2023-11-10T17:11:22.220Z]           Start  4: testMeshes
+[2023-11-10T17:11:22.220Z]           Start  5: testNamespaces
+[2023-11-10T17:11:22.220Z]           Start  6: testVisibility
+[2023-11-10T17:11:22.220Z]           Start  7: testRendererSwitching
+[2023-11-10T17:11:22.621Z]           Start  8: testSceneBrowser
+[2023-11-10T17:11:22.621Z]           Start  9: testStageAddPrim
+[2023-11-10T17:11:22.621Z]           Start 10: testNewSceneWithStage
+[2023-11-10T17:11:22.621Z]           Start 11: testColorPreferences
+[2023-11-10T17:11:22.621Z]           Start 12: testCppFramework
+[2023-11-10T17:11:22.621Z]           Start 13: testMayaSceneFlattening
+[2023-11-10T17:11:22.621Z]           Start 14: testMayaUsdUfeItems
+[2023-11-10T17:11:22.621Z]           Start 15: testMergingSceneIndex
+[2023-11-10T17:11:22.621Z]           Start 16: testSelectionSceneIndex
+[2023-11-10T17:11:23.020Z]           Start 17: testWireframeSelectionHighlightSceneIndex
+[2023-11-10T17:11:51.314Z]      2/18 Test  #3: testMtohCommand .............................   Passed   25.78 sec
+[2023-11-10T17:11:51.314Z]           Start 18: testMeshes_meshAdapter
+[2023-11-10T17:11:51.314Z]      3/18 Test  #5: testNamespaces ..............................   Passed   25.93 sec
+[2023-11-10T17:11:51.314Z]      4/18 Test  #9: testStageAddPrim ............................   Passed   26.38 sec
+[2023-11-10T17:11:51.314Z]      5/18 Test  #4: testMeshes ..................................   Passed   26.77 sec
+[2023-11-10T17:11:51.314Z]      6/18 Test  #7: testRendererSwitching .......................   Passed   27.34 sec
+[2023-11-10T17:11:52.553Z]      7/18 Test  #2: testImageDiffing ............................   Passed   30.12 sec
+[2023-11-10T17:11:53.320Z]      8/18 Test  #6: testVisibility ..............................   Passed   30.75 sec
+[2023-11-10T17:11:54.126Z]      9/18 Test  #8: testSceneBrowser ............................   Passed   31.63 sec
+[2023-11-10T17:11:54.491Z]     10/18 Test #10: testNewSceneWithStage .......................   Passed   32.02 sec
+[2023-11-10T17:11:54.827Z]     11/18 Test #13: testMayaSceneFlattening .....................   Passed   32.09 sec
+[2023-11-10T17:11:54.827Z]     12/18 Test #17: testWireframeSelectionHighlightSceneIndex ...   Passed   32.05 sec
+[2023-11-10T17:11:54.827Z]     13/18 Test #14: testMayaUsdUfeItems .........................   Passed   32.33 sec
+[2023-11-10T17:11:55.164Z]     14/18 Test #12: testCppFramework ............................   Passed   32.53 sec
+[2023-11-10T17:11:55.164Z]     15/18 Test #15: testMergingSceneIndex .......................   Passed   32.56 sec
+[2023-11-10T17:11:55.544Z]     16/18 Test #16: testSelectionSceneIndex .....................   Passed   32.64 sec
+[2023-11-10T17:11:55.544Z]     17/18 Test #11: testColorPreferences ........................   Passed   33.06 sec
+[2023-11-10T17:12:03.023Z]     18/18 Test #18: testMeshes_meshAdapter ......................   Passed   14.91 sec
+[2023-11-10T17:12:03.023Z]     
+[2023-11-10T17:12:03.023Z]     100% tests passed, 0 tests failed out of 17
+[2023-11-10T17:12:03.023Z]     
+[2023-11-10T17:12:03.023Z]     Label Time Summary:
+[2023-11-10T17:12:03.023Z]     Debugging      =   0.00 sec*proc (1 test)
+[2023-11-10T17:12:03.023Z]     interactive    = 498.86 sec*proc (17 tests)
+[2023-11-10T17:12:03.023Z]     mayaHydra      = 498.86 sec*proc (17 tests)
+[2023-11-10T17:12:03.023Z]     
+[2023-11-10T17:12:03.023Z]     Total Test time (real) =  40.83 sec
+[2023-11-10T17:12:03.023Z]     
+[2023-11-10T17:12:03.023Z]     The following tests did not run:
+[2023-11-10T17:12:03.023Z]     	  1 - _Interactive_Maya (Disabled)
+[2023-11-10T17:12:03.023Z]     
+[2023-11-10T17:12:03.023Z]         Building with settings:
+[2023-11-10T17:12:03.023Z]           Source directory          S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows\ecg-maya-hydra\maya-hydra
+[2023-11-10T17:12:03.023Z]           Workspace directory       W:\
+[2023-11-10T17:12:03.023Z]           Build directory           W:\build\RelWithDebInfo
+[2023-11-10T17:12:03.023Z]           Install directory         W:\install\RelWithDebInfo\MayaHydra
+[2023-11-10T17:12:03.023Z]           Variant                   RelWithDebInfo
+[2023-11-10T17:12:03.023Z]           Python Debug              Off
+[2023-11-10T17:12:03.023Z]           CMake generator           Ninja
+[2023-11-10T17:12:03.023Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=P:/shared/Artifactory/Windows/ninja/1.10.2/ccacdf8/ninja.exe', '-DPYTHON_INCLUDE_DIR=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/include/Python310/Python', '-DPython_EXECUTABLE=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/bin/mayapy.exe', '-DPYTHON_LIBRARIES=P:/shared/Artifactory/Windows/rundev-master/202311060140/runtime/1cbda2f/runTime/lib/python310.lib', '-DBUILD_WITH_PYTHON_3=ON', '-DBUILD_WITH_PYTHON_3_VERSION=3.10', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=P:\\shared\\Artifactory\\Windows\\USD\\ce619c6']
+[2023-11-10T17:12:03.023Z]           Stages arguments          ['test']
+[2023-11-10T17:12:03.023Z]           CTest arguments           ['--parallel 16']
+[2023-11-10T17:12:03.023Z]     Success running MayaHydra tests !!!!
+[Pipeline] bat
+[2023-11-10T17:12:03.641Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-11-10T17:12:04.257Z] Deleting alias drive P:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Cleanup)
+[Pipeline] timeout
+[2023-11-10T17:12:04.465Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[2023-11-10T17:12:05.094Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-11-10T17:12:05.737Z] Creating alias drive W: to S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows
+[Pipeline] bat
+[2023-11-10T17:12:06.756Z] "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-11-10T17:12:07.092Z] **********************************************************************
+[2023-11-10T17:12:07.092Z] ** Visual Studio 2022 Developer Command Prompt v17.3.2
+[2023-11-10T17:12:07.092Z] ** Copyright (c) 2022 Microsoft Corporation
+[2023-11-10T17:12:07.092Z] **********************************************************************
+[2023-11-10T17:12:08.264Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-11-10T17:12:08.264Z] python ecg-maya-hydra/build.py --stages=cleanup --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=379 --git-commit=d590573d5109725985e142e015db204e230f9776 --git-branch=master --variants=Debug --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --maya-cut-config=maya-rundev-master-debug.yaml --maya-package=rundev-master-debug --stage-banner
+[2023-11-10T17:12:09.444Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-master-debug\202310260154\runtime\2caf91a
+[2023-11-10T17:12:09.444Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2023\3ae1ae7
+[2023-11-10T17:12:09.444Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\3.4.0\284407f
+[2023-11-10T17:12:09.444Z] 
+[2023-11-10T17:12:09.444Z] ================================================================================
+[2023-11-10T17:12:09.444Z]                                cleanup (Finalize)
+[2023-11-10T17:12:09.444Z] ================================================================================
+[2023-11-10T17:12:09.444Z] Cleaning up workspace
+[2023-11-10T17:12:09.444Z] Removing directory: W:\build
+[2023-11-10T17:12:10.639Z] Removing directory: W:\install
+[Pipeline] bat
+[2023-11-10T17:12:11.250Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-11-10T17:12:11.856Z] Deleting alias drive P:
+[Pipeline] bat
+[2023-11-10T17:12:12.685Z] Creating alias drive P: to S:\jenkins\workspace
+[Pipeline] bat
+[2023-11-10T17:12:13.360Z] Creating alias drive W: to S:\jenkins\workspace\ECP\ecg-maya-hydra\ecg-maya-hydra-branch-preflight-python3-windows
+[Pipeline] bat
+[2023-11-10T17:12:14.352Z] "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+[2023-11-10T17:12:14.688Z] **********************************************************************
+[2023-11-10T17:12:14.688Z] ** Visual Studio 2022 Developer Command Prompt v17.3.2
+[2023-11-10T17:12:14.688Z] ** Copyright (c) 2022 Microsoft Corporation
+[2023-11-10T17:12:14.688Z] **********************************************************************
+[2023-11-10T17:12:15.923Z] [vcvarsall.bat] Environment initialized for: 'x64'
+[2023-11-10T17:12:15.923Z] python ecg-maya-hydra/build.py --stages=cleanup --workspace-dir=W:\ --artifactory-dir=P:\shared\Artifactory --build-dir=W:\build --install-dir=W:\install --signing-dir=W:\signing --package-dir=W:\package --output-dir=W:\output --stash-dir=W:\stash --jenkins-build=379 --git-commit=d590573d5109725985e142e015db204e230f9776 --git-branch=master --variants=RelWithDebInfo --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --maya-cut-config=maya-rundev-master.yaml --maya-package=rundev-master --stage-banner
+[2023-11-10T17:12:17.184Z] Using Maya cut from P:\shared\Artifactory\Windows\rundev-master\202311060140\runtime\1cbda2f
+[2023-11-10T17:12:17.184Z] Using Maya ADSK Signatures from P:\shared\Artifactory\Windows\adsk-plugin-signatures-maya\2023\3ae1ae7
+[2023-11-10T17:12:17.184Z] Using Maya Security Library from P:\shared\Artifactory\Windows\maya-security-library\3.4.0\284407f
+[2023-11-10T17:12:17.184Z] 
+[2023-11-10T17:12:17.184Z] ================================================================================
+[2023-11-10T17:12:17.184Z]                                cleanup (Finalize)
+[2023-11-10T17:12:17.184Z] ================================================================================
+[2023-11-10T17:12:17.184Z] Cleaning up workspace
+[Pipeline] bat
+[2023-11-10T17:12:17.828Z] Deleting alias drive W:
+[Pipeline] bat
+[2023-11-10T17:12:18.513Z] Deleting alias drive P:
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+[Checks API] No suitable checks publisher found.
+Finished: SUCCESS
