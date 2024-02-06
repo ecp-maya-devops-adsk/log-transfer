@@ -1,0 +1,641 @@
+[2024-02-06T14:00:01.467Z] ================================================================================
+[2024-02-06T14:00:01.467Z]                                  setup (Debug)
+[2024-02-06T14:00:01.467Z] ================================================================================
+[Pipeline] sh
+[2024-02-06T14:00:03.014Z] + python ecg-maya-hydra/build.py --stages=setup --workspace-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/build --install-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/install --signing-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/signing --package-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/package --output-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/output --stash-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/stash --jenkins-build=551 --git-commit=1229b648ae0e48d5c83758cfa8b409dc2faee7ae --git-branch=master --variants=RelWithDebInfo --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --extra-license-file=ecg-maya-hydra/jenkins-o03-cot/melicense.lic --prune-versions=3 --prune-revisions=3 --maya-cut-config=maya-rundev-master.yaml --maya-package=rundev-master --stage-banner --prune-artifacts --force-pruning
+[2024-02-06T14:00:03.014Z] config_file /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-rundev-master.yaml
+[2024-02-06T14:00:03.014Z] Getting rundev-master download URL from Maya SHA-1 hash
+[2024-02-06T14:00:03.014Z] Finding Artifactory servers response times
+[2024-02-06T14:00:07.173Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/checksum?repos=team-maya-generic,oss-stg-generic,team-mayausd-post-generic,autodesk-3p-generic,adsk-build-tools-generic,team-ecg-generic&sha1=06b4068e3e169d81601b59c061eda5f032c0a005
+[2024-02-06T14:00:07.173Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com/artifactory/api/search/checksum?repos=team-maya-generic,oss-stg-generic,team-mayausd-post-generic,autodesk-3p-generic,adsk-build-tools-generic,team-ecg-generic&sha1=06b4068e3e169d81601b59c061eda5f032c0a005
+[2024-02-06T14:00:07.173Z] [DEBUG] Output:
+[2024-02-06T14:00:07.173Z] {
+[2024-02-06T14:00:07.173Z]   "results" : [ {
+[2024-02-06T14:00:07.173Z]     "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg"
+[2024-02-06T14:00:07.173Z]   } ]
+[2024-02-06T14:00:07.173Z] }
+[2024-02-06T14:00:07.173Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com/artifactory/api/search/checksum?repos=team-maya-generic,oss-stg-generic,team-mayausd-post-generic,autodesk-3p-generic,adsk-build-tools-generic,team-ecg-generic&sha1=06b4068e3e169d81601b59c061eda5f032c0a005
+[2024-02-06T14:00:07.173Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg
+[2024-02-06T14:00:07.173Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg
+[2024-02-06T14:00:07.173Z] [DEBUG] Output:
+[2024-02-06T14:00:07.173Z] {
+[2024-02-06T14:00:07.173Z]   "repo" : "team-maya-generic",
+[2024-02-06T14:00:07.173Z]   "path" : "/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg",
+[2024-02-06T14:00:07.173Z]   "created" : "2024-02-05T13:43:56.333-08:00",
+[2024-02-06T14:00:07.173Z]   "createdBy" : "svc_aad_p_mescm",
+[2024-02-06T14:00:07.173Z]   "lastModified" : "2024-02-05T13:39:09.563-08:00",
+[2024-02-06T14:00:07.173Z]   "modifiedBy" : "svc_aad_p_mescm",
+[2024-02-06T14:00:07.173Z]   "lastUpdated" : "2024-02-05T13:43:56.334-08:00",
+[2024-02-06T14:00:07.173Z]   "downloadUri" : "https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg",
+[2024-02-06T14:00:07.173Z]   "mimeType" : "application/octet-stream",
+[2024-02-06T14:00:07.173Z]   "size" : "2883392726",
+[2024-02-06T14:00:07.173Z]   "checksums" : {
+[2024-02-06T14:00:07.173Z]     "sha1" : "06b4068e3e169d81601b59c061eda5f032c0a005",
+[2024-02-06T14:00:07.173Z]     "md5" : "68c207efa08e9f0550e35b0313b4313c",
+[2024-02-06T14:00:07.173Z]     "sha256" : "034ca054b057d1874e17ba7faceff6cd32877bb27d5d9dff4b961a9f6b67ff63"
+[2024-02-06T14:00:07.173Z]   },
+[2024-02-06T14:00:07.173Z]   "originalChecksums" : {
+[2024-02-06T14:00:07.173Z]     "sha1" : "06b4068e3e169d81601b59c061eda5f032c0a005",
+[2024-02-06T14:00:07.173Z]     "md5" : "68c207efa08e9f0550e35b0313b4313c",
+[2024-02-06T14:00:07.173Z]     "sha256" : "034ca054b057d1874e17ba7faceff6cd32877bb27d5d9dff4b961a9f6b67ff63"
+[2024-02-06T14:00:07.173Z]   },
+[2024-02-06T14:00:07.173Z]   "uri" : "https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg"
+[2024-02-06T14:00:07.173Z] }
+[2024-02-06T14:00:07.173Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg
+[2024-02-06T14:00:07.173Z] Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime
+[2024-02-06T14:00:07.173Z] Using Maya ADSK Signatures from /local/S/jenkins/workspace/shared/Artifactory/OSX/adsk-plugin-signatures-maya/2023/3ae1ae7
+[2024-02-06T14:00:07.173Z] Using Maya Security Library from /local/S/jenkins/workspace/shared/Artifactory/OSX/maya-security-library/3.4.0/5e08f3e
+[2024-02-06T14:00:07.704Z] [VERBOSE] Start loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg.multipart
+[2024-02-06T14:00:07.704Z] [DEBUG] Running: /usr/bin/curl -s -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg.multipart
+[2024-02-06T14:00:07.704Z] [DEBUG] Output:
+[2024-02-06T14:00:07.704Z] {
+[2024-02-06T14:00:07.704Z]   "errors" : [ {
+[2024-02-06T14:00:07.704Z]     "status" : 404,
+[2024-02-06T14:00:07.704Z]     "message" : "Unable to find item"
+[2024-02-06T14:00:07.704Z]   } ]
+[2024-02-06T14:00:07.704Z] }
+[2024-02-06T14:00:07.704Z] [VERBOSE] End loading URL (CURL): https://art-bobcat.autodesk.com:443/artifactory/api/storage/team-maya-generic/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg.multipart
+[2024-02-06T14:00:07.704Z] Downloading https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg to /local/S/jenkins/workspace/shared/Artifactory/OSX/tmp/tmpwwt9x3e4
+[2024-02-06T14:00:08.236Z] [VERBOSE] Start downloading file (CURL): https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg
+[2024-02-06T14:00:08.236Z] [DEBUG] Running: /usr/bin/curl -sI -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg
+[2024-02-06T14:00:08.236Z] [DEBUG] Header:
+[2024-02-06T14:00:08.236Z] HTTP/1.1 200 
+[2024-02-06T14:00:08.236Z] Date: Tue, 06 Feb 2024 14:00:07 GMT
+[2024-02-06T14:00:08.236Z] Content-Type: application/octet-stream
+[2024-02-06T14:00:08.236Z] Content-Length: 2883392726
+[2024-02-06T14:00:08.236Z] Connection: close
+[2024-02-06T14:00:08.236Z] X-JFrog-Version: Artifactory/7.55.9 75509900
+[2024-02-06T14:00:08.236Z] X-Artifactory-Id: 79b311d0333bdd120c0de6ef1436b28063dfc95b
+[2024-02-06T14:00:08.236Z] X-Artifactory-Node-Id: ussclpdrsync007
+[2024-02-06T14:00:08.236Z] Last-Modified: Mon, 05 Feb 2024 21:39:09 GMT
+[2024-02-06T14:00:08.236Z] ETag: 06b4068e3e169d81601b59c061eda5f032c0a005
+[2024-02-06T14:00:08.236Z] X-Checksum-Sha1: 06b4068e3e169d81601b59c061eda5f032c0a005
+[2024-02-06T14:00:08.236Z] X-Checksum-Sha256: 034ca054b057d1874e17ba7faceff6cd32877bb27d5d9dff4b961a9f6b67ff63
+[2024-02-06T14:00:08.236Z] X-Checksum-Md5: 68c207efa08e9f0550e35b0313b4313c
+[2024-02-06T14:00:08.236Z] Accept-Ranges: bytes
+[2024-02-06T14:00:08.236Z] X-Artifactory-Filename: 202402051227-c3d1f9c8bf-RUNDEV.dmg
+[2024-02-06T14:00:08.236Z] Content-Disposition: attachment; filename="202402051227-c3d1f9c8bf-RUNDEV.dmg"; filename*=UTF-8''"202402051227-c3d1f9c8bf-RUNDEV.dmg"
+[2024-02-06T14:00:08.236Z] Access-Control-Allow-Methods: GET, PUT, POST, OPTIONS, HEAD
+[2024-02-06T14:00:08.236Z] Access-Control-Allow-Headers: Authorization, Origin, X-Requested-With, Content-Type, Accept
+[2024-02-06T14:00:08.236Z] Access-Control-Allow-Credentials: true
+[2024-02-06T14:00:08.236Z] Set-Cookie: AlteonSC=2539135754.47873.0000; path=/; Httponly; Secure
+[2024-02-06T14:00:08.236Z] [DEBUG] Running: /usr/bin/curl --progress-bar -X GET --keepalive-time 10 --connect-timeout 60 --speed-limit 10000 --speed-time 120 --max-time 3600 --retry 5 --retry-max-time 2400 -H Connection:close -H Authorization:Basic ZWNnYmlmcm9zdDpvcGUqKjAw https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg -o /local/S/jenkins/workspace/shared/Artifactory/OSX/tmp/tmpwwt9x3e4/202402051227-c3d1f9c8bf-RUNDEV.dmg
+[2024-02-06T14:00:08.236Z]       0% complete.
+[2024-02-06T14:00:14.591Z]       1% complete.
+[2024-02-06T14:00:17.851Z]       2% complete.
+[2024-02-06T14:00:20.311Z]       3% complete.
+[2024-02-06T14:00:25.499Z]       4% complete.
+[2024-02-06T14:00:29.087Z]       5% complete.
+[2024-02-06T14:00:32.350Z]       6% complete.
+[2024-02-06T14:00:35.868Z]       7% complete.
+[2024-02-06T14:00:38.331Z]       8% complete.
+[2024-02-06T14:00:40.087Z]       9% complete.
+[2024-02-06T14:00:43.343Z]      10% complete.
+[2024-02-06T14:00:48.524Z]      11% complete.
+[2024-02-06T14:00:51.787Z]      12% complete.
+[2024-02-06T14:00:53.532Z]      13% complete.
+[2024-02-06T14:00:56.021Z]      14% complete.
+[2024-02-06T14:00:59.285Z]      15% complete.
+[2024-02-06T14:01:03.452Z]      16% complete.
+[2024-02-06T14:01:06.002Z]      17% complete.
+[2024-02-06T14:01:07.848Z]      18% complete.
+[2024-02-06T14:01:11.109Z]      19% complete.
+[2024-02-06T14:01:14.365Z]      20% complete.
+[2024-02-06T14:01:15.470Z]      21% complete.
+[2024-02-06T14:01:18.727Z]      22% complete.
+[2024-02-06T14:01:19.839Z]      23% complete.
+[2024-02-06T14:01:22.300Z]      24% complete.
+[2024-02-06T14:01:25.556Z]      25% complete.
+[2024-02-06T14:01:27.593Z]      26% complete.
+[2024-02-06T14:01:32.930Z]      27% complete.
+[2024-02-06T14:01:38.123Z]      28% complete.
+[2024-02-06T14:01:40.613Z]      29% complete.
+[2024-02-06T14:01:42.364Z]      30% complete.
+[2024-02-06T14:01:45.729Z]      31% complete.
+[2024-02-06T14:01:49.960Z]      32% complete.
+[2024-02-06T14:01:51.709Z]      33% complete.
+[2024-02-06T14:01:54.982Z]      34% complete.
+[2024-02-06T14:01:56.734Z]      35% complete.
+[2024-02-06T14:01:58.482Z]      36% complete.
+[2024-02-06T14:02:00.229Z]      37% complete.
+[2024-02-06T14:02:02.694Z]      38% complete.
+[2024-02-06T14:02:05.153Z]      39% complete.
+[2024-02-06T14:02:07.618Z]      40% complete.
+[2024-02-06T14:02:09.367Z]      41% complete.
+[2024-02-06T14:02:11.839Z]      42% complete.
+[2024-02-06T14:02:14.295Z]      43% complete.
+[2024-02-06T14:02:15.543Z]      44% complete.
+[2024-02-06T14:02:18.796Z]      45% complete.
+[2024-02-06T14:02:20.560Z]      46% complete.
+[2024-02-06T14:02:21.671Z]      47% complete.
+[2024-02-06T14:02:24.926Z]      48% complete.
+[2024-02-06T14:02:26.038Z]      49% complete.
+[2024-02-06T14:02:28.496Z]      50% complete.
+[2024-02-06T14:02:29.603Z]      51% complete.
+[2024-02-06T14:02:31.353Z]      52% complete.
+[2024-02-06T14:02:34.609Z]      53% complete.
+[2024-02-06T14:02:37.065Z]      54% complete.
+[2024-02-06T14:02:38.843Z]      55% complete.
+[2024-02-06T14:02:41.303Z]      56% complete.
+[2024-02-06T14:02:42.408Z]      57% complete.
+[2024-02-06T14:02:44.155Z]      58% complete.
+[2024-02-06T14:02:45.902Z]      59% complete.
+[2024-02-06T14:02:47.648Z]      60% complete.
+[2024-02-06T14:02:51.081Z]      61% complete.
+[2024-02-06T14:02:52.190Z]      62% complete.
+[2024-02-06T14:02:55.448Z]      63% complete.
+[2024-02-06T14:02:56.555Z]      64% complete.
+[2024-02-06T14:02:58.301Z]      65% complete.
+[2024-02-06T14:03:00.760Z]      66% complete.
+[2024-02-06T14:03:02.569Z]      67% complete.
+[2024-02-06T14:03:05.028Z]      68% complete.
+[2024-02-06T14:03:07.583Z]      69% complete.
+[2024-02-06T14:03:09.335Z]      70% complete.
+[2024-02-06T14:03:13.491Z]      71% complete.
+[2024-02-06T14:03:15.955Z]      72% complete.
+[2024-02-06T14:03:18.861Z]      73% complete.
+[2024-02-06T14:03:21.319Z]      74% complete.
+[2024-02-06T14:03:23.773Z]      75% complete.
+[2024-02-06T14:03:26.231Z]      76% complete.
+[2024-02-06T14:03:28.735Z]      77% complete.
+[2024-02-06T14:03:29.844Z]      78% complete.
+[2024-02-06T14:03:32.304Z]      79% complete.
+[2024-02-06T14:03:34.761Z]      80% complete.
+[2024-02-06T14:03:36.508Z]      81% complete.
+[2024-02-06T14:03:39.763Z]      82% complete.
+[2024-02-06T14:03:40.869Z]      83% complete.
+[2024-02-06T14:03:41.396Z]      84% complete.
+[2024-02-06T14:03:43.854Z]      85% complete.
+[2024-02-06T14:03:45.601Z]      86% complete.
+[2024-02-06T14:03:46.709Z]      87% complete.
+[2024-02-06T14:03:47.814Z]      88% complete.
+[2024-02-06T14:03:49.003Z]      89% complete.
+[2024-02-06T14:03:50.110Z]      90% complete.
+[2024-02-06T14:03:51.291Z]      91% complete.
+[2024-02-06T14:03:52.398Z]      92% complete.
+[2024-02-06T14:03:54.142Z]      93% complete.
+[2024-02-06T14:03:55.250Z]      94% complete.
+[2024-02-06T14:03:56.355Z]      95% complete.
+[2024-02-06T14:03:56.882Z]      96% complete.
+[2024-02-06T14:03:57.989Z]      97% complete.
+[2024-02-06T14:03:59.094Z]      98% complete.
+[2024-02-06T14:04:00.199Z]      99% complete.
+[2024-02-06T14:04:01.305Z]     100% complete.
+[2024-02-06T14:04:01.305Z] [VERBOSE] End downloading file (CURL): https://art-bobcat.autodesk.com:443/artifactory/team-maya-generic/Maya/master/pmac/2024-02-05-12-27_c3d1f9c8bf/202402051227-c3d1f9c8bf-RUNDEV.dmg
+[2024-02-06T14:04:01.305Z] Extracting 202402051227-c3d1f9c8bf-RUNDEV.dmg to /local/S/jenkins/workspace/shared/Artifactory/OSX/tmp/tmppw037t3o
+[2024-02-06T14:04:20.116Z] <?xml version="1.0" encoding="UTF-8"?>
+[2024-02-06T14:04:20.116Z] <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+[2024-02-06T14:04:20.116Z] <plist version="1.0">
+[2024-02-06T14:04:20.116Z] <dict>
+[2024-02-06T14:04:20.116Z] 	<key>system-entities</key>
+[2024-02-06T14:04:20.116Z] 	<array>
+[2024-02-06T14:04:20.116Z] 		<dict>
+[2024-02-06T14:04:20.116Z] 			<key>content-hint</key>
+[2024-02-06T14:04:20.116Z] 			<string>GUID_partition_scheme</string>
+[2024-02-06T14:04:20.116Z] 			<key>dev-entry</key>
+[2024-02-06T14:04:20.116Z] 			<string>/dev/disk4</string>
+[2024-02-06T14:04:20.116Z] 			<key>potentially-mountable</key>
+[2024-02-06T14:04:20.116Z] 			<false/>
+[2024-02-06T14:04:20.116Z] 			<key>unmapped-content-hint</key>
+[2024-02-06T14:04:20.116Z] 			<string>GUID_partition_scheme</string>
+[2024-02-06T14:04:20.116Z] 		</dict>
+[2024-02-06T14:04:20.116Z] 		<dict>
+[2024-02-06T14:04:20.116Z] 			<key>content-hint</key>
+[2024-02-06T14:04:20.116Z] 			<string>Apple_HFS</string>
+[2024-02-06T14:04:20.116Z] 			<key>dev-entry</key>
+[2024-02-06T14:04:20.116Z] 			<string>/dev/disk4s2</string>
+[2024-02-06T14:04:20.116Z] 			<key>mount-point</key>
+[2024-02-06T14:04:20.116Z] 			<string>/Volumes/zip</string>
+[2024-02-06T14:04:20.116Z] 			<key>potentially-mountable</key>
+[2024-02-06T14:04:20.116Z] 			<true/>
+[2024-02-06T14:04:20.116Z] 			<key>unmapped-content-hint</key>
+[2024-02-06T14:04:20.116Z] 			<string>48465300-0000-11AA-AA11-00306543ECAC</string>
+[2024-02-06T14:04:20.116Z] 			<key>volume-kind</key>
+[2024-02-06T14:04:20.116Z] 			<string>hfs</string>
+[2024-02-06T14:04:20.116Z] 		</dict>
+[2024-02-06T14:04:20.116Z] 		<dict>
+[2024-02-06T14:04:20.116Z] 			<key>content-hint</key>
+[2024-02-06T14:04:20.116Z] 			<string>EFI</string>
+[2024-02-06T14:04:20.116Z] 			<key>dev-entry</key>
+[2024-02-06T14:04:20.116Z] 			<string>/dev/disk4s1</string>
+[2024-02-06T14:04:20.116Z] 			<key>potentially-mountable</key>
+[2024-02-06T14:04:20.116Z] 			<true/>
+[2024-02-06T14:04:20.116Z] 			<key>unmapped-content-hint</key>
+[2024-02-06T14:04:20.116Z] 			<string>C12A7328-F81F-11D2-BA4B-00A0C93EC93B</string>
+[2024-02-06T14:04:20.116Z] 			<key>volume-kind</key>
+[2024-02-06T14:04:20.116Z] 			<string>msdos</string>
+[2024-02-06T14:04:20.116Z] 		</dict>
+[2024-02-06T14:04:20.116Z] 	</array>
+[2024-02-06T14:04:20.116Z] </dict>
+[2024-02-06T14:04:20.116Z] </plist>
+[2024-02-06T14:04:57.028Z] "disk4" ejected.
+[2024-02-06T14:04:57.028Z] Installing on /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068
+[2024-02-06T14:04:57.235Z] 
+[2024-02-06T14:04:57.235Z] ================================================================================
+[2024-02-06T14:04:57.235Z]                              setup (RelWithDebInfo)
+[2024-02-06T14:04:57.235Z] ================================================================================
+[2024-02-06T14:04:57.235Z] Installing license file 'melicense.lic'.
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clean)
+[Pipeline] timeout
+[2024-02-06T14:04:57.375Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[2024-02-06T14:04:58.536Z] + python ecg-maya-hydra/build.py --stages=clean --workspace-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/build --install-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/install --signing-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/signing --package-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/package --output-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/output --stash-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/stash --jenkins-build=551 --git-commit=1229b648ae0e48d5c83758cfa8b409dc2faee7ae --git-branch=master --variants=Debug --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --maya-cut-config=maya-rundev-master-debug.yaml --maya-package=rundev-master-debug --stage-banner
+[2024-02-06T14:04:58.536Z] config_file /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-rundev-master-debug.yaml
+[2024-02-06T14:04:58.536Z] Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime
+[2024-02-06T14:04:58.536Z] Using Maya ADSK Signatures from /local/S/jenkins/workspace/shared/Artifactory/OSX/adsk-plugin-signatures-maya/2023/3ae1ae7
+[2024-02-06T14:04:58.536Z] Using Maya Security Library from /local/S/jenkins/workspace/shared/Artifactory/OSX/maya-security-library/3.4.0/5e08f3e
+[2024-02-06T14:04:58.536Z] 
+[2024-02-06T14:04:58.536Z] ================================================================================
+[2024-02-06T14:04:58.536Z]                                  clean (Debug)
+[2024-02-06T14:04:58.536Z] ================================================================================
+[2024-02-06T14:04:58.536Z] Maya Python Debug Info:
+[2024-02-06T14:04:58.536Z]   mayapy executable   = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/bin/mayapy
+[2024-02-06T14:04:58.536Z]   Include Folder      = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.11
+[2024-02-06T14:04:58.536Z]   Library             = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.11.dylib
+[2024-02-06T14:04:58.536Z]   site-package Folder = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.11/site-packages
+[2024-02-06T14:04:59.064Z] In workdir: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra
+[2024-02-06T14:04:59.064Z] Executing: arch -arch arm64 /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/bin/mayapy /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/build.py --generator Ninja --build-debug --maya-location /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime --devkit-location /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/devkitBase --pxrusd-location /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/ca7f6ed --build-args=-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja,-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.11,-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/bin/mayapy,-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.11.dylib,-DBUILD_WITH_PYTHON_3_VERSION=3.11,-DBUILD_UB2=ON,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/ca7f6ed,-DMAYAHYDRA_BUILD_NUMBER=551,-DMAYAHYDRA_GIT_COMMIT=1229b648ae0e48d5c83758cfa8b409dc2faee7ae,-DMAYAHYDRA_GIT_BRANCH=master,-DMAYAUSD_LOCATION=/local/S/jenkins/workspace/shared/Artifactory/OSX/mayausd-cotd-debug/202401312329/runtime/e642f63/mayausd/MayaUSD '--ctest-args=--parallel 8' --stages=clean --redirect-outstream-file=False --install-location /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/install/Debug/MayaHydra /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx
+[2024-02-06T14:04:59.064Z] Modified environment variables:
+[2024-02-06T14:04:59.064Z]     PATH=/local/S/jenkins/workspace/shared/Artifactory/OSX/cmake/3.20.3/2594509/bin:/opt/homebrew/bin:/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin
+[2024-02-06T14:04:59.064Z]     
+[2024-02-06T14:04:59.064Z]         Building with settings:
+[2024-02-06T14:04:59.064Z]           Source directory          /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra
+[2024-02-06T14:04:59.064Z]           Workspace directory       /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx
+[2024-02-06T14:04:59.064Z]           Build directory           /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/build/Debug
+[2024-02-06T14:04:59.064Z]           Install directory         /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/install/Debug/MayaHydra
+[2024-02-06T14:04:59.064Z]           Variant                   Debug
+[2024-02-06T14:04:59.064Z]           Python Debug              Off
+[2024-02-06T14:04:59.064Z]           CMake generator           Ninja
+[2024-02-06T14:04:59.064Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja', '-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.11', '-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/bin/mayapy', '-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.11.dylib', '-DBUILD_WITH_PYTHON_3_VERSION=3.11', '-DBUILD_UB2=ON', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/ca7f6ed', '-DMAYAHYDRA_BUILD_NUMBER=551', '-DMAYAHYDRA_GIT_COMMIT=1229b648ae0e48d5c83758cfa8b409dc2faee7ae', '-DMAYAHYDRA_GIT_BRANCH=master', '-DMAYAUSD_LOCATION=/local/S/jenkins/workspace/shared/Artifactory/OSX/mayausd-cotd-debug/202401312329/runtime/e642f63/mayausd/MayaUSD']
+[2024-02-06T14:04:59.064Z]           Stages arguments          ['clean']
+[2024-02-06T14:04:59.064Z]           CTest arguments           ['--parallel 8']
+[2024-02-06T14:04:59.064Z]     Success MayaHydra build and install !!!!
+[2024-02-06T14:04:59.064Z]     Elapsed time: 00:00:00
+[Pipeline] sh
+[2024-02-06T14:05:00.467Z] + python ecg-maya-hydra/build.py --stages=clean --workspace-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/build --install-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/install --signing-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/signing --package-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/package --output-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/output --stash-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/stash --jenkins-build=551 --git-commit=1229b648ae0e48d5c83758cfa8b409dc2faee7ae --git-branch=master --variants=RelWithDebInfo --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --maya-cut-config=maya-rundev-master.yaml --maya-package=rundev-master --stage-banner
+[2024-02-06T14:05:00.467Z] config_file /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-rundev-master.yaml
+[2024-02-06T14:05:00.467Z] Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime
+[2024-02-06T14:05:00.467Z] Using Maya ADSK Signatures from /local/S/jenkins/workspace/shared/Artifactory/OSX/adsk-plugin-signatures-maya/2023/3ae1ae7
+[2024-02-06T14:05:00.467Z] Using Maya Security Library from /local/S/jenkins/workspace/shared/Artifactory/OSX/maya-security-library/3.4.0/5e08f3e
+[2024-02-06T14:05:00.467Z] 
+[2024-02-06T14:05:00.467Z] ================================================================================
+[2024-02-06T14:05:00.467Z]                              clean (RelWithDebInfo)
+[2024-02-06T14:05:00.467Z] ================================================================================
+[2024-02-06T14:05:00.467Z] Maya Python RelWithDebInfo Info:
+[2024-02-06T14:05:00.467Z]   mayapy executable   = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime/Maya.app/Contents/bin/mayapy
+[2024-02-06T14:05:00.467Z]   Include Folder      = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.11
+[2024-02-06T14:05:00.467Z]   Library             = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.11.dylib
+[2024-02-06T14:05:00.467Z]   site-package Folder = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.11/site-packages
+[2024-02-06T14:05:11.958Z] Adding Python package requirements: ['/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime/Maya.app/Contents/bin/mayapy', '-m', 'pip', 'install', '-t', '/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.11/site-packages', '-r', 'python_requirements.txt']
+[2024-02-06T14:05:12.485Z] In workdir: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra
+[2024-02-06T14:05:12.485Z] Executing: arch -arch arm64 /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime/Maya.app/Contents/bin/mayapy /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/build.py --generator Ninja --build-relwithdebug --maya-location /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime --devkit-location /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/devkitBase --pxrusd-location /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/8270819 --build-args=-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja,-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.11,-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime/Maya.app/Contents/bin/mayapy,-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.11.dylib,-DBUILD_WITH_PYTHON_3_VERSION=3.11,-DBUILD_UB2=ON,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/8270819,-DMAYAHYDRA_BUILD_NUMBER=551,-DMAYAHYDRA_GIT_COMMIT=1229b648ae0e48d5c83758cfa8b409dc2faee7ae,-DMAYAHYDRA_GIT_BRANCH=master,-DMAYAUSD_LOCATION=/local/S/jenkins/workspace/shared/Artifactory/OSX/mayausd-cotd/202401312329/runtime/a401aa9/mayausd/MayaUSD '--ctest-args=--parallel 8' --stages=clean --redirect-outstream-file=False --install-location /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/install/RelWithDebInfo/MayaHydra /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx
+[2024-02-06T14:05:12.485Z] Modified environment variables:
+[2024-02-06T14:05:12.485Z]     PATH=/local/S/jenkins/workspace/shared/Artifactory/OSX/cmake/3.20.3/2594509/bin:/opt/homebrew/bin:/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin
+[2024-02-06T14:05:12.692Z]     
+[2024-02-06T14:05:12.692Z]         Building with settings:
+[2024-02-06T14:05:12.692Z]           Source directory          /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra
+[2024-02-06T14:05:12.692Z]           Workspace directory       /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx
+[2024-02-06T14:05:12.693Z]           Build directory           /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/build/RelWithDebInfo
+[2024-02-06T14:05:12.693Z]           Install directory         /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/install/RelWithDebInfo/MayaHydra
+[2024-02-06T14:05:12.693Z]           Variant                   RelWithDebInfo
+[2024-02-06T14:05:12.693Z]           Python Debug              Off
+[2024-02-06T14:05:12.693Z]           CMake generator           Ninja
+[2024-02-06T14:05:12.693Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja', '-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.11', '-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime/Maya.app/Contents/bin/mayapy', '-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master/202402051227/runtime/06b4068/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.11.dylib', '-DBUILD_WITH_PYTHON_3_VERSION=3.11', '-DBUILD_UB2=ON', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/8270819', '-DMAYAHYDRA_BUILD_NUMBER=551', '-DMAYAHYDRA_GIT_COMMIT=1229b648ae0e48d5c83758cfa8b409dc2faee7ae', '-DMAYAHYDRA_GIT_BRANCH=master', '-DMAYAUSD_LOCATION=/local/S/jenkins/workspace/shared/Artifactory/OSX/mayausd-cotd/202401312329/runtime/a401aa9/mayausd/MayaUSD']
+[2024-02-06T14:05:12.693Z]           Stages arguments          ['clean']
+[2024-02-06T14:05:12.693Z]           CTest arguments           ['--parallel 8']
+[2024-02-06T14:05:12.693Z]     Success MayaHydra build and install !!!!
+[2024-02-06T14:05:12.693Z]     Elapsed time: 00:00:00
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Configure)
+[Pipeline] timeout
+[2024-02-06T14:05:12.829Z] Timeout set to expire in 6 hr 0 min
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[2024-02-06T14:05:14.007Z] + python ecg-maya-hydra/build.py --stages=configure --workspace-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx --artifactory-dir=/local/S/jenkins/workspace/shared/Artifactory --build-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/build --install-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/install --signing-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/signing --package-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/package --output-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/output --stash-dir=/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/stash --jenkins-build=551 --git-commit=1229b648ae0e48d5c83758cfa8b409dc2faee7ae --git-branch=master --variants=Debug --interactive-tests=true --post-zips=false --osx-binary-architecture-target=ub2 --osx-deployment-target=11.0 --osx-base-sdk=CurrentActiveSDK --maya-cut-config=maya-rundev-master-debug.yaml --maya-package=rundev-master-debug --stage-banner
+[2024-02-06T14:05:14.007Z] config_file /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-rundev-master-debug.yaml
+[2024-02-06T14:05:14.007Z] Using Maya cut from /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime
+[2024-02-06T14:05:14.007Z] Using Maya ADSK Signatures from /local/S/jenkins/workspace/shared/Artifactory/OSX/adsk-plugin-signatures-maya/2023/3ae1ae7
+[2024-02-06T14:05:14.007Z] Using Maya Security Library from /local/S/jenkins/workspace/shared/Artifactory/OSX/maya-security-library/3.4.0/5e08f3e
+[2024-02-06T14:05:14.007Z] 
+[2024-02-06T14:05:14.007Z] ================================================================================
+[2024-02-06T14:05:14.007Z]                                configure (Debug)
+[2024-02-06T14:05:14.007Z] ================================================================================
+[2024-02-06T14:05:14.007Z] Maya Python Debug Info:
+[2024-02-06T14:05:14.007Z]   mayapy executable   = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/bin/mayapy
+[2024-02-06T14:05:14.007Z]   Include Folder      = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.11
+[2024-02-06T14:05:14.007Z]   Library             = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.11.dylib
+[2024-02-06T14:05:14.007Z]   site-package Folder = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.11/site-packages
+[2024-02-06T14:05:14.007Z] In workdir: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra
+[2024-02-06T14:05:14.008Z] Executing: arch -arch arm64 /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/bin/mayapy /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/build.py --generator Ninja --build-debug --maya-location /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime --devkit-location /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/devkitBase --pxrusd-location /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/ca7f6ed --build-args=-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja,-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.11,-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/bin/mayapy,-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.11.dylib,-DBUILD_WITH_PYTHON_3_VERSION=3.11,-DBUILD_UB2=ON,-DCMAKE_WANT_MATERIALX_BUILD=ON,-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/ca7f6ed,-DMAYAHYDRA_BUILD_NUMBER=551,-DMAYAHYDRA_GIT_COMMIT=1229b648ae0e48d5c83758cfa8b409dc2faee7ae,-DMAYAHYDRA_GIT_BRANCH=master,-DMAYAUSD_LOCATION=/local/S/jenkins/workspace/shared/Artifactory/OSX/mayausd-cotd-debug/202401312329/runtime/e642f63/mayausd/MayaUSD '--ctest-args=--parallel 8' --stages=configure --redirect-outstream-file=False --install-location /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/install/Debug/MayaHydra /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx
+[2024-02-06T14:05:14.008Z] Modified environment variables:
+[2024-02-06T14:05:14.008Z]     PATH=/local/S/jenkins/workspace/shared/Artifactory/OSX/cmake/3.20.3/2594509/bin:/opt/homebrew/bin:/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin
+[2024-02-06T14:05:26.937Z]     -- The C compiler identification is AppleClang 13.1.6.13160021
+[2024-02-06T14:05:26.937Z]     -- The CXX compiler identification is AppleClang 13.1.6.13160021
+[2024-02-06T14:05:26.937Z]     -- Detecting C compiler ABI info
+[2024-02-06T14:05:26.937Z]     -- Detecting C compiler ABI info - done
+[2024-02-06T14:05:26.937Z]     -- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc - skipped
+[2024-02-06T14:05:26.937Z]     -- Detecting C compile features
+[2024-02-06T14:05:26.937Z]     -- Detecting C compile features - done
+[2024-02-06T14:05:26.937Z]     -- Detecting CXX compiler ABI info
+[2024-02-06T14:05:26.937Z]     -- Detecting CXX compiler ABI info - done
+[2024-02-06T14:05:26.937Z]     -- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ - skipped
+[2024-02-06T14:05:26.937Z]     -- Detecting CXX compile features
+[2024-02-06T14:05:26.937Z]     -- Detecting CXX compile features - done
+[2024-02-06T14:05:26.937Z]     -- Building with Universal Binary 2
+[2024-02-06T14:05:28.041Z]     -- Using Maya Light API Version 3
+[2024-02-06T14:05:28.041Z]     -- Maya has setDefaultMaterialHandling API
+[2024-02-06T14:05:28.041Z]     -- Maya has new point snapping API
+[2024-02-06T14:05:28.041Z]     -- Maya has isInCrashHandler API
+[2024-02-06T14:05:28.041Z]     -- Maya has getDisplayStyleOfAllViewports API
+[2024-02-06T14:05:28.041Z]     -- Maya array iterator has difference_type trait
+[2024-02-06T14:05:28.041Z]     -- MFnSet has getMemberPaths function
+[2024-02-06T14:05:28.041Z]     -- MFnDisplayLayer exists
+[2024-02-06T14:05:28.041Z]     -- MDisplayLayerMessage has MDisplayLayerMemberChangedFunction
+[2024-02-06T14:05:28.041Z]     -- MRenderItem has HideOnPlayback API
+[2024-02-06T14:05:28.041Z]     -- MacOSX: Maya was built with Universal Binary 2 (x86_64/arm64)
+[2024-02-06T14:05:28.041Z]     -- Found Maya: /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/maya.app/Contents/MacOS/Maya (found suitable version "2026", minimum required is "2024")
+[2024-02-06T14:05:28.568Z]     -- Found Python: /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/bin/mayapy (found suitable exact version "3.11.4") found components: Interpreter
+[2024-02-06T14:05:28.568Z]     -- Build mayaHydra with Python3 = 3.11
+[2024-02-06T14:05:28.568Z]     --    PYTHON_INCLUDE_DIRS = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.11
+[2024-02-06T14:05:28.568Z]     --    PYTHON_LIBRARIES    = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.11.dylib
+[2024-02-06T14:05:28.568Z]     --    Python_EXECUTABLE   = /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/bin/mayapy
+[2024-02-06T14:05:28.568Z]     -- Found Python3: /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.11 (found suitable exact version "3.11.4") found components: Development Development.Module Development.Embed
+[2024-02-06T14:05:28.568Z]     -- USD has new Sdr.PropertyTypes.Color4
+[2024-02-06T14:05:28.568Z]     -- USD has MaterialX metadata support
+[2024-02-06T14:05:28.568Z]     -- USD include dir: /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/ca7f6ed/include
+[2024-02-06T14:05:28.568Z]     -- USD library dir: /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/ca7f6ed/lib
+[2024-02-06T14:05:28.568Z]     -- USD version: 0.23.11
+[2024-02-06T14:05:28.568Z]     -- Found USD: /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/ca7f6ed (found suitable version "0.23.11", minimum required is "0.22.11")
+[2024-02-06T14:05:28.568Z]     Updated PYTHONPATH: /local/S/jenkins/workspace/shared/Artifactory/OSX/USD/ca7f6ed/lib/python
+[2024-02-06T14:05:28.568Z]     -- Found UFE: /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/devkitBase/devkit/ufe/include (found version "5.0.0")
+[2024-02-06T14:05:28.568Z]     -- UFE include dir: /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/devkitBase/devkit/ufe/include
+[2024-02-06T14:05:28.568Z]     -- UFE library: /local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/devkitBase/devkit/ufe/lib/libufe_5.dylib
+[2024-02-06T14:05:28.568Z]     -- UFE version: 5.0.0
+[2024-02-06T14:05:28.568Z]     -- Maya has UFE lights API
+[2024-02-06T14:05:28.568Z]     -- Maya has UFE scene segment API
+[2024-02-06T14:05:28.568Z]     -- Maya has UFE TrieNode childrenComponents accessor
+[2024-02-06T14:05:28.568Z]     -- Building with UFE 5.0.0.
+[2024-02-06T14:05:28.568Z]     -- Could NOT find MayaUsd (missing: MAYAUSD_MOD_PATH)
+[2024-02-06T14:05:28.568Z]     -- MayaUsd not used to build.
+[2024-02-06T14:05:28.568Z]     -- Found MaterialX
+[2024-02-06T14:05:29.094Z]     -- Performing Test HAVE_STDATOMIC
+[2024-02-06T14:05:29.095Z]     -- Performing Test HAVE_STDATOMIC - Success
+[2024-02-06T14:05:29.095Z]     -- Found OpenGL: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/OpenGL.framework
+[2024-02-06T14:05:29.621Z]     -- Check if linker can resolve circular dependencies - TRUE
+[2024-02-06T14:05:29.622Z]     -- Found Qt 6.5.3 in Maya devkit. Hydra Scene Browser will be built.
+[2024-02-06T14:05:29.622Z]     -- **** Building Gulrak From Github Repository.
+[2024-02-06T14:05:29.622Z]     -- Populating gulrak
+[2024-02-06T14:05:29.622Z]     -- Configuring done
+[2024-02-06T14:05:29.622Z]     -- Generating done
+[2024-02-06T14:05:29.622Z]     -- Build files have been written to: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/build/Debug/_deps/gulrak-subbuild
+[2024-02-06T14:05:29.622Z]     [1/9] Creating directories for 'gulrak-populate'
+[2024-02-06T14:05:29.622Z]     [1/9] Performing download step (git clone) for 'gulrak-populate'
+[2024-02-06T14:05:29.622Z]     Cloning into 'gulrak-src'...
+[2024-02-06T14:05:29.622Z]     HEAD is now at 4e21ab3 Version bump and updated readme.
+[2024-02-06T14:05:30.149Z]     [2/9] Performing update step for 'gulrak-populate'
+[2024-02-06T14:05:30.149Z]     [4/9] No patch step for 'gulrak-populate'
+[2024-02-06T14:05:30.149Z]     [5/9] No configure step for 'gulrak-populate'
+[2024-02-06T14:05:30.149Z]     [6/9] No build step for 'gulrak-populate'
+[2024-02-06T14:05:30.149Z]     [7/9] No install step for 'gulrak-populate'
+[2024-02-06T14:05:30.149Z]     [8/9] No test step for 'gulrak-populate'
+[2024-02-06T14:05:30.149Z]     [9/9] Completed 'gulrak-populate'
+[2024-02-06T14:05:30.149Z]     -- ========== Installing GoogleTest... ==========
+[2024-02-06T14:05:30.149Z]     -- Configuring done
+[2024-02-06T14:05:30.149Z]     -- Generating done
+[2024-02-06T14:05:30.149Z]     -- Build files have been written to: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/build/Debug/googletest-config
+[2024-02-06T14:05:30.149Z]     [1/8] Creating directories for 'googletest'
+[2024-02-06T14:05:31.253Z]     [2/8] Performing download step (git clone) for 'googletest'
+[2024-02-06T14:05:31.253Z]     Cloning into 'googletest-src'...
+[2024-02-06T14:05:31.253Z]     HEAD is now at 703bd9ca Googletest export
+[2024-02-06T14:05:31.253Z]     [3/8] Performing update step for 'googletest'
+[2024-02-06T14:05:31.253Z]     [4/8] No patch step for 'googletest'
+[2024-02-06T14:05:31.780Z]     [5/8] Performing configure step for 'googletest'
+[2024-02-06T14:05:31.780Z]     Not searching for unused variables given on the command line.
+[2024-02-06T14:05:31.780Z]     CMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
+[2024-02-06T14:05:31.780Z]       Compatibility with CMake < 2.8.12 will be removed from a future version of
+[2024-02-06T14:05:31.780Z]       CMake.
+[2024-02-06T14:05:31.780Z]     
+[2024-02-06T14:05:31.780Z]       Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[2024-02-06T14:05:31.780Z]       CMake that the project does not need compatibility with older versions.
+[2024-02-06T14:05:31.780Z]     
+[2024-02-06T14:05:31.780Z]     
+[2024-02-06T14:05:31.780Z]     -- The C compiler identification is AppleClang 13.1.6.13160021
+[2024-02-06T14:05:31.780Z]     -- The CXX compiler identification is AppleClang 13.1.6.13160021
+[2024-02-06T14:05:31.780Z]     -- Detecting C compiler ABI info
+[2024-02-06T14:05:31.780Z]     -- Detecting C compiler ABI info - done
+[2024-02-06T14:05:31.780Z]     -- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc - skipped
+[2024-02-06T14:05:31.780Z]     -- Detecting C compile features
+[2024-02-06T14:05:31.780Z]     -- Detecting C compile features - done
+[2024-02-06T14:05:31.780Z]     -- Detecting CXX compiler ABI info
+[2024-02-06T14:05:31.780Z]     -- Detecting CXX compiler ABI info - done
+[2024-02-06T14:05:31.780Z]     -- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ - skipped
+[2024-02-06T14:05:31.780Z]     -- Detecting CXX compile features
+[2024-02-06T14:05:31.780Z]     -- Detecting CXX compile features - done
+[2024-02-06T14:05:31.780Z]     CMake Deprecation Warning at googletest/CMakeLists.txt:56 (cmake_minimum_required):
+[2024-02-06T14:05:31.780Z]       Compatibility with CMake < 2.8.12 will be removed from a future version of
+[2024-02-06T14:05:31.780Z]       CMake.
+[2024-02-06T14:05:31.780Z]     
+[2024-02-06T14:05:31.780Z]       Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[2024-02-06T14:05:31.780Z]       CMake that the project does not need compatibility with older versions.
+[2024-02-06T14:05:31.780Z]     
+[2024-02-06T14:05:31.780Z]     
+[2024-02-06T14:05:31.780Z]     -- Found PythonInterp: /usr/local/bin/python (found version "3.10.6")
+[2024-02-06T14:05:31.780Z]     -- Looking for pthread.h
+[2024-02-06T14:05:31.780Z]     -- Looking for pthread.h - found
+[2024-02-06T14:05:31.780Z]     -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2024-02-06T14:05:31.780Z]     -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2024-02-06T14:05:31.780Z]     -- Found Threads: TRUE
+[2024-02-06T14:05:31.780Z]     -- Configuring done
+[2024-02-06T14:05:31.780Z]     -- Generating done
+[2024-02-06T14:05:31.780Z]     -- Build files have been written to: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/build/Debug/googletest-build
+[2024-02-06T14:05:34.238Z]     [6/8] Performing build step for 'googletest'
+[2024-02-06T14:05:34.238Z]     [1/4] Building CXX object googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[2024-02-06T14:05:34.238Z]     [2/4] Building CXX object googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[2024-02-06T14:05:34.238Z]     [3/4] Linking CXX shared library lib/libgtestd.dylib
+[2024-02-06T14:05:34.238Z]     [4/4] Linking CXX shared library lib/libgtest_maind.dylib
+[2024-02-06T14:05:34.238Z]     [7/8] Performing install step for 'googletest'
+[2024-02-06T14:05:34.238Z]     [0/1] Install the project...
+[2024-02-06T14:05:34.238Z]     -- Install configuration: "Debug"
+[2024-02-06T14:05:34.238Z]     [8/8] Completed 'googletest'
+[2024-02-06T14:05:34.238Z]     -- ========== ...  GoogleTest installed. ==========
+[2024-02-06T14:05:34.238Z]     CMake Error at cmake/test.cmake:200 (add_test):
+[2024-02-06T14:05:34.238Z]       add_test given test NAME "testArnoldLights" which already exists in this
+[2024-02-06T14:05:34.238Z]       directory.
+[2024-02-06T14:05:34.238Z]     Call Stack (most recent call first):
+[2024-02-06T14:05:34.238Z]       test/lib/mayaUsd/render/mayaToHydra/CMakeLists.txt:121 (mayaUsd_add_test)
+[2024-02-06T14:05:34.238Z]     
+[2024-02-06T14:05:34.238Z]     
+[2024-02-06T14:05:34.238Z]     -- Found GTest: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/build/Debug/googletest-install/lib/libgtestd.dylib
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/mayaPlugin/pluginUtils.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/api.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/debugCodes.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/hydraUtils.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/mayaHydraLibInterface.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/mayaHydraLibInterfaceImp.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/mayaUtils.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/mixedUtils.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/mayaHydraSceneProducer.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/adapter.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/adapterDebugCodes.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/adapterRegistry.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/cameraAdapter.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/constantShadowMatrix.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/dagAdapter.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/renderItemAdapter.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/lightAdapter.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/materialAdapter.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/materialNetworkConverter.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/mayaAttrs.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/shapeAdapter.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/adapters/tokens.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/delegate.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/delegateCtx.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/delegateDebugCodes.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/delegateRegistry.h
+[2024-02-06T14:05:34.238Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/params.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/sceneDelegate.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/defaultLightDelegate.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/delegates/testDelegate.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/registration.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraSceneIndex.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraDataSource.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraPrimvarDataSource.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraDisplayStyleDataSource.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraCameraDataSource.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraLightDataSource.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraDefaultLightDataSource.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraMayaDataProducerSceneIndexData.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraMayaDataProducerSceneIndexDataConcreteFactory.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraSceneIndexDataFactoriesSetup.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraMayaFilteringSceneIndexData.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mayaHydraMayaFilteringSceneIndexDataConcreteFactory.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/hydraExtensions/sceneIndex/mhMayaUsdProxyShapeSceneIndex.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/ufeExtensions/api.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/mayaHydra/ufeExtensions/Global.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/api.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/debugCodes.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/global.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/tokens.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/colorPreferences/fvpColorChanged.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/colorPreferences/fvpColorPreferences.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/colorPreferences/fvpColorPreferencesTokens.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/colorPreferences/fvpColorPreferencesTranslator.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpMergingSceneIndex.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpPathInterface.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpPathInterfaceSceneIndex.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpRenderIndexProxy.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpRenderIndexProxyFwd.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpSelectionSceneIndex.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpWireframeSelectionHighlightSceneIndex.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/sceneIndex/fvpParentDataModifierSceneIndex.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpSelectionClient.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpSelectionInterface.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpVersionInterface.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpInformationInterface.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpInformationClient.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpDataProducerSceneIndexInterface.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpFilteringSceneIndexClient.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpFilteringSceneIndexClientFwd.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpFilteringSceneIndexInterface.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/fvpViewportAPITokens.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/interfacesImp/fvpSelectionInterfaceImp.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/interfacesImp/fvpVersionInterfaceImp.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/interfacesImp/fvpInformationInterfaceImp.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/interfacesImp/fvpDataProducerSceneIndexInterfaceImp.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/interfacesImp/fvpFilteringSceneIndexInterfaceImp.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/samples/fvpSelectionClientExample.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/samples/fvpInformationClientExample.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/samples/fvpDataProducerSceneIndexExample.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/samples/fvpFilteringSceneIndexExample.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/samples/fvpFilteringSceneIndexClientExample.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/perViewportSceneIndicesData/fvpViewportInformationAndSceneIndicesPerViewportData.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/perViewportSceneIndicesData/fvpViewportInformationAndSceneIndicesPerViewportDataManager.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/perViewportSceneIndicesData/fvpDataProducerSceneIndexDataAbstractFactory.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/perViewportSceneIndicesData/fvpDataProducerSceneIndexDataBase.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/perViewportSceneIndicesData/fvpFilteringSceneIndexDataAbstractFactory.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/perViewportSceneIndicesData/fvpFilteringSceneIndexDataBase.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/API/perViewportSceneIndicesData/fvpFilteringSceneIndicesChainManager.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/selection/fvpSelection.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/selection/fvpSelectionFwd.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/selection/fvpSelectionTask.h
+[2024-02-06T14:05:34.239Z]     -- promoting: /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/lib/flowViewport/selection/fvpSelectionTracker.h
+[2024-02-06T14:05:35.347Z]     -- Configuring incomplete, errors occurred!
+[2024-02-06T14:05:35.347Z]     See also "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/build/Debug/CMakeFiles/CMakeOutput.log".
+[2024-02-06T14:05:35.347Z]     See also "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/build/Debug/CMakeFiles/CMakeError.log".
+[2024-02-06T14:05:35.347Z]     
+[2024-02-06T14:05:35.347Z]         Building with settings:
+[2024-02-06T14:05:35.347Z]           Source directory          /Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra
+[2024-02-06T14:05:35.347Z]           Workspace directory       /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx
+[2024-02-06T14:05:35.347Z]           Build directory           /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/build/Debug
+[2024-02-06T14:05:35.347Z]           Install directory         /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/install/Debug/MayaHydra
+[2024-02-06T14:05:35.347Z]           Variant                   Debug
+[2024-02-06T14:05:35.347Z]           Python Debug              Off
+[2024-02-06T14:05:35.347Z]           CMake generator           Ninja
+[2024-02-06T14:05:35.347Z]           Build arguments           ['-DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja', '-DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.11', '-DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/bin/mayapy', '-DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.11.dylib', '-DBUILD_WITH_PYTHON_3_VERSION=3.11', '-DBUILD_UB2=ON', '-DCMAKE_WANT_MATERIALX_BUILD=ON', '-DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/ca7f6ed', '-DMAYAHYDRA_BUILD_NUMBER=551', '-DMAYAHYDRA_GIT_COMMIT=1229b648ae0e48d5c83758cfa8b409dc2faee7ae', '-DMAYAHYDRA_GIT_BRANCH=master', '-DMAYAUSD_LOCATION=/local/S/jenkins/workspace/shared/Artifactory/OSX/mayausd-cotd-debug/202401312329/runtime/e642f63/mayausd/MayaUSD']
+[2024-02-06T14:05:35.347Z]           Stages arguments          ['configure']
+[2024-02-06T14:05:35.347Z]           CTest arguments           ['--parallel 8']
+[2024-02-06T14:05:35.347Z]     STATUS: Could not find Maya Qt6.
+[2024-02-06T14:05:35.347Z]     STATUS:   Extracting '/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/devkitBase/Qt.tgz' to '/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/devkitBase'
+[2024-02-06T14:05:35.347Z]     #####################################################################################
+[2024-02-06T14:05:35.347Z]     log date: 2024-02-06 06:05
+[2024-02-06T14:05:35.347Z]     commit sha: bf6ceb4a7d91166ae0ccef37877af37808a87715
+[2024-02-06T14:05:35.347Z]     commit date: Tue Feb 6 13:54:33 2024 +0100
+[2024-02-06T14:05:35.347Z]     #####################################################################################
+[2024-02-06T14:05:35.347Z]     
+[2024-02-06T14:05:35.347Z]     cmake -DCMAKE_INSTALL_PREFIX="/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/install/Debug/MayaHydra" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G "Ninja" -DMAYA_LOCATION="/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime" -DPXR_USD_LOCATION="/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/ca7f6ed" -DMAYA_DEVKIT_LOCATION="/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/devkitBase" -DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja -DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.11 -DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/bin/mayapy -DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.11.dylib -DBUILD_WITH_PYTHON_3_VERSION=3.11 -DBUILD_UB2=ON -DCMAKE_WANT_MATERIALX_BUILD=ON -DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/ca7f6ed -DMAYAHYDRA_BUILD_NUMBER=551 -DMAYAHYDRA_GIT_COMMIT=1229b648ae0e48d5c83758cfa8b409dc2faee7ae -DMAYAHYDRA_GIT_BRANCH=master -DMAYAUSD_LOCATION=/local/S/jenkins/workspace/shared/Artifactory/OSX/mayausd-cotd-debug/202401312329/runtime/e642f63/mayausd/MayaUSD "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra"
+[2024-02-06T14:05:35.347Z]     
+[2024-02-06T14:05:35.347Z]     Traceback (most recent call last):
+[2024-02-06T14:05:35.347Z]       File "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/build.py", line 745, in <module>
+[2024-02-06T14:05:35.347Z]         BuildAndInstall(context, context.buildArgs, context.stagesArgs)
+[2024-02-06T14:05:35.348Z]       File "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/build.py", line 502, in BuildAndInstall
+[2024-02-06T14:05:35.348Z]         RunCMake(context, extraArgs, stagesArgs)
+[2024-02-06T14:05:35.348Z]       File "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/build.py", line 305, in RunCMake
+[2024-02-06T14:05:35.348Z]         Run(context,
+[2024-02-06T14:05:35.348Z]       File "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra/build.py", line 197, in Run
+[2024-02-06T14:05:35.348Z]         raise RuntimeError("Failed to run '{cmd}'\nSee {log} for more details."
+[2024-02-06T14:05:35.348Z]     RuntimeError: Failed to run 'cmake -DCMAKE_INSTALL_PREFIX="/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/install/Debug/MayaHydra" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G "Ninja" -DMAYA_LOCATION="/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime" -DPXR_USD_LOCATION="/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/ca7f6ed" -DMAYA_DEVKIT_LOCATION="/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/devkitBase" -DCMAKE_MAKE_PROGRAM=/local/S/jenkins/workspace/shared/Artifactory/OSX/ninja/1.10.2/95d0ca5/ninja -DPYTHON_INCLUDE_DIR=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/include/python3.11 -DPython_EXECUTABLE=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/bin/mayapy -DPYTHON_LIBRARIES=/local/S/jenkins/workspace/shared/Artifactory/OSX/rundev-master-debug/202402020718/runtime/7d1b151/runTime/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/libpython3.11.dylib -DBUILD_WITH_PYTHON_3_VERSION=3.11 -DBUILD_UB2=ON -DCMAKE_WANT_MATERIALX_BUILD=ON -DCMAKE_PREFIX_PATH=/local/S/jenkins/workspace/shared/Artifactory/OSX/USD/ca7f6ed -DMAYAHYDRA_BUILD_NUMBER=551 -DMAYAHYDRA_GIT_COMMIT=1229b648ae0e48d5c83758cfa8b409dc2faee7ae -DMAYAHYDRA_GIT_BRANCH=master -DMAYAUSD_LOCATION=/local/S/jenkins/workspace/shared/Artifactory/OSX/mayausd-cotd-debug/202401312329/runtime/e642f63/mayausd/MayaUSD "/Volumes/DATA/local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/ecg-maya-hydra/maya-hydra"'
+[2024-02-06T14:05:35.348Z]     See /local/S/jenkins/workspace/ECP/ecg-maya-hydra/ecg-maya-hydra-branch-preflight-python3-osx/build/Debug/build_log.txt for more details.
+[2024-02-06T14:05:35.348Z] build.py: error: Command failed with error code: 1
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] emailextrecipients
+Not sending mail to user ecg.jenkins@autodesk.com with no permission to view ECP » ecg-maya-hydra » Maya Hydra [Python 3, Interactive] - Branch - Preflight (OSX) [M1/UB2] #551Not sending mail to user ecg.jenkins@autodesk.com with no permission to view ECP » ecg-maya-hydra » Maya Hydra [Python 3, Interactive] - Branch - Preflight (OSX) [M1/UB2] #551[Pipeline] echo
+No recipients to send notification.
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+[Checks API] No suitable checks publisher found.
+Finished: FAILURE
